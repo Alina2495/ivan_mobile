@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Предложение - Ivan</title>
+    <meta name="description" content="Сдать и арендовать спецтехнику в своем городе на ivan.ru">
+    <meta name="keywords" content="спецтехника, аренда, сдача, продажа, покупка, поиск стройматериалы, инструменты">
+    <!-- styles -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- open graph -->
+    <meta name="og:title" content="Предложение – «Ivan»">
+    <meta property="og:image" content="images/img/logo.svg">
+    <meta name="og:description" content="Сдать и арендовать спецтехнику в своем городе на ivan.ru">
+    <meta name="og:url" content="ivan.ru">
+    <meta name="og:site_name" content="«Ivan» – Официальный сайт">
+    <meta name="og:locale" content="ru_RU">
+    <meta name="og:type" content="website">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#f25c05">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <!-- MOBILE HEADER -->
+    <div class="mobile-header d-md-none container pt-3 pb-1">
+        <div class="shadow-box rounded-4 py-1 px-3 d-flex align-items-center justify-content-between">
+            <!-- Mobile Menu Button -->
+            <button class="btn p-0 mobile-menu-btn rounded-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">Меню</button>
+            <form class="flex-fill mx-3 d-flex align-items-center">
+                <svg class="flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14 14L11.1 11.1" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <input required type="search" name="" id="" class="form-control border-0 w-100 p-1 ps-2" placeholder="Поиск по предложениям...">
+            </form>
+            <button class="btn mobile-search-btn p-0 rounded-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#searchSettings" aria-controls="searchSettings">Настройки поиска</button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="offcanvas offcanvas-start offcanvas-menu fs-6" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header border-bottom flex-column">
+            <div class="d-flex mb-3">
+                <div class="rounded-pill avatar-small overflow-hidden me-3 flex-shrink-0">
+                    <!-- если залогинен, то подставить аватарку, если она есть -->
+                    <img class="w-100 h-100" src="https://randomuser.me/api/portraits/men/29.jpg">
+                </div>
+                <div class="d-flex flex-column">
+                    <a href="account.html">Владимир Ш.</a>
+                    <span class="c-dark-blue">Индивидуальный предприниматель</span>
+                </div>
+            </div>
+            <!-- если не вошел в аккаунт -->
+            <!-- <button class="btn c-accent p-0 text-start border-0">Войти или зарегистрироваться</button> -->
+            <button class="btn c-accent p-0 text-start border-0">Выйти</button>
+        </div>
+        <div class="offcanvas-body pt-4">
+            <nav>
+                <ul class="list-unstyled fs-6">
+                    <!-- orders search -->
+                    <li class="d-flex align-items-start mb-4">
+                        <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 21L16.65 16.65" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                        <a href="">Поиск предложений</a>
+                    </li>
+                    <!-- favorites -->
+                    <li class="d-flex align-items-start mb-4">
+                        <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.84 4.61C20.3292 4.09901 19.7228 3.69365 19.0554 3.41709C18.3879 3.14052 17.6725 2.99818 16.95 2.99818C16.2275 2.99818 15.5121 3.14052 14.8446 3.41709C14.1772 3.69365 13.5708 4.09901 13.06 4.61L12 5.67L10.94 4.61C9.9083 3.57831 8.50903 2.99871 7.05 2.99871C5.59096 2.99871 4.19169 3.57831 3.16 4.61C2.1283 5.64169 1.54871 7.04097 1.54871 8.5C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7563 11.2728 22.0329 10.6054C22.3095 9.9379 22.4518 9.22249 22.4518 8.5C22.4518 7.77751 22.3095 7.06211 22.0329 6.39465C21.7563 5.72719 21.351 5.12076 20.84 4.61V4.61Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                        <a href="">Избранное</a>
+                    </li>
+                    <!-- messages -->
+                    <li class="d-flex align-items-start mb-4">
+                        <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22 6L12 13L2 6" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                        <a href="">Мои сообщения</a>
+                    </li>
+                    <!-- announcements -->
+                    <li class="d-flex align-items-start mb-4">
+                        <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14 2V8H20" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 13H8" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 17H8" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10 9H9H8" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                        <a href="">Мои объявления</a>
+                    </li>
+                    <!-- offers -->
+                    <li class="d-flex align-items-start mb-4">
+                        <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                        <path d="M17.0788 12.1899C17.9604 11.2042 18.5599 9.9613 18.7496 8.58929H19.957C20.4749 8.58929 20.8945 8.16962 20.8945 7.65179C20.8945 7.13397 20.4749 6.71429 19.957 6.71429H19.5943C19.1287 2.92035 15.8855 0 12 0C7.86749 0 4.84387 3.1452 4.4057 6.71429H4.04297C3.52515 6.71429 3.10547 7.13397 3.10547 7.65179C3.10547 8.16943 3.52515 8.58929 4.04297 8.58929H5.25037C5.44006 9.9613 6.03955 11.2042 6.9212 12.1899C2.83319 14.1099 0 18.2351 0 23.0625C0 23.5803 0.419678 24 0.9375 24H23.0625C23.5803 24 24 23.5803 24 23.0625C24 18.2388 21.1703 14.1116 17.0788 12.1899ZM5.18555 22.125H1.9173C2.14874 19.5828 3.32684 17.2661 5.18555 15.5773V22.125ZM6.29938 6.71429C6.55847 5.1319 7.46301 3.76373 8.73285 2.88995V4.5C8.73285 5.01782 9.15253 5.4375 9.67035 5.4375C10.1882 5.4375 10.6078 5.01782 10.6078 4.5V2.04492C11.0539 1.93414 11.5201 1.875 12 1.875C12.4799 1.875 12.9461 1.93414 13.3922 2.04492V4.5C13.3922 5.01782 13.8118 5.4375 14.3297 5.4375C14.8475 5.4375 15.2672 5.01782 15.2672 4.5V2.88995C16.537 3.76373 17.4415 5.1319 17.7006 6.71429H6.29938ZM16.8503 8.58929C16.411 10.866 14.4031 12.5912 12 12.5912C9.59692 12.5912 7.58899 10.866 7.14972 8.58929H16.8503ZM16.9395 22.125H7.06055V14.2253C7.54285 13.9545 8.04639 13.7228 8.56586 13.5355C9.57477 14.1266 10.7485 14.4662 12 14.4662C13.2515 14.4662 14.4252 14.1266 15.4341 13.5355C15.9536 13.723 16.4572 13.9545 16.9395 14.2253V22.125ZM18.8145 22.125V15.5773C20.6743 17.267 21.8513 19.5833 22.0827 22.125H18.8145Z" fill="#3C3939"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0">
+                            <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                        <a href="">Мои предложения</a>
+                    </li>
+                    <!-- settings -->
+                    <li class="d-flex align-items-start mb-4">
+                        <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19.4 15C19.2669 15.3016 19.2272 15.6362 19.286 15.9606C19.3448 16.285 19.4995 16.5843 19.73 16.82L19.79 16.88C19.976 17.0657 20.1235 17.2863 20.2241 17.5291C20.3248 17.7719 20.3766 18.0322 20.3766 18.295C20.3766 18.5578 20.3248 18.8181 20.2241 19.0609C20.1235 19.3037 19.976 19.5243 19.79 19.71C19.6043 19.896 19.3837 20.0435 19.1409 20.1441C18.8981 20.2448 18.6378 20.2966 18.375 20.2966C18.1122 20.2966 17.8519 20.2448 17.6091 20.1441C17.3663 20.0435 17.1457 19.896 16.96 19.71L16.9 19.65C16.6643 19.4195 16.365 19.2648 16.0406 19.206C15.7162 19.1472 15.3816 19.1869 15.08 19.32C14.7842 19.4468 14.532 19.6572 14.3543 19.9255C14.1766 20.1938 14.0813 20.5082 14.08 20.83V21C14.08 21.5304 13.8693 22.0391 13.4942 22.4142C13.1191 22.7893 12.6104 23 12.08 23C11.5496 23 11.0409 22.7893 10.6658 22.4142C10.2907 22.0391 10.08 21.5304 10.08 21V20.91C10.0723 20.579 9.96512 20.258 9.77251 19.9887C9.5799 19.7194 9.31074 19.5143 9 19.4C8.69838 19.2669 8.36381 19.2272 8.03941 19.286C7.71502 19.3448 7.41568 19.4995 7.18 19.73L7.12 19.79C6.93425 19.976 6.71368 20.1235 6.47088 20.2241C6.22808 20.3248 5.96783 20.3766 5.705 20.3766C5.44217 20.3766 5.18192 20.3248 4.93912 20.2241C4.69632 20.1235 4.47575 19.976 4.29 19.79C4.10405 19.6043 3.95653 19.3837 3.85588 19.1409C3.75523 18.8981 3.70343 18.6378 3.70343 18.375C3.70343 18.1122 3.75523 17.8519 3.85588 17.6091C3.95653 17.3663 4.10405 17.1457 4.29 16.96L4.35 16.9C4.58054 16.6643 4.73519 16.365 4.794 16.0406C4.85282 15.7162 4.81312 15.3816 4.68 15.08C4.55324 14.7842 4.34276 14.532 4.07447 14.3543C3.80618 14.1766 3.49179 14.0813 3.17 14.08H3C2.46957 14.08 1.96086 13.8693 1.58579 13.4942C1.21071 13.1191 1 12.6104 1 12.08C1 11.5496 1.21071 11.0409 1.58579 10.6658C1.96086 10.2907 2.46957 10.08 3 10.08H3.09C3.42099 10.0723 3.742 9.96512 4.0113 9.77251C4.28059 9.5799 4.48572 9.31074 4.6 9C4.73312 8.69838 4.77282 8.36381 4.714 8.03941C4.65519 7.71502 4.50054 7.41568 4.27 7.18L4.21 7.12C4.02405 6.93425 3.87653 6.71368 3.77588 6.47088C3.67523 6.22808 3.62343 5.96783 3.62343 5.705C3.62343 5.44217 3.67523 5.18192 3.77588 4.93912C3.87653 4.69632 4.02405 4.47575 4.21 4.29C4.39575 4.10405 4.61632 3.95653 4.85912 3.85588C5.10192 3.75523 5.36217 3.70343 5.625 3.70343C5.88783 3.70343 6.14808 3.75523 6.39088 3.85588C6.63368 3.95653 6.85425 4.10405 7.04 4.29L7.1 4.35C7.33568 4.58054 7.63502 4.73519 7.95941 4.794C8.28381 4.85282 8.61838 4.81312 8.92 4.68H9C9.29577 4.55324 9.54802 4.34276 9.72569 4.07447C9.90337 3.80618 9.99872 3.49179 10 3.17V3C10 2.46957 10.2107 1.96086 10.5858 1.58579C10.9609 1.21071 11.4696 1 12 1C12.5304 1 13.0391 1.21071 13.4142 1.58579C13.7893 1.96086 14 2.46957 14 3V3.09C14.0013 3.41179 14.0966 3.72618 14.2743 3.99447C14.452 4.26276 14.7042 4.47324 15 4.6C15.3016 4.73312 15.6362 4.77282 15.9606 4.714C16.285 4.65519 16.5843 4.50054 16.82 4.27L16.88 4.21C17.0657 4.02405 17.2863 3.87653 17.5291 3.77588C17.7719 3.67523 18.0322 3.62343 18.295 3.62343C18.5578 3.62343 18.8181 3.67523 19.0609 3.77588C19.3037 3.87653 19.5243 4.02405 19.71 4.21C19.896 4.39575 20.0435 4.61632 20.1441 4.85912C20.2448 5.10192 20.2966 5.36217 20.2966 5.625C20.2966 5.88783 20.2448 6.14808 20.1441 6.39088C20.0435 6.63368 19.896 6.85425 19.71 7.04L19.65 7.1C19.4195 7.33568 19.2648 7.63502 19.206 7.95941C19.1472 8.28381 19.1869 8.61838 19.32 8.92V9C19.4468 9.29577 19.6572 9.54802 19.9255 9.72569C20.1938 9.90337 20.5082 9.99872 20.83 10H21C21.5304 10 22.0391 10.2107 22.4142 10.5858C22.7893 10.9609 23 11.4696 23 12C23 12.5304 22.7893 13.0391 22.4142 13.4142C22.0391 13.7893 21.5304 14 21 14H20.91C20.5882 14.0013 20.2738 14.0966 20.0055 14.2743C19.7372 14.452 19.5268 14.7042 19.4 15V15Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                        <a href="">Настройки</a>
+                    </li>
+                    <!-- add new announcement -->
+                    <li class="d-flex align-items-start mb-4 fw-5">
+                        <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="12" fill="#FF6600"/>
+                    <path d="M12 7.33334V16.6667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7.33337 12H16.6667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                        <a href="">Добавить объявление</a>
+                    </li>
+                    <!-- add new offer -->
+                    <li class="d-flex align-items-start fw-5">
+                        <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="12" fill="#FF6600"/>
+                    <path d="M12 7.33334V16.6667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7.33337 12H16.6667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                        <a href="">Добавить предложение</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Mobile Search -->
+    <div class="offcanvas offcanvas-end border-0 bg-light-gray" tabindex="-1" id="searchSettings" aria-labelledby="searchSettingsLabel">
+        <div class="offcanvas-header z-index-10 py-2 align-items-center justify-content-start bg-white shadow-box">
+            <button type="button" class="btn-close text-reset m-0 me-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <h6 class="offcanvas-title" id="searchSettingsLabel">Настройки поиска</h6>
+        </div>
+        <form class="offcanvas-body py-4 position-relative pb-5">
+            <!-- category -->
+            <fieldset class="bg-white rounded-4 pt-2 px-3 pb-4 mb-3">
+                <legend class="mb-3 fs-6 c-gray">Категория</legend>
+                <fieldset class="form-check mb-4">
+                    <input name="category" id="any" type="radio" class="form-check-input me-3" required checked>
+                    <label for="any">Любая категория</label>
+                </fieldset>
+                <fieldset class="form-check mb-4">
+                    <input name="category" id="instrument" type="radio" class="form-check-input me-3" required>
+                    <label for="instrument">Инструменты</label>
+                </fieldset>
+                <fieldset class="form-check mb-4">
+                    <input name="category" id="equipment" type="radio" class="form-check-input me-3" required>
+                    <label for="equipment">Техника</label>
+                </fieldset>
+                <fieldset class="form-check">
+                    <input name="category" id="materials" type="radio" class="form-check-input me-3" required>
+                    <label for="materials">Материалы</label>
+                </fieldset>
+            </fieldset>
+            <!-- city and metro station -->
+            <fieldset class="bg-white rounded-4 pt-2 px-3 pb-4 mb-3">
+                <legend class="mb-1 fs-6 c-gray">Город или регион</legend>
+                <fieldset class="mb-3">
+
+                </fieldset>
+                <legend class="mb-1 fs-6 c-gray">Метро</legend>
+                <fieldset>
+
+                </fieldset>
+            </fieldset>
+            <!-- price range -->
+            <fieldset class="bg-white rounded-4 pt-2 px-3 pb-4 mb-3">
+                <fieldset class="mb-3">
+                    <label for="price-from" class="mb-1 c-gray">Стоимость, от</label>
+                    <input class="form-control py-1" type="number" name="price" id="price-from">
+                </fieldset>
+                <fieldset>
+                    <label for="price-unto" class="mb-1 c-gray">Стоимость, до</label>
+                    <input class="form-control py-1" type="number" name="price" id="price-unto">
+                </fieldset>
+            </fieldset>
+            <!-- type -->
+            <fieldset class="bg-white rounded-4 pt-2 px-3 pb-4 mb-3">
+                <legend class="mb-3 fs-6 c-gray">Исполнители</legend>
+                <fieldset class="mb-4 form-check">
+                    <input type="checkbox" class="form-check-input" id="member-type-1">
+                    <label for="member-type-1" class="form-check-label">Частное лицо</label>
+                </fieldset>
+                <fieldset class="mb-4 form-check">
+                    <input type="checkbox" class="form-check-input" id="member-type-2">
+                    <label for="member-type-2" class="form-check-label">Индивидуальный предприниматель</label>
+                </fieldset>
+                <fieldset class="form-check">
+                    <input type="checkbox" class="form-check-input" id="member-type-3">
+                    <label for="member-type-3" class="form-check-label">Компания</label>
+                </fieldset>
+            </fieldset>
+            <!-- sorting -->
+            <fieldset class="bg-white rounded-4 pt-2 px-3 pb-4 mb-4">
+                <legend class="mb-3 fs-6 c-gray">Сортировка</legend>
+                <fieldset class="form-check mb-4">
+                    <input name="sorting" id="default" type="radio" class="form-check-input me-3" required checked>
+                    <label for="default">По умолчанию</label>
+                </fieldset>
+                <fieldset class="form-check mb-4">
+                    <input name="sorting" id="expensive" type="radio" class="form-check-input me-3" required>
+                    <label for="expensive">Дороже</label>
+                </fieldset>
+                <fieldset class="form-check mb-4">
+                    <input name="sorting" id="cheaper" type="radio" class="form-check-input me-3" required>
+                    <label for="cheaper">Дешевле</label>
+                </fieldset>
+                <fieldset class="form-check">
+                    <input name="sorting" id="by-distance" type="radio" class="form-check-input me-3" required>
+                    <label for="by-distance">По удалённости</label>
+                </fieldset>
+            </fieldset>
+            <div class="position-fixed bottom-0 p-3 start-0 end-0">
+                <button class="btn btn-accent w-100" type="submit">Показать 0 предложений</button>
+            </div>
+        </form>
+    </div>
+
+    <main class="mb-5 proposal-page">
+        <div class="container">
+            <a href="#" class="fw-5 my-3 my-lg-5 d-inline-flex align-items-center">
+                <svg class="me-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Вернуться назад</span>
+            </a>
+            <div class="row">
+                <!-- slider -->
+                <div class="col-lg-5 mb-4">
+                    <!-- Swiper -->
+                    <div class="swiper-container position-relative gallery-top mb-4 border rounded-4 p-2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="images/img/category4.jpeg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/img/category2.jpeg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/img/category3.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/img/category.jpeg" alt="">
+                            </div>
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next swiper-button-white h-100 top-0 bottom-0 end-0 px-3 w-auto mt-0">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 18L15 12L9 6" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="swiper-button-prev swiper-button-white h-100 top-0 bottom-0 start-0 px-3 w-auto mt-0">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 18L9 12L15 6" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="swiper-container gallery-thumbs">
+                        <div class="swiper-wrapper w-100">
+                            <div class="swiper-slide w-25">
+                                <img src="images/img/category4.jpeg" alt="">
+                            </div>
+                            <div class="swiper-slide w-25">
+                                <img src="images/img/category2.jpeg" alt="">
+                            </div>
+                            <div class="swiper-slide w-25">
+                                <img src="images/img/category3.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide w-25">
+                                <img src="images/img/category.jpeg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- right column -->
+                <div class="col-lg-6 d-flex flex-column">
+                    <!-- title and price-->
+                    <div class="d-flex flex-wrap justify-content-between mb-2">
+                        <h5 class="c-black">Экскаватор-погрузчик с гидромолотом</h5>
+                        <span class="h5">1500 руб./час</span>
+                    </div>
+                    <!-- address and show on map -->
+                    <div class="d-flex flex-wrap justify-content-between mb-1">
+                        <!-- address -->
+                        <div class="mb-2">
+                            <svg class="me-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0)">
+                                <path d="M14 6.66663C14 11.3333 8 15.3333 8 15.3333C8 15.3333 2 11.3333 2 6.66663C2 5.07533 2.63214 3.5492 3.75736 2.42399C4.88258 1.29877 6.4087 0.666626 8 0.666626C9.5913 0.666626 11.1174 1.29877 12.2426 2.42399C13.3679 3.5492 14 5.07533 14 6.66663Z" fill="#03588C" stroke="#03588C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 8.66663C9.10457 8.66663 10 7.7712 10 6.66663C10 5.56206 9.10457 4.66663 8 4.66663C6.89543 4.66663 6 5.56206 6 6.66663C6 7.7712 6.89543 8.66663 8 8.66663Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0">
+                                <rect width="16" height="16" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <span>г. Казань, м. Площадь Габдуллы Тукая</span>
+                        </div>
+                        <!-- show on map -->
+                        <button class="btn p-0 c-accent mb-2">Показать на карте</button>
+                    </div>
+                    <div>
+                        <span>Исполнитель:</span>
+                        <a href="user.html" class="ms-3 c-blue fw-5">Георгий Б.</a>
+                    </div>
+                    <div class="c-dark-blue my-2">Частное лицо</div>
+                    <div class="mb-2">На сайте с марта 2021 года</div>
+
+                    <div class="d-flex align-items-baseline">
+                        <!-- rating -->
+                        <div class="d-flex align-items-center flex-shrink-0 c-gray fs-20 me-4">
+                            <span class="checked">&#9733;</span>
+                            <span class="checked">&#9733;</span>
+                            <span class="checked">&#9733;</span>
+                            <span class="checked">&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <a href="user.html" class="fs-14 c-blue text-nowrap">14 отзывов</a>
+                    </div>
+                    <div class="d-inline-flex flex-column align-self-start mt-4">
+                        <button class="btn btn-outline-2 border-0 mb-4">
+                            <svg class="me-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.8401 4.60999C20.3294 4.099 19.7229 3.69364 19.0555 3.41708C18.388 3.14052 17.6726 2.99817 16.9501 2.99817C16.2276 2.99817 15.5122 3.14052 14.8448 3.41708C14.1773 3.69364 13.5709 4.099 13.0601 4.60999L12.0001 5.66999L10.9401 4.60999C9.90843 3.5783 8.50915 2.9987 7.05012 2.9987C5.59109 2.9987 4.19181 3.5783 3.16012 4.60999C2.12843 5.64169 1.54883 7.04096 1.54883 8.49999C1.54883 9.95903 2.12843 11.3583 3.16012 12.39L4.22012 13.45L12.0001 21.23L19.7801 13.45L20.8401 12.39C21.3511 11.8792 21.7565 11.2728 22.033 10.6053C22.3096 9.93789 22.4519 9.22248 22.4519 8.49999C22.4519 7.77751 22.3096 7.0621 22.033 6.39464C21.7565 5.72718 21.3511 5.12075 20.8401 4.60999V4.60999Z" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Добавить в избранное</span>
+                        </button>
+                        <a href="" class="btn btn-outline-2 mb-4">Написать отзыв</a>
+                        <button class="mt-auto btn btn-lg btn-accent">Написать сообщение</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 py-5">
+                <nav class="w-100">
+                    <div class="nav my-tabs ff-2 flex-nowrap text-nowra" id="nav-tab" role="tablist">
+                        <button class="btn active rounded-0 flex-fill" id="specification-tab" data-bs-toggle="tab" data-bs-target="#specification" type="button" role="tab" aria-controls="specification" aria-selected="true">Описание</button>
+                        <button class="btn rounded-0 flex-fill" id="parameters-tab" data-bs-toggle="tab" data-bs-target="#parameters" type="button" role="tab" aria-controls="parameters" aria-selected="false">Параметры</button>
+                        <button class="btn rounded-0 flex-fill" id="on-map-tab" data-bs-toggle="tab" data-bs-target="#on-map" type="button" role="tab" aria-controls="on-map" aria-selected="false">На карте</button>
+                    </div>
+                </nav>
+                <div class="tab-content py-4" id="nav-tabContent">
+                    <!-- specification -->
+                    <div class="tab-pane show active c-black" id="specification" role="tabpanel" aria-labelledby="specification-tab">
+                        <p>Сложно сказать, почему реплицированные с зарубежных источников, современные исследования набирают популярность среди определённых слоёв населения, а значит, должны быть превращены в посмешище, хотя само их существование приносит
+                            несомненную пользу обществу. Также как высокотехнологичная концепция общественного уклада требует определения и уточнения вывода текущих активов. Базовые сценарии поведения пользователей и по сей день остаются уделом либералов,
+                            которые жаждут быть подвергнуты целой серии независимых исследований. Каждый из нас понимает очевидную вещь: укрепление и развитие внутренней структуры является качественно новой ступенью модели развития..</p>
+                    </div>
+                    <!-- parameters -->
+                    <div class="tab-pane" id="parameters" role="tabpanel" aria-labelledby="parameters-tab">
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <th>Масса гидромолота:</th>
+                                    <td>295 кг</td>
+                                </tr>
+                                <tr>
+                                    <th>Энергия удара: </th>
+                                    <td>849 Дж.</td>
+                                </tr>
+                                <tr>
+                                    <th>Частота ударов:</th>
+                                    <td>450-900 уд/мин.</td>
+                                </tr>
+                                <tr>
+                                    <th>Длина пики:</th>
+                                    <td>400 мм</td>
+                                </tr>
+                                <tr>
+                                    <th>Длина гидромолота:</th>
+                                    <td>1.5 м</td>
+                                </tr>
+                                <tr>
+                                    <th>Рабочее давление:</th>
+                                    <td>90-130 атм.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- on-map -->
+                    <div class="tab-pane" id="on-map" role="tabpanel" aria-labelledby="on-map-tab">
+                    </div>
+                </div>
+            </div>
+
+            <!-- similar proposal -->
+            <section class="popular-list py-5">
+                <div class="container my-lg-5">
+                    <h2 class="mb-4 mb-lg-5">Похожие предложения</h2>
+                    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 gx-2 gy-3 g-sm-3 g-xxl-4 mb-4 mb-lg-5">
+                        <!-- card -->
+                        <div>
+                            <div class="card shadow-box rounded-4 h-100 border-0">
+                                <button class="btn-fav position-absolute btn p-1 z-index-10 end-0 top-0 m-2" data-bs-toggle="button" autocomplete="off">
+                                <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.84 3.60999C20.3292 3.099 19.7228 2.69364 19.0554 2.41708C18.3879 2.14052 17.6725 1.99817 16.95 1.99817C16.2275 1.99817 15.5121 2.14052 14.8446 2.41708C14.1772 2.69364 13.5708 3.099 13.06 3.60999L12 4.66999L10.94 3.60999C9.9083 2.5783 8.50903 1.9987 7.05 1.9987C5.59096 1.9987 4.19169 2.5783 3.16 3.60999C2.1283 4.64169 1.54871 6.04096 1.54871 7.49999C1.54871 8.95903 2.1283 10.3583 3.16 11.39L4.22 12.45L12 20.23L19.78 12.45L20.84 11.39C21.351 10.8792 21.7563 10.2728 22.0329 9.60535C22.3095 8.93789 22.4518 8.22248 22.4518 7.49999C22.4518 6.77751 22.3095 6.0621 22.0329 5.39464C21.7563 4.72718 21.351 4.12075 20.84 3.60999V3.60999Z" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                                <div class="img">
+                                    <img src="images/img/category.jpeg" alt="">
+                                </div>
+                                <div class="card-body d-flex flex-column text-center p-2 pb-3 p-xl-3">
+                                    <a class="card-title fw-5" href="">Экскаватор-погрузчик с гидромолотом</a>
+                                    <div class="mt-auto d-flex flex-column justify-content-center align-items-center">
+                                        <!-- rating -->
+                                        <div class="d-flex align-items-center flex-shrink-0 c-gray fs-20">
+                                            <span class="checked">&#9733;</span>
+                                            <span class="checked">&#9733;</span>
+                                            <span class="checked">&#9733;</span>
+                                            <span class="checked">&#9733;</span>
+                                            <span>&#9733;</span>
+                                        </div>
+                                        <a href="" class="fs-14 c-blue text-nowrap">14 отзывов</a>
+                                    </div>
+                                    <div class="fs-14 c-gray mb-1">5 км от Вас</div>
+                                    <div class="fw-5">500 руб./час</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card -->
+                        <div>
+                            <div class="card shadow-box rounded-4 h-100 border-0">
+                                <button class="btn-fav position-absolute btn p-1 z-index-10 end-0 top-0 m-2" data-bs-toggle="button" autocomplete="off">
+                                <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.84 3.60999C20.3292 3.099 19.7228 2.69364 19.0554 2.41708C18.3879 2.14052 17.6725 1.99817 16.95 1.99817C16.2275 1.99817 15.5121 2.14052 14.8446 2.41708C14.1772 2.69364 13.5708 3.099 13.06 3.60999L12 4.66999L10.94 3.60999C9.9083 2.5783 8.50903 1.9987 7.05 1.9987C5.59096 1.9987 4.19169 2.5783 3.16 3.60999C2.1283 4.64169 1.54871 6.04096 1.54871 7.49999C1.54871 8.95903 2.1283 10.3583 3.16 11.39L4.22 12.45L12 20.23L19.78 12.45L20.84 11.39C21.351 10.8792 21.7563 10.2728 22.0329 9.60535C22.3095 8.93789 22.4518 8.22248 22.4518 7.49999C22.4518 6.77751 22.3095 6.0621 22.0329 5.39464C21.7563 4.72718 21.351 4.12075 20.84 3.60999V3.60999Z" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                                <div class="img">
+                                    <img src="images/img/category2.jpeg" alt="">
+                                </div>
+                                <div class="card-body d-flex flex-column text-center p-2 pb-3 p-xl-3">
+                                    <a class="card-title fw-5" href="">Эвакуатор до 5 т</a>
+                                    <div class="mt-auto d-flex flex-column justify-content-center align-items-center">
+                                        <!-- rating -->
+                                        <div class="d-flex align-items-center flex-shrink-0 c-gray fs-20">
+                                            <span class="checked">&#9733;</span>
+                                            <span class="checked">&#9733;</span>
+                                            <span class="checked">&#9733;</span>
+                                            <span class="checked">&#9733;</span>
+                                            <span>&#9733;</span>
+                                        </div>
+                                        <a href="" class="fs-14 c-blue text-nowrap">4 отзывов</a>
+                                    </div>
+                                    <div class="fs-14 c-gray mb-1">15 км от Вас</div>
+                                    <div class="fw-5">1500 руб./час</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </main>
+
+    <!-- MOBILE BOTTOM NAVIGATION -->
+    <div class="position-fixed bg-white shadow-box bottom-0 p-3 d-flex d-md-none justify-content-around w-100 start-0 end-0 z-index-10">
+        <!-- forum -->
+        <a href="forum.html">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0035 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.6056 8.7 3.90003C9.87812 3.30496 11.1801 2.99659 12.5 3.00003H13C15.0843 3.11502 17.053 3.99479 18.5291 5.47089C20.0052 6.94699 20.885 8.91568 21 11V11.5Z" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        <!-- search -->
+        <a href="search.html">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 20.9999L16.65 16.6499" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        <!-- messages -->
+        <a href="" class="position-relative px-1">
+            <!-- если есть сообщения показать кружок -->
+            <div class="rounded-circle bg-accent position-absolute end-0 top-0 ms-1"></div>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 6L12 13L2 6" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        <!-- account -->
+        <a href="account.html">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- scripts -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/my-swiper.js"></script>
+    <script src="js/extra.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
