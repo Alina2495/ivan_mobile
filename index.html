@@ -46,6 +46,7 @@
             <button class="btn mobile-search-btn p-0 rounded-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#searchSettings" aria-controls="searchSettings">Настройки поиска</button>
         </div>
     </div>
+
     <!-- MOBILE MENU -->
     <div class="offcanvas offcanvas-start offcanvas-menu fs-6" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
         <div class="offcanvas-header align-items-start border-bottom flex-column">
@@ -54,6 +55,7 @@
                     <!-- если залогинен, то подставить аватарку, если она есть -->
                     <img class="w-100 h-100" alt="" src="https://randomuser.me/api/portraits/men/29.jpg">
                 </div>
+                <!-- скрыть если не вошел -->
                 <div class="d-flex flex-column">
                     <a href="account.html">Владимир Ш.</a>
                     <span class="c-dark-blue">Индивидуальный предприниматель</span>
@@ -66,14 +68,6 @@
         <div class="offcanvas-body pt-4">
             <nav>
                 <ul class="list-unstyled fs-6">
-                    <!-- orders search -->
-                    <li class="d-flex align-items-start mb-4">
-                        <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M21 21L16.65 16.65" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <a href="">Поиск предложений</a>
-                    </li>
                     <!-- favorites -->
                     <li class="d-flex align-items-start mb-4">
                         <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -81,13 +75,14 @@
                         </svg>
                         <a href="">Избранное</a>
                     </li>
-                    <!-- messages -->
+                    <!-- reviews -->
                     <li class="d-flex align-items-start mb-4">
                         <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M22 6L12 13L2 6" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 20V10" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18 20V4" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 20V16" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        <a href="">Мои сообщения</a>
+                        <a href="">Мои отзывы</a>
                     </li>
                     <!-- announcements -->
                     <li class="d-flex align-items-start mb-4">
@@ -123,7 +118,7 @@
                         <a href="">Настройки</a>
                     </li>
                     <!-- add new announcement -->
-                    <li class="d-flex align-items-start mb-4 fw-5">
+                    <li class="d-flex align-items-start mb-4 fw-5 c-accent">
                         <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="12" cy="12" r="12" fill="#FF6600"/>
                             <path d="M12 7.33334V16.6667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -132,7 +127,7 @@
                         <a href="">Добавить объявление</a>
                     </li>
                     <!-- add new offer -->
-                    <li class="d-flex align-items-start fw-5">
+                    <li class="d-flex align-items-start fw-5 c-accent">
                         <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="12" cy="12" r="12" fill="#FF6600"/>
                             <path d="M12 7.33334V16.6667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

@@ -35,30 +35,77 @@
     <div class="mobile-header pb-1 position-fixed w-100">
         <div class="shadow-box py-2 px-3 d-flex align-items-center bg-white w-100">
 
-            <button class="btn p-0 me-3">
+            <a href="#" class="btn p-0 me-3">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>        
-            </button>
-            <div class="d-flex">
+                </svg>
+            </a>
+            <a class="d-flex" href="user.html">
                 <img src="https://randomuser.me/api/portraits/men/97.jpg" class="img_sm me-2">
                 <div>
                     <h1 class="h6 m-0">Вячеслав Г.</h1>
                     <span class="fs_14 c-gray">был в сети 2 часа назад</span>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 
     <!-- MAIN CONTENT -->
-    <main class="text-nowrap my-5">
-
+    <main class="my-5 px-3">
+        <!-- за 1 день -->
+        <div class="py-3 dialogue c-black d-flex flex-column align-items-start">
+            <span class="c-gray fs_14 text-center mb-3 align-self-center">16 марта</span>
+            <div class="d-flex align-items-end px-3 py-2 mb-3 rounded-30 bg-light-gray">
+                <div class="me-2">Привет! Как дела?</div>
+                <span class="c-gray fs_14">16:21</span>
+            </div>
+            <!-- my msg -->
+            <div class="d-flex align-items-end px-3 py-2 mb-3 rounded-30 my-msg">
+                <div class="me-2">Хотел уточнить, что с экскаватором?</div>
+                <span class="c-gray fs_14">16:24</span>
+            </div>
+            <div class="d-flex align-items-end px-3 py-2 mb-3 rounded-30 bg-light-gray">
+                <div class="me-2">Привет! Все отлично, как сам? С другой стороны, консультация с широким активом позволяет выполнить важные задания по разработке направлений прогрессивного развития. Господа, высококачественный прототип будущего проекта однозначно определяет
+                    каждого участника как способного принимать собственные решения касаемо своевременного выполнения сверхзадачи.</div>
+                <span class="c-gray fs_14">16:21</span>
+            </div>
+            <!-- my msg -->
+            <div class="d-flex align-items-end px-3 py-2 mb-3 rounded-30 my-msg">
+                <div class="me-2">Хотел уточнить, что с экскаватором?</div>
+                <span class="c-gray fs_14">16:24</span>
+            </div>
+            <!-- my msg -->
+            <div class="d-flex align-items-end px-3 py-2 mb-3 rounded-30 my-msg">
+                <div class="me-2">Хотел уточнить, что с экскаватором?</div>
+                <span class="c-gray fs_14">16:24</span>
+            </div>
+        </div>
+        <!-- за 2 день -->
+        <div class="py-3 dialogue c-black d-flex flex-column align-items-start">
+            <span class="c-gray fs_14 text-center mb-3 align-self-center">18 марта</span>
+            <div class="d-flex align-items-end px-3 py-2 mb-3 rounded-30 bg-light-gray">
+                <div class="me-2">Привет! Как дела?</div>
+                <span class="c-gray fs_14">19:21</span>
+            </div>
+            <!-- my msg -->
+            <div class="d-flex align-items-end px-3 py-2 mb-3 rounded-30 my-msg">
+                <div class="me-2">Хотел уточнить, что с экскаватором?</div>
+                <span class="c-gray fs_14">19:24</span>
+            </div>
+        </div>
     </main>
 
-    <!--  -->
-    <div class="position-fixed bg-white shadow-box bottom-0 p-3 d-flex justify-content-around w-100 start-0 end-0 z-index-10">
-        <input type="text" class="w-100 h-100 border-0" placeholder="Введите сообщение">
+    <!-- text input -->
+    <div class="position-fixed bg-white shadow-box bottom-0 d-flex justify-content-around w-100 start-0 end-0 z-index-10 pe-3">
+        <input type="text" class="w-100 h-100 border-0 p-3 txt_inp" placeholder="Введите сообщение">
+        <button class="btn p-0">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="40" height="40" rx="20" fill="#FF6600"/>
+                <path d="M30 19.7037L14 27.4074L16.963 19.7037L14 12L30 19.7037Z" fill="#FF6600"/>
+                <path d="M30 19.7037H16.963M30 19.7037L14 27.4074L16.963 19.7037M30 19.7037L14 12L16.963 19.7037" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
     </div>
 
     <!-- scripts -->
