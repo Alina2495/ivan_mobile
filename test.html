@@ -1,0 +1,63 @@
+<?php
+/**
+ * @var yii\web\View $this
+ * @var PageDescription $page
+ */
+
+use yii\widgets\ListView;
+use common\components\Helper;
+use frontend\assets\FrontendAsset;
+use common\models\PageDescription;
+
+//$this->title = Yii::$app->name;
+FrontendAsset::regAssets($this, [], ['/css/showroom.css','/css/layouts/pages.css','/css/layouts/media.css']);
+?>
+
+    <div class="views-page">
+
+        <div class="container container-2">
+            <div class="breadcrumbs">
+                <a href="<?= Helper::generateUrl('') ?>">Главная</a>
+                <?php foreach ($breadcrumbs as $crumb): ?>
+                <span>
+          <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L4 4L1 7" stroke="#5B6052" stroke-width="2"/>
+          </svg>
+          <a href="<?= Helper::generateUrl($crumb['url']) ?>"><?= $crumb['name'] ?></a>
+            </span>
+                <?php endforeach; ?>
+            </div>
+        </div>
+
+
+        <div class="container container-2">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="h-100 mt-1 block-2">
+                        <div class="article-preview-box">
+                            <img src="/img/optov.jpg" />
+                        </div>
+                        <div class="t">
+                            <h1>Оптовый пошив одежды на заказ</h1>
+                            <div class=" mb-4 pb-2">
+                                <p>Оптовое производство вещей требует тщательного подхода. Выполним оптовый пошив одежды на заказ в соответствии с требованиями заказчика. В работе используются эскизы дизайнеров или самого клиента.
+                                </p>
+                                <p>
+                                    В команде Ruelle17 работают креативные дизайнеры. Эскиз моделей разрабатывается с учётом пожеланий заказчика. Костюмы, брюки, юбки, платья, верхняя одежда, летние/зимние варианты отшиваются с соблюдением стандартов к одежде премиум-класса</p>
+                            </div>
+                        </div>
+                        <button class="btn_1">Заказать</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <?= $this->render('../layouts/_article-list') ?>
+        <?= $this->render('../layouts/_question-list') ?>
+
+            <div class="container-fluid write-to-us-container">
+                <?= $this->render('../layouts/_form', ['title' => 'Остались вопросы?']) ?>
+            </div>

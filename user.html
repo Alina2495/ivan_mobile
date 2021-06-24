@@ -175,14 +175,14 @@
                 <span class="checked">&#9733;</span>
                 <span>&#9733;</span>
             </div>
-            <a href="" class="fs-14 c-blue text-nowrap">4 отзывов</a>
+            <a href="" class="fs-14 c_blue text-nowrap">4 отзывов</a>
         </div>
 
         <!-- PROPOSALS CONTENT -->
         <div class="mb-4">
             <div class="d-flex justify-content-between mb-3">
                 <div class="d-flex align-items-baseline">
-                    <h5 class="fw-normal c-black mb-0 me-1">Актуальные предложения</h5>
+                    <h5 class="fw-normal c_black mb-0 me-1">Актуальные предложения</h5>
                     <span class="c-gray">6</span>
                 </div>
                 <a href="#">
@@ -207,7 +207,7 @@
                             <img src="images/img/category.jpeg" alt="">
                         </div>
                         <div class="card-body d-flex flex-column text-center p-2 pb-3 p-xl-3">
-                            <a class="card-title fw-5 c-blue" href="">Экскаватор-погрузчик с гидромолотом</a>
+                            <a class="card-title fw-5 c_blue" href="">Экскаватор-погрузчик с гидромолотом</a>
 
                             <div class="fs-14 c-gray mb-1">5 км от Вас</div>
                             <div class="fw-5">500 руб./за услугу</div>
@@ -226,7 +226,7 @@
                             <img src="images/img/category2.jpeg" alt="">
                         </div>
                         <div class="card-body d-flex flex-column text-center p-2 pb-3 p-xl-3">
-                            <a class="card-title fw-5 c-blue" href="">Эвакуатор до 5 т</a>
+                            <a class="card-title fw-5 c_blue" href="">Эвакуатор до 5 т</a>
 
                             <div class="fs-14 c-gray mb-1">15 км от Вас</div>
                             <div class="fw-5">1500 руб./час</div>
@@ -245,7 +245,7 @@
                             <img src="images/img/category2.jpeg" alt="">
                         </div>
                         <div class="card-body d-flex flex-column text-center p-2 pb-3 p-xl-3">
-                            <a class="card-title fw-5 c-blue" href="">Эвакуатор до 5 т</a>
+                            <a class="card-title fw-5 c_blue" href="">Эвакуатор до 5 т</a>
 
                             <div class="fs-14 c-gray mb-1">15 км от Вас</div>
                             <div class="fw-5">1500 руб./час</div>
@@ -264,7 +264,7 @@
                             <img src="images/img/category2.jpeg" alt="">
                         </div>
                         <div class="card-body d-flex flex-column text-center p-2 pb-3 p-xl-3">
-                            <a class="card-title fw-5 c-blue" href="">Эвакуатор до 5 т</a>
+                            <a class="card-title fw-5 c_blue" href="">Эвакуатор до 5 т</a>
 
                             <div class="fs-14 c-gray mb-1">15 км от Вас</div>
                             <div class="fw-5">1500 руб./час</div>
@@ -279,7 +279,7 @@
         <div class="mb-4">
             <div class="d-flex justify-content-between mb-3">
                 <div class="d-flex align-items-baseline">
-                    <h5 class="fw-normal c-black mb-0 me-1">Актуальные объявления</h5>
+                    <h5 class="fw-normal c_black mb-0 me-1">Актуальные объявления</h5>
                     <span class="c-gray">1</span>
                 </div>
                 <a href="#">
@@ -295,7 +295,7 @@
                 <!-- announcement 1 -->
                 <div class="d-flex flex-wrap rounded-4 shadow-box p-3">
                     <div class="col-8 d-flex flex-fill flex-column">
-                        <div class="h5 mb-1 c-blue">Выкопать яму под колодец</div>
+                        <div class="h5 mb-1 c_blue">Выкопать яму под колодец</div>
                         <time class="c-gray">3 часа назад</time>
                         <div class="mt-auto d-flex flex-wrap justify-content-between align-items-end">
                             <div>
@@ -314,47 +314,113 @@
             </div>
         </div>
 
-        <!-- REVIEWS  CONTENT -->
-        <div>
-            <div class="d-flex justify-content-between">
-                <div class="d-flex align-items-baseline">
-                    <h5 class="fw-normal c-black mb-0 me-1">Мои отзывы</h5>
-                    <span class="c-gray">8</span>
+        <?php
+        /**
+         * @var yii\web\View $this
+         * @var PageDescription $page
+         */
+        
+        use yii\widgets\ListView;
+        use common\components\Helper;
+        use frontend\assets\FrontendAsset;
+        use common\models\PageDescription;
+        
+        //$this->title = Yii::$app->name;
+        FrontendAsset::regAssets($this, [], ['/css/showroom.css','/css/layouts/pages.css','/css/layouts/media.css']);
+        ?>
+
+            <div class="views-page">
+
+                <div class="container container-2">
+                    <div class="breadcrumbs">
+                        <a href="<?= Helper::generateUrl('') ?>">Главная</a>
+                        <?php foreach ($breadcrumbs as $crumb): ?>
+                        <span>
+                  <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L4 4L1 7" stroke="#5B6052" stroke-width="2"/>
+                  </svg>
+                  <a href="<?= Helper::generateUrl($crumb['url']) ?>"><?= $crumb['name'] ?></a>
+                    </span>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
-                <a href="#">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9 18L15 12L9 6" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
-            </div>
-            <!-- empty announcements -->
-            <!-- <p class="fs-20">У пользователя пока нет отзывов.</p> -->
-            <!-- reviews list -->
-            <div class="reviews-list mb-3">
-                <!-- review 1 -->
-                <div class="py-4 border-bottom">
-                    <div class="d-flex">
-                        <img class="img_md me-2" src="images/img/user.jpg">
-                        <div class="d-flex flex-wrap justify-content-between">
-                            <!-- name -->
-                            <a class="c-black" href="user.html">Геннадий Л.</a>
-                            <!-- rating -->
-                            <div class="mb-2">
-                                <span>Оценка:</span>
-                                <div class="rated ms-3 d-inline-flex align-items-center flex-shrink-0 c-gray fs-20">
-                                    <span class="checked">&#9733;</span>
-                                    <span class="checked">&#9733;</span>
-                                    <span class="checked">&#9733;</span>
-                                    <span class="checked">&#9733;</span>
-                                    <span>&#9733;</span>
+
+
+                <div class="container container-2">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="h-100 mt-1 block-2">
+                                <div class="article-preview-box">
+                                    <img src="/img/optov.jpg" />
                                 </div>
+                                <div class="t">
+                                    <h1>Оптовый пошив одежды на заказ</h1>
+                                    <div class=" mb-4 pb-2">
+                                        <p>Оптовое производство вещей требует тщательного подхода. Выполним оптовый пошив одежды на заказ в соответствии с требованиями заказчика. В работе используются эскизы дизайнеров или самого клиента.
+                                        </p>
+                                        <p>
+                                            В команде Ruelle17 работают креативные дизайнеры. Эскиз моделей разрабатывается с учётом пожеланий заказчика. Костюмы, брюки, юбки, платья, верхняя одежда, летние/зимние варианты отшиваются с соблюдением стандартов к одежде премиум-класса</p>
+                                    </div>
+                                </div>
+                                <button class="btn_1">Заказать</button>
+
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <!-- link -->
-                    <a href="#" class="c-blue d-flex align-items-baseline">
-                        <svg class="flex-shrink-0 me-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+            <?= $this->render('../layouts/_article-list') ?>
+                <?= $this->render('../layouts/_question-list') ?>
+
+                    <div class="container-fluid write-to-us-container">
+                        <?= $this->render('../layouts/_form', ['title' => 'Остались вопросы?']) ?>
+                    </div>
+
+
+
+                    <!-- REVIEWS  CONTENT -->
+                    <div>
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex align-items-baseline">
+                                <h5 class="fw-normal c_black mb-0 me-1">Мои отзывы</h5>
+                                <span class="c-gray">8</span>
+                            </div>
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                            </a>
+                        </div>
+                        <!-- empty announcements -->
+                        <!-- <p class="fs-20">У пользователя пока нет отзывов.</p> -->
+                        <!-- reviews list -->
+                        <div class="reviews-list mb-3">
+                            <!-- review 1 -->
+                            <div class="py-4 border-bottom">
+                                <div class="d-flex">
+                                    <img class="img_md me-2" src="images/img/user.jpg">
+                                    <div class="d-flex flex-wrap justify-content-between">
+                                        <!-- name -->
+                                        <a class="c_black" href="user.html">Геннадий Л.</a>
+                                        <!-- rating -->
+                                        <div class="mb-2">
+                                            <span>Оценка:</span>
+                                            <div class="rated ms-3 d-inline-flex align-items-center flex-shrink-0 c-gray fs-20">
+                                                <span class="checked">&#9733;</span>
+                                                <span class="checked">&#9733;</span>
+                                                <span class="checked">&#9733;</span>
+                                                <span class="checked">&#9733;</span>
+                                                <span>&#9733;</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- link -->
+                                <a href="#" class="c_blue d-flex align-items-baseline">
+                                    <svg class="flex-shrink-0 me-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip1)">
                             <path d="M14.4152 1.38101C12.8295 -0.351715 10.1439 -0.47093 8.41097 1.11506L0.747415 8.12856L1.38501 8.82524L9.04857 1.81175C9.69986 1.21567 10.5442 0.909059 11.4264 0.947969C13.2514 1.02881 14.6631 2.57117 14.5823 4.39641C14.5432 5.27845 14.163 6.0925 13.5116 6.68857L4.97723 14.499C4.11285 15.2901 2.7661 15.2304 1.9751 14.366C1.18225 13.4997 1.24162 12.1569 2.10811 11.3639L10.2942 3.87227C10.4803 3.70197 10.7211 3.61423 10.9736 3.6255C11.495 3.64858 11.8984 4.08923 11.8753 4.61076C11.8641 4.86279 11.7554 5.09537 11.5693 5.26567L4.2541 11.9603L4.8917 12.657L12.2069 5.96233C12.5791 5.62171 12.7964 5.15656 12.8187 4.65254C12.865 3.60976 12.0584 2.72819 11.0153 2.68198C10.5113 2.65969 10.0288 2.83494 9.65661 3.17556L1.47051 10.6672C0.219086 11.8125 0.133083 13.7521 1.27842 15.0036C2.42199 16.2532 4.36737 16.3373 5.61482 15.1957L14.1492 7.38529C15.8779 5.80323 15.9972 3.10973 14.4152 1.38101Z" fill="#4CA9FF"/>
                         </g>
@@ -364,18 +430,18 @@
                             </clipPath>
                         </defs>
                     </svg>
-                        <span>Экскаватор-погрузчик с гидромолотом</span>
-                    </a>
-                    <!-- text -->
-                    <p class="c-black m-0">Через несколько недель мне позвонила то ли заведующая магазина, то ли директор, поблагодарила за отзыв и сказала, что он был зачитан на собрании</p>
+                                    <span>Экскаватор-погрузчик с гидромолотом</span>
+                                </a>
+                                <!-- text -->
+                                <p class="c_black m-0">Через несколько недель мне позвонила то ли заведующая магазина, то ли директор, поблагодарила за отзыв и сказала, что он был зачитан на собрании</p>
 
-                </div>
-                <!-- reviews list end -->
-            </div>
-            <!-- write review btn -->
-            <button class="btn btn-outline-2 btn-lg w-100 px-4 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#addReview" aria-controls="addReview">Написать отзыв</button>
+                            </div>
+                            <!-- reviews list end -->
+                        </div>
+                        <!-- write review btn -->
+                        <button class="btn btn-outline-2 btn-lg w-100 px-4 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#addReview" aria-controls="addReview">Написать отзыв</button>
 
-        </div>
+                    </div>
     </main>
 
 

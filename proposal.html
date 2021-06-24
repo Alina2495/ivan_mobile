@@ -33,7 +33,7 @@
 <body>
 
     <!-- HEADER -->
-    <header class="mobile-header position-fixed shadow-box p-3 d-flex align-items-center justify-content-between bg-white w-100">
+    <header class=" shadow-box p-3 d-flex align-items-center justify-content-between">
         <a href="#" class="btn p-0">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -41,10 +41,7 @@
             </svg>
         </a>
         <!-- add announcement to favorites -->
-        <button class="btn-fav btn p-1" data-bs-toggle="button">
-            <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20.84 3.60999C20.3292 3.099 19.7228 2.69364 19.0554 2.41708C18.3879 2.14052 17.6725 1.99817 16.95 1.99817C16.2275 1.99817 15.5121 2.14052 14.8446 2.41708C14.1772 2.69364 13.5708 3.099 13.06 3.60999L12 4.66999L10.94 3.60999C9.9083 2.5783 8.50903 1.9987 7.05 1.9987C5.59096 1.9987 4.19169 2.5783 3.16 3.60999C2.1283 4.64169 1.54871 6.04096 1.54871 7.49999C1.54871 8.95903 2.1283 10.3583 3.16 11.39L4.22 12.45L12 20.23L19.78 12.45L20.84 11.39C21.351 10.8792 21.7563 10.2728 22.0329 9.60535C22.3095 8.93789 22.4518 8.22248 22.4518 7.49999C22.4518 6.77751 22.3095 6.0621 22.0329 5.39464C21.7563 4.72718 21.351 4.12075 20.84 3.60999V3.60999Z" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+        <button class="btn-fav btn-i btn p-0" data-bs-toggle="button">
         </button>
     </header>
 
@@ -147,8 +144,9 @@
         </div>
     </div>
 
-    <main class="mb-5 container proposal-page py-3">
+    <main class="container py-3">
 
+        <!-- PROPOSAL -->
         <section>
             <!-- proposal slider -->
             <div>
@@ -175,7 +173,7 @@
             <div class="col-lg-6 d-flex flex-column">
                 <!-- title and price-->
                 <div class="d-flex flex-wrap justify-content-between mb-4">
-                    <h5 class="c-black fw-normal">Экскаватор-погрузчик с гидромолотом</h5>
+                    <h5 class="c_black fw-normal">Экскаватор-погрузчик с гидромолотом</h5>
                     <span class="fs-5 fw-5">1500 руб./час</span>
                 </div>
                 <div class="d-flex flex-column mb-4">
@@ -204,7 +202,7 @@
                 </div>
                 <div>
                     <span>Исполнитель:</span>
-                    <a href="user.html" class="ms-3 c-blue fw-5">Геннадий С.</a>
+                    <a href="user.html" class="ms-3 c_blue fw-5">Наиль Б.</a>
                 </div>
                 <div class="c-dark-blue my-2">Частное лицо</div>
                 <div class="mb-2">На сайте с марта 2021 года</div>
@@ -219,7 +217,7 @@
                         <span class="checked">&#9733;</span>
                         <span>&#9733;</span>
                     </div>
-                    <a class="c-blue" href="user.html">14 отзывов</a>
+                    <a class="c_blue" href="user.html">14 отзывов</a>
                 </div>
 
                 <!-- есть рейтинг, но нет отзывов -->
@@ -242,18 +240,18 @@
 
             </div>
 
-            <div class=" py-5">
+            <div class="py-5">
                 <!-- specification -->
-                <div class="c-black mb-4">
+                <div class="c_black mb-4">
                     <h5 class="fw-5 mb-3">Описание</h5>
                     <p>Сложно сказать, почему реплицированные с зарубежных источников, современные исследования набирают популярность среди определённых слоёв населения, а значит, должны быть превращены в посмешище, хотя само их существование приносит несомненную
                         пользу обществу. Также как высокотехнологичная концепция общественного уклада требует определения и уточнения вывода текущих активов. Базовые сценарии поведения пользователей и по сей день остаются уделом либералов, которые жаждут
                         быть подвергнуты целой серии независимых исследований. Каждый из нас понимает очевидную вещь: укрепление и развитие внутренней структуры является качественно новой ступенью модели развития..</p>
                 </div>
                 <!-- parameters -->
-                <div class="mb-4">
+                <div>
                     <h5 class="fw-5 mb-3">Параметры</h5>
-                    <table class="table table-striped">
+                    <table class="table table-striped m-0">
                         <tbody>
                             <tr>
                                 <th>Масса гидромолота:</th>
@@ -282,8 +280,9 @@
                         </tbody>
                     </table>
                 </div>
+
                 <!-- on-map -->
-                <div id="map-sec">
+                <div class="pt-4" id="map-sec">
                     <h5 class="fw-5 mb-3">На карте</h5>
                     <!-- map -->
                     <div class="w-100 position-relative map-sm">
@@ -295,8 +294,8 @@
 
         <!-- SIMILAR PROPOSALS -->
         <section>
-            <h2 class="mb-4 mb-lg-5">Похожие предложения</h2>
-            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 gx-2 gy-3 g-sm-3 g-xxl-4 mb-4 mb-lg-5">
+            <h5 class="mb-4 c_black">Похожие предложения</h5>
+            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 gx-2 gy-3 g-sm-3">
                 <!-- proposal card -->
                 <div>
                     <div class="card shadow-box rounded-4">
@@ -305,7 +304,7 @@
                             <img src="images/img/category.jpeg" alt="#">
                         </div>
                         <div class="card-body d-flex flex-column p-2 pb-3">
-                            <a class="card-title mb-1 c-blue fw-5" href="proposal.html">Экскаватор-погрузчик с гидромолотом</a>
+                            <a class="card-title mb-1 c_blue fw-5" href="proposal.html">Экскаватор-погрузчик с гидромолотом</a>
                             <div class="fs_14 c-gray mb-1 mt-auto">5 км от Вас</div>
                             <div class="fw-5">500 руб./час</div>
                         </div>
@@ -319,7 +318,7 @@
                             <img src="images/img/category4.jpeg" alt="#">
                         </div>
                         <div class="card-body d-flex flex-column p-2 pb-3">
-                            <a class="card-title mb-1 c-blue fw-5" href="proposal.html">Эвакуатор до 5 т</a>
+                            <a class="card-title mb-1 c_blue fw-5" href="proposal.html">Эвакуатор до 5 т</a>
                             <div class="fs_14 c-gray mb-1 mt-auto">2 км от Вас</div>
                             <div class="fw-5">1500 руб./час</div>
                         </div>
@@ -333,7 +332,7 @@
                             <img src="images/img/category2.jpeg" alt="#">
                         </div>
                         <div class="card-body d-flex flex-column p-2 pb-3">
-                            <a class="card-title mb-1 c-blue fw-5" href="proposal.html">Китайские вилочные погрузчики</a>
+                            <a class="card-title mb-1 c_blue fw-5" href="proposal.html">Китайские вилочные погрузчики</a>
                             <div class="fs_14 c-gray mb-1 mt-auto">5 км от Вас</div>
                             <div class="fw-5">500 руб./час</div>
                         </div>
@@ -347,7 +346,7 @@
                             <img src="images/img/category3.jpg" alt="#">
                         </div>
                         <div class="card-body d-flex flex-column p-2 pb-3">
-                            <a class="card-title mb-1 c-blue fw-5" href="proposal.html">Эвакуатор до 5 т</a>
+                            <a class="card-title mb-1 c_blue fw-5" href="proposal.html">Эвакуатор до 5 т</a>
                             <div class="fs_14 c-gray mb-1 mt-auto">2 км от Вас</div>
                             <div class="fw-5">1500 руб./час</div>
                         </div>
@@ -392,15 +391,15 @@
     </div>
 
     <!-- ADD REVIEW -->
-    <div class="offcanvas offcanvas-end border-0 bg-white" tabindex="-1" id="addReview" aria-labelledby="addReviewLabel">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="addReview" aria-labelledby="addReviewLabel">
         <div class="offcanvas-header position-relative z-index-10 py-2 align-items-center justify-content-end bg-white shadow-box">
-            <h1 class="fw-normal m-0 h6 position-absolute translate-middle top-50 start-50">Отправка отзыва</h1>
-            <button type="button" class="btn-close text-reset m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <h6 id="addReviewLabel" class="fw-normal m-0 position-absolute translate-middle top-50 start-50">Отправка отзыва</h6>
+            <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <form class="offcanvas-body py-4 position-relative pb-5">
             <fieldset class="mb-3">
                 <label class="mb-1 mb-lg-0 col-lg-3">Кому:</label>
-                <input class="form-control bg-white" type="text" readonly value="Геннадий С.">
+                <input class="form-control bg-white" type="text" readonly value="Наиль Б.">
             </fieldset>
             <fieldset class="mb-4">
                 <label class="mb-1 mb-lg-0 col-lg-3">Тема:</label>
@@ -422,7 +421,7 @@
                     <label for="1"></label>
                 </div>
             </fieldset>
-            <textarea class="form-control" name="message" id="message" rows="5" placeholder="Введите сообщение..."></textarea>
+            <textarea class="form-control" name="message" id="message" rows="6" placeholder="Введите сообщение..."></textarea>
             <div class="position-fixed bottom-0 p-3 start-0 end-0 bg-white">
                 <button class="btn btn-accent w-100" type="submit">Отправить</button>
             </div>
@@ -430,14 +429,14 @@
     </div>
 
     <!-- ADD MESSAGE -->
-    <div class="offcanvas offcanvas-end border-0 bg-white" tabindex="-1" id="addMsg" aria-labelledby="addMsgLabel">
-        <div class="offcanvas-header position-relative z-index-10 py-2 align-items-center justify-content-end bg-white shadow-box">
-            <h1 class="fw-normal m-0 h6 position-absolute translate-middle top-50 start-50 text-nowrap">Отправка сообщения</h1>
-            <button type="button" class="btn-close text-reset m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="addMsg" aria-labelledby="addMsgLabel">
+        <div class="offcanvas-header position-relative z-index-10 py-2 align-items-center justify-content-end shadow-box">
+            <h6 id="addMsgLabel" class="fw-normal m-0 position-absolute translate-middle top-50 start-50 text-nowrap">Отправка сообщения</h6>
+            <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <form class="offcanvas-body py-4 position-relative pb-5">
             <label class="mb-1 mb-lg-0 col-lg-3">Кому:</label>
-            <input class="form-control bg-white mb-3" type="text" readonly value="Геннадий С.">
+            <input class="form-control bg-white mb-3" type="text" readonly value="Наиль Б.">
             <label class="mb-1 mb-lg-0 col-lg-3">Тема:</label>
             <input class="form-control bg-white mb-3" type="text" readonly value="Экскаватор-погрузчик с гидромолотом">
             <textarea class="form-control" name="message" id="message" rows="6" placeholder="Введите сообщение..." required></textarea>

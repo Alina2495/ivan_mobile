@@ -31,430 +31,323 @@
 </head>
 
 <body>
-    <!-- MOBILE HEADER -->
-    <div class="mobile-header d-md-none container pt-3 pb-1">
-        <div class="shadow-box rounded-4 py-1 px-3 d-flex align-items-center justify-content-between">
-            <!-- Mobile Menu Button -->
-            <button class="btn p-0 mobile-menu-btn rounded-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">Меню</button>
-            <form class="flex-fill mx-3 d-flex align-items-center">
-                <svg class="flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M14 14L11.1 11.1" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <input required type="search" name="" id="" class="form-control border-0 w-100 p-1 ps-2" placeholder="Поиск по предложениям...">
-            </form>
-            <button class="btn mobile-search-btn p-0 rounded-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#searchSettings" aria-controls="searchSettings">Настройки поиска</button>
-        </div>
-    </div>
 
-    <!-- Mobile Menu -->
-    <div class="offcanvas offcanvas-start offcanvas-menu fs-6" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
-        <div class="offcanvas-header border-bottom flex-column">
-            <div class="d-flex mb-3">
-                <div class="rounded-pill avatar-small overflow-hidden me-3 flex-shrink-0">
-                    <!-- если залогинен, то подставить аватарку, если она есть -->
-                    <img class="w-100 h-100" src="https://randomuser.me/api/portraits/men/29.jpg">
+    <!-- HEADER -->
+    <header class="shadow-box p-3 d-flex align-items-center justify-content-between">
+        <a href="#" class="btn p-0">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+    </header>
+
+    <main class="container py-3">
+
+        <!-- ANNOUNCEMENT -->
+        <section class="pb-3">
+            <div class="pb-3 border-bottom">
+                <div class="c-gray mb-2 ms-auto">3 часа назад</div>
+                <img class="w-100 rounded-4 mb-3" src="images/img/map.jpg" alt="">
+                <!-- announcement address -->
+                <div class="address_row mb-3">г. Казань, м. Площадь Габдуллы Тукая</div>
+                <h5 class="c_black fw-normal mb_32">Выкопать яму под колодец</h5>
+                <button class="w-100 btn btn-outline-2 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#editAnn" aria-controls="editAnn">Редактировать объявление</button>
+                <button class="btn btn_del mb-3 w-100 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#delAnn" aria-controls="delAnn"><span>Удалить объявление</span></button>
+                <div>
+                    <span>Заказчик:</span>
+                    <span class="ms-3 c_blue fw-5">Геннадий С.</span>
                 </div>
-                <div class="d-flex flex-column">
-                    <a href="account.html">Владимир Ш.</a>
-                    <span class="c-dark-blue">Индивидуальный предприниматель</span>
+                <div class="c-dark-blue my-2">Индивидуальный предприниматель</div>
+                <div>На сайте с марта 2021 года</div>
+                <div class="d-flex align-items-baseline mb-4">
+                    <!-- rating -->
+                    <div class="d-flex align-items-center flex-shrink-0 c-gray fs-20 me-4">
+                        <span class="checked">&#9733;</span>
+                        <span class="checked">&#9733;</span>
+                        <span class="checked">&#9733;</span>
+                        <span class="checked">&#9733;</span>
+                        <span>&#9733;</span>
+                    </div>
+                    <a href="reviews.html" class="fs-14 c_blue text-nowrap">14 отзывов</a>
+                </div>
+                <div class="d-flex">
+                    <span>Дата исполнения:</span>
+                    <span class="ms-3 c_black fw-5">25.04.21</span>
                 </div>
             </div>
-            <!-- если не вошел в аккаунт -->
-            <!-- <button class="btn c-accent p-0 text-start border-0">Войти или зарегистрироваться</button> -->
-            <button class="btn c-accent p-0 text-start border-0">Выйти</button>
-        </div>
-        <div class="offcanvas-body pt-4">
-            <nav>
-                <ul class="list-unstyled fs-6">
-                    <!-- orders search -->
-                    <li class="d-flex align-items-start mb-4">
-                        <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M21 21L16.65 16.65" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                        <a href="">Поиск предложений</a>
-                    </li>
-                    <!-- favorites -->
-                    <li class="d-flex align-items-start mb-4">
-                        <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20.84 4.61C20.3292 4.09901 19.7228 3.69365 19.0554 3.41709C18.3879 3.14052 17.6725 2.99818 16.95 2.99818C16.2275 2.99818 15.5121 3.14052 14.8446 3.41709C14.1772 3.69365 13.5708 4.09901 13.06 4.61L12 5.67L10.94 4.61C9.9083 3.57831 8.50903 2.99871 7.05 2.99871C5.59096 2.99871 4.19169 3.57831 3.16 4.61C2.1283 5.64169 1.54871 7.04097 1.54871 8.5C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7563 11.2728 22.0329 10.6054C22.3095 9.9379 22.4518 9.22249 22.4518 8.5C22.4518 7.77751 22.3095 7.06211 22.0329 6.39465C21.7563 5.72719 21.351 5.12076 20.84 4.61V4.61Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                        <a href="">Избранное</a>
-                    </li>
-                    <!-- messages -->
-                    <li class="d-flex align-items-start mb-4">
-                        <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M22 6L12 13L2 6" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                        <a href="">Мои сообщения</a>
-                    </li>
-                    <!-- announcements -->
-                    <li class="d-flex align-items-start mb-4">
-                        <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M14 2V8H20" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16 13H8" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16 17H8" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M10 9H9H8" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                        <a href="">Мои объявления</a>
-                    </li>
-                    <!-- offers -->
-                    <li class="d-flex align-items-start mb-4">
-                        <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0)">
-                        <path d="M17.0788 12.1899C17.9604 11.2042 18.5599 9.9613 18.7496 8.58929H19.957C20.4749 8.58929 20.8945 8.16962 20.8945 7.65179C20.8945 7.13397 20.4749 6.71429 19.957 6.71429H19.5943C19.1287 2.92035 15.8855 0 12 0C7.86749 0 4.84387 3.1452 4.4057 6.71429H4.04297C3.52515 6.71429 3.10547 7.13397 3.10547 7.65179C3.10547 8.16943 3.52515 8.58929 4.04297 8.58929H5.25037C5.44006 9.9613 6.03955 11.2042 6.9212 12.1899C2.83319 14.1099 0 18.2351 0 23.0625C0 23.5803 0.419678 24 0.9375 24H23.0625C23.5803 24 24 23.5803 24 23.0625C24 18.2388 21.1703 14.1116 17.0788 12.1899ZM5.18555 22.125H1.9173C2.14874 19.5828 3.32684 17.2661 5.18555 15.5773V22.125ZM6.29938 6.71429C6.55847 5.1319 7.46301 3.76373 8.73285 2.88995V4.5C8.73285 5.01782 9.15253 5.4375 9.67035 5.4375C10.1882 5.4375 10.6078 5.01782 10.6078 4.5V2.04492C11.0539 1.93414 11.5201 1.875 12 1.875C12.4799 1.875 12.9461 1.93414 13.3922 2.04492V4.5C13.3922 5.01782 13.8118 5.4375 14.3297 5.4375C14.8475 5.4375 15.2672 5.01782 15.2672 4.5V2.88995C16.537 3.76373 17.4415 5.1319 17.7006 6.71429H6.29938ZM16.8503 8.58929C16.411 10.866 14.4031 12.5912 12 12.5912C9.59692 12.5912 7.58899 10.866 7.14972 8.58929H16.8503ZM16.9395 22.125H7.06055V14.2253C7.54285 13.9545 8.04639 13.7228 8.56586 13.5355C9.57477 14.1266 10.7485 14.4662 12 14.4662C13.2515 14.4662 14.4252 14.1266 15.4341 13.5355C15.9536 13.723 16.4572 13.9545 16.9395 14.2253V22.125ZM18.8145 22.125V15.5773C20.6743 17.267 21.8513 19.5833 22.0827 22.125H18.8145Z" fill="#3C3939"/>
-                    </g>
-                    <defs>
-                        <clipPath id="clip0">
-                            <rect width="24" height="24" fill="white"/>
-                        </clipPath>
-                    </defs>
-                </svg>
-                        <a href="">Мои предложения</a>
-                    </li>
-                    <!-- settings -->
-                    <li class="d-flex align-items-start mb-4">
-                        <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M19.4 15C19.2669 15.3016 19.2272 15.6362 19.286 15.9606C19.3448 16.285 19.4995 16.5843 19.73 16.82L19.79 16.88C19.976 17.0657 20.1235 17.2863 20.2241 17.5291C20.3248 17.7719 20.3766 18.0322 20.3766 18.295C20.3766 18.5578 20.3248 18.8181 20.2241 19.0609C20.1235 19.3037 19.976 19.5243 19.79 19.71C19.6043 19.896 19.3837 20.0435 19.1409 20.1441C18.8981 20.2448 18.6378 20.2966 18.375 20.2966C18.1122 20.2966 17.8519 20.2448 17.6091 20.1441C17.3663 20.0435 17.1457 19.896 16.96 19.71L16.9 19.65C16.6643 19.4195 16.365 19.2648 16.0406 19.206C15.7162 19.1472 15.3816 19.1869 15.08 19.32C14.7842 19.4468 14.532 19.6572 14.3543 19.9255C14.1766 20.1938 14.0813 20.5082 14.08 20.83V21C14.08 21.5304 13.8693 22.0391 13.4942 22.4142C13.1191 22.7893 12.6104 23 12.08 23C11.5496 23 11.0409 22.7893 10.6658 22.4142C10.2907 22.0391 10.08 21.5304 10.08 21V20.91C10.0723 20.579 9.96512 20.258 9.77251 19.9887C9.5799 19.7194 9.31074 19.5143 9 19.4C8.69838 19.2669 8.36381 19.2272 8.03941 19.286C7.71502 19.3448 7.41568 19.4995 7.18 19.73L7.12 19.79C6.93425 19.976 6.71368 20.1235 6.47088 20.2241C6.22808 20.3248 5.96783 20.3766 5.705 20.3766C5.44217 20.3766 5.18192 20.3248 4.93912 20.2241C4.69632 20.1235 4.47575 19.976 4.29 19.79C4.10405 19.6043 3.95653 19.3837 3.85588 19.1409C3.75523 18.8981 3.70343 18.6378 3.70343 18.375C3.70343 18.1122 3.75523 17.8519 3.85588 17.6091C3.95653 17.3663 4.10405 17.1457 4.29 16.96L4.35 16.9C4.58054 16.6643 4.73519 16.365 4.794 16.0406C4.85282 15.7162 4.81312 15.3816 4.68 15.08C4.55324 14.7842 4.34276 14.532 4.07447 14.3543C3.80618 14.1766 3.49179 14.0813 3.17 14.08H3C2.46957 14.08 1.96086 13.8693 1.58579 13.4942C1.21071 13.1191 1 12.6104 1 12.08C1 11.5496 1.21071 11.0409 1.58579 10.6658C1.96086 10.2907 2.46957 10.08 3 10.08H3.09C3.42099 10.0723 3.742 9.96512 4.0113 9.77251C4.28059 9.5799 4.48572 9.31074 4.6 9C4.73312 8.69838 4.77282 8.36381 4.714 8.03941C4.65519 7.71502 4.50054 7.41568 4.27 7.18L4.21 7.12C4.02405 6.93425 3.87653 6.71368 3.77588 6.47088C3.67523 6.22808 3.62343 5.96783 3.62343 5.705C3.62343 5.44217 3.67523 5.18192 3.77588 4.93912C3.87653 4.69632 4.02405 4.47575 4.21 4.29C4.39575 4.10405 4.61632 3.95653 4.85912 3.85588C5.10192 3.75523 5.36217 3.70343 5.625 3.70343C5.88783 3.70343 6.14808 3.75523 6.39088 3.85588C6.63368 3.95653 6.85425 4.10405 7.04 4.29L7.1 4.35C7.33568 4.58054 7.63502 4.73519 7.95941 4.794C8.28381 4.85282 8.61838 4.81312 8.92 4.68H9C9.29577 4.55324 9.54802 4.34276 9.72569 4.07447C9.90337 3.80618 9.99872 3.49179 10 3.17V3C10 2.46957 10.2107 1.96086 10.5858 1.58579C10.9609 1.21071 11.4696 1 12 1C12.5304 1 13.0391 1.21071 13.4142 1.58579C13.7893 1.96086 14 2.46957 14 3V3.09C14.0013 3.41179 14.0966 3.72618 14.2743 3.99447C14.452 4.26276 14.7042 4.47324 15 4.6C15.3016 4.73312 15.6362 4.77282 15.9606 4.714C16.285 4.65519 16.5843 4.50054 16.82 4.27L16.88 4.21C17.0657 4.02405 17.2863 3.87653 17.5291 3.77588C17.7719 3.67523 18.0322 3.62343 18.295 3.62343C18.5578 3.62343 18.8181 3.67523 19.0609 3.77588C19.3037 3.87653 19.5243 4.02405 19.71 4.21C19.896 4.39575 20.0435 4.61632 20.1441 4.85912C20.2448 5.10192 20.2966 5.36217 20.2966 5.625C20.2966 5.88783 20.2448 6.14808 20.1441 6.39088C20.0435 6.63368 19.896 6.85425 19.71 7.04L19.65 7.1C19.4195 7.33568 19.2648 7.63502 19.206 7.95941C19.1472 8.28381 19.1869 8.61838 19.32 8.92V9C19.4468 9.29577 19.6572 9.54802 19.9255 9.72569C20.1938 9.90337 20.5082 9.99872 20.83 10H21C21.5304 10 22.0391 10.2107 22.4142 10.5858C22.7893 10.9609 23 11.4696 23 12C23 12.5304 22.7893 13.0391 22.4142 13.4142C22.0391 13.7893 21.5304 14 21 14H20.91C20.5882 14.0013 20.2738 14.0966 20.0055 14.2743C19.7372 14.452 19.5268 14.7042 19.4 15V15Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                        <a href="">Настройки</a>
-                    </li>
-                    <!-- add new announcement -->
-                    <li class="d-flex align-items-start mb-4 fw-5">
-                        <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="12" fill="#FF6600"/>
-                    <path d="M12 7.33334V16.6667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M7.33337 12H16.6667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                        <a href="">Добавить объявление</a>
-                    </li>
-                    <!-- add new offer -->
-                    <li class="d-flex align-items-start fw-5">
-                        <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="12" fill="#FF6600"/>
-                    <path d="M12 7.33334V16.6667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M7.33337 12H16.6667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                        <a href="">Добавить предложение</a>
-                    </li>
-                </ul>
-            </nav>
+            <!-- announcement description -->
+            <div class="c_black py-3 border-bottom">
+                Современные технологии достигли такого уровня, что понимание сути ресурсосберегающих технологий предполагает независимые способы реализации системы обучения кадров, соответствующей насущным потребностям.
+            </div>
+        </section>
+
+        <!-- MY RESPONSES -->
+        <section>
+            <h5 class="c_black mb-3">2 отклика по Вашему объявлению</h5>
+            <!-- response preview -->
+            <div class="shadow-box br_10 p-3 mb-3">
+                <div class="d-flex flex-wrap align-items-baseline justify-content-between">
+                    <button class="btn p-0 h5 mb-2 c_blue" type="button" data-bs-toggle="offcanvas" data-bs-target="#fullResp" aria-controls="fullResp">Китайские вилочные погрузчики</button>
+                    <span class="mb-2">1000 за услугу</span>
+                </div>
+                <div class="d-flex mb-2">
+                    <span>Дата исполнения:</span>
+                    <span class="ms-2 c_black">25.04.21</span>
+                </div>
+                <div class="mb-2">
+                    <span>Исполнитель:</span>
+                    <a href="user.html" class="ms-2 c_blue">Наиль Б.</a>
+                </div>
+                <!-- есть рейтинг и отзывы -->
+                <div class="d-flex align-items-baseline c-gray text-nowrap fs_14">
+                    <!-- rating -->
+                    <div class="rated d-flex align-items-center flex-shrink-0 fs-5 me-4">
+                        <span class="checked">&#9733;</span>
+                        <span class="checked">&#9733;</span>
+                        <span class="checked">&#9733;</span>
+                        <span class="checked">&#9733;</span>
+                        <span>&#9733;</span>
+                    </div>
+                    <a class="c_blue" href="user.html">14 отзывов</a>
+                </div>
+                <!-- есть рейтинг, но нет отзывов -->
+                <div class="d-flex align-items-baseline c-gray text-nowrap fs_14">
+                    <!-- rating -->
+                    <div class="rated d-flex align-items-center flex-shrink-0 fs-5 me-4">
+                        <span class="checked">&#9733;</span>
+                        <span class="checked">&#9733;</span>
+                        <span class="checked">&#9733;</span>
+                        <span class="checked">&#9733;</span>
+                        <span>&#9733;</span>
+                    </div>
+                    <span>Отзывов пока нет</span>
+                </div>
+                <!-- нет рейтинга -->
+                <div class="d-flex align-items-baseline fs_14 c-gray text-nowrap">
+                    <span>Оценок пока нет</span>
+                </div>
+            </div>
+            <!-- response preview -->
+            <div class="shadow-box br_10 p-3 mb-3">
+                <div class="d-flex flex-wrap align-items-baseline justify-content-between">
+                    <a href="#" class="h5 mb-2 c_blue">Эвакуатор до 5 т</a>
+                    <span class="mb-2">1000 руб./час</span>
+                </div>
+                <div class="d-flex mb-2">
+                    <span>Дата исполнения:</span>
+                    <span class="ms-2 c_black">25.04.21</span>
+                </div>
+                <div class="mb-2">
+                    <span>Исполнитель:</span>
+                    <a href="user.html" class="ms-2 c_blue">Наиль Б.</a>
+                </div>
+                <!-- есть рейтинг и отзывы -->
+                <div class="d-flex align-items-baseline c-gray text-nowrap fs_14">
+                    <!-- rating -->
+                    <div class="rated d-flex align-items-center flex-shrink-0 fs-5 me-4">
+                        <span class="checked">&#9733;</span>
+                        <span class="checked">&#9733;</span>
+                        <span class="checked">&#9733;</span>
+                        <span class="checked">&#9733;</span>
+                        <span>&#9733;</span>
+                    </div>
+                    <a class="c_blue" href="user.html">14 отзывов</a>
+                </div>
+                <!-- есть рейтинг, но нет отзывов -->
+                <div class="d-flex align-items-baseline c-gray text-nowrap fs_14">
+                    <!-- rating -->
+                    <div class="rated d-flex align-items-center flex-shrink-0 fs-5 me-4">
+                        <span class="checked">&#9733;</span>
+                        <span class="checked">&#9733;</span>
+                        <span class="checked">&#9733;</span>
+                        <span class="checked">&#9733;</span>
+                        <span>&#9733;</span>
+                    </div>
+                    <span>Отзывов пока нет</span>
+                </div>
+                <!-- нет рейтинга -->
+                <div class="d-flex align-items-baseline fs_14 c-gray text-nowrap">
+                    <span>Оценок пока нет</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- BOTTOM NAVIGATION -->
+    <div class="bottom-nav shadow-box bottom-0 p-3">
+        <div class="container d-flex justify-content-around">
+            <!-- forum -->
+            <a href="forum.html">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0035 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.6056 8.7 3.90003C9.87812 3.30496 11.1801 2.99659 12.5 3.00003H13C15.0843 3.11502 17.053 3.99479 18.5291 5.47089C20.0052 6.94699 20.885 8.91568 21 11V11.5Z" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            </a>
+            <!-- search -->
+            <a href="search.html">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 20.9999L16.65 16.6499" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            </a>
+            <!-- messages -->
+            <a href="messages.html" class="position-relative px-1">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 6L12 13L2 6" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            </a>
+            <!-- account -->
+            <a href="account.html">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            </a>
         </div>
     </div>
 
-    <!-- Mobile Search -->
-    <div class="offcanvas offcanvas-end border-0 bg-light-gray" tabindex="-1" id="searchSettings" aria-labelledby="searchSettingsLabel">
-        <div class="offcanvas-header z-index-10 py-2 align-items-center justify-content-start bg-white shadow-box">
-            <button type="button" class="btn-close text-reset m-0 me-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            <h6 class="offcanvas-title" id="searchSettingsLabel">Настройки поиска</h6>
+    <!-- DELETE PROPOSAL -->
+    <div class="offcanvas offcanvas-end border-0" tabindex="-1" id="delAnn" aria-labelledby="delAnnLabel">
+        <div class="offcanvas-header position-relative z-index-10 py-2 align-items-center justify-content-end bg-white shadow-box">
+            <h6 id="delAnnLabel" class="fw-normal m-0 position-absolute translate-middle top-50 start-50 text-nowrap">Удаление объявления</h6>
+            <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <form class="offcanvas-body py-4 position-relative pb-5">
-            <!-- category -->
-            <fieldset class="bg-white rounded-4 pt-2 px-3 pb-4 mb-3">
-                <legend class="mb-3 fs-6 c-gray">Категория</legend>
-                <fieldset class="form-check mb-4">
-                    <input name="category" id="any" type="radio" class="form-check-input me-3" required checked>
-                    <label for="any">Любая категория</label>
-                </fieldset>
-                <fieldset class="form-check mb-4">
-                    <input name="category" id="instrument" type="radio" class="form-check-input me-3" required>
-                    <label for="instrument">Инструменты</label>
-                </fieldset>
-                <fieldset class="form-check mb-4">
-                    <input name="category" id="equipment" type="radio" class="form-check-input me-3" required>
-                    <label for="equipment">Техника</label>
-                </fieldset>
-                <fieldset class="form-check">
-                    <input name="category" id="materials" type="radio" class="form-check-input me-3" required>
-                    <label for="materials">Материалы</label>
-                </fieldset>
-            </fieldset>
-            <!-- city and metro station -->
-            <fieldset class="bg-white rounded-4 pt-2 px-3 pb-4 mb-3">
-                <legend class="mb-1 fs-6 c-gray">Город или регион</legend>
-                <fieldset class="mb-3">
+        <form class="offcanvas-body d-flex flex-column justify-content-center py-4">
+            <p class="text-center mt-auto">Вы уверены, что хотите удалить Ваше объявление?</p>
+            <!-- delete proposal -->
+            <button type="button" class="btn btn-danger w-100 mt-auto">Удалить</button>
+        </form>
+    </div>
 
-                </fieldset>
-                <legend class="mb-1 fs-6 c-gray">Метро</legend>
-                <fieldset>
+    <!-- FULL RESPONSE -->
+    <div class="offcanvas offcanvas-end border-0" tabindex="-1" id="fullResp" aria-labelledby="fullRespLabel">
+        <div class="offcanvas-header z-index-10 py-2 shadow-box">
+            <button type="button" class="btn m-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <form class="offcanvas-body d-flex flex-column pb-4">
+            <img src="images/img/category4.jpeg" alt="#" class="img_rec_1">
+            <a href="proposal.html" class="fs-5 c_blue mt-3 mb-2">Китайские вилочные погрузчики</a>
+            <div class="fs-5 fw-5 c_black">1500 за услугу</div>
+            <div class="d-flex my-2">
+                <span>Дата исполнения:</span>
+                <span class="ms-3 c_black fw-5">25.04.21</span>
+            </div>
+            <a href="user.html" class="fs-5 c_blue">Наиль Б.</a>
+            <span class="c-dark-blue mt-1 mb-2">Организация</span>
+            <!-- есть рейтинг и отзывы -->
+            <div class="d-flex align-items-baseline c-gray text-nowrap fs_14">
+                <!-- rating -->
+                <div class="rated d-flex align-items-center flex-shrink-0 fs-5 me-4">
+                    <span class="checked">&#9733;</span>
+                    <span class="checked">&#9733;</span>
+                    <span class="checked">&#9733;</span>
+                    <span class="checked">&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+                <a class="c_blue" href="user.html">14 отзывов</a>
+            </div>
+            <!-- есть рейтинг, но нет отзывов -->
+            <div class="d-flex align-items-baseline c-gray text-nowrap fs_14">
+                <!-- rating -->
+                <div class="rated d-flex align-items-center flex-shrink-0 fs-5 me-4">
+                    <span class="checked">&#9733;</span>
+                    <span class="checked">&#9733;</span>
+                    <span class="checked">&#9733;</span>
+                    <span class="checked">&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+                <span>Отзывов пока нет</span>
+            </div>
+            <!-- нет рейтинга -->
+            <div class="d-flex align-items-baseline fs_14 c-gray text-nowrap">
+                <span>Оценок пока нет</span>
+            </div>
+            <p class="mt-3 mb-2">Комментарий:</p>
+            <p class="c_black">Таким образом, понимание сути ресурсосберегающих технологий, в своём классическом представлении, допускает внедрение системы обучения кадров, соответствующей насущным потребностям.</p>
+            <a href="proposal.html" class="btn btn-outline-2 w-100 mt-auto mb-3">Перейти к предложению</a>
+            <button type="button" class="btn btn-accent w-100">Написать сообщение</button>
+        </form>
+    </div>
 
-                </fieldset>
+    <!-- EDIT ANNOUNCEMENT -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="editAnn" aria-labelledby="editAnnLabel">
+        <div class="offcanvas-header z-index-10 py-2 align-items-center justify-content-end shadow-box">
+            <h6 id="editAnnLabel" class="fw-normal m-0 position-absolute translate-middle top-50 start-50 text-nowrap">Редактирование объявления</h6>
+            <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <form class="offcanvas-body px-0 pb-4 c_black">
+            <div class="px-3">
+                <!-- announcement category -->
+                <label for="announcement-cat" class="fs-5 mb-2">Категория</label>
+                <select id="announcement-cat" class="form-select mb-3" required>
+                    <option value="equipment">Спецтехника</option>
+                    <option value="instruments">Инструменты</option>
+                    <option value="materials">Материалы</option>
+                </select>
+                <!-- announcement title -->
+                <label for="announcement-title" class="fs-5 mb-2">Название</label>
+                <input id="announcement-title" type="text" class="form-control mb-3" placeholder="Например, экскаватор-погрузчик" required>
+                <!-- announcement date -->
+                <label class="fs-5 mb-2" for="date">Дата:</label>
+                <input type="date" id="date" class="form-control mb-3" value="2021-04-16">
+                <!-- announcement description -->
+                <label for="announcement-desc" class="fs-5 mb-2">Описание</label>
+                <textarea id="announcement-desc" rows="5" class="form-control mb-3" placeholder="Начните ввод..."></textarea>
+            </div>
+            <!-- edit announcement address -->
+            <fieldset class="mb-4">
+                <label for="proposal-address" class="ps-3 fs-5 mb-2">Адрес</label>
+                <!-- search input -->
+                <div class="input-group flex-nowrap">
+                    <input class="form-control border_acc border-start-0 rounded-0 col-10" type="search" id="proposal-address" placeholder="Улица и номер дома">
+                    <button class="btn btn-accent px-4 rounded-0" type="button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21.0001 21L16.6501 16.65" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <!-- map -->
+                <div class="map-lg position-relative">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+                    <button class="btn btn-accent position-absolute start-50 bottom-0 translate-middle px-4">OK</button>
+                </div>
             </fieldset>
-            <!-- price range -->
-            <fieldset class="bg-white rounded-4 pt-2 px-3 pb-4 mb-3">
-                <fieldset class="mb-3">
-                    <label for="price-from" class="mb-1 c-gray">Стоимость, от</label>
-                    <input class="form-control py-1" type="number" name="price" id="price-from">
-                </fieldset>
-                <fieldset>
-                    <label for="price-unto" class="mb-1 c-gray">Стоимость, до</label>
-                    <input class="form-control py-1" type="number" name="price" id="price-unto">
-                </fieldset>
+            <!-- announcement address -->
+            <fieldset class="mb-4 px-3">
+                <label for="proposal-address" class="fs-5 mb-2">Адрес</label>
+                <!-- search input -->
+                <div class="input-group flex-nowrap position-relative">
+                    <input class="form-control bg-white col-10" type="search" id="proposal-address" placeholder="Улица и номер дома" value="ул. Красноможайская, д. 12" readonly>
+                    <button class="w-auto btn p-0 me-1 position-absolute end-0 top-50 translate-middle" type="button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 20H21" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16.5 3.49998C16.8978 3.10216 17.4374 2.87866 18 2.87866C18.2786 2.87866 18.5544 2.93353 18.8118 3.04014C19.0692 3.14674 19.303 3.303 19.5 3.49998C19.697 3.69697 19.8532 3.93082 19.9598 4.18819C20.0665 4.44556 20.1213 4.72141 20.1213 4.99998C20.1213 5.27856 20.0665 5.55441 19.9598 5.81178C19.8532 6.06915 19.697 6.303 19.5 6.49998L7 19L3 20L4 16L16.5 3.49998Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
             </fieldset>
-            <!-- type -->
-            <fieldset class="bg-white rounded-4 pt-2 px-3 pb-4 mb-3">
-                <legend class="mb-3 fs-6 c-gray">Исполнители</legend>
-                <fieldset class="mb-4 form-check">
-                    <input type="checkbox" class="form-check-input" id="member-type-1">
-                    <label for="member-type-1" class="form-check-label">Частное лицо</label>
-                </fieldset>
-                <fieldset class="mb-4 form-check">
-                    <input type="checkbox" class="form-check-input" id="member-type-2">
-                    <label for="member-type-2" class="form-check-label">Индивидуальный предприниматель</label>
-                </fieldset>
-                <fieldset class="form-check">
-                    <input type="checkbox" class="form-check-input" id="member-type-3">
-                    <label for="member-type-3" class="form-check-label">Компания</label>
-                </fieldset>
-            </fieldset>
-            <!-- sorting -->
-            <fieldset class="bg-white rounded-4 pt-2 px-3 pb-4 mb-4">
-                <legend class="mb-3 fs-6 c-gray">Сортировка</legend>
-                <fieldset class="form-check mb-4">
-                    <input name="sorting" id="default" type="radio" class="form-check-input me-3" required checked>
-                    <label for="default">По умолчанию</label>
-                </fieldset>
-                <fieldset class="form-check mb-4">
-                    <input name="sorting" id="expensive" type="radio" class="form-check-input me-3" required>
-                    <label for="expensive">Дороже</label>
-                </fieldset>
-                <fieldset class="form-check mb-4">
-                    <input name="sorting" id="cheaper" type="radio" class="form-check-input me-3" required>
-                    <label for="cheaper">Дешевле</label>
-                </fieldset>
-                <fieldset class="form-check">
-                    <input name="sorting" id="by-distance" type="radio" class="form-check-input me-3" required>
-                    <label for="by-distance">По удалённости</label>
-                </fieldset>
-            </fieldset>
-            <div class="position-fixed bottom-0 p-3 start-0 end-0">
-                <button class="btn btn-accent w-100" type="submit">Показать 0 предложений</button>
+            <!-- save announcement changes -->
+            <div class="px-3">
+                <button class="mt-auto btn btn-lg btn-accent w-100">Сохранить изменения</button>
             </div>
         </form>
     </div>
 
-    <main class="mb-5 proposal-page">
-        <div class="container">
-            <a href="#" class="fw-5 my-3 my-lg-5 d-inline-flex align-items-center">
-                <svg class="me-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>Вернуться назад</span>
-            </a>
-            <div class="row border-bottom pb-3">
-                <div class="col-12 d-flex flex-wrap mb-2">
-                    <h5 class="c-black me-1 me-lg-4 mb-1">Выкопать яму под колодец</h5>
-                    <span class="c-gray mb-1">3 часа назад</span>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <img class="w-100 rounded-4 mb-3" src="images/img/map.jpg" alt="">
-                    <div class="">
-                        <!-- address -->
-                        <div class="mb-2">
-                            <svg class="me-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip1)">
-                                <path d="M14 6.66663C14 11.3333 8 15.3333 8 15.3333C8 15.3333 2 11.3333 2 6.66663C2 5.07533 2.63214 3.5492 3.75736 2.42399C4.88258 1.29877 6.4087 0.666626 8 0.666626C9.5913 0.666626 11.1174 1.29877 12.2426 2.42399C13.3679 3.5492 14 5.07533 14 6.66663Z" fill="#03588C" stroke="#03588C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M8 8.66663C9.10457 8.66663 10 7.7712 10 6.66663C10 5.56206 9.10457 4.66663 8 4.66663C6.89543 4.66663 6 5.56206 6 6.66663C6 7.7712 6.89543 8.66663 8 8.66663Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip1">
-                                <rect width="16" height="16" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>
-                            <span>г. Казань, м. Площадь Габдуллы Тукая</span>
-                        </div>
-                        <div class="c-black">
-                            Современные технологии достигли такого уровня, что понимание сути ресурсосберегающих технологий предполагает независимые способы реализации системы обучения кадров, соответствующей насущным потребностям.
-                        </div>
-                    </div>
-                </div>
-                <!-- right column -->
-                <div class="col-lg-6 d-flex flex-column">
-                    <!-- address and show on map -->
-                    <div class="d-flex flex-wrap justify-content-between mb-1">
-
-                    </div>
-                    <div>
-                        <span>Заказчик:</span>
-                        <span class="ms-3 c-blue fw-5">Георгий Б.</span>
-                    </div>
-
-                    <div class="c-dark-blue my-2">Частное лицо</div>
-                    <div>На сайте с марта 2021 года</div>
-                    <div class="d-flex align-items-baseline mb-4">
-                        <!-- rating -->
-                        <div class="d-flex align-items-center flex-shrink-0 c-gray fs-20 me-4">
-                            <span class="checked">&#9733;</span>
-                            <span class="checked">&#9733;</span>
-                            <span class="checked">&#9733;</span>
-                            <span class="checked">&#9733;</span>
-                            <span>&#9733;</span>
-                        </div>
-                        <a href="reviews.html" class="fs-14 c-blue text-nowrap">14 отзывов</a>
-                    </div>
-                    <div class="d-flex">
-                        <span>Дата исполнения:</span>
-                        <span class="ms-3 c-black fw-5">25.04.21</span>
-                    </div>
-                    <div class="d-inline-flex flex-column align-self-start mt-4">
-                        <a href="announcement-create.html" class="btn btn-outline-2 mb-4">Редактировать объявление</a>
-                        <button class="btn p-0 text-start" data-bs-toggle="modal" data-bs-target="#deleteAnnouncement" type="button">
-                            <svg class="me-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3 6H5H21" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M10 11V17" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M14 11V17" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span>Удалить объявление</span>
-                        </button>
-                    </div>
-
-                </div>
-
-            </div>
-            <div class="col-lg-8 py-5">
-                <div class="h5 c-black mb-40">12 откликов по Вашему объявлению</div>
-                <div class="row mb-4">
-                    <div class="col-lg-3 col-xxl-4">
-                        <img class="w-100 h-100" src="images/img/ivanc.jpg" alt="">
-                    </div>
-                    <div class="col-lg-9 col-xxl-8">
-                        <div class="d-flex flex-wrap justify-content-between">
-                            <div>
-                                <div class="h5 c-blue">Эвакуатор до 5 т</div>
-                                <div class="h5 c-blue">Иван С</div>
-                                <div class="c-dark-blue mb-3">Частное лицо</div>
-                            </div>
-                            <div class="d-flex flex-column align-items-lg-end">
-                                <div class="c-black">1500 руб./час</div>
-                                <div class="d-flex align-items-baseline">
-                                    <!-- rating -->
-                                    <div class="d-flex align-items-center flex-shrink-0 c-gray fs-20 me-4">
-                                        <span class="checked">&#9733;</span>
-                                        <span class="checked">&#9733;</span>
-                                        <span class="checked">&#9733;</span>
-                                        <span class="checked">&#9733;</span>
-                                        <span>&#9733;</span>
-                                    </div>
-                                    <a href="reviews.html" class="fs-14 c-blue text-nowrap">14 отзывов</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex mb-2">
-                            <span>Дата исполнения:</span>
-                            <span class="ms-3 c-black fw-5">25.04.21</span>
-                        </div>
-                        <div>
-                            <span>Комментарий:</span>
-                            <div class="mt-2 c-black col-lg-11 mb-3">Таким образом, понимание сути ресурсосберегающих технологий, в своём классическом представлении, допускает внедрение системы обучения кадров, соответствующей насущным потребностям.</div>
-                            <button class="btn btn-accent px-4 mt-auto">Написать сообщение</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col-lg-3 col-xxl-4">
-                        <img class="w-100 h-100" src="images/img/category.jpeg" alt="">
-                    </div>
-                    <div class="col-lg-9 col-xxl-8">
-                        <div class="d-flex flex-wrap justify-content-between">
-                            <div>
-                                <div class="h5 c-blue">Эвакуатор до 5 т</div>
-                                <div class="h5 c-blue">Иван С</div>
-                                <div class="c-dark-blue mb-3">Частное лицо</div>
-                            </div>
-                            <div class="d-flex flex-column align-items-lg-end">
-                                <div class="c-black">1500 руб./час</div>
-                                <div class="d-flex align-items-baseline">
-                                    <!-- rating -->
-                                    <div class="d-flex align-items-center flex-shrink-0 c-gray fs-20 me-4">
-                                        <span class="checked">&#9733;</span>
-                                        <span class="checked">&#9733;</span>
-                                        <span class="checked">&#9733;</span>
-                                        <span class="checked">&#9733;</span>
-                                        <span>&#9733;</span>
-                                    </div>
-                                    <a href="reviews.html" class="fs-14 c-blue text-nowrap">14 отзывов</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex mb-2">
-                            <span>Дата исполнения:</span>
-                            <span class="ms-3 c-black fw-5">25.04.21</span>
-                        </div>
-                        <div>
-                            <span>Комментарий:</span>
-                            <div class="mt-2 c-black col-lg-11 mb-3">Допускает внедрение системы обучения кадров, соответствующей насущным потребностям.</div>
-                            <button class="btn btn-accent px-4 mt-auto">Написать сообщение</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!-- MOBILE BOTTOM NAVIGATION -->
-    <div class="position-fixed bg-white shadow-box bottom-0 p-3 d-flex d-md-none justify-content-around w-100 start-0 end-0 z-index-10">
-        <!-- forum -->
-        <a href="forum.html">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0035 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.6056 8.7 3.90003C9.87812 3.30496 11.1801 2.99659 12.5 3.00003H13C15.0843 3.11502 17.053 3.99479 18.5291 5.47089C20.0052 6.94699 20.885 8.91568 21 11V11.5Z" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </a>
-        <!-- search -->
-        <a href="search.html">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M21 20.9999L16.65 16.6499" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </a>
-        <!-- messages -->
-        <a href="" class="position-relative px-1">
-            <!-- если есть сообщения показать кружок -->
-            <div class="rounded-circle bg-accent position-absolute end-0 top-0 ms-1"></div>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M22 6L12 13L2 6" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </a>
-        <!-- account -->
-        <a href="account.html">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </a>
-    </div>
-
-    <!-- Delete Proposal Modal -->
-    <div class="modal fade" id="deleteAnnouncement" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="deleteAnnouncementLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-small">
-            <div class="modal-content text-center rounded-4 py-4">
-                <div class="modal-header px-lg-5 c-black">
-                    <h5 class="modal-title" id="deleteAnnouncementLabel">Вы уверены, что хотите удалить Ваше объявление?</h5>
-                    <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <button type="button" class="btn px-4 btn-danger">Удалить</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- scripts -->
     <script src="js/jquery-3.6.0.min.js"></script>
-
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/my-swiper.js"></script>
     <script src="js/extra.js"></script>
     <script src="js/script.js"></script>
-
 </body>
 
 </html>
