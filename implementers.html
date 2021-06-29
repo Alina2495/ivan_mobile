@@ -33,7 +33,7 @@
 <body>
 
     <!-- HEADER -->
-    <header class="shadow-box py-3">
+    <header class="py-3">
         <div class="container d-flex align-items-center">
             <!-- Mobile Menu Button -->
             <button class="btn p-0 mobile-menu-btn rounded-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">Меню</button>
@@ -42,11 +42,11 @@
     </header>
 
     <!-- MENU -->
-    <div class="offcanvas offcanvas-start offcanvas-menu" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas offcanvas-start offcanvas-menu" tabindex="-1" id="mobileMenu">
         <div class="offcanvas-header align-items-start border-bottom flex-column">
             <div class="d-flex mb-3">
-                <div class="rounded-pill avatar-small overflow-hidden me-3 flex-shrink-0">
-                    <!-- если залогинен, то подставить аватарку, если она есть -->
+                <div class="img_md overflow-hidden me-3 flex-shrink-0">
+                    <!-- если залогинен, то подставить аватарку, если она загружена -->
                     <img class="w-100 h-100" alt="" src="https://randomuser.me/api/portraits/men/32.jpg">
                 </div>
                 <!-- скрыть если не вошел -->
@@ -57,6 +57,7 @@
             </div>
             <!-- если не вошел в аккаунт -->
             <button class="btn c-accent p-0 text-start border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#login" aria-controls="login">Войти или зарегистрироваться</button>
+            <!-- если вошел -->
             <button class="btn c-accent p-0 text-start border-0">Выйти</button>
         </div>
         <nav class="offcanvas-body pt-4">
@@ -67,6 +68,14 @@
                         <path d="M20.84 4.61C20.3292 4.09901 19.7228 3.69365 19.0554 3.41709C18.3879 3.14052 17.6725 2.99818 16.95 2.99818C16.2275 2.99818 15.5121 3.14052 14.8446 3.41709C14.1772 3.69365 13.5708 4.09901 13.06 4.61L12 5.67L10.94 4.61C9.9083 3.57831 8.50903 2.99871 7.05 2.99871C5.59096 2.99871 4.19169 3.57831 3.16 4.61C2.1283 5.64169 1.54871 7.04097 1.54871 8.5C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7563 11.2728 22.0329 10.6054C22.3095 9.9379 22.4518 9.22249 22.4518 8.5C22.4518 7.77751 22.3095 7.06211 22.0329 6.39465C21.7563 5.72719 21.351 5.12076 20.84 4.61V4.61Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     <a href="">Избранное</a>
+                </li>
+                <!-- если не залогинен то добавлять атрибут для ссылки data-bs-toggle="offcanvas" и href="#login", который будет направлять на модалку авторизации и так для всех пунктов меню -->
+                <!-- favorites -->
+                <li class="d-flex align-items-start mb-4">
+                    <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.84 4.61C20.3292 4.09901 19.7228 3.69365 19.0554 3.41709C18.3879 3.14052 17.6725 2.99818 16.95 2.99818C16.2275 2.99818 15.5121 3.14052 14.8446 3.41709C14.1772 3.69365 13.5708 4.09901 13.06 4.61L12 5.67L10.94 4.61C9.9083 3.57831 8.50903 2.99871 7.05 2.99871C5.59096 2.99871 4.19169 3.57831 3.16 4.61C2.1283 5.64169 1.54871 7.04097 1.54871 8.5C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7563 11.2728 22.0329 10.6054C22.3095 9.9379 22.4518 9.22249 22.4518 8.5C22.4518 7.77751 22.3095 7.06211 22.0329 6.39465C21.7563 5.72719 21.351 5.12076 20.84 4.61V4.61Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <a data-bs-toggle="offcanvas" href="#login">Избранное</a>
                 </li>
                 <!-- reviews -->
                 <li class="d-flex align-items-start mb-4">
@@ -110,6 +119,13 @@
                     </svg>
                     <a href="">Настройки</a>
                 </li>
+                <!-- forum -->
+                <li class="d-flex align-items-start mb-4">
+                    <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0035 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.6056 8.7 3.90003C9.87812 3.30496 11.1801 2.99659 12.5 3.00003H13C15.0843 3.11502 17.053 3.99479 18.5291 5.47089C20.0052 6.94699 20.885 8.91568 21 11V11.5Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <a href="">Форум</a>
+                </li>
                 <!-- add new announcement -->
                 <li class="d-flex align-items-start mb-4 fw_5 c-accent">
                     <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -133,28 +149,28 @@
     </div>
 
     <!-- MAIN CONTENT -->
-    <main class="container">
+    <main class="pt-3 pb-4">
 
         <!-- announcements section -->
-        <section>
+        <section class="container">
             <!-- annoncements header -->
-            <div class="d-flex justify-content-between align-items-center py-3">
-                <div class="c_black fs-5">Аукцион объявлений</div>
-                <button class="btn mobile-search-btn p-0 rounded-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#searchSettings" aria-controls="searchSettings">Настройки поиска</button>
+            <div class="d-flex justify-content-between align-items-center pb-3">
+                <h2 class="c_black h5 m-0">Аукцион объявлений</h2>
+                <button class="btn mobile-search-btn p-0 rounded-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#annSearch" aria-controls="annSearch">Настройки поиска</button>
             </div>
             <!-- announcement preview -->
-            <div class="d-flex flex-wrap br_10 shadow-box p-3 mb-3">
+            <div class="d-flex flex-wrap br_10 shad_box p-3 mb-3">
                 <div class="col-8 d-flex flex-fill flex-column">
                     <a href="announcement.html" class="h5 mb-1 c_blue">Выкопать яму под колодец</a>
                     <time class="c-gray">3 часа назад</time>
                     <div class="mt-auto d-flex flex-wrap justify-content-between align-items-end">
                         <div>
                             <div class="d-flex">
-                                <span class="me-2 me-lg-4 c-primary">Дата исполнения:</span>
+                                <span class="me-2 me-lg-4 c_primary">Дата исполнения:</span>
                                 <span class="fw_5 c_black">25.04.21</span>
                             </div>
                             <div class="d-flex">
-                                <span class="me-2 me-lg-4 c-primary">Адрес:</span>
+                                <span class="me-2 me-lg-4 c_primary">Адрес:</span>
                                 <span class="fw_5 c_black">ул. Гарифьянова, д.12 к.32/2</span>
                             </div>
                         </div>
@@ -162,120 +178,162 @@
                 </div>
             </div>
             <!-- announcement preview -->
-            <div class="d-flex flex-wrap br_10 shadow-box p-3 mb-3">
+            <div class="d-flex flex-wrap br_10 shad_box p-3 mb-3">
                 <div class="col-8 d-flex flex-fill flex-column">
                     <a href="announcement.html" class="h5 mb-1 c_blue">Выкопать яму под колодец</a>
                     <time class="c-gray">3 часа назад</time>
                     <div class="mt-auto d-flex flex-wrap justify-content-between align-items-end">
                         <div>
                             <div class="d-flex">
-                                <span class="me-2 me-lg-4 c-primary">Дата исполнения:</span>
+                                <span class="me-2 me-lg-4 c_primary">Дата исполнения:</span>
                                 <span class="fw_5 c_black">25.04.21</span>
                             </div>
                             <div class="d-flex">
-                                <span class="me-2 me-lg-4 c-primary">Адрес:</span>
+                                <span class="me-2 me-lg-4 c_primary">Адрес:</span>
                                 <span class="fw_5 c_black">ул. Гарифьянова, д.12 к.32/2</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="btn btn-outline-2 w-100">Показать еще</button>
+            <button class="btn btn_2 w-100">Показать еще</button>
         </section>
 
         <!-- NEWS SECTION -->
-        <section class="news-list pe-0 pe-md-3 mb-md-5 py-5 mb-5">
-            <h2 class="mb-4 mb-lg-5 mt-lg-5">Новости</h2>
-            <div class="row row-cols-auto mx-0 flex-nowrap gx-2 news-group d-flex mb-lg-4">
-                <div class="d-flex flex-wrap mb-4 pb-md-2">
-                    <div class="col-md-5 col-xl-3 mb-2 mb-md-0">
-                        <time class="c-gray mb-1 d-inline-block d-md-none" datetime="2021-03-31">31.03.21</time>
-                        <img class="br_10 w-100" src="images/img/ecovata.jpg" alt="" loading="lazy">
-                    </div>
-                    <div class="col-md-7 ps-md-3 ps-xl-4 d-flex flex-column">
-                        <time class="c-gray d-none d-md-block mb-auto" datetime="2021-03-31">31.03.21</time>
-                        <h5 class="mb-md-3">Как определить лучшего исполнителя</h5>
-                        <div class="new-text d-none d-md-block">Есть над чем задуматься: сделанные на базе интернет-аналитики выводы лишь добавляют фракционных разногласий и объективно рассмотрены соответствующими инстанциями. В своём стремлении повысить качество жизни, они забывают, что высокотехнологичная
-                            концепция общественного уклада влечёт за собой процесс внедрения и модернизации глубокомысленных рассуждений.
-                        </div>
-                        <a class="c_blue d-none d-md-block mt-auto" href="new.html">Подробнее<svg width="35" height="24" viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.29167 12H27.7083" stroke="#4083D1" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M20 6L28 12L20 18" stroke="#4083D1" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
+        <section class="news-list ps-2 pe-0 pe-md-3 pt-4">
+            <h5 class="mb-3">Новости</h5>
+            <div class="news-group row row-cols-auto mx-0 flex-nowrap gx-2">
+                <!-- new preview -->
+                <div>
+                    <time class="c-gray" datetime="2021-03-31">31.03.21</time>
+                    <img class="br_10 w-100 my-2" src="https://randomwordgenerator.com/img/picture-generator/david-kovalenko-G85VuTpw6jg-unsplash.jpg" alt="" loading="lazy">
+                    <a href="new.html">Выбираем лучшего заказчика для быстрых сделок</a>
                 </div>
-                <div class="d-flex flex-wrap mb-4 pb-md-2">
-                    <div class="col-md-5 col-xl-3 mb-2 mb-md-0">
-                        <time class="c-gray mb-1 d-inline-block d-md-none" datetime="2021-03-31">31.03.21</time>
-                        <img class="br_10 w-100" src="images/img/new.jpeg" alt="" loading="lazy">
-                    </div>
-                    <div class="col-md-7 ps-md-3 ps-xl-4 d-flex flex-column">
-                        <time class="c-gray d-none d-md-block mb-auto" datetime="2021-03-31">31.03.21</time>
-                        <h5 class="mb-md-3">Выбираем лучшие материалы для строительства</h5>
-                        <div class="d-none d-md-block">
-                            Соответствующими инстанциями. В своём стремлении повысить качество жизни, они забывают, что высокотехнологичная концепция общественного уклада влечет за собой процесс внедрения и модернизации глубокомысленных рассуждений.</div>
-                        <a class="c_blue d-none d-md-block mt-auto" href="new.html">Подробнее<svg width="35" height="24" viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.29167 12H27.7083" stroke="#4083D1" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M20 6L28 12L20 18" stroke="#4083D1" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
+                <!-- new preview -->
+                <div>
+                    <time class="c-gray" datetime="2021-03-31">23.04.21</time>
+                    <img class="br_10 w-100 my-2" src="https://randomwordgenerator.com/img/picture-generator/ga3a5c4ac7dd43b0b917414f6afb1225bd3336d6c39b63fc82a7140360c8b34823bf7918581f55f0e8b111c20d56a3c82_640.jpg" alt="" loading="lazy">
+                    <a href="new.html">Как определить лучшего исполнителя</a>
                 </div>
-                <div class="d-flex flex-wrap mb-4 pb-md-2">
-                    <div class="col-md-5 col-xl-3 mb-2 mb-md-0">
-                        <time class="c-gray mb-1 d-inline-block d-md-none" datetime="2021-03-31">31.03.21</time>
-                        <img class="br_10 w-100" src="images/img/category2.jpeg" alt="" loading="lazy">
-                    </div>
-                    <div class="col-md-7 ps-md-3 ps-xl-4 d-flex flex-column">
-                        <time class="c-gray d-none d-md-block mb-auto" datetime="2021-03-31">31.03.21</time>
-                        <h5 class="mb-md-3">Как определить лучшего исполнителя</h5>
-                        <div class="d-none d-md-block">Соответствующими инстанциями. В своём стремлении повысить качество жизни, они забывают, что высокотехнологичная концепция общественного уклада влечет за собой процесс внедрения и модернизации глубокомысленных рассуждений.</div>
-                        <a class="c_blue d-none d-md-block mt-auto" href="new.html">Подробнее<svg width="35" height="24" viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.29167 12H27.7083" stroke="#4083D1" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M20 6L28 12L20 18" stroke="#4083D1" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
+                <!-- new preview -->
+                <div>
+                    <time class="c-gray" datetime="2021-03-31">06.06.21</time>
+                    <img class="br_10 w-100 my-2" src="images/img/ecovata.jpg" alt="" loading="lazy">
+                    <a href="new.html">Новый раздел на сайте</a>
                 </div>
-            </div>
-            <div class="d-flex col-12 pe-3 mt-md-3">
-                <a href="news.html" class="btn btn-outline-2 btn-lg mx-auto w-100">Все новости</a>
             </div>
         </section>
 
     </main>
 
     <!-- BOTTOM NAVIGATION -->
-    <div class="bottom-nav position-fixed bg-white shadow-box bottom-0 p-3 w-100 start-0 end-0 z-index-10">
+    <footer class="p-3">
         <div class="container d-flex justify-content-around">
-            <!-- forum -->
+            <!-- home -->
             <a href="forum.html">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0035 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.6056 8.7 3.90003C9.87812 3.30496 11.1801 2.99659 12.5 3.00003H13C15.0843 3.11502 17.053 3.99479 18.5291 5.47089C20.0052 6.94699 20.885 8.91568 21 11V11.5Z" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"/>
+                    <path d="M9 22V12H15V22"/>
+                </svg>
             </a>
             <!-- search -->
             <a href="search.html">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M21 20.9999L16.65 16.6499" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"/>
+                    <path d="M21 20.9999L16.65 16.6499"/>
+                </svg>
             </a>
             <!-- messages -->
             <a href="messages.html" class="position-relative px-1">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M22 6L12 13L2 6" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+                <!-- если есть сообщения показать кружок удалить класс d-none -->
+                <div class="d-none rounded-circle bg-accent position-absolute end-0 top-0 ms-1"></div>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"/>
+                    <path d="M22 6L12 13L2 6"/>
+                </svg>
             </a>
             <!-- account -->
             <a href="account.html">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"/>
+                    <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"/>
+                </svg>
             </a>
+        </div>
+    </footer>
+
+    <!-- ANNOUNCEMENTS SEARCH SETTINGS -->
+    <div class="offcanvas offcanvas-end bg-light-gray" tabindex="-1" id="annSearch" aria-labelledby="annSearchLabel">
+        <div class="offcanvas-header py-2 justify-content-end shad_box">
+            <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <h6 class="offcanvas-title position-absolute translate-middle start-50 top-50 h6 fw-normal m-0" id="annSearchLabel">Настройки поиска</h6>
+        </div>
+        <form class="offcanvas-body py-4 position-relative pb-5">
+            <!-- category -->
+            <fieldset class="bg-white br_10 pt-2 px-3 pb-4 mb-3">
+                <legend class="mb-3 fs-6 c-gray">Категория</legend>
+                <fieldset class="form-check mb-4">
+                    <input name="category" id="any" type="radio" class="form-check-input me-3" required checked>
+                    <label for="any">Любая категория</label>
+                </fieldset>
+                <fieldset class="form-check mb-4">
+                    <input name="category" id="instrument" type="radio" class="form-check-input me-3" required>
+                    <label for="instrument">Инструменты</label>
+                </fieldset>
+                <fieldset class="form-check mb-4">
+                    <input name="category" id="equipment" type="radio" class="form-check-input me-3" required>
+                    <label for="equipment">Техника</label>
+                </fieldset>
+                <fieldset class="form-check">
+                    <input name="category" id="materials" type="radio" class="form-check-input me-3" required>
+                    <label for="materials">Материалы</label>
+                </fieldset>
+            </fieldset>
+            <!-- city and metro station -->
+            <fieldset class="bg-white br_10 pt-2 px-3 pb-4">
+                <legend class="mb-1 fs-6 c-gray">Город или регион</legend>
+                <input class="form-control mb-3" type="text" value="Россия" />
+                <legend class="mb-1 fs-6 c-gray">Метро</legend>
+
+                <!-- custom select single -->
+                <div class="div">
+                    <div class="custom-select me-2">
+                        <button type="button"></button>
+                        <div class="cs-options search-list">
+                            <input type="search" placeholder="Поиск" class="search-in-list">
+                            <div class="radio">
+                                <input type="checkbox" name="country" value="ru" checked>
+                                <label>Авиастроительная</label>
+                            </div>
+                            <div class="radio">
+                                <input type="checkbox" name="country" value="uk">
+                                <label>Северный вокзал</label>
+                            </div>
+                            <div class="radio">
+                                <input type="checkbox" name="country" value="fr">
+                                <label>Яшьлек</label>
+                            </div>
+                            <div class="radio">
+                                <input type="checkbox" name="country" value="ru">
+                                <label>Козья слобода</label>
+                            </div>
+                            <div class="radio">
+                                <input type="checkbox" name="country" value="uk">
+                                <label>Площадь Габдуллы Тукая</label>
+                            </div>
+                            <div class="radio">
+                                <input type="checkbox" name="country" value="fr">
+                                <label>Суконная слобода</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </fieldset>
+        </form>
+        <div class="bottom-0 p-3 start-0 end-0">
+            <button class="btn btn-accent w-100" type="submit">Показать 0 предложений</button>
         </div>
     </div>
 

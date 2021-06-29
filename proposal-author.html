@@ -33,7 +33,7 @@
 <body>
 
     <!-- HEADER -->
-    <header class="shadow-box p-3 d-flex align-items-center justify-content-between">
+    <header class="shad_box p-3 d-flex align-items-center justify-content-between">
         <a href="#" class="btn p-0">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -173,7 +173,7 @@
                     <span class="fs-5 fw_5">1500 руб./час</span>
                 </div>
                 <div class="d-flex flex-column mb-4">
-                    <button class="mt-auto btn btn-outline-2 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#editProp" aria-controls="editProp">Редактировать предложение</button>
+                    <button class="mt-auto btn btn_2 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#editProp" aria-controls="editProp">Редактировать предложение</button>
                     <button class="btn fw_5 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#delProp" aria-controls="delProp">
                         <svg class="me-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3 6H5H21" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -301,7 +301,7 @@
             <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 gx-2 gy-3 g-sm-3 g-xxl-4 mb-4 mb-lg-5">
                 <!-- proposal card -->
                 <div>
-                    <div class="card shadow-box br_10">
+                    <div class="card shad_box br_10">
                         <button class="btn-fav btn-i position-absolute end-0 top-0 m-2" data-bs-toggle="button"></button>
                         <div class="img">
                             <img src="images/img/category.jpeg" alt="#">
@@ -315,7 +315,7 @@
                 </div>
                 <!-- proposal card -->
                 <div>
-                    <div class="card shadow-box br_10">
+                    <div class="card shad_box br_10">
                         <button class="btn-fav btn-i position-absolute end-0 top-0 m-2 active" data-bs-toggle="button"></button>
                         <div class="img">
                             <img src="images/img/category4.jpeg" alt="#">
@@ -329,7 +329,7 @@
                 </div>
                 <!-- proposal card -->
                 <div>
-                    <div class="card shadow-box br_10">
+                    <div class="card shad_box br_10">
                         <button class="btn-fav btn-i position-absolute end-0 top-0 m-2" data-bs-toggle="button"></button>
                         <div class="img">
                             <img src="images/img/category2.jpeg" alt="#">
@@ -343,7 +343,7 @@
                 </div>
                 <!-- proposal card -->
                 <div>
-                    <div class="card shadow-box br_10">
+                    <div class="card shad_box br_10">
                         <button class="btn-fav btn-i position-absolute end-0 top-0 m-2" data-bs-toggle="button"></button>
                         <div class="img">
                             <img src="images/img/category3.jpg" alt="#">
@@ -361,7 +361,7 @@
     </main>
 
     <!-- BOTTOM NAVIGATION -->
-    <div class="position-fixed bg-white shadow-box bottom-0 p-3 d-flex d-md-none justify-content-around w-100 start-0 end-0 z-index-10">
+    <div class="position-fixed bg-white shad_box bottom-0 p-3 d-flex d-md-none justify-content-around w-100 start-0 end-0 z-index-10">
         <!-- forum -->
         <a href="forum.html">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -395,7 +395,7 @@
 
     <!-- EDIT PROPOSAL -->
     <div class="offcanvas offcanvas-end bg-white" tabindex="-1" id="editProp" aria-labelledby="editPropLabel">
-        <div class="offcanvas-header position-relative z-index-10 py-2 align-items-center justify-content-end bg-white shadow-box">
+        <div class="offcanvas-header position-relative z-index-10 py-2 align-items-center justify-content-end bg-white shad_box">
             <h6 id="editPropLabel" class="fw-normal m-0 position-absolute translate-middle top-50 start-50 text-nowrap">Редактирование предложения</h6>
             <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
@@ -555,7 +555,7 @@
                     </fieldset>
 
                     <!-- add param group btn -->
-                    <button type="button" class="btn btn-outline-2 order-last p-0 border-0 add-param-group" onclick="addInput(this)">
+                    <button type="button" class="btn btn_2 order-last p-0 border-0 add-param-group" onclick="addInput(this)">
                     <svg class="me-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 5V19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M5 12H19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -571,7 +571,7 @@
 
     <!-- DELETE PROPOSAL -->
     <div class="offcanvas offcanvas-end border-0" tabindex="-1" id="delProp" aria-labelledby="delPropLabel">
-        <div class="offcanvas-header position-relative z-index-10 py-2 align-items-center justify-content-end bg-white shadow-box">
+        <div class="offcanvas-header position-relative z-index-10 py-2 align-items-center justify-content-end bg-white shad_box">
             <h6 id="delPropLabel" class="fw-normal m-0 position-absolute translate-middle top-50 start-50 text-nowrap">Удаление предложения</h6>
             <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>

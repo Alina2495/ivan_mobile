@@ -13,38 +13,15 @@ passBtn.forEach(function(item, i, arr) {
     });
 });
 
-// write review on user page
-$(".write-review-btn").on('click', function() {
-    $(".write-review-btn").prop('disabled', 'true');
-    $(".write-review-block").removeClass('d-none');
-    $(".bg-block").removeClass('d-none');
-});
-
-$(".write-review-close").on('click', function() {
-    $(".write-review-btn").removeAttr('disabled');
-    $(".write-review-block").addClass('d-none');
-    $(".bg-block").addClass('d-none');
-});
-
-// send message on user page
-$(".write-message-btn").on('click', function() {
-    $(".write-message-block").removeClass('d-none');
-    $(".bg-block").removeClass('d-none');
-});
-
-$(".write-message-close").on('click', function() {
-    $(".write-message-block").addClass('d-none');
-    $(".bg-block").addClass('d-none');
-});
-
-
-// delete dialogue on user page
-$(".dialogue-delete-btn").on('click', function() {
-    $(".write-message-block").removeClass('d-none');
-});
 
 /* adding new parametres inputs */
 function addInput(elem) {
     let cloneInput = elem.previousElementSibling.cloneNode(true);
     elem.before(cloneInput);
 }
+
+
+// on account page show unverified email window
+$(".unverified_trigger").on('click', function() {
+    $(".unverified_window").removeClass('d-none');
+});

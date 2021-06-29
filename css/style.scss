@@ -130,6 +130,16 @@ main {
     }
 }
 
+.pop-cat-tabs {
+    button {
+        color: $accent;
+        &.active {
+            background-color: $accent !important;
+            color: $white !important;
+        }
+    }
+}
+
 .auction {
     .img {
         padding-top: 55%;
@@ -152,20 +162,11 @@ main {
 }
 
 .news-list {
+    line-height: 20px;
     img {
         height: 272px;
         object-fit: cover;
         object-position: center;
-    }
-    .new-text {
-        max-height: 100px;
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-    p {
-        margin-bottom: 0;
     }
 }
 
@@ -194,6 +195,9 @@ h6,
     &_10 {
         font-size: 0.63em;
     }
+    &_12 {
+        font-size: 0.75em;
+    }
     &_14 {
         font-size: 0.88em;
     }
@@ -212,7 +216,7 @@ h6,
     &-accent {
         color: $accent;
     }
-    &-primary {
+    &_primary {
         color: $primary;
     }
     &_blue {
@@ -251,23 +255,9 @@ a {
     }
 }
 
-.unconfirmed {
-    .unc-svg {
-        &::before {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-left: 8px solid transparent;
-            border-right: 8px solid transparent;
-            border-top: 10px solid $white;
-            top: -11px;
-            filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.3));
-        }
-    }
-    >div {
-        bottom: 34px;
-    }
+// ACCOUNT PAGE
+.unverified_window {
+    z-index: 20;
 }
 
 // BACKGROUNDS
@@ -286,7 +276,7 @@ a {
     }
 }
 
-.shadow-box {
+.shad_box {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -436,11 +426,12 @@ button {
             border-color: grayscale($accent);
         }
     }
-    &-outline-2 {
+    &_2 {
         color: $accent;
         border: 1px solid $accent;
-        &:hover {
-            color: darken($accent, 1);
+        &:active {
+            background-color: $accent;
+            color: $white;
         }
         &:disabled {
             background-color: grayscale($accent);
@@ -671,6 +662,7 @@ input[type=date] {
     &-header {
         position: relative;
         background-color: $white;
+        z-index: 20;
     }
     &-menu {
         max-width: 90%;
@@ -859,11 +851,11 @@ input[type=date] {
     .btn-lg {
         font-size: 16px;
     }
-    .page-item {
-        .page-link {
-            font-size: 1rem;
-        }
-    }
+    // .page-item {
+    //     .page-link {
+    //         font-size: 1rem;
+    //     }
+    // }
     .map-container-lg {
         height: 633px;
     }
@@ -873,12 +865,6 @@ input[type=date] {
             overflow-x: scroll;
             >* {
                 width: 45%;
-            }
-            h5 {
-                font-family: 'Roboto', sans-serif;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 20px;
             }
         }
         img {
@@ -933,4 +919,116 @@ input[type=date] {
             z-index: 3;
         }
     }
+}
+
+
+/************
+CUSTOM SELECT
+************/
+
+input[type=text]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=text]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+.custom-select {
+    position: relative;
+    width: 100%;
+    border: 1px solid #D2D2D2;
+}
+
+.custom-select button {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--lightengray);
+    text-align: left;
+    padding: .7em 1.5em .7em 1em;
+    background: url(../images/icons/label_btn.svg) no-repeat;
+    background-position: calc(100% - .5em) 55%;
+    background-size: 1.25em 1.25em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cs-options {
+    position: absolute;
+    top: calc(100% - 1px);
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    display: none;
+    border: 1px solid var(--lightengray);
+    background-color: var(--coolwhite);
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.cs-options::-webkit-scrollbar {
+    width: 0;
+}
+
+.cs-options.opened {
+    display: block;
+}
+
+
+/* checkbox for select customization */
+
+.cs-options .radio:not(:last-child) {
+    position: relative;
+    border-bottom: 1px solid var(--lightengray);
+}
+
+.cs-options .radio {
+    position: relative;
+}
+
+.cs-options .radio label {
+    position: relative;
+    z-index: 1;
+    padding: .7em 1em;
+    transition: .2s;
+    line-height: 1.2em;
+    display: block;
+    width: 100%;
+    background-color: $white;
+    border-bottom: 1px solid #D2D2D2;
+    background: $white url('../images/icons/label.svg') no-repeat center right;
+}
+
+.cs-options .radio input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+
+.cs-options .radio input[type="checkbox"]:checked~label {
+    background-color: $accent;
+    color: $white;
+    background: $accent url('../images/icons/label_check.svg') no-repeat center right;
 }

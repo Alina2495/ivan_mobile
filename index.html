@@ -37,7 +37,7 @@
         <div class="container d-flex align-items-center">
             <!-- Mobile Menu Button -->
             <button class="btn p-0 mobile-menu-btn rounded-0 me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">Меню</button>
-            <div class="shadow-box flex-fill br_10 py-1 px-3 d-flex align-items-center justify-content-between">
+            <div class="shad_box flex-fill br_10 py-1 px-3 d-flex align-items-center justify-content-between">
                 <form class="flex-fill me-3 d-flex align-items-center">
                     <svg class="flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -51,7 +51,7 @@
     </header>
 
     <!-- MENU -->
-    <div class="offcanvas offcanvas-start offcanvas-menu" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas offcanvas-start offcanvas-menu" tabindex="-1" id="mobileMenu">
         <div class="offcanvas-header align-items-start border-bottom flex-column">
             <div class="d-flex mb-3">
                 <div class="img_md overflow-hidden me-3 flex-shrink-0">
@@ -78,7 +78,7 @@
                     </svg>
                     <a href="">Избранное</a>
                 </li>
-                <!-- если не залогинен то добавлять атрибут для ссылки data-bs-toggle="offcanvas" и href="#login", который будет направлять на модалку авторизации -->
+                <!-- если не залогинен то добавлять атрибут для ссылки data-bs-toggle="offcanvas" и href="#login", который будет направлять на модалку авторизации и так для всех пунктов меню -->
                 <!-- favorites -->
                 <li class="d-flex align-items-start mb-4">
                     <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -159,7 +159,7 @@
 
     <!-- SEARCH SETTINGS -->
     <div class="offcanvas offcanvas-end border-0 bg-light-gray" tabindex="-1" id="searchSettings" aria-labelledby="searchSettingsLabel">
-        <div class="offcanvas-header z-index-10 py-2 align-items-center justify-content-start bg-white shadow-box">
+        <div class="offcanvas-header z-index-10 py-2 align-items-center justify-content-start bg-white shad_box">
             <button type="button" class="btn-close text-reset m-0 me-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             <h6 class="offcanvas-title" id="searchSettingsLabel">Настройки поиска</h6>
         </div>
@@ -186,6 +186,7 @@
             </fieldset>
             <!-- city and metro station -->
             <fieldset class="bg-white br_10 pt-2 px-3 pb-4 mb-3">
+
                 <!-- custom select single -->
                 <div class="custom-select single mb-3">
                     <button type="button">Не выбрано</button>
@@ -386,20 +387,20 @@
 
         <!-- POPULAR PROPOSAL SECTION -->
         <section class="pb-4">
-            <div class="container pe-0 my-lg-5">
-                <div class="d-flex justify-content-between align-items-center mb-lg-5">
+            <div class="container pe-0">
+                <div class="d-flex justify-content-between align-items-center">
                     <h2 class="mb-0 d-none d-md-block me-auto">Популярные предложения</h2>
                     <div class="d-flex w-100 overflow-x-scroll pop-cat-tabs py-3 py-md-0">
-                        <button class="bg-white br_30 px-3 py-1 me-2 border-0 shadow-box active">Любая категория</button>
-                        <button class="bg-white br_30 px-3 py-1 me-2 border-0 shadow-box">Инструменты</button>
-                        <button class="bg-white br_30 px-3 py-1 me-2 border-0 shadow-box">Спецтехника</button>
-                        <button class="bg-white br_30 px-3 py-1 border-0 shadow-box">Материалы</button>
+                        <button class="bg-white br_30 px-3 py-1 me-2 border-0 shad_box active">Любая категория</button>
+                        <button class="bg-white br_30 px-3 py-1 me-2 border-0 shad_box">Инструменты</button>
+                        <button class="bg-white br_30 px-3 py-1 me-2 border-0 shad_box">Спецтехника</button>
+                        <button class="bg-white br_30 px-3 py-1 border-0 shad_box">Материалы</button>
                     </div>
                 </div>
-                <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 gx-2 gy-3 g-sm-3 g-xxl-4 mb-4 mb-lg-5 pe-3">
+                <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 gx-2 gy-3 g-sm-3 mb-4 pe-3">
                     <!-- card -->
                     <div>
-                        <div class="card shadow-box br_10 h-100 border-0">
+                        <div class="card shad_box br_10 h-100 border-0">
                             <button class="btn-fav btn-i position-absolute btn p-1 z-index-10 end-0 top-0 m-2" data-bs-toggle="button"></button>
                             <div class="img">
                                 <img src="images/img/drel.png" alt="">
@@ -424,7 +425,7 @@
                     </div>
                 </div>
                 <div class="col-12 pe-3">
-                    <button class="btn btn-outline-2 btn-lg mx-auto w-100">Показать ещё</button>
+                    <button class="btn btn_2 w-100">Показать ещё</button>
                 </div>
             </div>
         </section>
@@ -449,7 +450,7 @@
         <section class="find-on-map container px-0 py-4 py-md-5 position-relative">
             <h2 class="mb-3 ps-3 ps-md-0">Найти на карте</h2>
             <p class="mb-4 col-xl-10 d-none d-md-block">А также стремящиеся вытеснить традиционное производство, нанотехнологии являются только методом политического участия и смешаны с не уникальными данными до степени совершённой неузнаваемости, из-за чего возрастает их статус бесполезности</p>
-            <div class="input-group align-items-center shadow-box z-index-10">
+            <div class="input-group align-items-center shad_box z-index-10">
                 <div class="col-2 col-lg-3 col-xxl-2 d-none d-md-block">
                     <select class="form-select" aria-label="Выбор категории">
                                     <option selected>Любая категория</option>
@@ -477,12 +478,12 @@
                             </button>
             </div>
             <div class="d-flex w-100 overflow-x-scroll pop-cat-tabs ps-3 py-3 position-absolute z-index-10">
-                <button class="bg-white br_30 px-3 py-1 me-2 border-0 shadow-box active">В радиусе 1 км</button>
-                <button class="bg-white br_30 px-3 py-1 me-2 border-0 shadow-box">В радиусе 5 км</button>
-                <button class="bg-white br_30 px-3 py-1 me-2 border-0 shadow-box">В радиусе 10 км</button>
-                <button class="bg-white br_30 px-3 py-1 me-2 border-0 shadow-box">В радиусе 25 км</button>
-                <button class="bg-white br_30 px-3 py-1 me-2 border-0 shadow-box">В радиусе 50 км</button>
-                <button class="bg-white br_30 px-3 py-1 border-0 shadow-box">В радиусе 100 км</button>
+                <button class="bg-white br_30 px-3 py-1 me-2 border-0 shad_box active">В радиусе 1 км</button>
+                <button class="bg-white br_30 px-3 py-1 me-2 border-0 shad_box">В радиусе 5 км</button>
+                <button class="bg-white br_30 px-3 py-1 me-2 border-0 shad_box">В радиусе 10 км</button>
+                <button class="bg-white br_30 px-3 py-1 me-2 border-0 shad_box">В радиусе 25 км</button>
+                <button class="bg-white br_30 px-3 py-1 me-2 border-0 shad_box">В радиусе 50 км</button>
+                <button class="bg-white br_30 px-3 py-1 border-0 shad_box">В радиусе 100 км</button>
             </div>
             <!-- map -->
             <div class="w-100 position-relative map-container-lg">
@@ -494,60 +495,15 @@
         <section class="news-list container pe-0 pe-md-3 mb-md-5 py-4 mb-5">
             <h2 class="mb-4 mb-lg-5 mt-lg-5">Новости</h2>
             <div class="row row-cols-auto mx-0 flex-nowrap flex-md-wrap gx-2 news-group d-flex mb-lg-4">
-                <div class="d-flex flex-wrap mb-4 pb-md-2">
-                    <div class="col-md-5 col-xl-3 mb-2 mb-md-0">
-                        <time class="c-gray mb-1 d-inline-block d-md-none" datetime="2021-03-31">31.03.21</time>
-                        <img class="br_10 w-100" src="images/img/ecovata.jpg" alt="" loading="lazy">
-                    </div>
-                    <div class="col-md-7 ps-md-3 ps-xl-4 d-flex flex-column">
-                        <time class="c-gray d-none d-md-block mb-auto" datetime="2021-03-31">31.03.21</time>
-                        <h5 class="mb-md-3">Как определить лучшего исполнителя</h5>
-                        <div class="new-text d-none d-md-block">Есть над чем задуматься: сделанные на базе интернет-аналитики выводы лишь добавляют фракционных разногласий и объективно рассмотрены соответствующими инстанциями. В своём стремлении повысить качество жизни, они забывают, что высокотехнологичная
-                            концепция общественного уклада влечёт за собой процесс внедрения и модернизации глубокомысленных рассуждений.
-                        </div>
-                        <a class="c_blue d-none d-md-block mt-auto" href="new.html">Подробнее<svg width="35" height="24" viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.29167 12H27.7083" stroke="#4083D1" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M20 6L28 12L20 18" stroke="#4083D1" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="d-flex flex-wrap mb-4 pb-md-2">
-                    <div class="col-md-5 col-xl-3 mb-2 mb-md-0">
-                        <time class="c-gray mb-1 d-inline-block d-md-none" datetime="2021-03-31">31.03.21</time>
-                        <img class="br_10 w-100" src="images/img/new.jpeg" alt="" loading="lazy">
-                    </div>
-                    <div class="col-md-7 ps-md-3 ps-xl-4 d-flex flex-column">
-                        <time class="c-gray d-none d-md-block mb-auto" datetime="2021-03-31">31.03.21</time>
-                        <h5 class="mb-md-3">Выбираем лучшие материалы для строительства</h5>
-                        <div class="d-none d-md-block">
-                            Соответствующими инстанциями. В своём стремлении повысить качество жизни, они забывают, что высокотехнологичная концепция общественного уклада влечет за собой процесс внедрения и модернизации глубокомысленных рассуждений.</div>
-                        <a class="c_blue d-none d-md-block mt-auto" href="new.html">Подробнее<svg width="35" height="24" viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.29167 12H27.7083" stroke="#4083D1" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M20 6L28 12L20 18" stroke="#4083D1" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="d-flex flex-wrap mb-4 pb-md-2">
-                    <div class="col-md-5 col-xl-3 mb-2 mb-md-0">
-                        <time class="c-gray mb-1 d-inline-block d-md-none" datetime="2021-03-31">31.03.21</time>
-                        <img class="br_10 w-100" src="images/img/category2.jpeg" alt="" loading="lazy">
-                    </div>
-                    <div class="col-md-7 ps-md-3 ps-xl-4 d-flex flex-column">
-                        <time class="c-gray d-none d-md-block mb-auto" datetime="2021-03-31">31.03.21</time>
-                        <h5 class="mb-md-3">Как определить лучшего исполнителя</h5>
-                        <div class="d-none d-md-block">Соответствующими инстанциями. В своём стремлении повысить качество жизни, они забывают, что высокотехнологичная концепция общественного уклада влечет за собой процесс внедрения и модернизации глубокомысленных рассуждений.</div>
-                        <a class="c_blue d-none d-md-block mt-auto" href="new.html">Подробнее<svg width="35" height="24" viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.29167 12H27.7083" stroke="#4083D1" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M20 6L28 12L20 18" stroke="#4083D1" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
+                <!-- new preview -->
+                <div>
+                    <time class="c-gray mb-1 d-inline-block d-md-none" datetime="2021-03-31">31.03.21</time>
+                    <img class="br_10 w-100" src="images/img/ecovata.jpg" alt="" loading="lazy">
+                    <a href="new.html">Как определить лучшего исполнителя</a>
                 </div>
             </div>
-            <div class="d-flex col-12 pe-3 mt-md-3">
-                <a href="news.html" class="btn btn-outline-2 btn-lg mx-auto w-100">Все новости</a>
+            <div class="d-flex col-12 pe-3 mt-3">
+                <a href="news.html" class="btn btn_2 w-100">Все новости</a>
             </div>
         </section>
 
@@ -557,7 +513,7 @@
     <footer class="p-3">
         <div class="container d-flex justify-content-around">
             <!-- home -->
-            <a href="forum.html">
+            <a href="index.html">
                 <svg class="active" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"/>
                     <path d="M9 22V12H15V22"/>
@@ -573,7 +529,7 @@
             <!-- messages -->
             <a href="messages.html" class="position-relative px-1">
                 <!-- если есть сообщения показать кружок удалить класс d-none -->
-                <div class="d-none rounded-circle bg-accent position-absolute end-0 top-0 ms-1"></div>
+                <div class="rounded-circle bg-accent position-absolute end-0 top-0 ms-1"></div>
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"/>
                 <path d="M22 6L12 13L2 6"/>
@@ -591,7 +547,7 @@
 
     <!-- LOGIN -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="login" aria-labelledby="loginLabel">
-        <div class="offcanvas-header align-items-center justify-content-end shadow-box">
+        <div class="offcanvas-header align-items-center justify-content-end shad_box">
             <h6 class="position-absolute translate-middle start-50 top-50 fw-normal m-0">Вход</h6>
             <button class="btn p-0" data-bs-dismiss="offcanvas" aria-label="Close">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -620,8 +576,8 @@
 
     <!-- SIGNIN -->
     <div class="offcanvas offcanvas-start fs-6" tabindex="-1" id="signin" aria-labelledby="signinLabel">
-        <div class="offcanvas-header align-items-center justify-content-between shadow-box position-relative">
-            <button class="btn p-0">
+        <div class="offcanvas-header align-items-center justify-content-between shad_box position-relative">
+            <button class="btn p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#login" aria-controls="login">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -644,8 +600,8 @@
 
     <!-- SIGNIN 2 -->
     <div class="offcanvas offcanvas-start fs-6" tabindex="-1" id="signin2" aria-labelledby="signin2Label">
-        <div class="offcanvas-header align-items-center justify-content-between shadow-box position-relative">
-            <button class="btn p-0">
+        <div class="offcanvas-header align-items-center justify-content-between shad_box position-relative">
+            <button class="btn p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin" aria-controls="signin">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -665,14 +621,14 @@
             <input class="form-control mb-3" type="text" placeholder="Код подтверждения">
             <button class="btn p-0 text-start c_blue fw-normal mb-4">Получить новый код</button>
             <button class="btn btn-accent px-4 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin3" aria-controls="signin3">Подтвердить</button>
-            <button class="btn btn-outline-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin" aria-controls="signin">Изменить E-mail</button>
+            <button class="btn btn_2" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin" aria-controls="signin">Изменить E-mail</button>
         </form>
     </div>
 
     <!-- SIGNIN 3 -->
     <div class="offcanvas offcanvas-start fs-6" tabindex="-1" id="signin3" aria-labelledby="signin3Label">
-        <div class="offcanvas-header align-items-center justify-content-between shadow-box position-relative">
-            <button class="btn p-0">
+        <div class="offcanvas-header align-items-center justify-content-between shad_box position-relative">
+            <button class="btn p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin2" aria-controls="signin2">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -691,7 +647,7 @@
             <input class="form-control mb-3" type="text" placeholder="Имя профиля">
             <div class="position-relative mb-4">
                 <input type="password" class="form-control" placeholder="Придумайте пароль" id="create-pass">
-                <button data-state="invisible" type="button" class="btn p-0 px-3 position-absolute end-0 top-0 bg-white h-100 pass_btn"></button>
+                <button data-state="invisible" type="button" class="btn p-0 px-3 position-absolute end-0 top-0 h-100 pass_btn"></button>
             </div>
             <button class="btn btn-accent px-4 mb-5" type="button">Продолжить</button>
             <p class="mx-auto"><span>У вас есть учетная запись?</span> <button class="btn p-0 c_blue border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#login" aria-controls="login">Войти</button></p>
@@ -700,8 +656,8 @@
 
     <!-- PASS RECOVERY -->
     <div class="offcanvas offcanvas-start fs-6" tabindex="-1" id="pass-rec" aria-labelledby="pass-recLabel">
-        <div class="offcanvas-header align-items-center justify-content-between shadow-box position-relative">
-            <button class="btn p-0">
+        <div class="offcanvas-header align-items-center justify-content-between shad_box position-relative">
+            <button class="btn p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#login" aria-controls="login">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
