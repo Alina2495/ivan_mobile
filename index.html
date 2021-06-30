@@ -76,7 +76,7 @@
                     <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M20.84 4.61C20.3292 4.09901 19.7228 3.69365 19.0554 3.41709C18.3879 3.14052 17.6725 2.99818 16.95 2.99818C16.2275 2.99818 15.5121 3.14052 14.8446 3.41709C14.1772 3.69365 13.5708 4.09901 13.06 4.61L12 5.67L10.94 4.61C9.9083 3.57831 8.50903 2.99871 7.05 2.99871C5.59096 2.99871 4.19169 3.57831 3.16 4.61C2.1283 5.64169 1.54871 7.04097 1.54871 8.5C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7563 11.2728 22.0329 10.6054C22.3095 9.9379 22.4518 9.22249 22.4518 8.5C22.4518 7.77751 22.3095 7.06211 22.0329 6.39465C21.7563 5.72719 21.351 5.12076 20.84 4.61V4.61Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <a href="">Избранное</a>
+                    <a href="favorites.html">Избранное</a>
                 </li>
                 <!-- если не залогинен то добавлять атрибут для ссылки data-bs-toggle="offcanvas" и href="#login", который будет направлять на модалку авторизации и так для всех пунктов меню -->
                 <!-- favorites -->
@@ -93,7 +93,7 @@
                         <path d="M18 20V4" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M6 20V16" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <a href="">Мои отзывы</a>
+                    <a href="reviews.html">Мои отзывы</a>
                 </li>
                 <!-- announcements -->
                 <li class="d-flex align-items-start mb-4">
@@ -104,9 +104,9 @@
                         <path d="M16 17H8" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M10 9H9H8" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <a href="">Мои объявления</a>
+                    <a href="announcements.html">Мои объявления</a>
                 </li>
-                <!-- offers -->
+                <!-- proposals -->
                 <li class="d-flex align-items-start mb-4">
                     <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0)">
@@ -118,7 +118,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <a href="">Мои предложения</a>
+                    <a href="proposals.html">Мои предложения</a>
                 </li>
                 <!-- settings -->
                 <li class="d-flex align-items-start mb-4">
@@ -126,32 +126,34 @@
                         <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M19.4 15C19.2669 15.3016 19.2272 15.6362 19.286 15.9606C19.3448 16.285 19.4995 16.5843 19.73 16.82L19.79 16.88C19.976 17.0657 20.1235 17.2863 20.2241 17.5291C20.3248 17.7719 20.3766 18.0322 20.3766 18.295C20.3766 18.5578 20.3248 18.8181 20.2241 19.0609C20.1235 19.3037 19.976 19.5243 19.79 19.71C19.6043 19.896 19.3837 20.0435 19.1409 20.1441C18.8981 20.2448 18.6378 20.2966 18.375 20.2966C18.1122 20.2966 17.8519 20.2448 17.6091 20.1441C17.3663 20.0435 17.1457 19.896 16.96 19.71L16.9 19.65C16.6643 19.4195 16.365 19.2648 16.0406 19.206C15.7162 19.1472 15.3816 19.1869 15.08 19.32C14.7842 19.4468 14.532 19.6572 14.3543 19.9255C14.1766 20.1938 14.0813 20.5082 14.08 20.83V21C14.08 21.5304 13.8693 22.0391 13.4942 22.4142C13.1191 22.7893 12.6104 23 12.08 23C11.5496 23 11.0409 22.7893 10.6658 22.4142C10.2907 22.0391 10.08 21.5304 10.08 21V20.91C10.0723 20.579 9.96512 20.258 9.77251 19.9887C9.5799 19.7194 9.31074 19.5143 9 19.4C8.69838 19.2669 8.36381 19.2272 8.03941 19.286C7.71502 19.3448 7.41568 19.4995 7.18 19.73L7.12 19.79C6.93425 19.976 6.71368 20.1235 6.47088 20.2241C6.22808 20.3248 5.96783 20.3766 5.705 20.3766C5.44217 20.3766 5.18192 20.3248 4.93912 20.2241C4.69632 20.1235 4.47575 19.976 4.29 19.79C4.10405 19.6043 3.95653 19.3837 3.85588 19.1409C3.75523 18.8981 3.70343 18.6378 3.70343 18.375C3.70343 18.1122 3.75523 17.8519 3.85588 17.6091C3.95653 17.3663 4.10405 17.1457 4.29 16.96L4.35 16.9C4.58054 16.6643 4.73519 16.365 4.794 16.0406C4.85282 15.7162 4.81312 15.3816 4.68 15.08C4.55324 14.7842 4.34276 14.532 4.07447 14.3543C3.80618 14.1766 3.49179 14.0813 3.17 14.08H3C2.46957 14.08 1.96086 13.8693 1.58579 13.4942C1.21071 13.1191 1 12.6104 1 12.08C1 11.5496 1.21071 11.0409 1.58579 10.6658C1.96086 10.2907 2.46957 10.08 3 10.08H3.09C3.42099 10.0723 3.742 9.96512 4.0113 9.77251C4.28059 9.5799 4.48572 9.31074 4.6 9C4.73312 8.69838 4.77282 8.36381 4.714 8.03941C4.65519 7.71502 4.50054 7.41568 4.27 7.18L4.21 7.12C4.02405 6.93425 3.87653 6.71368 3.77588 6.47088C3.67523 6.22808 3.62343 5.96783 3.62343 5.705C3.62343 5.44217 3.67523 5.18192 3.77588 4.93912C3.87653 4.69632 4.02405 4.47575 4.21 4.29C4.39575 4.10405 4.61632 3.95653 4.85912 3.85588C5.10192 3.75523 5.36217 3.70343 5.625 3.70343C5.88783 3.70343 6.14808 3.75523 6.39088 3.85588C6.63368 3.95653 6.85425 4.10405 7.04 4.29L7.1 4.35C7.33568 4.58054 7.63502 4.73519 7.95941 4.794C8.28381 4.85282 8.61838 4.81312 8.92 4.68H9C9.29577 4.55324 9.54802 4.34276 9.72569 4.07447C9.90337 3.80618 9.99872 3.49179 10 3.17V3C10 2.46957 10.2107 1.96086 10.5858 1.58579C10.9609 1.21071 11.4696 1 12 1C12.5304 1 13.0391 1.21071 13.4142 1.58579C13.7893 1.96086 14 2.46957 14 3V3.09C14.0013 3.41179 14.0966 3.72618 14.2743 3.99447C14.452 4.26276 14.7042 4.47324 15 4.6C15.3016 4.73312 15.6362 4.77282 15.9606 4.714C16.285 4.65519 16.5843 4.50054 16.82 4.27L16.88 4.21C17.0657 4.02405 17.2863 3.87653 17.5291 3.77588C17.7719 3.67523 18.0322 3.62343 18.295 3.62343C18.5578 3.62343 18.8181 3.67523 19.0609 3.77588C19.3037 3.87653 19.5243 4.02405 19.71 4.21C19.896 4.39575 20.0435 4.61632 20.1441 4.85912C20.2448 5.10192 20.2966 5.36217 20.2966 5.625C20.2966 5.88783 20.2448 6.14808 20.1441 6.39088C20.0435 6.63368 19.896 6.85425 19.71 7.04L19.65 7.1C19.4195 7.33568 19.2648 7.63502 19.206 7.95941C19.1472 8.28381 19.1869 8.61838 19.32 8.92V9C19.4468 9.29577 19.6572 9.54802 19.9255 9.72569C20.1938 9.90337 20.5082 9.99872 20.83 10H21C21.5304 10 22.0391 10.2107 22.4142 10.5858C22.7893 10.9609 23 11.4696 23 12C23 12.5304 22.7893 13.0391 22.4142 13.4142C22.0391 13.7893 21.5304 14 21 14H20.91C20.5882 14.0013 20.2738 14.0966 20.0055 14.2743C19.7372 14.452 19.5268 14.7042 19.4 15V15Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <a href="">Настройки</a>
+                    <a href="account.html">Настройки</a>
                 </li>
                 <!-- forum -->
                 <li class="d-flex align-items-start mb-4">
                     <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0035 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.6056 8.7 3.90003C9.87812 3.30496 11.1801 2.99659 12.5 3.00003H13C15.0843 3.11502 17.053 3.99479 18.5291 5.47089C20.0052 6.94699 20.885 8.91568 21 11V11.5Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <a href="">Форум</a>
+                    <a href="forum.html">Форум</a>
                 </li>
                 <!-- add new announcement -->
+                <!-- после создания объявления перекидывает на страницу объявления автора -->
                 <li class="d-flex align-items-start mb-4 fw_5 c-accent">
                     <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="12" cy="12" r="12" fill="#FF6600"/>
                         <path d="M12 7.33334V16.6667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M7.33337 12H16.6667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <a href="">Добавить объявление</a>
+                    <a data-bs-toggle="offcanvas" href="#createAnn">Добавить объявление</a>
                 </li>
                 <!-- add new offer -->
+                <!-- после создания предложения перекидывает на страницу предложения автора -->
                 <li class="d-flex align-items-start fw_5 c-accent">
                     <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="12" cy="12" r="12" fill="#FF6600"/>
                         <path d="M12 7.33334V16.6667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M7.33337 12H16.6667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <a href="">Добавить предложение</a>
+                    <a data-bs-toggle="offcanvas" href="#createProp">Добавить предложение</a>
                 </li>
             </ul>
         </nav>
@@ -724,6 +726,246 @@
             <h5 class="mb-3 text-center">Восстановление пароля</h5>
             <input class="form-control mb-4" type="tel" placeholder="Введите Ваш e-mail">
             <button class="btn btn_1 px-4 mb-5" type="button">Сбросить текущий пароль</button>
+        </form>
+    </div>
+
+    <!-- CREATE PROPOSAL -->
+    <div class="offcanvas offcanvas-end bg-white" tabindex="-1" id="createProp" aria-labelledby="createPropLabel">
+        <div class="offcanvas-header position-relative z-index-10 py-2 align-items-center justify-content-end bg-white shad_box">
+            <h6 id="createPropLabel" class="fw-normal m-0 position-absolute translate-middle top-50 start-50 text-nowrap">Новое предложение</h6>
+            <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <form class="offcanvas-body px-0 position-relative pb-4 c_black">
+            <div class="px-3">
+                <!-- category -->
+                <fieldset class="mb-3">
+                    <label for="proposal-cat" class="fs-5 mb-2">Категория</label>
+                    <select id="proposal-cat" class="form-select" required>
+                <option value="equipment">Спецтехника</option>
+                <option value="instruments">Инструменты</option>
+                <option value="materials">Материалы</option>
+            </select>
+                </fieldset>
+                <!-- title -->
+                <fieldset class="mb-3">
+                    <label for="proposal-title" class="fs-5 mb-2">Название</label>
+                    <input id="proposal-title" type="text" class="form-control" placeholder="Например, экскаватор-погрузчик" required>
+                </fieldset>
+                <!-- VIN только для спецтехники! -->
+                <fieldset class="mb-4">
+                    <label for="proposal-vin" class="fs-5 mb-2">VIN-код</label>
+                    <input id="proposal-vin" type="text" class="form-control" placeholder="Например, XTA210990Y2766389" required>
+                </fieldset>
+                <!-- photo -->
+                <fieldset class="img-upload d-flex flex-column mb-3 mb-md-4">
+                    <div class="d-flex flex-wrap justify-content-between mb-3 mb-md-4">
+                        <label for="" class="fs-5 c_black me-4">Загрузите фотографию:</label>
+                        <div class="position-relative c-accent fw_5">
+                            <input type="file" class="w-100 h-100" multiple>
+                            <span class="d-flex align-items-center">
+                        <svg class="me-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 5V19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5 12H19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Добавить</span>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- drop img -->
+                    <div class="img-drop position-relative rounded-3 border align-self-start">
+                        <input type="file" class="top-0 start-0 w-100 h-100">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M35 25V31.6667C35 32.5507 34.6488 33.3986 34.0237 34.0237C33.3986 34.6488 32.5507 35 31.6667 35H8.33333C7.44928 35 6.60143 34.6488 5.97631 34.0237C5.35119 33.3986 5 32.5507 5 31.6667V25" stroke="#4DA9FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M11.6663 16.6667L19.9997 25L28.333 16.6667" stroke="#4DA9FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20 25V5" stroke="#4DA9FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                    </div>
+                </fieldset>
+                <!-- description -->
+                <fieldset class="mb-4">
+                    <label for="proposal-desc" class="fs-5 mb-2">Описание</label>
+                    <textarea id="proposal-desc" rows="4" class="form-control" placeholder="Начните ввод..."></textarea>
+                </fieldset>
+            </div>
+
+            <!-- address edit -->
+            <fieldset class="mb-3">
+                <label for="proposal-address" class="ps-3 fs-5 mb-2">Адрес</label>
+                <!-- search input -->
+                <div class="input-group flex-nowrap">
+                    <input class="form-control border_acc border-start-0 rounded-0 col-10" type="search" id="proposal-address" placeholder="Улица и номер дома">
+                    <button class="btn btn_1 px-4 rounded-0" type="button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21.0001 21L16.6501 16.65" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                </div>
+                <!-- map -->
+                <div class="map_lg position-relative">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+                    <button class="btn btn_1 position-absolute start-50 bottom-0 translate-middle px-4">OK</button>
+                </div>
+            </fieldset>
+
+            <!-- address -->
+            <fieldset class="mb-4 px-3">
+                <label for="proposal-address" class="fs-5 mb-2">Адрес</label>
+                <!-- search input -->
+                <div class="input-group flex-nowrap position-relative">
+                    <input class="form-control bg-white col-10" type="search" id="proposal-address" placeholder="Улица и номер дома" value="ул. Красноможайская, д. 12" readonly>
+                    <button class="w-auto btn p-0 me-1 position-absolute end-0 top-50 translate-middle" type="button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 20H21" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.5 3.49998C16.8978 3.10216 17.4374 2.87866 18 2.87866C18.2786 2.87866 18.5544 2.93353 18.8118 3.04014C19.0692 3.14674 19.303 3.303 19.5 3.49998C19.697 3.69697 19.8532 3.93082 19.9598 4.18819C20.0665 4.44556 20.1213 4.72141 20.1213 4.99998C20.1213 5.27856 20.0665 5.55441 19.9598 5.81178C19.8532 6.06915 19.697 6.303 19.5 6.49998L7 19L3 20L4 16L16.5 3.49998Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                </div>
+            </fieldset>
+
+            <div class="px-3">
+                <!-- price -->
+                <fieldset class="mb-4 d-flex flex-wrap align-items-sm-center">
+                    <label class="mb-2 fs-5" for="price">Стоимость:</label>
+                    <div class="row gx-2 gx-md-3">
+                        <div class="col-6">
+                            <input id="price" type="number" class="form-control d-inline-block" value="1500" placeholder="Цена" required>
+                        </div>
+                        <div class="col-6">
+                            <select class="form-select d-inline-block" aria-label="Выбор категории" required>
+                        <option selected>руб./час</option>
+                        <option>за услугу</option>
+                    </select>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- parameters -->
+                <legend class="fs-5 mb-3">Параметры</legend>
+                <fieldset class="mb-5 col-lg-10 add-param-block flex-column">
+                    <!-- hidden param group -->
+                    <fieldset class="mb-4">
+                        <fieldset class="mb-3">
+                            <label for="parameters-name" class="c_black mb-2">Введите название параметра:</label>
+                            <div class="d-flex flex-nowrap align-items-center">
+                                <div class="col-10">
+                                    <input id="parameters-name" type="text" class="form-control" placeholder="Например, масса">
+                                </div>
+                                <!-- delete param group -->
+                                <button class="p-0 btn flex-shrink-0 ms-4 col-auto">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 6H5H21" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                                    
+                        </button>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <label for="parameters-value" class="c_black mb-2">Введите значение параметра:</label>
+                            <input id="parameters-value" type="text" class="form-control" placeholder="Например, 10кг">
+                        </fieldset>
+                    </fieldset>
+
+                    <!-- visible param group -->
+                    <fieldset class="mb-4">
+                        <fieldset class="mb-3">
+                            <label for="parameters-name" class="c_black mb-2">Введите название параметра:</label>
+                            <div class="d-flex flex-nowrap align-items-center">
+                                <div class="col-10">
+                                    <input id="parameters-name" type="text" class="form-control" placeholder="Например, масса">
+                                </div>
+                                <!-- delete param group -->
+                                <button class="p-0 btn flex-shrink-0 ms-3 col-auto">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 6H5H21" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                                    
+                        </button>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <label for="parameters-value" class="c_black mb-2">Введите значение параметра:</label>
+                            <div class="col-10">
+                                <input id="parameters-value" type="text" class="form-control" placeholder="Например, 10кг">
+                            </div>
+                        </fieldset>
+                    </fieldset>
+
+                    <!-- add param group btn -->
+                    <button type="button" class="btn btn_2 order-last p-0 border-0 add-param-group" onclick="addInput(this)">
+                        <svg class="me-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 5V19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5 12H19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Добавить параметр</span>
+                    </button>
+                </fieldset>
+                <button class="btn btn_1 w-100">Опубликовать</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- CREATE ANNOUNCEMENT -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="createAnn" aria-labelledby="createAnnLabel">
+        <div class="offcanvas-header z-index-10 py-2 align-items-center justify-content-end shad_box">
+            <h6 id="createAnnLabel" class="fw-normal m-0 position-absolute translate-middle top-50 start-50 text-nowrap">Новое объявление</h6>
+            <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <form class="offcanvas-body px-0 pb-4 c_black">
+            <div class="px-3">
+                <!-- announcement category -->
+                <label for="announcement-cat" class="fs-5 mb-2">Категория</label>
+                <select id="announcement-cat" class="form-select mb-3" required>
+                    <option value="equipment">Спецтехника</option>
+                    <option value="instruments">Инструменты</option>
+                    <option value="materials">Материалы</option>
+                </select>
+                <!-- announcement title -->
+                <label for="announcement-title" class="fs-5 mb-2">Название</label>
+                <input id="announcement-title" type="text" class="form-control mb-3" placeholder="Например, экскаватор-погрузчик" required>
+                <!-- announcement date -->
+                <label class="fs-5 mb-2" for="date">Дата:</label>
+                <input type="date" id="date" class="form-control mb-3" value="2021-04-16">
+                <!-- announcement description -->
+                <label for="announcement-desc" class="fs-5 mb-2">Описание</label>
+                <textarea id="announcement-desc" rows="5" class="form-control mb-3" placeholder="Начните ввод..."></textarea>
+            </div>
+            <!-- edit announcement address -->
+            <fieldset class="mb-4">
+                <label for="ann-address" class="ps-3 fs-5 mb-2">Адрес</label>
+                <!-- search input -->
+                <div class="input-group flex-nowrap">
+                    <input class="form-control border_acc border-start-0 rounded-0 col-10" type="search" id="ann-address" placeholder="Улица и номер дома">
+                    <button class="btn btn_1 px-4 rounded-0" type="button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21.0001 21L16.6501 16.65" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <!-- map -->
+                <div class="map-lg position-relative">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+                    <button class="btn btn_1 position-absolute start-50 bottom-0 translate-middle px-4">OK</button>
+                </div>
+            </fieldset>
+            <!-- announcement address -->
+            <fieldset class="mb-4 px-3">
+                <label for="proposal-address" class="fs-5 mb-2">Адрес</label>
+                <!-- search input -->
+                <div class="input-group flex-nowrap position-relative">
+                    <input class="form-control bg-white col-10" type="search" id="proposal-address" placeholder="Улица и номер дома" value="ул. Красноможайская, д. 12" readonly>
+                    <button class="w-auto btn p-0 me-1 position-absolute end-0 top-50 translate-middle" type="button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 20H21" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16.5 3.49998C16.8978 3.10216 17.4374 2.87866 18 2.87866C18.2786 2.87866 18.5544 2.93353 18.8118 3.04014C19.0692 3.14674 19.303 3.303 19.5 3.49998C19.697 3.69697 19.8532 3.93082 19.9598 4.18819C20.0665 4.44556 20.1213 4.72141 20.1213 4.99998C20.1213 5.27856 20.0665 5.55441 19.9598 5.81178C19.8532 6.06915 19.697 6.303 19.5 6.49998L7 19L3 20L4 16L16.5 3.49998Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </fieldset>
+            <!-- save announcement changes -->
+            <div class="px-3">
+                <button class="btn btn_lg btn_1 w-100">Опубликовать</button>
+            </div>
         </form>
     </div>
 

@@ -15,21 +15,20 @@ $danger: #EB1919;
 // *******************************************
 html {
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     color: $primary;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 header,
 footer {
-    z-index: 30;
-    position: fixed;
-    width: 100%;
-    left: 0;
-    right: 0;
     background-color: $white;
 }
 
@@ -40,14 +39,7 @@ footer,
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-header {
-    top: 0;
-    max-height: 51px;
-}
-
 footer {
-    bottom: 0;
-    max-height: 58px;
     svg {
         width: 24px;
         height: 24px;
@@ -70,7 +62,9 @@ footer {
 }
 
 main {
-    margin: 50px 0 58px 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-grow: 1;
 }
 
 .z-index-10 {
@@ -111,7 +105,12 @@ main {
 }
 
 .rated {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    color: #C4C4C4;
     line-height: 1em;
+    font-size: 20px;
 }
 
 .add_rate {

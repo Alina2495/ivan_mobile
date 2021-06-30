@@ -1,21 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 html {
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   color: #3C3939;
   overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
 }
 
 header,
 footer {
-  z-index: 30;
-  position: fixed;
-  width: 100%;
-  left: 0;
-  right: 0;
   background-color: white;
 }
 
@@ -25,16 +29,6 @@ footer,
 .btn_pills button {
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-header {
-  top: 0;
-  max-height: 51px;
-}
-
-footer {
-  bottom: 0;
-  max-height: 58px;
 }
 
 footer svg {
@@ -59,7 +53,11 @@ footer .rounded-circle {
 }
 
 main {
-  margin: 50px 0 58px 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .z-index-10 {
@@ -108,7 +106,17 @@ main {
 }
 
 .rated {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  color: #C4C4C4;
   line-height: 1em;
+  font-size: 20px;
 }
 
 .add_rate input {
