@@ -25,12 +25,18 @@ body {
 
 header,
 footer {
-    z-index: 20;
+    z-index: 30;
     position: fixed;
     width: 100%;
     left: 0;
     right: 0;
     background-color: $white;
+}
+
+header,
+footer,
+.card,
+.btn_pills button {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -71,6 +77,10 @@ main {
     z-index: 10;
 }
 
+.zi_20 {
+    z-index: 20;
+}
+
 .dropdown-menu {
     input:checked+label {
         color: $accent;
@@ -80,7 +90,16 @@ main {
 .card {
     height: 100%;
     border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    &-body {
+        display: flex;
+        flex-direction: column;
+    }
     &-title {
+        flex-grow: 1;
+        margin-bottom: 4px;
         max-height: 40px;
         overflow: hidden;
         line-height: 20px;
@@ -130,9 +149,14 @@ main {
     }
 }
 
-.pop-cat-tabs {
+.btn_pills {
     button {
+        border-radius: 30px;
         color: $accent;
+        background-color: $white;
+        padding: 4px 16px;
+        margin-right: 8px;
+        border: none;
         &.active {
             background-color: $accent !important;
             color: $white !important;
@@ -141,10 +165,8 @@ main {
 }
 
 .auction {
-    .img {
-        padding-top: 55%;
-        max-height: 200px !important;
-    }
+    background: url('../images/img/auction-bg.png') no-repeat center;
+    background-size: contain;
 }
 
 .popular-categories {
@@ -388,14 +410,18 @@ button {
     font-weight: 500;
     white-space: nowrap;
     border-radius: 10px;
-    &-lg {
-        padding: 12px 32px 14px 32px;
-        line-height: 1em;
+    &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgba($accent, 0.25);
     }
     &-sm {
         padding: 10px 16px;
     }
-    &-accent {
+    &_lg {
+        padding: 11px 32px 11px 32px;
+        line-height: 1em;
+    }
+    &_1 {
         background-color: $accent;
         color: $white;
         border-radius: 10px;
@@ -429,6 +455,8 @@ button {
     &_2 {
         color: $accent;
         border: 1px solid $accent;
+        &:hover,
+        &:focus,
         &:active {
             background-color: $accent;
             color: $white;
@@ -447,7 +475,12 @@ button {
         background-size: 1.5em;
         background-image: url('../images/icons/btn-close.svg');
     }
-    &-fav {
+    &_fav {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        width: 20px;
+        height: 20px;
         z-index: 3;
         background-image: url('../images/icons/fav.svg');
         &.active {
@@ -489,7 +522,7 @@ img {
 }
 
 .img {
-    padding-top: 84%;
+    padding-top: 85%;
     position: relative;
     // img {
     //     position: absolute;
@@ -685,8 +718,8 @@ input[type=date] {
         height: 50vw;
     }
     &_lg {
-        height: 130vw;
-        min-height: 633px;
+        height: 75vh;
+        max-height: 633px;
     }
 }
 
@@ -848,7 +881,7 @@ input[type=date] {
 
 // MEDIA QUERIES start
 @media screen and (max-width: 767.98px) {
-    .btn-lg {
+    .btn_lg {
         font-size: 16px;
     }
     // .page-item {
@@ -903,20 +936,6 @@ input[type=date] {
     .my-tabs {
         button {
             font-size: 16px;
-        }
-    }
-    .auction {
-        img {
-            opacity: 0.2;
-            max-height: 100%;
-            max-width: 100%;
-            left: 50%;
-            top: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            position: absolute;
-        }
-        .auction-text {
-            z-index: 3;
         }
     }
 }

@@ -158,7 +158,7 @@
     </div>
 
     <!-- SEARCH SETTINGS -->
-    <div class="offcanvas offcanvas-end border-0 bg-light-gray" tabindex="-1" id="searchSettings" aria-labelledby="searchSettingsLabel">
+    <div class="offcanvas offcanvas-end bg-light-gray" tabindex="-1" id="searchSettings" aria-labelledby="searchSettingsLabel">
         <div class="offcanvas-header z-index-10 py-2 align-items-center justify-content-start bg-white shad_box">
             <button type="button" class="btn-close text-reset m-0 me-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             <h6 class="offcanvas-title" id="searchSettingsLabel">Настройки поиска</h6>
@@ -377,7 +377,7 @@
                 </fieldset>
             </fieldset>
             <div class="position-fixed bottom-0 p-3 start-0 end-0">
-                <button class="btn btn-accent w-100" type="submit">Показать 0 предложений</button>
+                <button class="btn btn_1 w-100" type="submit">Показать 0 предложений</button>
             </div>
         </form>
     </div>
@@ -385,125 +385,174 @@
     <!-- MAIN CONTENT -->
     <main>
 
-        <!-- POPULAR PROPOSAL SECTION -->
-        <section class="pb-4">
-            <div class="container pe-0">
-                <div class="d-flex justify-content-between align-items-center">
-                    <h2 class="mb-0 d-none d-md-block me-auto">Популярные предложения</h2>
-                    <div class="d-flex w-100 overflow-x-scroll pop-cat-tabs py-3 py-md-0">
-                        <button class="bg-white br_30 px-3 py-1 me-2 border-0 shad_box active">Любая категория</button>
-                        <button class="bg-white br_30 px-3 py-1 me-2 border-0 shad_box">Инструменты</button>
-                        <button class="bg-white br_30 px-3 py-1 me-2 border-0 shad_box">Спецтехника</button>
-                        <button class="bg-white br_30 px-3 py-1 border-0 shad_box">Материалы</button>
-                    </div>
-                </div>
-                <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 gx-2 gy-3 g-sm-3 mb-4 pe-3">
-                    <!-- card -->
-                    <div>
-                        <div class="card shad_box br_10 h-100 border-0">
-                            <button class="btn-fav btn-i position-absolute btn p-1 z-index-10 end-0 top-0 m-2" data-bs-toggle="button"></button>
-                            <div class="img">
-                                <img src="images/img/drel.png" alt="">
-                            </div>
-                            <div class="card-body d-flex flex-column align-items-start text-start p-2 pb-3 p-xl-3">
-                                <a class="card-title c_blue fw_5" href="proposal.html">Дрель Makita 6413 450 Вт</a>
-                                <div class="d-none d-md-flex mt-auto flex-column justify-content-center align-items-center">
-                                    <!-- rating -->
-                                    <div class="d-flex align-items-center flex-shrink-0 c-gray fs-5">
-                                        <span class="checked">&#9733;</span>
-                                        <span class="checked">&#9733;</span>
-                                        <span class="checked">&#9733;</span>
-                                        <span class="checked">&#9733;</span>
-                                        <span>&#9733;</span>
-                                    </div>
-                                    <a href="reviews.html" class="fs-14 c_blue text-nowrap">14 отзывов</a>
-                                </div>
-                                <div class="fs-14 c-gray mb-1">5 км от Вас</div>
-                                <div class="fw_5">200 руб./час</div>
-                            </div>
+        <!-- POPULAR PROPOSALS SECTION -->
+        <section class="container pe-0 pb-4">
+            <!-- categories tabs -->
+            <div class="d-flex w-100 overflow-x-scroll btn_pills py-3">
+                <button class="active">Любая категория</button>
+                <button>Инструменты</button>
+                <button>Спецтехника</button>
+                <button>Материалы</button>
+            </div>
+            <!-- tab content -->
+            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 gx-2 gy-3 g-sm-3 mb-3 pe-3">
+
+                <!-- card -->
+                <div>
+                    <div class="card">
+                        <button class="btn_fav btn-i" data-bs-toggle="button"></button>
+                        <div class="img">
+                            <img src="images/img/drel.png" alt="Дрель Makita 6413 450 Вт">
+                        </div>
+                        <div class="card-body p-2">
+                            <a class="card-title c_blue fw_5" href="proposal.html">Дрель Makita 6413 450 Вт</a>
+                            <span class="fs_14 c-gray mb-1">5 км от Вас</span>
+                            <span class="c_black fw_5">200 руб./час</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 pe-3">
-                    <button class="btn btn_2 w-100">Показать ещё</button>
+
+                <!-- card -->
+                <div>
+                    <div class="card">
+                        <button class="btn_fav btn-i active" data-bs-toggle="button"></button>
+                        <div class="img">
+                            <img src="images/img/category2.jpeg" alt="Китайские вилочные погрузчики">
+                        </div>
+                        <div class="card-body p-2">
+                            <a class="card-title c_blue fw_5" href="proposal.html">Китайские вилочные погрузчики</a>
+                            <span class="fs_14 c-gray mb-1">5 км от Вас</span>
+                            <span class="c_black fw_5">200 руб./час</span>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- card -->
+                <div>
+                    <div class="card">
+                        <button class="btn_fav btn-i" data-bs-toggle="button"></button>
+                        <div class="img">
+                            <img src="images/img/ecovata.jpg" alt="Эковата 2 кг">
+                        </div>
+                        <div class="card-body p-2">
+                            <a class="card-title c_blue fw_5" href="proposal.html">Эковата 2 кг</a>
+                            <span class="fs_14 c-gray mb-1">325 км от Вас</span>
+                            <span class="c_black fw_5">4000 за услугу</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card -->
+                <div>
+                    <div class="card">
+                        <button class="btn_fav btn-i" data-bs-toggle="button"></button>
+                        <div class="img">
+                            <img src="images/img/drel.png" alt="Дрель Makita 6413 450 Вт">
+                        </div>
+                        <div class="card-body p-2">
+                            <a class="card-title c_blue fw_5" href="proposal.html">Дрель Makita 6413 450 Вт</a>
+                            <span class="fs_14 c-gray mb-1">5 км от Вас</span>
+                            <span class="c_black fw_5">200 руб./час</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card -->
+                <div>
+                    <div class="card">
+                        <button class="btn_fav btn-i" data-bs-toggle="button"></button>
+                        <div class="img">
+                            <img src="images/img/category2.jpeg" alt="Китайские вилочные погрузчики">
+                        </div>
+                        <div class="card-body p-2">
+                            <a class="card-title c_blue fw_5" href="proposal.html">Китайские вилочные погрузчики</a>
+                            <span class="fs_14 c-gray mb-1">5 км от Вас</span>
+                            <span class="c_black fw_5">200 руб./час</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card -->
+                <div>
+                    <div class="card">
+                        <button class="btn_fav btn-i" data-bs-toggle="button"></button>
+                        <div class="img">
+                            <img src="images/img/ecovata.jpg" alt="Эковата 2 кг">
+                        </div>
+                        <div class="card-body p-2">
+                            <a class="card-title c_blue fw_5" href="proposal.html">Эковата 2 кг</a>
+                            <span class="fs_14 c-gray mb-1">325 км от Вас</span>
+                            <span class="c_black fw_5">4000 за услугу</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- show more proposals -->
+            <div class="col-12 pe-3">
+                <button class="btn btn_2 w-100">Показать ещё</button>
             </div>
         </section>
 
         <!-- AUCTION SECTION -->
-        <section class="auction bg-gray text-center py-5">
-            <div class="container position-relative">
-                <div class="row row-cols-lg-2 align-items-center">
-                    <div class="mh-100">
-                        <img class="mw-100" alt="" src="images/img/auction.png" loading="lazy">
-                    </div>
-                    <div class="py-lg-5 auction-text">
-                        <h5 class="mb-2 mb-lg-4">Вы не нашли подходящего исполнителя?</h5>
-                        <p class="mb-4">Опубликуйте свое объявление!</p>
-                        <a href="auction.html" aria-label="Перейти на страницу Аукцион" class="btn btn-accent btn-lg mb-lg-5">Подробнее</a>
-                    </div>
-                </div>
+        <section class="auction bg-gray text-center py-4">
+            <div class="container">
+                <h5 class="mb-2">Вы не нашли подходящее предложение?</h5>
+                <p class="mb-4">Опубликуйте свое объявление!</p>
+                <a href="implementers.html" class="btn btn_1 btn_lg">Подробнее</a>
             </div>
         </section>
 
         <!-- FIND ON MAP SECTION -->
         <section class="find-on-map container px-0 py-4 py-md-5 position-relative">
-            <h2 class="mb-3 ps-3 ps-md-0">Найти на карте</h2>
-            <p class="mb-4 col-xl-10 d-none d-md-block">А также стремящиеся вытеснить традиционное производство, нанотехнологии являются только методом политического участия и смешаны с не уникальными данными до степени совершённой неузнаваемости, из-за чего возрастает их статус бесполезности</p>
-            <div class="input-group align-items-center shad_box z-index-10">
-                <div class="col-2 col-lg-3 col-xxl-2 d-none d-md-block">
-                    <select class="form-select" aria-label="Выбор категории">
-                                    <option selected>Любая категория</option>
-                                    <option value="Автокраны">Автокраны</option>
-                                    <option value="Бульдозеры">Бульдозеры</option>
-                                    <option value="Гидромолоты">Гидромолоты</option>
-                                </select>
-                </div>
-                <button class="btn mobile-search-btn p-0 px-4 rounded-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#searchSettings" aria-controls="searchSettings">Настройки поиска</button>
+            <h4 class="mb-3 ps-3 ps-md-0">Найти на карте</h4>
+            <div class="input-group align-items-center shad_box">
+                <button class="btn mobile-search-btn p-0 px-4 rounded-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#searchSettings" aria-controls="searchSettings"></button>
                 <input type="text" class="form-control border-0" placeholder="Поиск по предложениям...">
-                <div class="col-2 col-lg-3 col-xxl-2 d-none d-md-block">
-                    <select class="form-select" aria-label="Радиус, метро, район">
-                                <option selected>Радиус/Метро/Район</option>
-                                <option value="Автокраны">Автокраны</option>
-                                <option value="Бульдозеры">Бульдозеры</option>
-                                <option value="Гидромолоты">Гидромолоты</option>
-                            </select>
-                </div>
-                <button class="btn btn-accent px-4 rounded-0">
-                                <svg class="d-lg-none" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M21 21L16.65 16.65" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <span class="d-none d-lg-block">Показать на карте</span>
-                            </button>
+                <button class="btn btn_1 px-4 rounded-0">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21 21L16.65 16.65" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
             </div>
-            <div class="d-flex w-100 overflow-x-scroll pop-cat-tabs ps-3 py-3 position-absolute z-index-10">
-                <button class="bg-white br_30 px-3 py-1 me-2 border-0 shad_box active">В радиусе 1 км</button>
-                <button class="bg-white br_30 px-3 py-1 me-2 border-0 shad_box">В радиусе 5 км</button>
-                <button class="bg-white br_30 px-3 py-1 me-2 border-0 shad_box">В радиусе 10 км</button>
-                <button class="bg-white br_30 px-3 py-1 me-2 border-0 shad_box">В радиусе 25 км</button>
-                <button class="bg-white br_30 px-3 py-1 me-2 border-0 shad_box">В радиусе 50 км</button>
-                <button class="bg-white br_30 px-3 py-1 border-0 shad_box">В радиусе 100 км</button>
+            <!-- proposals radius search -->
+            <div class="d-flex w-100 overflow-x-scroll btn_pills ps-3 py-3 position-absolute zi_20">
+                <button class="active">В радиусе 1 км</button>
+                <button>В радиусе 5 км</button>
+                <button>В радиусе 10 км</button>
+                <button>В радиусе 25 км</button>
+                <button>В радиусе 50 км</button>
+                <button>В радиусе 100 км</button>
             </div>
             <!-- map -->
-            <div class="w-100 position-relative map-container-lg">
+            <div class="w-100 position-relative map_lg">
                 <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=false"></script>
             </div>
         </section>
 
         <!-- NEWS SECTION -->
-        <section class="news-list container pe-0 pe-md-3 mb-md-5 py-4 mb-5">
-            <h2 class="mb-4 mb-lg-5 mt-lg-5">Новости</h2>
-            <div class="row row-cols-auto mx-0 flex-nowrap flex-md-wrap gx-2 news-group d-flex mb-lg-4">
+        <section class="container news-list pe-0 pe-md-3 pt-3 pb-4">
+            <h3 class="mb-3">Новости</h3>
+            <div class="news-group row row-cols-auto mx-0 flex-nowrap gx-2">
                 <!-- new preview -->
                 <div>
-                    <time class="c-gray mb-1 d-inline-block d-md-none" datetime="2021-03-31">31.03.21</time>
-                    <img class="br_10 w-100" src="images/img/ecovata.jpg" alt="" loading="lazy">
+                    <time class="c-gray" datetime="2021-03-31">31.03.21</time>
+                    <img class="br_10 w-100 my-2" src="https://randomwordgenerator.com/img/picture-generator/david-kovalenko-G85VuTpw6jg-unsplash.jpg" alt="" loading="lazy">
+                    <a href="new.html">Выбираем лучшего заказчика для быстрых сделок</a>
+                </div>
+                <!-- new preview -->
+                <div>
+                    <time class="c-gray" datetime="2021-03-31">23.04.21</time>
+                    <img class="br_10 w-100 my-2" src="https://randomwordgenerator.com/img/picture-generator/ga3a5c4ac7dd43b0b917414f6afb1225bd3336d6c39b63fc82a7140360c8b34823bf7918581f55f0e8b111c20d56a3c82_640.jpg" alt="" loading="lazy">
                     <a href="new.html">Как определить лучшего исполнителя</a>
                 </div>
-            </div>
-            <div class="d-flex col-12 pe-3 mt-3">
-                <a href="news.html" class="btn btn_2 w-100">Все новости</a>
+                <!-- new preview -->
+                <div>
+                    <time class="c-gray" datetime="2021-03-31">06.06.21</time>
+                    <img class="br_10 w-100 my-2" src="images/img/ecovata.jpg" alt="" loading="lazy">
+                    <a href="new.html">Новый раздел на сайте</a>
+                </div>
             </div>
         </section>
 
@@ -567,7 +616,7 @@
                 <label for="remPass">Запомнить пароль</label>
             </div>
             <div class="d-flex flex-column">
-                <button class="btn btn-accent px-5 w-100 mb-4">Войти</button>
+                <button class="btn btn_1 px-5 w-100 mb-4">Войти</button>
                 <button class="btn c_blue fw_5" type="button" data-bs-toggle="offcanvas" data-bs-target="#pass-rec" aria-controls="pass-rec">Забыли пароль?</button>
                 <button class="btn c_blue fw_5" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin" aria-controls="signin">Зарегистрироваться</button>
             </div>
@@ -593,7 +642,7 @@
         </div>
         <form class="offcanvas-body d-flex flex-column justify-content-center pt-4">
             <input class="form-control mb-4" type="tel" placeholder="Введите Ваш e-mail">
-            <button class="btn btn-accent px-4 mb-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin2" aria-controls="signin2">Продолжить</button>
+            <button class="btn btn_1 px-4 mb-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin2" aria-controls="signin2">Продолжить</button>
             <p class="mx-auto"><span>У вас есть учетная запись?</span> <button class="btn p-0 c_blue border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#login" aria-controls="login">Войти</button></p>
         </form>
     </div>
@@ -620,7 +669,7 @@
             <p class="text-center">В течение 2 минут вы получите сообщение с кодом подтверждения на эл. почту <span> gavrilov@mail.ru</span></p>
             <input class="form-control mb-3" type="text" placeholder="Код подтверждения">
             <button class="btn p-0 text-start c_blue fw-normal mb-4">Получить новый код</button>
-            <button class="btn btn-accent px-4 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin3" aria-controls="signin3">Подтвердить</button>
+            <button class="btn btn_1 px-4 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin3" aria-controls="signin3">Подтвердить</button>
             <button class="btn btn_2" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin" aria-controls="signin">Изменить E-mail</button>
         </form>
     </div>
@@ -649,7 +698,7 @@
                 <input type="password" class="form-control" placeholder="Придумайте пароль" id="create-pass">
                 <button data-state="invisible" type="button" class="btn p-0 px-3 position-absolute end-0 top-0 h-100 pass_btn"></button>
             </div>
-            <button class="btn btn-accent px-4 mb-5" type="button">Продолжить</button>
+            <button class="btn btn_1 px-4 mb-5" type="button">Продолжить</button>
             <p class="mx-auto"><span>У вас есть учетная запись?</span> <button class="btn p-0 c_blue border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#login" aria-controls="login">Войти</button></p>
         </form>
     </div>
@@ -674,7 +723,7 @@
         <form class="offcanvas-body d-flex flex-column justify-content-center pt-4">
             <h5 class="mb-3 text-center">Восстановление пароля</h5>
             <input class="form-control mb-4" type="tel" placeholder="Введите Ваш e-mail">
-            <button class="btn btn-accent px-4 mb-5" type="button">Сбросить текущий пароль</button>
+            <button class="btn btn_1 px-4 mb-5" type="button">Сбросить текущий пароль</button>
         </form>
     </div>
 
