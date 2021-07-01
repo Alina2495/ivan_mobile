@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мои отзывы - Ivan</title>
+    <title>Мои предложения - Ivan</title>
     <meta name="description" content="Сдать и арендовать спецтехнику в своем городе на ivan.ru">
     <meta name="keywords" content="спецтехника, аренда, сдача, продажа, покупка, поиск стройматериалы, инструменты">
     <!-- styles -->
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- open graph -->
-    <meta name="og:title" content="Главная – «Ivan»">
+    <meta name="og:title" content="Мои предложения – «Ivan»">
     <meta property="og:image" content="images/img/logo.svg">
     <meta name="og:description" content="Сдать и арендовать спецтехнику в своем городе на ivan.ru">
     <meta name="og:url" content="ivan.ru">
@@ -36,7 +36,13 @@
     <header class="p-3 d-flex align-items-center">
         <!-- Mobile Menu Button -->
         <button class="btn p-0 mobile-menu-btn rounded-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">Меню</button>
-        <h1 class="ms-3 h6 m-0">Мои отзывы</h1>
+        <h2 class="ms-3 me-auto h6 m-0">Мои предложения</h2>
+        <button class="btn p-0" data-bs-toggle="offcanvas" data-bs-target="#createProp" aria-controls="createProp">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 5V19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5 12H19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
     </header>
 
     <!-- MENU -->
@@ -149,124 +155,98 @@
     </div>
 
     <!-- MAIN CONTENT -->
-    <main class="container pb-2">
+    <main class="container d-flex flex-column pt-3 pb-4">
 
         <!-- empty state -->
-        <div class="text-center c-gray py-4">
-            <p class="lh-sm mb-4">Вам пока не оставили отзывов.</p>
-            <a href="#" class="c-accent fw_5">Вернуться назад</a>
+        <div class="flex-grow-1 text-center c-gray py-4">
+            <p class="lh-sm mb-4">У вас пока нет размещённых предложений.</p>
         </div>
 
-        <!-- оценки из отзывов на предложения идут в рейтинг пользователя -->
-        <!-- следуя дизайн-макету если более 8 отзывов то включать пагинацию -->
+        <!-- proposals list -->
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 gx-2 gy-3 g-sm-3 mb-3">
 
-        <!-- reviews list -->
-        <div class="c_black">
-
-            <!-- review 1 -->
-            <div class="py-3 border-bottom">
-                <div class="d-flex mb-2">
-                    <img class="img_md me-2" src="https://randomuser.me/api/portraits/men/97.jpg" alt="">
-                    <div>
-                        <!-- name -->
-                        <a href="user.html">Наиль Б.</a>
-                        <!-- rating -->
-                        <div>
-                            <span class="c_primary me-3">Оценка:</span>
-                            <div class="rated">
-                                <span class="checked">&#9733;</span>
-                                <span class="checked">&#9733;</span>
-                                <span class="checked">&#9733;</span>
-                                <span>&#9733;</span>
-                                <span>&#9733;</span>
-                            </div>
-                        </div>
+            <!-- card -->
+            <div>
+                <div class="card">
+                    <div class="img">
+                        <img src="images/img/drel.png" alt="Дрель Makita 6413 450 Вт">
+                    </div>
+                    <div class="card-body p-2">
+                        <a class="card-title c_blue fw_5" href="proposal.html">Дрель Makita 6413 450 Вт</a>
+                        <span class="c_black fw_5">200 руб./час</span>
                     </div>
                 </div>
-                <!-- link -->
-                <a href="proposal-author.html" class="c_blue link_row">Экскаватор-погрузчик с гидромолотом</a>
-                <!-- text -->
-                <p class="mt-1 m-0">Через несколько недель мне позвонила то ли заведующая магазина, то ли директор, поблагодарила за отзыв и сказала, что он был зачитан на собрании</p>
             </div>
 
-            <!-- review 2 -->
-            <div class="py-3 border-bottom">
-                <div class="d-flex mb-2">
-                    <img class="img_md me-2" src="images/img/user.jpg" alt="">
-                    <div>
-                        <!-- name -->
-                        <a href="user.html">Геннадий Л.</a>
-                        <!-- rating -->
-                        <div>
-                            <span class="c_primary me-3">Оценка:</span>
-                            <div class="rated">
-                                <span class="checked">&#9733;</span>
-                                <span class="checked">&#9733;</span>
-                                <span class="checked">&#9733;</span>
-                                <span class="checked">&#9733;</span>
-                                <span>&#9733;</span>
-                            </div>
-                        </div>
+            <!-- card -->
+            <div>
+                <div class="card">
+                    <div class="img">
+                        <img src="images/img/category2.jpeg" alt="Китайские вилочные погрузчики">
+                    </div>
+                    <div class="card-body p-2">
+                        <a class="card-title c_blue fw_5" href="proposal.html">Китайские вилочные погрузчики</a>
+                        <span class="c_black fw_5">200 руб./час</span>
                     </div>
                 </div>
-                <!-- link -->
-                <a href="proposal-author.html" class="c_blue link_row">Эковата</a>
-                <!-- text -->
-                <p class="mt-1 m-0">Через несколько недель мне позвонила то ли заведующая магазина, то ли директор, поблагодарила за отзыв и сказала, что он был зачитан на собрании</p>
             </div>
 
-            <!-- review whitout text 3 -->
-            <div class="py-3 border-bottom">
-                <div class="d-flex mb-2">
-                    <img class="img_md me-2" src="https://uifaces.co/our-content/donated/Xp0NB-TL.jpg" alt="">
-                    <div>
-                        <!-- name -->
-                        <a href="user.html">Леша А.</a>
-                        <!-- rating -->
-                        <div>
-                            <span class="c_primary me-3">Оценка:</span>
-                            <div class="rated">
-                                <span class="checked">&#9733;</span>
-                                <span class="checked">&#9733;</span>
-                                <span class="checked">&#9733;</span>
-                                <span class="checked">&#9733;</span>
-                                <span class="checked">&#9733;</span>
-                            </div>
-                        </div>
+            <!-- card -->
+            <div>
+                <div class="card">
+                    <div class="img">
+                        <img src="images/img/ecovata.jpg" alt="Эковата 2 кг">
+                    </div>
+                    <div class="card-body p-2">
+                        <a class="card-title c_blue fw_5" href="proposal.html">Эковата 2 кг</a>
+                        <span class="c_black fw_5">4000 за услугу</span>
                     </div>
                 </div>
-                <!-- link -->
-                <a href="proposal-author.html" class="c_blue link_row">Бетон 5 тонн</a>
+            </div>
+
+            <!-- card -->
+            <div>
+                <div class="card">
+                    <div class="img">
+                        <img src="images/img/drel.png" alt="Дрель Makita 6413 450 Вт">
+                    </div>
+                    <div class="card-body p-2">
+                        <a class="card-title c_blue fw_5" href="proposal.html">Дрель Makita 6413 450 Вт</a>
+                        <span class="c_black fw_5">200 руб./час</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card -->
+            <div>
+                <div class="card">
+                    <div class="img">
+                        <img src="images/img/category2.jpeg" alt="Китайские вилочные погрузчики">
+                    </div>
+                    <div class="card-body p-2">
+                        <a class="card-title c_blue fw_5" href="proposal.html">Китайские вилочные погрузчики</a>
+                        <span class="c_black fw_5">200 руб./час</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card -->
+            <div>
+                <div class="card">
+                    <div class="img">
+                        <img src="images/img/ecovata.jpg" alt="Эковата 2 кг">
+                    </div>
+                    <div class="card-body p-2">
+                        <a class="card-title c_blue fw_5" href="proposal.html">Эковата 2 кг</a>
+                        <span class="c_black fw_5">4000 за услугу</span>
+                    </div>
+                </div>
             </div>
 
         </div>
 
-        <!-- pagination -->
-        <nav class="fs-5 mt-4">
-            <ul class="pagination flex-wrap justify-content-center">
-                <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
-                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7 13L1 7L7 1" stroke="#797979" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                </li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                <li class="page-item"><a class="page-link" href="#">...</a></li>
-                <li class="page-item"><a class="page-link" href="#">6</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#">
-                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 13L7 7L1 1" stroke="#797979" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
+        <!-- create proposal -->
+        <button class="btn btn_2 w-100" data-bs-toggle="offcanvas" data-bs-target="#createProp" aria-controls="createProp">Добавить предложение</button>
     </main>
 
     <!-- BOTTOM NAVIGATION -->

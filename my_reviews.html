@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная - Ivan</title>
+    <title>Мои отзывы - Ivan</title>
     <meta name="description" content="Сдать и арендовать спецтехнику в своем городе на ivan.ru">
     <meta name="keywords" content="спецтехника, аренда, сдача, продажа, покупка, поиск стройматериалы, инструменты">
     <!-- styles -->
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- open graph -->
-    <meta name="og:title" content="Главная – «Ivan»">
+    <meta name="og:title" content="Мои отзывы – «Ivan»">
     <meta property="og:image" content="images/img/logo.svg">
     <meta name="og:description" content="Сдать и арендовать спецтехнику в своем городе на ivan.ru">
     <meta name="og:url" content="ivan.ru">
@@ -33,21 +33,10 @@
 <body>
 
     <!-- HEADER -->
-    <header class="py-2">
-        <div class="container d-flex align-items-center">
-            <!-- Mobile Menu Button -->
-            <button class="btn p-0 mobile-menu-btn rounded-0 me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">Меню</button>
-            <div class="shad_box flex-fill br_10 py-1 px-3 d-flex align-items-center justify-content-between">
-                <form class="flex-fill me-3 d-flex align-items-center">
-                    <svg class="flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M14 14L11.1 11.1" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <input required type="search" name="" id="" class="form-control border-0 w-100 p-1 ps-2" placeholder="Поиск по предложениям...">
-                </form>
-                <button class="btn mobile-search-btn p-0 rounded-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#searchSettings" aria-controls="searchSettings">Настройки поиска</button>
-            </div>
-        </div>
+    <header class="p-3 d-flex align-items-center">
+        <!-- Mobile Menu Button -->
+        <button class="btn p-0 mobile-menu-btn rounded-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">Меню</button>
+        <h1 class="ms-3 h6 m-0">Мои отзывы</h1>
     </header>
 
     <!-- MENU -->
@@ -60,7 +49,7 @@
                 </div>
                 <!-- скрыть если не вошел -->
                 <div class="d-flex flex-column">
-                    <a href="my_account.html">Геннадий С.</a>
+                    <a href="account.html">Геннадий С.</a>
                     <span class="c-dark-blue">Индивидуальный предприниматель</span>
                 </div>
             </div>
@@ -76,7 +65,7 @@
                     <svg class="me-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M20.84 4.61C20.3292 4.09901 19.7228 3.69365 19.0554 3.41709C18.3879 3.14052 17.6725 2.99818 16.95 2.99818C16.2275 2.99818 15.5121 3.14052 14.8446 3.41709C14.1772 3.69365 13.5708 4.09901 13.06 4.61L12 5.67L10.94 4.61C9.9083 3.57831 8.50903 2.99871 7.05 2.99871C5.59096 2.99871 4.19169 3.57831 3.16 4.61C2.1283 5.64169 1.54871 7.04097 1.54871 8.5C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7563 11.2728 22.0329 10.6054C22.3095 9.9379 22.4518 9.22249 22.4518 8.5C22.4518 7.77751 22.3095 7.06211 22.0329 6.39465C21.7563 5.72719 21.351 5.12076 20.84 4.61V4.61Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <a href="my_favorites.html">Избранное</a>
+                    <a href="favorites.html">Избранное</a>
                 </li>
                 <!-- если не залогинен то добавлять атрибут для ссылки data-bs-toggle="offcanvas" и href="#login", который будет направлять на модалку авторизации и так для всех пунктов меню -->
                 <!-- favorites -->
@@ -93,7 +82,7 @@
                         <path d="M18 20V4" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M6 20V16" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <a href="my_reviews.html">Мои отзывы</a>
+                    <a href="reviews.html">Мои отзывы</a>
                 </li>
                 <!-- announcements -->
                 <li class="d-flex align-items-start mb-4">
@@ -118,7 +107,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <a href="my_proposals.html">Мои предложения</a>
+                    <a href="proposals.html">Мои предложения</a>
                 </li>
                 <!-- settings -->
                 <li class="d-flex align-items-start mb-4">
@@ -159,404 +148,124 @@
         </nav>
     </div>
 
-    <!-- SEARCH SETTINGS -->
-    <div class="offcanvas offcanvas-end bg-light-gray" tabindex="-1" id="searchSettings" aria-labelledby="searchSettingsLabel">
-        <div class="offcanvas-header z-index-10 py-2 align-items-center justify-content-start bg-white shad_box">
-            <button type="button" class="btn-close text-reset m-0 me-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            <h6 class="offcanvas-title" id="searchSettingsLabel">Настройки поиска</h6>
-        </div>
-        <form class="offcanvas-body py-4 position-relative pb-5">
-            <!-- category -->
-            <fieldset class="bg-white br_10 pt-2 px-3 pb-4 mb-3">
-                <legend class="mb-3 fs-6 c-gray">Категория</legend>
-                <fieldset class="form-check mb-4">
-                    <input name="category" id="any" type="radio" class="form-check-input me-3" required checked>
-                    <label for="any">Любая категория</label>
-                </fieldset>
-                <fieldset class="form-check mb-4">
-                    <input name="category" id="instrument" type="radio" class="form-check-input me-3" required>
-                    <label for="instrument">Инструменты</label>
-                </fieldset>
-                <fieldset class="form-check mb-4">
-                    <input name="category" id="equipment" type="radio" class="form-check-input me-3" required>
-                    <label for="equipment">Техника</label>
-                </fieldset>
-                <fieldset class="form-check">
-                    <input name="category" id="materials" type="radio" class="form-check-input me-3" required>
-                    <label for="materials">Материалы</label>
-                </fieldset>
-            </fieldset>
-            <!-- city and metro station -->
-            <fieldset class="bg-white br_10 pt-2 px-3 pb-4 mb-3">
-
-                <!-- custom select single -->
-                <div class="custom-select single mb-3">
-                    <button type="button">Не выбрано</button>
-                    <div class="cs-options search-list">
-                        <input type="search" placeholder="Поиск" class="search-in-list">
-                        <div class="radio search-item">
-                            <input type="radio" name="radio-opt" value="Для влюбленных">
-                            <label>Для влюбленных</label>
-                        </div>
-                        <div class="sublevel">
-                            <div class="radio search-item">
-                                <input type="radio" name="radio-opt" value="Вкусные подарки Любовь">
-                                <label>
-                                    <span class="nesting">-</span>
-                                    <span class="level-mark">2</span>
-                                    Вкусные подарки Любовь
-                                </label>
-                            </div>
-                            <div class="radio search-item">
-                                <input type="radio" name="radio-opt" value="Другое">
-                                <label>
-                                    <span class="nesting">+</span>
-                                    <span class="level-mark">2</span>
-                                    Другое
-                                </label>
-                            </div>
-                            <div class="sublevel">
-                                <div class="radio search-item">
-                                    <input type="radio" name="radio-opt" value="Термостакан “Любовь...">
-                                    <label>
-                                        <span class="nesting">-</span>
-                                        <span class="level-mark">3</span>
-                                        Термостакан “Любовь...
-                                    </label>
-                                </div>
-                                <div class="radio search-item">
-                                    <input type="radio" name="radio-opt" value="Другое 2">
-                                    <label>
-                                        <span class="nesting">-</span>
-                                        <span class="level-mark">3</span>
-                                        Другое 2
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="radio search-item">
-                            <input type="radio" name="radio-opt" value="Подарочные наборы">
-                            <label>Подарочные наборы</label>
-                        </div>
-                        <div class="sublevel">
-                            <div class="radio search-item">
-                                <input type="radio" name="radio-opt" value="Мужские наборы">
-                                <label>
-                                    <span class="nesting">-</span>
-                                    <span class="level-mark">2</span>
-                                    Мужские наборы
-                                </label>
-                            </div>
-                            <div class="radio search-item">
-                                <input type="radio" name="radio-opt" value="Женские наборы">
-                                <label>
-                                    <span class="nesting">-</span>
-                                    <span class="level-mark">2</span>
-                                    Женские наборы
-                                </label>
-                            </div>
-                        </div>
-                        <div class="radio search-item">
-                            <input type="radio" name="radio-opt" value="Товары 18+">
-                            <label>Товары 18+</label>
-                        </div>
-                        <div class="radio search-item">
-                            <input type="radio" name="radio-opt" value="Воздушные шары">
-                            <label>Воздушные шары</label>
-                        </div>
-                        <div class="sublevel">
-                            <div class="radio search-item">
-                                <input type="radio" name="radio-opt" value="Латексные шары">
-                                <label>
-                                    <span class="nesting">-</span>
-                                    <span class="level-mark">2</span>
-                                    Латексные шары
-                                </label>
-                            </div>
-                            <div class="radio search-item">
-                                <input type="radio" name="radio-opt" value="Фольгированные шары">
-                                <label>
-                                    <span class="nesting">-</span>
-                                    <span class="level-mark">2</span>
-                                    Фольгированные шары
-                                </label>
-                            </div>
-                        </div>
-                        <div class="radio search-item">
-                            <input type="radio" name="radio-opt" value="Фотоальбомы">
-                            <label>Фотоальбомы</label>
-                        </div>
-                        <div class="sublevel">
-                            <div class="radio search-item">
-                                <input type="radio" name="radio-opt" value="Детские фотоальбомы и фотокниги">
-                                <label>
-                                    <span class="nesting">-</span>
-                                    <span class="level-mark">2</span>
-                                    Детские фотоальбомы и фотокниги
-                                </label>
-                            </div>
-                            <div class="radio search-item">
-                                <input type="radio" name="radio-opt" value="Свадебные фотоальбомы">
-                                <label>
-                                    <span class="nesting">-</span>
-                                    <span class="level-mark">2</span>
-                                    Свадебные фотоальбомы
-                                </label>
-                            </div>
-                            <div class="radio search-item">
-                                <input type="radio" name="radio-opt" value="Классические фотоальбомы и фотокниги">
-                                <label>
-                                    <span class="nesting">-</span>
-                                    <span class="level-mark">2</span>
-                                    Классические фотоальбомы и фотокниги
-                                </label>
-                            </div>
-                        </div>
-                        <div class="radio search-item">
-                            <input type="radio" name="radio-opt" value="Подарочная косметика">
-                            <label>Подарочная косметика</label>
-                        </div>
-                        <div class="radio search-item">
-                            <input type="radio" name="radio-opt" value="Необычные вкусные подарки">
-                            <label>Необычные вкусные подарки</label>
-                        </div>
-                    </div>
-                </div>
-                <legend class="mb-1 fs-6 c-gray">Город или регион</legend>
-                <fieldset class="mb-3">
-
-                </fieldset>
-                <legend class="mb-1 fs-6 c-gray">Метро</legend>
-                <fieldset>
-
-                </fieldset>
-            </fieldset>
-            <!-- price range -->
-            <fieldset class="bg-white br_10 pt-2 px-3 pb-4 mb-3">
-                <fieldset class="mb-3">
-                    <label for="price-from" class="mb-1 c-gray">Стоимость, от</label>
-                    <input class="form-control py-1" type="number" name="price" id="price-from">
-                </fieldset>
-                <fieldset>
-                    <label for="price-unto" class="mb-1 c-gray">Стоимость, до</label>
-                    <input class="form-control py-1" type="number" name="price" id="price-unto">
-                </fieldset>
-            </fieldset>
-            <!-- type -->
-            <fieldset class="bg-white br_10 pt-2 px-3 pb-4 mb-3">
-                <legend class="mb-3 fs-6 c-gray">Исполнители</legend>
-                <fieldset class="mb-4 form-check">
-                    <input type="checkbox" class="form-check-input" id="member-type-1">
-                    <label for="member-type-1" class="form-check-label">Частное лицо</label>
-                </fieldset>
-                <fieldset class="mb-4 form-check">
-                    <input type="checkbox" class="form-check-input" id="member-type-2">
-                    <label for="member-type-2" class="form-check-label">Индивидуальный предприниматель</label>
-                </fieldset>
-                <fieldset class="form-check">
-                    <input type="checkbox" class="form-check-input" id="member-type-3">
-                    <label for="member-type-3" class="form-check-label">Компания</label>
-                </fieldset>
-            </fieldset>
-            <!-- sorting -->
-            <fieldset class="bg-white br_10 pt-2 px-3 pb-4 mb-4">
-                <legend class="mb-3 fs-6 c-gray">Сортировка</legend>
-                <fieldset class="form-check mb-4">
-                    <input name="sorting" id="default" type="radio" class="form-check-input me-3" required checked>
-                    <label for="default">По умолчанию</label>
-                </fieldset>
-                <fieldset class="form-check mb-4">
-                    <input name="sorting" id="expensive" type="radio" class="form-check-input me-3" required>
-                    <label for="expensive">Дороже</label>
-                </fieldset>
-                <fieldset class="form-check mb-4">
-                    <input name="sorting" id="cheaper" type="radio" class="form-check-input me-3" required>
-                    <label for="cheaper">Дешевле</label>
-                </fieldset>
-                <fieldset class="form-check">
-                    <input name="sorting" id="by-distance" type="radio" class="form-check-input me-3" required>
-                    <label for="by-distance">По удалённости</label>
-                </fieldset>
-            </fieldset>
-            <div class="position-fixed bottom-0 p-3 start-0 end-0">
-                <button class="btn btn_1 w-100" type="submit">Показать 0 предложений</button>
-            </div>
-        </form>
-    </div>
-
     <!-- MAIN CONTENT -->
-    <main>
+    <main class="container pb-2">
 
-        <!-- POPULAR PROPOSALS SECTION -->
-        <section class="container pe-0 pb-4">
-            <!-- categories tabs -->
-            <div class="d-flex w-100 overflow-x-scroll btn_pills py-3">
-                <button class="active">Любая категория</button>
-                <button>Инструменты</button>
-                <button>Спецтехника</button>
-                <button>Материалы</button>
-            </div>
-            <!-- tab content -->
-            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 gx-2 gy-3 g-sm-3 mb-3 pe-3">
+        <!-- empty state -->
+        <div class="text-center c-gray py-4">
+            <p class="lh-sm mb-4">Вам пока не оставили отзывов.</p>
+            <a href="#" class="c-accent fw_5">Вернуться назад</a>
+        </div>
 
-                <!-- card -->
-                <div>
-                    <div class="card">
-                        <button class="btn_fav btn-i" data-bs-toggle="button"></button>
-                        <div class="img">
-                            <img src="images/img/drel.png" alt="Дрель Makita 6413 450 Вт">
-                        </div>
-                        <div class="card-body p-2">
-                            <a class="card-title c_blue fw_5" href="proposal.html">Дрель Makita 6413 450 Вт</a>
-                            <span class="fs_14 c-gray mb-1">5 км от Вас</span>
-                            <span class="c_black fw_5">200 руб./час</span>
+        <!-- оценки из отзывов на предложения идут в рейтинг пользователя -->
+        <!-- следуя дизайн-макету если более 8 отзывов то включать пагинацию -->
+
+        <!-- reviews list -->
+        <div class="c_black">
+
+            <!-- review 1 -->
+            <div class="py-3 border-bottom">
+                <div class="d-flex mb-2">
+                    <img class="img_md me-2" src="https://randomuser.me/api/portraits/men/97.jpg" alt="">
+                    <div>
+                        <!-- name -->
+                        <a href="user.html">Наиль Б.</a>
+                        <!-- rating -->
+                        <div>
+                            <span class="c_primary me-3">Оценка:</span>
+                            <div class="rated">
+                                <span class="checked">&#9733;</span>
+                                <span class="checked">&#9733;</span>
+                                <span class="checked">&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!-- link -->
+                <a href="proposal-author.html" class="c_blue link_row">Экскаватор-погрузчик с гидромолотом</a>
+                <!-- text -->
+                <p class="mt-1 m-0">Через несколько недель мне позвонила то ли заведующая магазина, то ли директор, поблагодарила за отзыв и сказала, что он был зачитан на собрании</p>
+            </div>
 
-                <!-- card -->
-                <div>
-                    <div class="card">
-                        <button class="btn_fav btn-i active" data-bs-toggle="button"></button>
-                        <div class="img">
-                            <img src="images/img/category2.jpeg" alt="Китайские вилочные погрузчики">
-                        </div>
-                        <div class="card-body p-2">
-                            <a class="card-title c_blue fw_5" href="proposal.html">Китайские вилочные погрузчики</a>
-                            <span class="fs_14 c-gray mb-1">5 км от Вас</span>
-                            <span class="c_black fw_5">200 руб./час</span>
+            <!-- review 2 -->
+            <div class="py-3 border-bottom">
+                <div class="d-flex mb-2">
+                    <img class="img_md me-2" src="images/img/user.jpg" alt="">
+                    <div>
+                        <!-- name -->
+                        <a href="user.html">Геннадий Л.</a>
+                        <!-- rating -->
+                        <div>
+                            <span class="c_primary me-3">Оценка:</span>
+                            <div class="rated">
+                                <span class="checked">&#9733;</span>
+                                <span class="checked">&#9733;</span>
+                                <span class="checked">&#9733;</span>
+                                <span class="checked">&#9733;</span>
+                                <span>&#9733;</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!-- link -->
+                <a href="proposal-author.html" class="c_blue link_row">Эковата</a>
+                <!-- text -->
+                <p class="mt-1 m-0">Через несколько недель мне позвонила то ли заведующая магазина, то ли директор, поблагодарила за отзыв и сказала, что он был зачитан на собрании</p>
+            </div>
 
-                <!-- card -->
-                <div>
-                    <div class="card">
-                        <button class="btn_fav btn-i" data-bs-toggle="button"></button>
-                        <div class="img">
-                            <img src="images/img/ecovata.jpg" alt="Эковата 2 кг">
-                        </div>
-                        <div class="card-body p-2">
-                            <a class="card-title c_blue fw_5" href="proposal.html">Эковата 2 кг</a>
-                            <span class="fs_14 c-gray mb-1">325 км от Вас</span>
-                            <span class="c_black fw_5">4000 за услугу</span>
+            <!-- review whitout text 3 -->
+            <div class="py-3 border-bottom">
+                <div class="d-flex mb-2">
+                    <img class="img_md me-2" src="https://uifaces.co/our-content/donated/Xp0NB-TL.jpg" alt="">
+                    <div>
+                        <!-- name -->
+                        <a href="user.html">Леша А.</a>
+                        <!-- rating -->
+                        <div>
+                            <span class="c_primary me-3">Оценка:</span>
+                            <div class="rated">
+                                <span class="checked">&#9733;</span>
+                                <span class="checked">&#9733;</span>
+                                <span class="checked">&#9733;</span>
+                                <span class="checked">&#9733;</span>
+                                <span class="checked">&#9733;</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- card -->
-                <div>
-                    <div class="card">
-                        <button class="btn_fav btn-i" data-bs-toggle="button"></button>
-                        <div class="img">
-                            <img src="images/img/drel.png" alt="Дрель Makita 6413 450 Вт">
-                        </div>
-                        <div class="card-body p-2">
-                            <a class="card-title c_blue fw_5" href="proposal.html">Дрель Makita 6413 450 Вт</a>
-                            <span class="fs_14 c-gray mb-1">5 км от Вас</span>
-                            <span class="c_black fw_5">200 руб./час</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- card -->
-                <div>
-                    <div class="card">
-                        <button class="btn_fav btn-i" data-bs-toggle="button"></button>
-                        <div class="img">
-                            <img src="images/img/category2.jpeg" alt="Китайские вилочные погрузчики">
-                        </div>
-                        <div class="card-body p-2">
-                            <a class="card-title c_blue fw_5" href="proposal.html">Китайские вилочные погрузчики</a>
-                            <span class="fs_14 c-gray mb-1">5 км от Вас</span>
-                            <span class="c_black fw_5">200 руб./час</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- card -->
-                <div>
-                    <div class="card">
-                        <button class="btn_fav btn-i" data-bs-toggle="button"></button>
-                        <div class="img">
-                            <img src="images/img/ecovata.jpg" alt="Эковата 2 кг">
-                        </div>
-                        <div class="card-body p-2">
-                            <a class="card-title c_blue fw_5" href="proposal.html">Эковата 2 кг</a>
-                            <span class="fs_14 c-gray mb-1">325 км от Вас</span>
-                            <span class="c_black fw_5">4000 за услугу</span>
-                        </div>
-                    </div>
-                </div>
-
+                <!-- link -->
+                <a href="proposal-author.html" class="c_blue link_row">Бетон 5 тонн</a>
             </div>
-            <!-- show more proposals -->
-            <div class="col-12 pe-3">
-                <button class="btn btn_2 w-100">Показать ещё</button>
-            </div>
-        </section>
 
-        <!-- AUCTION SECTION -->
-        <section class="auction bg-gray text-center py-4">
-            <div class="container">
-                <h5 class="mb-2">Вы не нашли подходящее предложение?</h5>
-                <p class="mb-4">Опубликуйте свое объявление!</p>
-                <a href="implementers.html" class="btn btn_1 btn_lg">Подробнее</a>
-            </div>
-        </section>
+        </div>
 
-        <!-- FIND ON MAP SECTION -->
-        <section class="find-on-map container px-0 py-4 py-md-5 position-relative">
-            <h4 class="mb-3 ps-3 ps-md-0">Найти на карте</h4>
-            <div class="input-group align-items-center shad_box">
-                <button class="btn mobile-search-btn p-0 px-4 rounded-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#searchSettings" aria-controls="searchSettings"></button>
-                <input type="text" class="form-control border-0" placeholder="Поиск по предложениям...">
-                <button class="btn btn_1 px-4 rounded-0">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M21 21L16.65 16.65" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-            </div>
-            <!-- proposals radius search -->
-            <div class="d-flex w-100 overflow-x-scroll btn_pills ps-3 py-3 position-absolute zi_20">
-                <button class="active">В радиусе 1 км</button>
-                <button>В радиусе 5 км</button>
-                <button>В радиусе 10 км</button>
-                <button>В радиусе 25 км</button>
-                <button>В радиусе 50 км</button>
-                <button>В радиусе 100 км</button>
-            </div>
-            <!-- map -->
-            <div class="w-100 position-relative map_lg">
-                <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=false"></script>
-            </div>
-        </section>
-
-        <!-- NEWS SECTION -->
-        <section class="container news-list pe-0 pe-md-3 pt-3 pb-4">
-            <h3 class="mb-3">Новости</h3>
-            <div class="news-group row row-cols-auto mx-0 flex-nowrap gx-2">
-                <!-- new preview -->
-                <div>
-                    <time class="c-gray" datetime="2021-03-31">31.03.21</time>
-                    <img class="br_10 w-100 my-2" src="https://randomwordgenerator.com/img/picture-generator/david-kovalenko-G85VuTpw6jg-unsplash.jpg" alt="" loading="lazy">
-                    <a href="new.html">Выбираем лучшего заказчика для быстрых сделок</a>
-                </div>
-                <!-- new preview -->
-                <div>
-                    <time class="c-gray" datetime="2021-03-31">23.04.21</time>
-                    <img class="br_10 w-100 my-2" src="https://randomwordgenerator.com/img/picture-generator/ga3a5c4ac7dd43b0b917414f6afb1225bd3336d6c39b63fc82a7140360c8b34823bf7918581f55f0e8b111c20d56a3c82_640.jpg" alt="" loading="lazy">
-                    <a href="new.html">Как определить лучшего исполнителя</a>
-                </div>
-                <!-- new preview -->
-                <div>
-                    <time class="c-gray" datetime="2021-03-31">06.06.21</time>
-                    <img class="br_10 w-100 my-2" src="images/img/ecovata.jpg" alt="" loading="lazy">
-                    <a href="new.html">Новый раздел на сайте</a>
-                </div>
-            </div>
-        </section>
+        <!-- pagination -->
+        <nav class="mt-4">
+            <ul class="pagination flex-wrap justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 13L1 7L7 1" stroke="#797979" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">...</a></li>
+                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13L7 7L1 1" stroke="#797979" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
     </main>
 
@@ -565,7 +274,7 @@
         <div class="container d-flex justify-content-around">
             <!-- home -->
             <a href="index.html">
-                <svg class="active" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"/>
                     <path d="M9 22V12H15V22"/>
                 </svg>
@@ -580,7 +289,7 @@
             <!-- messages -->
             <a href="messages.html" class="position-relative px-1">
                 <!-- если есть сообщения показать кружок удалить класс d-none -->
-                <div class="rounded-circle bg-accent position-absolute end-0 top-0 ms-1"></div>
+                <div class="d-none rounded-circle bg-accent position-absolute end-0 top-0 ms-1"></div>
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"/>
                 <path d="M22 6L12 13L2 6"/>
@@ -596,136 +305,42 @@
         </div>
     </footer>
 
-    <!-- LOGIN -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="login" aria-labelledby="loginLabel">
-        <div class="offcanvas-header align-items-center justify-content-end shad_box">
-            <h6 class="position-absolute translate-middle start-50 top-50 fw-normal m-0">Вход</h6>
-            <button class="btn p-0" data-bs-dismiss="offcanvas" aria-label="Close">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 6L6 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6 6L18 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>              
-            </button>
+    <!-- написать отзыв со страницы пользователя на предложение -->
+    <!-- ADD REVIEW -->
+    <div class="offcanvas offcanvas-end border-0 bg-white" tabindex="-1" id="addReview" aria-labelledby="addReviewLabel">
+        <div class="offcanvas-header position-relative z-index-10 py-2 align-items-center justify-content-end bg-white shad_box">
+            <h6 class="fw-normal m-0 position-absolute translate-middle top-50 start-50">Отправка отзыва</h6>
+            <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <form class="offcanvas-body d-flex flex-column justify-content-center pt-4">
-            <input class="form-control mb-3" type="email" placeholder="Введите Ваш e-mail">
-            <div class="position-relative mb-3">
-                <input type="password" class="form-control" id="create-pass">
-                <button data-state="invisible" type="button" class="btn p-0 px-3 position-absolute end-0 top-0 h-100 pass_btn"></button>
+        <form class="offcanvas-body py-4 position-relative pb-5">
+            <label class="mb-1 mb-lg-0 col-lg-3">Кому:</label>
+            <input class="form-control bg-white mb-4" type="text" readonly value="Наиль Б.">
+            <label class="mb-1 mb-lg-0 col-lg-3">Тема:</label>
+            <select class="form-select mb-4">
+                <option value="">Эковата</option>
+                <option value="">Китайские вилочные погрузчики</option>
+                <option value="">Экскаватор-погрузчик</option>
+            </select>
+            <!-- rate -->
+            <fieldset class="mb-4">
+                <label class="mb-2">Ваша оценка:</label>
+                <div class="add_rate d-flex flex-row-reverse justify-content-end">
+                    <input type="radio" name="rate" id="5" value="5" checked>
+                    <label for="5"></label>
+                    <input type="radio" name="rate" id="4" value="4">
+                    <label for="4"></label>
+                    <input type="radio" name="rate" id="3" value="3">
+                    <label for="3"></label>
+                    <input type="radio" name="rate" id="2" value="2">
+                    <label for="2"></label>
+                    <input type="radio" name="rate" id="1" value="1">
+                    <label for="1"></label>
+                </div>
+            </fieldset>
+            <textarea class="form-control" name="message" id="message" rows="5" placeholder="Введите сообщение..."></textarea>
+            <div class="position-fixed bottom-0 p-3 start-0 end-0 bg-white">
+                <button class="btn btn_1 w-100" type="submit">Отправить</button>
             </div>
-            <div class="form-check mb-4">
-                <input id="remPass" type="checkbox" class="form-check-input me-2">
-                <label for="remPass">Запомнить пароль</label>
-            </div>
-            <div class="d-flex flex-column">
-                <button class="btn btn_1 px-5 w-100 mb-4">Войти</button>
-                <button class="btn c_blue fw_5" type="button" data-bs-toggle="offcanvas" data-bs-target="#pass-rec" aria-controls="pass-rec">Забыли пароль?</button>
-                <button class="btn c_blue fw_5" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin" aria-controls="signin">Зарегистрироваться</button>
-            </div>
-        </form>
-    </div>
-
-    <!-- SIGNIN -->
-    <div class="offcanvas offcanvas-start fs-6" tabindex="-1" id="signin" aria-labelledby="signinLabel">
-        <div class="offcanvas-header align-items-center justify-content-between shad_box position-relative">
-            <button class="btn p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#login" aria-controls="login">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-            <h6 class="position-absolute translate-middle start-50 top-50 fw-normal">Регистрация</h6>
-            <button class="btn p-0" data-bs-dismiss="offcanvas" aria-label="Close">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 6L6 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6 6L18 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>                    
-            </button>
-        </div>
-        <form class="offcanvas-body d-flex flex-column justify-content-center pt-4">
-            <input class="form-control mb-4" type="tel" placeholder="Введите Ваш e-mail">
-            <button class="btn btn_1 px-4 mb-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin2" aria-controls="signin2">Продолжить</button>
-            <p class="mx-auto"><span>У вас есть учетная запись?</span> <button class="btn p-0 c_blue border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#login" aria-controls="login">Войти</button></p>
-        </form>
-    </div>
-
-    <!-- SIGNIN 2 -->
-    <div class="offcanvas offcanvas-start fs-6" tabindex="-1" id="signin2" aria-labelledby="signin2Label">
-        <div class="offcanvas-header align-items-center justify-content-between shad_box position-relative">
-            <button class="btn p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin" aria-controls="signin">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-            <h6 class="position-absolute translate-middle start-50 top-50 fw-normal">Регистрация</h6>
-            <button class="btn p-0" data-bs-dismiss="offcanvas" aria-label="Close">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 6L6 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6 6L18 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>                    
-            </button>
-        </div>
-        <form class="offcanvas-body d-flex flex-column justify-content-center pt-4">
-            <h5 class="mb-3">Подтвердите Вашу эл. почту</h5>
-            <p class="text-center">В течение 2 минут вы получите сообщение с кодом подтверждения на эл. почту <span> gavrilov@mail.ru</span></p>
-            <input class="form-control mb-3" type="text" placeholder="Код подтверждения">
-            <button class="btn p-0 text-start c_blue fw-normal mb-4">Получить новый код</button>
-            <button class="btn btn_1 px-4 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin3" aria-controls="signin3">Подтвердить</button>
-            <button class="btn btn_2" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin" aria-controls="signin">Изменить E-mail</button>
-        </form>
-    </div>
-
-    <!-- SIGNIN 3 -->
-    <div class="offcanvas offcanvas-start fs-6" tabindex="-1" id="signin3" aria-labelledby="signin3Label">
-        <div class="offcanvas-header align-items-center justify-content-between shad_box position-relative">
-            <button class="btn p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin2" aria-controls="signin2">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-            <h6 class="position-absolute translate-middle start-50 top-50 fw-normal">Регистрация</h6>
-            <button class="btn p-0" data-bs-dismiss="offcanvas" aria-label="Close">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 6L6 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6 6L18 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>                    
-            </button>
-        </div>
-        <form class="offcanvas-body d-flex flex-column justify-content-center pt-4">
-            <h5 class="mb-3 text-center">Регистрация</h5>
-            <input class="form-control mb-3" type="text" placeholder="Имя профиля">
-            <div class="position-relative mb-4">
-                <input type="password" class="form-control" placeholder="Придумайте пароль" id="create-pass">
-                <button data-state="invisible" type="button" class="btn p-0 px-3 position-absolute end-0 top-0 h-100 pass_btn"></button>
-            </div>
-            <button class="btn btn_1 px-4 mb-5" type="button">Продолжить</button>
-            <p class="mx-auto"><span>У вас есть учетная запись?</span> <button class="btn p-0 c_blue border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#login" aria-controls="login">Войти</button></p>
-        </form>
-    </div>
-
-    <!-- PASS RECOVERY -->
-    <div class="offcanvas offcanvas-start fs-6" tabindex="-1" id="pass-rec" aria-labelledby="pass-recLabel">
-        <div class="offcanvas-header align-items-center justify-content-between shad_box position-relative">
-            <button class="btn p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#login" aria-controls="login">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
-            <h6 class="position-absolute translate-middle start-50 top-50 fw-normal">Вход</h6>
-            <button class="btn p-0" data-bs-dismiss="offcanvas" aria-label="Close">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 6L6 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6 6L18 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>                    
-            </button>
-        </div>
-        <form class="offcanvas-body d-flex flex-column justify-content-center pt-4">
-            <h5 class="mb-3 text-center">Восстановление пароля</h5>
-            <input class="form-control mb-4" type="tel" placeholder="Введите Ваш e-mail">
-            <button class="btn btn_1 px-4 mb-5" type="button">Сбросить текущий пароль</button>
         </form>
     </div>
 

@@ -25,3 +25,20 @@ function addInput(elem) {
 $(".unverified_trigger").on('click', function() {
     $(".unverified_window").removeClass('d-none');
 });
+
+
+
+function toggleDiv(elem) {
+    // открываем/закрываем окно, добаляя/удаляя активный класс
+    elem.classList.toggle('d-none');
+}
+//скрываем опции при клике вне селекта
+let item = document.getElementById('unverified_window');
+document.addEventListener('click', function(e) {
+    const target = e.target;
+    const currentDiv = target == item || item.contains(target);
+    const div_is_closed = options.classList.contains('d-none');
+    if (!currentDiv && !div_is_closed) {
+        toggleDiv(item);
+    }
+});

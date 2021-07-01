@@ -15,12 +15,21 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 header,
 footer {
   background-color: white;
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 30;
+}
+
+header {
+  top: 0;
 }
 
 header,
@@ -29,6 +38,10 @@ footer,
 .btn_pills button {
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  bottom: 0;
 }
 
 footer svg {
@@ -58,6 +71,7 @@ main {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  margin: 56px 0;
 }
 
 .z-index-10 {

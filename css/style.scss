@@ -24,12 +24,21 @@ body {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 header,
 footer {
     background-color: $white;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 30;
+}
+
+header {
+    top: 0;
 }
 
 header,
@@ -40,6 +49,7 @@ footer,
 }
 
 footer {
+    bottom: 0;
     svg {
         width: 24px;
         height: 24px;
@@ -65,6 +75,7 @@ main {
     overflow-y: auto;
     overflow-x: hidden;
     flex-grow: 1;
+    margin: 56px 0;
 }
 
 .z-index-10 {
