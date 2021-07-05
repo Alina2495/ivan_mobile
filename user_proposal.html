@@ -37,7 +37,7 @@
         <!-- Mobile Menu Button -->
         <button class="btn p-0 mobile-menu-btn rounded-0 me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">Меню</button>
         <!-- add proposal to favorites -->
-        <button class="btn-fav btn-i btn p-0" data-bs-toggle="button">
+        <button class="btn_fav position-static btn-i btn p-0" data-bs-toggle="button">
         </button>
     </header>
 
@@ -176,12 +176,12 @@
             <div class="d-flex flex-column">
                 <!-- title and price-->
                 <div class="d-flex flex-wrap justify-content-between mb-4">
-                    <h5 class="c_black fw-normal">Экскаватор-погрузчик с гидромолотом</h5>
+                    <h5 class="c_black">Экскаватор-погрузчик с гидромолотом</h5>
                     <span class="fs-5 fw_5">1500 руб./час</span>
                 </div>
                 <div class="d-flex flex-column mb-4">
-                    <button class="mt-auto btn btn_2 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#addReview" aria-controls="addReview">Написать отзыв</button>
-                    <button class="mt-auto btn btn_lg btn_1" type="button" data-bs-toggle="offcanvas" data-bs-target="#addMsg" aria-controls="addMsg">Написать сообщение</button>
+                    <button class="btn btn_2 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#addReview" aria-controls="addReview">Написать отзыв</button>
+                    <button class="btn btn_lg btn_1" type="button" data-bs-toggle="offcanvas" data-bs-target="#addMsg" aria-controls="addMsg">Написать сообщение</button>
                 </div>
                 <!-- address and show on map -->
                 <div class="d-flex flex-wrap justify-content-between mb-1">
@@ -198,7 +198,7 @@
                 <div class="mb-2">На сайте с марта 2021 года</div>
 
                 <!-- есть рейтинг и отзывы -->
-                <div class="d-flex align-items-baseline c-gray text-nowrap fs_14">
+                <div class="d-flex align-items-baseline text-nowrap fs_14">
                     <!-- rating -->
                     <div class="rated d-flex align-items-center flex-shrink-0 fs-5 me-4">
                         <span class="checked">&#9733;</span>
@@ -211,7 +211,7 @@
                 </div>
 
                 <!-- есть рейтинг, но нет отзывов -->
-                <div class="d-flex align-items-baseline c-gray text-nowrap fs_14">
+                <div class="d-flex align-items-baseline text-nowrap fs_14">
                     <!-- rating -->
                     <div class="rated d-flex align-items-center flex-shrink-0 fs-5 me-4">
                         <span class="checked">&#9733;</span>
@@ -224,13 +224,14 @@
                 </div>
 
                 <!-- нет рейтинга -->
-                <div class="d-flex align-items-baseline fs_14 c-gray text-nowrap">
+                <div class="d-flex align-items-baseline fs_14 c_gray text-nowrap">
                     <span>Оценок пока нет</span>
                 </div>
 
             </div>
 
             <div class="py-5">
+
                 <!-- specification -->
                 <section class="c_black mb-4">
                     <h5 class="fw_5 mb-3">Описание</h5>
@@ -298,7 +299,7 @@
                         </div>
                         <div class="card-body d-flex flex-column p-2 pb-3">
                             <a class="card-title mb-1 c_blue fw_5" href="proposal.html">Экскаватор-погрузчик с гидромолотом</a>
-                            <div class="fs_14 c-gray mb-1 mt-auto">5 км от Вас</div>
+                            <div class="fs_14 c_gray mb-1 mt-auto">5 км от Вас</div>
                             <div class="fw_5">500 руб./час</div>
                         </div>
                     </div>
@@ -312,7 +313,7 @@
                         </div>
                         <div class="card-body d-flex flex-column p-2 pb-3">
                             <a class="card-title mb-1 c_blue fw_5" href="proposal.html">Эвакуатор до 5 т</a>
-                            <div class="fs_14 c-gray mb-1 mt-auto">2 км от Вас</div>
+                            <div class="fs_14 c_gray mb-1 mt-auto">2 км от Вас</div>
                             <div class="fw_5">1500 руб./час</div>
                         </div>
                     </div>
@@ -326,7 +327,7 @@
                         </div>
                         <div class="card-body d-flex flex-column p-2 pb-3">
                             <a class="card-title mb-1 c_blue fw_5" href="proposal.html">Китайские вилочные погрузчики</a>
-                            <div class="fs_14 c-gray mb-1 mt-auto">5 км от Вас</div>
+                            <div class="fs_14 c_gray mb-1 mt-auto">5 км от Вас</div>
                             <div class="fw_5">500 руб./час</div>
                         </div>
                     </div>
@@ -340,7 +341,7 @@
                         </div>
                         <div class="card-body d-flex flex-column p-2 pb-3">
                             <a class="card-title mb-1 c_blue fw_5" href="proposal.html">Эвакуатор до 5 т</a>
-                            <div class="fs_14 c-gray mb-1 mt-auto">2 км от Вас</div>
+                            <div class="fs_14 c_gray mb-1 mt-auto">2 км от Вас</div>
                             <div class="fw_5">1500 руб./час</div>
                         </div>
                     </div>
@@ -386,7 +387,7 @@
         </div>
     </footer>
 
-    <!-- ADD REVIEW -->
+    <!-- ADD REVIEW ON CURRENT PROPOSAL -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="addReview" aria-labelledby="addReviewLabel">
         <div class="offcanvas-header position-relative z-index-10 py-2 align-items-center justify-content-end bg-white shad_box">
             <h6 id="addReviewLabel" class="fw-normal m-0 position-absolute translate-middle top-50 start-50">Отправка отзыва</h6>

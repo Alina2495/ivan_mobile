@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Предложение - Ivan</title>
+    <title>Моё предложение - Ivan</title>
     <meta name="description" content="Сдать и арендовать спецтехнику в своем городе на ivan.ru">
     <meta name="keywords" content="спецтехника, аренда, сдача, продажа, покупка, поиск стройматериалы, инструменты">
     <!-- styles -->
@@ -33,13 +33,9 @@
 <body>
 
     <!-- HEADER -->
-    <header class="shad_box p-3 d-flex align-items-center justify-content-between">
-        <a href="#" class="btn p-0">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </a>
+    <header class="p-3">
+        <!-- Mobile Menu Button -->
+        <button class="btn p-0 mobile-menu-btn rounded-0 me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">Меню</button>
     </header>
 
     <!-- MENU -->
@@ -153,78 +149,56 @@
 
     <main class=" container py-3">
 
-        <section>
+        <section class="mb-4">
+
             <!-- proposal slider -->
-            <div>
-                <div class="swiper-container position-relative gallery-top mb-3 br_10">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="images/img/category4.jpeg" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/img/category2.jpeg" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/img/category3.jpg" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/img/category.jpeg" alt="">
-                        </div>
+            <div class="swiper-container gallery-top mb-3 br_10">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/img/category4.jpeg" alt="">
                     </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination text-white fs_14 bg-dark w-auto translate-middle start-50 bottom-0 px-1"></div>
+                    <div class="swiper-slide">
+                        <img src="images/img/category2.jpeg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img/category3.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img/category.jpeg" alt="">
+                    </div>
                 </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination text-white fs_14 bg-dark w-auto translate-middle start-50 bottom-0 px-1"></div>
             </div>
-            <!-- right column -->
-            <div class="col-lg-6 d-flex flex-column">
-                <!-- title and price-->
-                <div class="d-flex flex-wrap justify-content-between mb-4">
-                    <h5 class="c_black fw-normal">Экскаватор-погрузчик с гидромолотом</h5>
-                    <span class="fs-5 fw_5">1500 руб./час</span>
-                </div>
-                <div class="d-flex flex-column mb-4">
-                    <button class="mt-auto btn btn_2 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#editProp" aria-controls="editProp">Редактировать предложение</button>
-                    <button class="btn fw_5 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#delProp" aria-controls="delProp">
-                        <svg class="me-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 6H5H21" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M10 11V17" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M14 11V17" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <span>Удалить предложение</span>
-                    </button>
-                </div>
-                <!-- address and show on map -->
-                <div class="d-flex flex-wrap justify-content-between mb-1">
-                    <!-- address -->
-                    <div class="d-flex align-items-baseline mb-2">
-                        <svg class="me-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip2)">
-                                <path d="M14 6.66663C14 11.3333 8 15.3333 8 15.3333C8 15.3333 2 11.3333 2 6.66663C2 5.07533 2.63214 3.5492 3.75736 2.42399C4.88258 1.29877 6.4087 0.666626 8 0.666626C9.5913 0.666626 11.1174 1.29877 12.2426 2.42399C13.3679 3.5492 14 5.07533 14 6.66663Z" fill="#03588C" stroke="#03588C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M8 8.66663C9.10457 8.66663 10 7.7712 10 6.66663C10 5.56206 9.10457 4.66663 8 4.66663C6.89543 4.66663 6 5.56206 6 6.66663C6 7.7712 6.89543 8.66663 8 8.66663Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip2">
-                                <rect width="16" height="16" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>
-                        <span>г. Казань, м. Площадь Габдуллы Тукая</span>
-                    </div>
-                    <!-- show on map -->
-                    <a href="#map-sec" class="fw_5 p-0 c-accent mb-2">Показать на карте</a>
-                </div>
+
+            <!-- proposal details -->
+            <div class="d-flex flex-column mb-4">
+                <!-- proposal title -->
+                <h5 class="c_black">Экскаватор-погрузчик с гидромолотом</h5>
+                <!-- price -->
+                <span class="fs-5 fw_5 mb-4">1500 руб./час</span>
+                <!-- edit proposal -->
+                <button class="btn btn_2 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#editProp" aria-controls="editProp">Редактировать предложение</button>
+                <!-- delete proposal -->
+                <button class="btn btn_del mb-3 w-100 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#delProp" aria-controls="delProp"><span>Удалить предложение</span></button>
+                <!-- address -->
+                <div class="address_row mb-2">г. Казань, м. Площадь Габдуллы Тукая</div>
+                <!-- show on map -->
+                <a href="#map-sec" class="fw_5 p-0 c-accent mb-2">Показать на карте</a>
+                <!-- implementer -->
                 <div>
                     <span>Исполнитель:</span>
-                    <a href="account.html" class="ms-3 c_blue fw_5">Геннадий С.</a>
+                    <a href="my_account.html" class="ms-3 c_blue fw_5">Геннадий С.</a>
                 </div>
-                <div class="c-dark-blue my-2">Частное лицо</div>
+                <!-- type -->
+                <div class="c-dark-blue my-2">Индивидуальный предприниматель</div>
+                <!-- register date -->
                 <div class="mb-2">На сайте с марта 2021 года</div>
 
                 <!-- есть рейтинг и отзывы -->
-                <div class="d-flex align-items-baseline c-gray text-nowrap fs_14">
+                <div class="d-flex align-items-baseline fs_14">
                     <!-- rating -->
-                    <div class="rated d-flex align-items-center flex-shrink-0 fs-5 me-4">
+                    <div class="rated me-4">
                         <span class="checked">&#9733;</span>
                         <span class="checked">&#9733;</span>
                         <span class="checked">&#9733;</span>
@@ -235,9 +209,9 @@
                 </div>
 
                 <!-- есть рейтинг, но нет отзывов -->
-                <div class="d-flex align-items-baseline c-gray text-nowrap fs_14">
+                <div class="d-flex align-items-baseline fs_14">
                     <!-- rating -->
-                    <div class="rated d-flex align-items-center flex-shrink-0 fs-5 me-4">
+                    <div class="rated fs-5 me-4">
                         <span class="checked">&#9733;</span>
                         <span class="checked">&#9733;</span>
                         <span class="checked">&#9733;</span>
@@ -248,160 +222,198 @@
                 </div>
 
                 <!-- нет рейтинга -->
-                <div class="d-flex align-items-baseline fs_14 c-gray text-nowrap">
+                <div class="fs_14 c_gray">
                     <span>Оценок пока нет</span>
                 </div>
 
             </div>
 
-            <div class=" py-5">
-                <!-- specification -->
-                <div class="c_black mb-4">
-                    <h5 class="fw_5 mb-3">Описание</h5>
-                    <p>Сложно сказать, почему реплицированные с зарубежных источников, современные исследования набирают популярность среди определённых слоёв населения, а значит, должны быть превращены в посмешище, хотя само их существование приносит несомненную
-                        пользу обществу. Также как высокотехнологичная концепция общественного уклада требует определения и уточнения вывода текущих активов. Базовые сценарии поведения пользователей и по сей день остаются уделом либералов, которые жаждут
-                        быть подвергнуты целой серии независимых исследований. Каждый из нас понимает очевидную вещь: укрепление и развитие внутренней структуры является качественно новой ступенью модели развития..</p>
-                </div>
-                <!-- parameters -->
-                <div class="mb-4">
-                    <h5 class="fw_5 mb-3">Параметры</h5>
-                    <table class="table table-striped">
-                        <tbody>
-                            <tr>
-                                <th>Масса гидромолота:</th>
-                                <td>295 кг</td>
-                            </tr>
-                            <tr>
-                                <th>Энергия удара: </th>
-                                <td>849 Дж.</td>
-                            </tr>
-                            <tr>
-                                <th>Частота ударов:</th>
-                                <td>450-900 уд/мин.</td>
-                            </tr>
-                            <tr>
-                                <th>Длина пики:</th>
-                                <td>400 мм</td>
-                            </tr>
-                            <tr>
-                                <th>Длина гидромолота:</th>
-                                <td>1.5 м</td>
-                            </tr>
-                            <tr>
-                                <th>Рабочее давление:</th>
-                                <td>90-130 атм.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- on-map -->
-                <div id="map-sec">
-                    <h5 class="fw_5 mb-3">На карте</h5>
-                    <!-- map -->
-                    <div class="w-100 position-relative map-sm">
-                        <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=false"></script>
-                    </div>
+            <!-- specification -->
+            <div class="c_black mb-4">
+                <h5 class="mb-3">Описание</h5>
+                <p>Аpенда Уcлуги экскаватора-погpузчика 2000₽/ ч. нaл. /безнал с НДС. Опытный и аккуpaтный oпepaтoр. Теxникa нoвая. Оплата нал., без нал. с НДС, без НДС. расчистка участка, выравнивание участка, благоустройство участка, грунт на подсыпку,
+                    ландшафт, ландшафтный дизайн, ландшафтные работы, земляные работы, сливная яма, корчеватель, канализация, септик под ключ, емкость под септик, бочка под септик, септик пластиковый, септик из бетонных колец, септик из колец,</p>
+            </div>
+
+            <!-- parameters -->
+            <div class="mb-4">
+                <h5 class="mb-3">Параметры</h5>
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <th>Масса гидромолота:</th>
+                            <td>295 кг</td>
+                        </tr>
+                        <tr>
+                            <th>Энергия удара: </th>
+                            <td>849 Дж.</td>
+                        </tr>
+                        <tr>
+                            <th>Частота ударов:</th>
+                            <td>450-900 уд/мин.</td>
+                        </tr>
+                        <tr>
+                            <th>Длина пики:</th>
+                            <td>400 мм</td>
+                        </tr>
+                        <tr>
+                            <th>Длина гидромолота:</th>
+                            <td>1.5 м</td>
+                        </tr>
+                        <tr>
+                            <th>Рабочее давление:</th>
+                            <td>90-130 атм.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- on map -->
+            <div id="map-sec">
+                <h5 class="mb-3">На карте</h5>
+                <!-- map -->
+                <div class="w-100 position-relative map_sm">
+                    <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=false"></script>
                 </div>
             </div>
+
         </section>
 
         <!-- SIMILAR PROPOSALS -->
         <section>
-            <h2 class="mb-4 mb-lg-5">Похожие предложения</h2>
-            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 gx-2 gy-3 g-sm-3 g-xxl-4 mb-4 mb-lg-5">
-                <!-- proposal card -->
+            <h5 class="mb-3">Похожие предложения</h5>
+            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 gx-2 gy-3 g-sm-3 mb-3">
+
+                <!-- card -->
                 <div>
-                    <div class="card shad_box br_10">
-                        <button class="btn-fav btn-i position-absolute end-0 top-0 m-2" data-bs-toggle="button"></button>
+                    <div class="card">
+                        <button class="btn_fav btn-i" data-bs-toggle="button"></button>
                         <div class="img">
-                            <img src="images/img/category.jpeg" alt="#">
+                            <img src="images/img/drel.png" alt="Дрель Makita 6413 450 Вт">
                         </div>
-                        <div class="card-body d-flex flex-column p-2 pb-3">
-                            <a class="card-title mb-1 c_blue fw_5" href="proposal.html">Экскаватор-погрузчик с гидромолотом</a>
-                            <div class="fs_14 c-gray mb-1 mt-auto">5 км от Вас</div>
-                            <div class="fw_5">500 руб./час</div>
+                        <div class="card-body p-2">
+                            <a class="card-title c_blue fw_5" href="proposal.html">Дрель Makita 6413 450 Вт</a>
+                            <span class="fs_14 c_gray mb-1">5 км от Вас</span>
+                            <span class="c_black fw_5">200 руб./час</span>
                         </div>
                     </div>
                 </div>
-                <!-- proposal card -->
+
+                <!-- card -->
                 <div>
-                    <div class="card shad_box br_10">
-                        <button class="btn-fav btn-i position-absolute end-0 top-0 m-2 active" data-bs-toggle="button"></button>
+                    <div class="card">
+                        <button class="btn_fav btn-i active" data-bs-toggle="button"></button>
                         <div class="img">
-                            <img src="images/img/category4.jpeg" alt="#">
+                            <img src="images/img/category2.jpeg" alt="Китайские вилочные погрузчики">
                         </div>
-                        <div class="card-body d-flex flex-column p-2 pb-3">
-                            <a class="card-title mb-1 c_blue fw_5" href="proposal.html">Эвакуатор до 5 т</a>
-                            <div class="fs_14 c-gray mb-1 mt-auto">2 км от Вас</div>
-                            <div class="fw_5">1500 руб./час</div>
+                        <div class="card-body p-2">
+                            <a class="card-title c_blue fw_5" href="proposal.html">Китайские вилочные погрузчики</a>
+                            <span class="fs_14 c_gray mb-1">5 км от Вас</span>
+                            <span class="c_black fw_5">200 руб./час</span>
                         </div>
                     </div>
                 </div>
-                <!-- proposal card -->
+
+                <!-- card -->
                 <div>
-                    <div class="card shad_box br_10">
-                        <button class="btn-fav btn-i position-absolute end-0 top-0 m-2" data-bs-toggle="button"></button>
+                    <div class="card">
+                        <button class="btn_fav btn-i" data-bs-toggle="button"></button>
                         <div class="img">
-                            <img src="images/img/category2.jpeg" alt="#">
+                            <img src="images/img/ecovata.jpg" alt="Эковата 2 кг">
                         </div>
-                        <div class="card-body d-flex flex-column p-2 pb-3">
-                            <a class="card-title mb-1 c_blue fw_5" href="proposal.html">Китайские вилочные погрузчики</a>
-                            <div class="fs_14 c-gray mb-1 mt-auto">5 км от Вас</div>
-                            <div class="fw_5">500 руб./час</div>
+                        <div class="card-body p-2">
+                            <a class="card-title c_blue fw_5" href="proposal.html">Эковата 2 кг</a>
+                            <span class="fs_14 c_gray mb-1">325 км от Вас</span>
+                            <span class="c_black fw_5">4000 за услугу</span>
                         </div>
                     </div>
                 </div>
-                <!-- proposal card -->
+
+                <!-- card -->
                 <div>
-                    <div class="card shad_box br_10">
-                        <button class="btn-fav btn-i position-absolute end-0 top-0 m-2" data-bs-toggle="button"></button>
+                    <div class="card">
+                        <button class="btn_fav btn-i" data-bs-toggle="button"></button>
                         <div class="img">
-                            <img src="images/img/category3.jpg" alt="#">
+                            <img src="images/img/drel.png" alt="Дрель Makita 6413 450 Вт">
                         </div>
-                        <div class="card-body d-flex flex-column p-2 pb-3">
-                            <a class="card-title mb-1 c_blue fw_5" href="proposal.html">Эвакуатор до 5 т</a>
-                            <div class="fs_14 c-gray mb-1 mt-auto">2 км от Вас</div>
-                            <div class="fw_5">1500 руб./час</div>
+                        <div class="card-body p-2">
+                            <a class="card-title c_blue fw_5" href="proposal.html">Дрель Makita 6413 450 Вт</a>
+                            <span class="fs_14 c_gray mb-1">5 км от Вас</span>
+                            <span class="c_black fw_5">200 руб./час</span>
                         </div>
                     </div>
                 </div>
+
+                <!-- card -->
+                <div>
+                    <div class="card">
+                        <button class="btn_fav btn-i" data-bs-toggle="button"></button>
+                        <div class="img">
+                            <img src="images/img/category2.jpeg" alt="Китайские вилочные погрузчики">
+                        </div>
+                        <div class="card-body p-2">
+                            <a class="card-title c_blue fw_5" href="proposal.html">Китайские вилочные погрузчики</a>
+                            <span class="fs_14 c_gray mb-1">5 км от Вас</span>
+                            <span class="c_black fw_5">200 руб./час</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card -->
+                <div>
+                    <div class="card">
+                        <button class="btn_fav btn-i" data-bs-toggle="button"></button>
+                        <div class="img">
+                            <img src="images/img/ecovata.jpg" alt="Эковата 2 кг">
+                        </div>
+                        <div class="card-body p-2">
+                            <a class="card-title c_blue fw_5" href="proposal.html">Эковата 2 кг</a>
+                            <span class="fs_14 c_gray mb-1">325 км от Вас</span>
+                            <span class="c_black fw_5">4000 за услугу</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
     </main>
 
     <!-- BOTTOM NAVIGATION -->
-    <div class="position-fixed bg-white shad_box bottom-0 p-3 d-flex d-md-none justify-content-around w-100 start-0 end-0 z-index-10">
-        <!-- forum -->
-        <a href="forum.html">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0035 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.6056 8.7 3.90003C9.87812 3.30496 11.1801 2.99659 12.5 3.00003H13C15.0843 3.11502 17.053 3.99479 18.5291 5.47089C20.0052 6.94699 20.885 8.91568 21 11V11.5Z" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <footer class="p-3">
+        <div class="container d-flex justify-content-around">
+            <!-- home -->
+            <a href="index.html">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"/>
+                    <path d="M9 22V12H15V22"/>
+                </svg>
+            </a>
+            <!-- search -->
+            <a href="search.html">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"/>
+                <path d="M21 20.9999L16.65 16.6499"/>
             </svg>
-        </a>
-        <!-- search -->
-        <a href="search.html">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M21 20.9999L16.65 16.6499" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </a>
+            <!-- messages -->
+            <a href="messages.html" class="position-relative px-1">
+                <!-- если есть сообщения показать кружок удалить класс d-none -->
+                <div class="rounded-circle bg-accent position-absolute end-0 top-0 ms-1"></div>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"/>
+                <path d="M22 6L12 13L2 6"/>
             </svg>
-        </a>
-        <!-- messages -->
-        <a href="" class="position-relative px-1">
-            <!-- если есть сообщения показать кружок -->
-            <div class="rounded-circle bg-accent position-absolute end-0 top-0 ms-1"></div>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M22 6L12 13L2 6" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </a>
+            <!-- account -->
+            <a href="account.html">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"/>
+                <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"/>
             </svg>
-        </a>
-        <!-- account -->
-        <a href="account.html">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </a>
-    </div>
+            </a>
+        </div>
+    </footer>
 
     <!-- EDIT PROPOSAL -->
     <div class="offcanvas offcanvas-end bg-white" tabindex="-1" id="editProp" aria-labelledby="editPropLabel">
@@ -476,7 +488,7 @@
                     </button>
                 </div>
                 <!-- map -->
-                <div class="map-lg position-relative">
+                <div class="map_lg position-relative">
                     <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
                     <button class="btn btn_1 position-absolute start-50 bottom-0 translate-middle px-4">OK</button>
                 </div>

@@ -201,16 +201,16 @@
                 </span>
 
                 <!-- unconfirmed email tooltip -->
-                <div class="unverified_window d-none br_10 shad_box pt-2 pb-3 px-3 position-fixed translate-middle start-50 top-50 bg-white c_primary">
+                <div class="unverified_window zi_20 d-none br_10 shad_box pt-2 pb-3 px-3 position-fixed translate-middle start-50 top-50 bg-white c_primary">
                     <div class="fs_14">Неподтвержденная<br/> электронная почта</div>
                     <button onclick="toggleDiv(this.closest('.unverified_window'))" class="border-0 btn p-0 c_blue text-dashed rounded-0 fs_14 fw-normal" type="button" data-bs-toggle="modal" data-bs-target="#emailVerificationModal">Отправить сообщение на почту</button>
                 </div>
 
             </div>
             <!-- есть рейтинг и отзывы -->
-            <div class="d-flex align-items-baseline c-gray text-nowrap fs_14">
+            <div class="d-flex align-items-baseline c_gray text-nowrap fs_14">
                 <!-- rating -->
-                <div class="rated d-flex align-items-center flex-shrink-0 fs-5 me-4">
+                <div class="rated fs-5 me-4">
                     <span class="checked">&#9733;</span>
                     <span class="checked">&#9733;</span>
                     <span class="checked">&#9733;</span>
@@ -220,9 +220,9 @@
                 <a class="c_blue" href="#my_reviews">14 отзывов</a>
             </div>
             <!-- есть рейтинг, но нет отзывов -->
-            <div class="d-flex align-items-baseline c-gray text-nowrap fs_14">
+            <div class="d-flex align-items-baseline c_gray fs_14">
                 <!-- rating -->
-                <div class="rated d-flex align-items-center flex-shrink-0 fs-5 me-4">
+                <div class="rated fs-5 me-4">
                     <span class="checked">&#9733;</span>
                     <span class="checked">&#9733;</span>
                     <span class="checked">&#9733;</span>
@@ -232,7 +232,7 @@
                 <span>Отзывов пока нет</span>
             </div>
             <!-- нет рейтинга -->
-            <div class="d-flex align-items-baseline fs_14 c-gray text-nowrap">
+            <div class="fs_14 c_gray">
                 <span>Оценок пока нет</span>
             </div>
         </section>
@@ -242,7 +242,7 @@
             <div class="d-flex justify-content-between mb-3">
                 <div class="d-flex align-items-baseline">
                     <h5 class="fw-normal c_black mb-0 me-1">Мои предложения</h5>
-                    <span class="c-gray">6</span>
+                    <span class="c_gray">6</span>
                 </div>
                 <a href="my_proposals.html">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -307,7 +307,7 @@
             <div class="d-flex justify-content-between mb-3">
                 <div class="d-flex align-items-baseline">
                     <h5 class="fw-normal c_black mb-0 me-1">Мои объявления</h5>
-                    <span class="c-gray">1</span>
+                    <span class="c_gray">1</span>
                 </div>
                 <a href="my_announcements.html">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -320,15 +320,11 @@
             <div class="mb-3">
 
                 <!-- announcement 1 -->
-                <div class="d-flex flex-wrap br_10 shad_box p-3 pb-4">
-                    <div class="col-8 d-flex flex-fill flex-column">
-                        <div class="fs-5 fw_5 mb-1 c_blue">Выкопать яму под колодец</div>
-                        <div class="c-gray">3 часа назад</div>
-                        <div class="mt-auto d-flex flex-wrap justify-content-between align-items-end">
-                            <div class="mb-3">Повседневная практика показывает, что граница обучения кадров позволяет выполнить важные задания...</div>
-                            <a href="#" class="c_blue">12 откликов</a>
-                        </div>
-                    </div>
+                <div class="br_10 shad_box p-3 pb-4">
+                    <a href="my_announcement.html" class="fs-5 fw_5 mb-1 c_blue">Выкопать яму под колодец</a>
+                    <div class="c_gray">3 часа назад</div>
+                    <div class="mb-3">Повседневная практика показывает, что граница обучения кадров позволяет выполнить важные задания...</div>
+                    <span class="c_blue">12 откликов</span>
                 </div>
 
             </div>
@@ -348,7 +344,7 @@
             <div class="d-flex justify-content-between mb-2">
                 <div class="d-flex align-items-baseline">
                     <h5 class="fw-normal c_black mb-0 me-1">Мои отзывы</h5>
-                    <span class="c-gray">8</span>
+                    <span class="c_gray">8</span>
                 </div>
                 <a href="reviews-author.html">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -369,7 +365,7 @@
                             <!-- rating -->
                             <div class="mb-2">
                                 <span>Оценка:</span>
-                                <div class="rated ms-3 d-inline-flex align-items-center flex-shrink-0 c-gray fs-5">
+                                <div class="rated ms-3 d-inline-flex align-items-center flex-shrink-0 c_gray fs-5">
                                     <span class="checked">&#9733;</span>
                                     <span class="checked">&#9733;</span>
                                     <span class="checked">&#9733;</span>
@@ -417,7 +413,7 @@
             <div class="d-flex justify-content-between mb-3">
                 <div class="d-flex align-items-baseline">
                     <h5 class="fw-normal c_black mb-0 me-1">Избранное</h5>
-                    <span class="c-gray">16</span>
+                    <span class="c_gray">16</span>
                 </div>
                 <a href="favorites.html">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -437,7 +433,7 @@
                         </div>
                         <div class="card-body p-2">
                             <a class="card-title c_blue fw_5" href="proposal.html">Дрель Makita 6413 450 Вт</a>
-                            <span class="fs_14 c-gray mb-1">5 км от Вас</span>
+                            <span class="fs_14 c_gray mb-1">5 км от Вас</span>
                             <span class="c_black fw_5">200 руб./час</span>
                         </div>
                     </div>
@@ -452,7 +448,7 @@
                         </div>
                         <div class="card-body p-2">
                             <a class="card-title c_blue fw_5" href="proposal.html">Китайские вилочные погрузчики</a>
-                            <span class="fs_14 c-gray mb-1">5 км от Вас</span>
+                            <span class="fs_14 c_gray mb-1">5 км от Вас</span>
                             <span class="c_black fw_5">200 руб./час</span>
                         </div>
                     </div>
@@ -467,7 +463,7 @@
                         </div>
                         <div class="card-body p-2">
                             <a class="card-title c_blue fw_5" href="proposal.html">Эковата 2 кг</a>
-                            <span class="fs_14 c-gray mb-1">5 км от Вас</span>
+                            <span class="fs_14 c_gray mb-1">5 км от Вас</span>
                             <span class="c_black fw_5">4000 за услугу</span>
                         </div>
                     </div>
@@ -482,7 +478,7 @@
                         </div>
                         <div class="card-body p-2">
                             <a class="card-title c_blue fw_5" href="proposal.html">Дрель Makita 6413 450 Вт</a>
-                            <span class="fs_14 c-gray mb-1">5 км от Вас</span>
+                            <span class="fs_14 c_gray mb-1">5 км от Вас</span>
                             <span class="c_black fw_5">200 руб./час</span>
                         </div>
                     </div>
@@ -497,7 +493,7 @@
                         </div>
                         <div class="card-body p-2">
                             <a class="card-title c_blue fw_5" href="proposal.html">Китайские вилочные погрузчики</a>
-                            <span class="fs_14 c-gray mb-1">5 км от Вас</span>
+                            <span class="fs_14 c_gray mb-1">5 км от Вас</span>
                             <span class="c_black fw_5">200 руб./час</span>
                         </div>
                     </div>
@@ -512,7 +508,7 @@
                         </div>
                         <div class="card-body p-2">
                             <a class="card-title c_blue fw_5" href="proposal.html">Эковата 2 кг</a>
-                            <span class="fs_14 c-gray mb-1">5 км от Вас</span>
+                            <span class="fs_14 c_gray mb-1">5 км от Вас</span>
                             <span class="c_black fw_5">4000 за услугу</span>
                         </div>
                     </div>
@@ -861,7 +857,7 @@
                     </button>
                 </div>
                 <!-- map -->
-                <div class="map-lg position-relative">
+                <div class="map_lg position-relative">
                     <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
                     <button class="btn btn_1 position-absolute start-50 bottom-0 translate-middle px-4">OK</button>
                 </div>
@@ -887,7 +883,7 @@
         </form>
     </div>
 
-    <!-- Modal -->
+    <!-- EMAIL Verification -->
     <div class="modal fade" id="emailVerificationModal" tabindex="-1" aria-labelledby="emailVerificationModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content text-center br_10">
