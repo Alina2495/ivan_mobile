@@ -42,3 +42,10 @@ document.addEventListener('click', function(e) {
         toggleDiv(item);
     }
 });
+
+// forum page show topic description
+$('.btn_desc').on('click', function() {
+    $(this).addClass('d-none');
+    $(this).next(".topic_link").removeClass('d-none');
+    $(this).closest(".br_10").children(".topic_desc").removeClass('d-none');
+});

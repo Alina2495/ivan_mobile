@@ -1,0 +1,112 @@
+/************
+CUSTOM SELECT
+************/
+
+input[type=text]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=text]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+.custom-select {
+    position: relative;
+    width: 100%;
+    border: 1px solid #D2D2D2;
+}
+
+.custom-select button {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--lightengray);
+    text-align: left;
+    padding: .7em 1.5em .7em 1em;
+    background: url(../images/icons/label_btn.svg) no-repeat;
+    background-position: calc(100% - .5em) 55%;
+    background-size: 1.25em 1.25em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cs-options {
+    position: absolute;
+    top: calc(100% - 1px);
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    display: none;
+    border: 1px solid var(--lightengray);
+    background-color: var(--coolwhite);
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.cs-options::-webkit-scrollbar {
+    width: 0;
+}
+
+.cs-options.opened {
+    display: block;
+}
+
+
+/* checkbox for select customization */
+
+.cs-options .radio:not(:last-child) {
+    position: relative;
+    border-bottom: 1px solid var(--lightengray);
+}
+
+.cs-options .radio {
+    position: relative;
+}
+
+.cs-options .radio label {
+    position: relative;
+    z-index: 1;
+    padding: .7em 1em;
+    -webkit-transition: .2s;
+    transition: .2s;
+    line-height: 1.2em;
+    display: block;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid #D2D2D2;
+    background: white url("../images/icons/label.svg") no-repeat center right;
+}
+
+.cs-options .radio input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+
+.cs-options .radio input[type="checkbox"]:checked~label {
+    background-color: #FF6600;
+    color: white;
+    background: #FF6600 url("../images/icons/label_check.svg") no-repeat center right;
+}

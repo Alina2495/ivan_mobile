@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-// COLORS
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+// VARIABLES
 $accent: #FF6600;
 $black: black;
 $primary: #3C3939;
@@ -124,6 +124,10 @@ main {
     font-size: 20px;
 }
 
+span.checked {
+    color: $yellow;
+}
+
 .add_rate {
     input {
         width: 0;
@@ -227,6 +231,7 @@ h6,
     font-weight: normal;
 }
 
+// FONT SIZES
 .fs {
     &_10 {
         font-size: 0.63em;
@@ -239,6 +244,7 @@ h6,
     }
 }
 
+// FONT WEIGHT
 .fw {
     &_5 {
         font-weight: 500;
@@ -248,8 +254,9 @@ h6,
     }
 }
 
+// COLORS
 .c {
-    &-accent {
+    &_accent {
         color: $accent;
     }
     &_primary {
@@ -258,7 +265,7 @@ h6,
     &_blue {
         color: $blue;
     }
-    &-dark-blue {
+    &_dark-blue {
         color: $dark-blue;
     }
     &_gray {
@@ -418,12 +425,11 @@ button {
     font-weight: 500;
     white-space: nowrap;
     border-radius: 10px;
+    padding: 0;
+    line-height: 1em;
     &:focus {
         outline: 0;
         box-shadow: 0 0 0 0.25rem rgba($accent, 0.25);
-    }
-    &-sm {
-        padding: 10px 16px;
     }
     &_lg {
         padding: 11px 32px 11px 32px;
@@ -433,6 +439,7 @@ button {
         background-color: $accent;
         color: $white;
         border-radius: 10px;
+        padding: 10.5px 24px;
         &:hover {
             background-color: lighten($accent, 5);
             color: $white;
@@ -448,6 +455,7 @@ button {
         }
     }
     &_2 {
+        padding: 10.5px 24px;
         color: $accent;
         border: 1px solid $accent;
         &:hover,
@@ -462,11 +470,8 @@ button {
             border-color: grayscale($accent);
         }
     }
-    &-white {
-        background-color: $white;
-        color: $primary;
-    }
     &-danger {
+        padding: 10.5px 24px;
         background-color: $danger;
     }
     &-close {
@@ -559,11 +564,15 @@ img {
 .form-select,
 .form-control {
     border-color: #D2D2D2;
+    flex-shrink: 0;
     &:focus {
         box-shadow: 0 0 0 0.25rem rgba($accent, 0.3);
     }
     &::placeholder {
         color: $gray;
+    }
+    &:read-only {
+        background-color: $white;
     }
 }
 
@@ -575,10 +584,6 @@ img {
 
 .border_acc {
     border: 1px solid $accent;
-}
-
-span.checked {
-    color: $yellow;
 }
 
 input[type=date] {
@@ -689,12 +694,20 @@ input[type=date] {
         background-color: $white;
         z-index: 20;
     }
+    &-body {
+        display: flex;
+        flex-direction: column;
+    }
     &-menu {
         max-width: 90%;
         .img_md {
             width: 40px;
             height: 40px;
             background-image: url(../images/img/avatar-sm.svg);
+        }
+        svg {
+            width: 24px;
+            height: 24px;
         }
     }
 }
@@ -707,7 +720,7 @@ input[type=date] {
 
 .map {
     &_sm {
-        height: 50vw;
+        height: 54vw;
     }
     &_lg {
         height: 75vh;
@@ -723,6 +736,18 @@ input[type=date] {
 .link_row {
     padding-left: 22px;
     background: url('../images/icons/link.svg') no-repeat left top;
+}
+
+// FORUM PAGE
+.comments_row {
+    padding-left: 16px+4;
+    background: url('../images/icons/comment.svg') no-repeat left center;
+}
+
+// TOPIC PAGE
+.answer_row {
+    padding-left: 16px+8;
+    background: url('../images/icons/replay.svg') no-repeat left center;
 }
 
 .btn_del span {
@@ -837,116 +862,4 @@ input[type=date] {
             height: 121px;
         }
     }
-}
-
-
-/************
-CUSTOM SELECT
-************/
-
-input[type=text]::-ms-clear {
-    display: none;
-    width: 0;
-    height: 0;
-}
-
-input[type=text]::-ms-reveal {
-    display: none;
-    width: 0;
-    height: 0;
-}
-
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
-    display: none;
-}
-
-.custom-select {
-    position: relative;
-    width: 100%;
-    border: 1px solid #D2D2D2;
-}
-
-.custom-select button {
-    width: 100%;
-    border-radius: 4px;
-    border: 1px solid var(--lightengray);
-    text-align: left;
-    padding: .7em 1.5em .7em 1em;
-    background: url(../images/icons/label_btn.svg) no-repeat;
-    background-position: calc(100% - .5em) 55%;
-    background-size: 1.25em 1.25em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.cs-options {
-    position: absolute;
-    top: calc(100% - 1px);
-    left: 0;
-    z-index: 100;
-    width: 100%;
-    display: none;
-    border: 1px solid var(--lightengray);
-    background-color: var(--coolwhite);
-    max-height: 300px;
-    overflow-y: scroll;
-}
-
-.cs-options::-webkit-scrollbar {
-    width: 0;
-}
-
-.cs-options.opened {
-    display: block;
-}
-
-
-/* checkbox for select customization */
-
-.cs-options .radio:not(:last-child) {
-    position: relative;
-    border-bottom: 1px solid var(--lightengray);
-}
-
-.cs-options .radio {
-    position: relative;
-}
-
-.cs-options .radio label {
-    position: relative;
-    z-index: 1;
-    padding: .7em 1em;
-    transition: .2s;
-    line-height: 1.2em;
-    display: block;
-    width: 100%;
-    background-color: $white;
-    border-bottom: 1px solid #D2D2D2;
-    background: $white url('../images/icons/label.svg') no-repeat center right;
-}
-
-.cs-options .radio input[type="checkbox"] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    box-shadow: none;
-    border: none;
-    outline: none;
-}
-
-.cs-options .radio input[type="checkbox"]:checked~label {
-    background-color: $accent;
-    color: $white;
-    background: $accent url('../images/icons/label_check.svg') no-repeat center right;
 }

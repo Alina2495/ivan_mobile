@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Избранное - Ivan</title>
+    <title>Тема - Ivan</title>
     <meta name="description" content="Сдать и арендовать спецтехнику в своем городе на ivan.ru">
     <meta name="keywords" content="спецтехника, аренда, сдача, продажа, покупка, поиск стройматериалы, инструменты">
     <!-- styles -->
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- open graph -->
-    <meta name="og:title" content="Избранное – «Ivan»">
+    <meta name="og:title" content="Тема – «Ivan»">
     <meta property="og:image" content="images/img/logo.svg">
     <meta name="og:description" content="Сдать и арендовать спецтехнику в своем городе на ivan.ru">
     <meta name="og:url" content="ivan.ru">
@@ -34,10 +34,10 @@
 
     <!-- HEADER -->
     <header>
-        <div class="container d-flex align-items-center p-3">
+        <div class="container p-3 d-flex align-items-center">
             <!-- Mobile Menu Button -->
             <button class="btn p-0 mobile-menu-btn rounded-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">Меню</button>
-            <h1 class="ms-3 h6 m-0">Избранное</h1>
+            <h2 class="ms-3 h6 m-0">Тема</h2>
         </div>
     </header>
 
@@ -151,105 +151,158 @@
     </div>
 
     <!-- MAIN CONTENT -->
-    <main class="container pt-3 pb-4">
+    <main class="pt-3 pb-2">
+        <div class="container border-bottom pb-3 mb-3">
+            <h1 class="h5 c_blue">Как определить лучшего исполнителя</h1>
+            <div class="mb-2">Что высокотехнологичная концепция общественного уклада влечет за собой процесс внедрения и модернизации глубокомысленных рассуждений.</div>
+            <div class="c_gray fs_14 mb-3">
+                <span class="me-3">20.06.21</span>
+                <span>17:06</span>
+            </div>
+            <div class="mb-1">
+                <a href="user.html" class="c_blue me-3">Наиль Б.</a>
+                <span class="c_dark-blue">Организация</span>
+            </div>
 
-        <!-- empty state -->
-        <div class="text-center c_gray py-4">
-            <p class="lh-sm mb-4">Вы не добавили ни одно предложение в избранное.</p>
-            <a href="#" class="c_accent fw_5">Вернуться назад</a>
+            <!-- есть рейтинг и отзывы -->
+            <div class="d-flex align-items-baseline fs_14">
+                <!-- rating -->
+                <div class="rated me-4">
+                    <span class="checked">&#9733;</span>
+                    <span class="checked">&#9733;</span>
+                    <span class="checked">&#9733;</span>
+                    <span class="checked">&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+                <a class="c_blue" href="user.html">14 отзывов</a>
+            </div>
+
+            <!-- есть рейтинг, но нет отзывов -->
+            <div class="d-flex align-items-baseline fs_14">
+                <!-- rating -->
+                <div class="rated fs-5 me-4">
+                    <span class="checked">&#9733;</span>
+                    <span class="checked">&#9733;</span>
+                    <span class="checked">&#9733;</span>
+                    <span class="checked">&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+                <span>Отзывов пока нет</span>
+            </div>
+
+            <!-- нет рейтинга -->
+            <div class="fs_14 c_gray">
+                <span>Оценок пока нет</span>
+            </div>
+
         </div>
 
-        <!-- favorites list -->
-        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 gx-2 gy-3 g-sm-3">
+        <div class="container">
+            <!-- add answer -->
+            <button type="button" data-bs-toggle="offcanvas" data-bs-target="#addAnswer" class="btn btn_1 w-100 mb-3">Написать ответ</button>
+            <div>4 ответа по данной теме</div>
 
-            <!-- card -->
-            <div>
-                <div class="card">
-                    <button class="btn_fav btn-i active" data-bs-toggle="button" aria-pressed="true"></button>
-                    <div class="img">
-                        <img src="images/img/drel.png" alt="Дрель Makita 6413 450 Вт">
+            <!-- topics answers list -->
+            <div class="mt-4">
+
+                <!-- answer -->
+                <div class="shad_box br_10 py-3 px-2 mb-3">
+                    <div class="border-bottom pb-3 px-2">
+                        <a href="user.html" class="d-block mb-1">Ганнибал Л.</a>
+                        <div class="c_dark-blue lh-sm mb-1">Индивидуальный предприниматель</div>
+                        <!-- есть рейтинг и отзывы -->
+                        <div class="d-flex align-items-baseline fs_14">
+                            <!-- rating -->
+                            <div class="rated me-4">
+                                <span class="checked">&#9733;</span>
+                                <span class="checked">&#9733;</span>
+                                <span class="checked">&#9733;</span>
+                                <span class="checked">&#9733;</span>
+                                <span>&#9733;</span>
+                            </div>
+                            <a class="c_blue" href="user.html">14 отзывов</a>
+                        </div>
+
+                        <!-- есть рейтинг, но нет отзывов -->
+                        <div class="d-flex align-items-baseline fs_14 c_gray">
+                            <!-- rating -->
+                            <div class="rated fs-5 me-4">
+                                <span class="checked">&#9733;</span>
+                                <span class="checked">&#9733;</span>
+                                <span class="checked">&#9733;</span>
+                                <span class="checked">&#9733;</span>
+                                <span>&#9733;</span>
+                            </div>
+                            <span>Отзывов пока нет</span>
+                        </div>
+
+                        <!-- нет рейтинга -->
+                        <div class="fs_14 c_gray">
+                            <span>Оценок пока нет</span>
+                        </div>
                     </div>
-                    <div class="card-body p-2">
-                        <a class="card-title c_blue fw_5" href="user_proposal.html">Дрель Makita 6413 450 Вт</a>
-                        <span class="fs_14 c_gray mb-1">5 км от Вас</span>
-                        <span class="c_black fw_5">200 руб./час</span>
+                    <div class="border-bottom pt-2 pb-3 px-2">
+                        <div class="d-flex justify-content-between mb-2 fs_14 c_gray">
+                            <div class="answer_row">Наиль Б.</div>
+                            <span class="ms-auto me-3">20.06.21</span>
+                            <span>17:06</span>
+                        </div>
+                        <div>Определить лучшего исполнителя можно только попробовав его на вкус.</div>
+                    </div>
+                    <div class="text-end pt-3 px-2">
+                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#answerToAnswer" class="btn c_accent fs_12">Ответить</button>
                     </div>
                 </div>
-            </div>
 
-            <!-- card -->
-            <div>
-                <div class="card">
-                    <button class="btn_fav btn-i active" data-bs-toggle="button" aria-pressed="true"></button>
-                    <div class="img">
-                        <img src="images/img/category2.jpeg" alt="Китайские вилочные погрузчики">
+                <!-- answer -->
+                <div class="shad_box br_10 py-3 px-2 mb-3">
+                    <div class="border-bottom pb-3 px-2">
+                        <a href="user.html" class="d-block mb-1">Наиль Б.</a>
+                        <div class="c_dark-blue lh-sm mb-1">Организация</div>
+                        <!-- есть рейтинг и отзывы -->
+                        <div class="d-flex align-items-baseline fs_14">
+                            <!-- rating -->
+                            <div class="rated me-4">
+                                <span class="checked">&#9733;</span>
+                                <span class="checked">&#9733;</span>
+                                <span class="checked">&#9733;</span>
+                                <span class="checked">&#9733;</span>
+                                <span>&#9733;</span>
+                            </div>
+                            <a class="c_blue" href="user.html">14 отзывов</a>
+                        </div>
+
+                        <!-- есть рейтинг, но нет отзывов -->
+                        <div class="d-flex align-items-baseline fs_14 c_gray">
+                            <!-- rating -->
+                            <div class="rated fs-5 me-4">
+                                <span class="checked">&#9733;</span>
+                                <span class="checked">&#9733;</span>
+                                <span class="checked">&#9733;</span>
+                                <span class="checked">&#9733;</span>
+                                <span>&#9733;</span>
+                            </div>
+                            <span>Отзывов пока нет</span>
+                        </div>
+
+                        <!-- нет рейтинга -->
+                        <div class="fs_14 c_gray">
+                            <span>Оценок пока нет</span>
+                        </div>
                     </div>
-                    <div class="card-body p-2">
-                        <a class="card-title c_blue fw_5" href="user_proposal.html">Китайские вилочные погрузчики</a>
-                        <span class="fs_14 c_gray mb-1">5 км от Вас</span>
-                        <span class="c_black fw_5">200 руб./час</span>
+                    <div class="border-bottom pt-2 pb-3 px-2">
+                        <div class="d-flex justify-content-between mb-2 fs_14 c_gray">
+                            <div class="answer_row">Ганнибал Л.</div>
+                            <span class="ms-auto me-3">20.06.21</span>
+                            <span>20:09</span>
+                        </div>
+                        <div>Это понятно, я спросил по каким критериям определять качество?</div>
+                    </div>
+                    <div class="text-end pt-3 px-2">
+                        <button type="button" data-bs-toggle="offcanvas" data-bs-target="#answerToAnswer" class="btn c_accent fs_12">Ответить</button>
                     </div>
                 </div>
-            </div>
 
-            <!-- card -->
-            <div>
-                <div class="card">
-                    <button class="btn_fav btn-i active" data-bs-toggle="button" aria-pressed="true"></button>
-                    <div class="img">
-                        <img src="images/img/ecovata.jpg" alt="Эковата 2 кг">
-                    </div>
-                    <div class="card-body p-2">
-                        <a class="card-title c_blue fw_5" href="user_proposal.html">Эковата 2 кг</a>
-                        <span class="fs_14 c_gray mb-1">5 км от Вас</span>
-                        <span class="c_black fw_5">4000 за услугу</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- card -->
-            <div>
-                <div class="card">
-                    <button class="btn_fav btn-i active" data-bs-toggle="button" aria-pressed="true"></button>
-                    <div class="img">
-                        <img src="images/img/drel.png" alt="Дрель Makita 6413 450 Вт">
-                    </div>
-                    <div class="card-body p-2">
-                        <a class="card-title c_blue fw_5" href="user_proposal.html">Дрель Makita 6413 450 Вт</a>
-                        <span class="fs_14 c_gray mb-1">5 км от Вас</span>
-                        <span class="c_black fw_5">200 руб./час</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- card -->
-            <div>
-                <div class="card">
-                    <button class="btn_fav btn-i active" data-bs-toggle="button" aria-pressed="true"></button>
-                    <div class="img">
-                        <img src="images/img/category2.jpeg" alt="Китайские вилочные погрузчики">
-                    </div>
-                    <div class="card-body p-2">
-                        <a class="card-title c_blue fw_5" href="user_proposal.html">Китайские вилочные погрузчики</a>
-                        <span class="fs_14 c_gray mb-1">5 км от Вас</span>
-                        <span class="c_black fw_5">200 руб./час</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- card -->
-            <div>
-                <div class="card">
-                    <button class="btn_fav btn-i active" data-bs-toggle="button" aria-pressed="true"></button>
-                    <div class="img">
-                        <img src="images/img/ecovata.jpg" alt="Эковата 2 кг">
-                    </div>
-                    <div class="card-body p-2">
-                        <a class="card-title c_blue fw_5" href="user_proposal.html">Эковата 2 кг</a>
-                        <span class="fs_14 c_gray mb-1">5 км от Вас</span>
-                        <span class="c_black fw_5">4000 за услугу</span>
-                    </div>
-                </div>
             </div>
 
         </div>
@@ -276,7 +329,7 @@
             <!-- messages -->
             <a href="messages.html" class="position-relative px-1">
                 <!-- если есть сообщения показать кружок удалить класс d-none -->
-                <div class="rounded-circle bg-accent position-absolute end-0 top-0 ms-1"></div>
+                <div class="d-none rounded-circle bg-accent position-absolute end-0 top-0 ms-1"></div>
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"/>
                 <path d="M22 6L12 13L2 6"/>
@@ -291,6 +344,139 @@
             </a>
         </div>
     </footer>
+
+    <!-- LOGIN -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="login" aria-labelledby="loginLabel">
+        <div class="offcanvas-header align-items-center justify-content-end shad_box">
+            <h6 class="position-absolute translate-middle start-50 top-50 fw-normal m-0">Вход</h6>
+            <button class="btn p-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>              
+            </button>
+        </div>
+        <form class="offcanvas-body d-flex flex-column justify-content-center pt-4">
+            <input class="form-control mb-3" type="email" placeholder="Введите Ваш e-mail">
+            <div class="position-relative mb-3">
+                <input type="password" class="form-control" id="create-pass">
+                <button data-state="invisible" type="button" class="btn p-0 px-3 position-absolute end-0 top-0 h-100 pass_btn"></button>
+            </div>
+            <div class="form-check mb-4">
+                <input id="remPass" type="checkbox" class="form-check-input me-2">
+                <label for="remPass">Запомнить пароль</label>
+            </div>
+            <div class="d-flex flex-column">
+                <button class="btn btn_1 px-5 w-100 mb-4">Войти</button>
+                <button class="btn c_blue fw_5" type="button" data-bs-toggle="offcanvas" data-bs-target="#pass-rec" aria-controls="pass-rec">Забыли пароль?</button>
+                <button class="btn c_blue fw_5" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin" aria-controls="signin">Зарегистрироваться</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- SIGNIN -->
+    <div class="offcanvas offcanvas-start fs-6" tabindex="-1" id="signin" aria-labelledby="signinLabel">
+        <div class="offcanvas-header align-items-center justify-content-between shad_box position-relative">
+            <button class="btn p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#login" aria-controls="login">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <h6 class="position-absolute translate-middle start-50 top-50 fw-normal">Регистрация</h6>
+            <button class="btn p-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                    
+            </button>
+        </div>
+        <form class="offcanvas-body d-flex flex-column justify-content-center pt-4">
+            <input class="form-control mb-4" type="tel" placeholder="Введите Ваш e-mail">
+            <button class="btn btn_1 px-4 mb-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin2" aria-controls="signin2">Продолжить</button>
+            <p class="mx-auto"><span>У вас есть учетная запись?</span> <button class="btn p-0 c_blue border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#login" aria-controls="login">Войти</button></p>
+        </form>
+    </div>
+
+    <!-- SIGNIN 2 -->
+    <div class="offcanvas offcanvas-start fs-6" tabindex="-1" id="signin2" aria-labelledby="signin2Label">
+        <div class="offcanvas-header align-items-center justify-content-between shad_box position-relative">
+            <button class="btn p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin" aria-controls="signin">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <h6 class="position-absolute translate-middle start-50 top-50 fw-normal">Регистрация</h6>
+            <button class="btn p-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                    
+            </button>
+        </div>
+        <form class="offcanvas-body d-flex flex-column justify-content-center pt-4">
+            <h5 class="mb-3">Подтвердите Вашу эл. почту</h5>
+            <p class="text-center">В течение 2 минут вы получите сообщение с кодом подтверждения на эл. почту <span> gavrilov@mail.ru</span></p>
+            <input class="form-control mb-3" type="text" placeholder="Код подтверждения">
+            <button class="btn p-0 text-start c_blue fw-normal mb-4">Получить новый код</button>
+            <button class="btn btn_1 px-4 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin3" aria-controls="signin3">Подтвердить</button>
+            <button class="btn btn_2" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin" aria-controls="signin">Изменить E-mail</button>
+        </form>
+    </div>
+
+    <!-- SIGNIN 3 -->
+    <div class="offcanvas offcanvas-start fs-6" tabindex="-1" id="signin3" aria-labelledby="signin3Label">
+        <div class="offcanvas-header align-items-center justify-content-between shad_box position-relative">
+            <button class="btn p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin2" aria-controls="signin2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <h6 class="position-absolute translate-middle start-50 top-50 fw-normal">Регистрация</h6>
+            <button class="btn p-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                    
+            </button>
+        </div>
+        <form class="offcanvas-body d-flex flex-column justify-content-center pt-4">
+            <h5 class="mb-3 text-center">Регистрация</h5>
+            <input class="form-control mb-3" type="text" placeholder="Имя профиля">
+            <div class="position-relative mb-4">
+                <input type="password" class="form-control" placeholder="Придумайте пароль" id="create-pass">
+                <button data-state="invisible" type="button" class="btn p-0 px-3 position-absolute end-0 top-0 h-100 pass_btn"></button>
+            </div>
+            <button class="btn btn_1 px-4 mb-5" type="button">Продолжить</button>
+            <p class="mx-auto"><span>У вас есть учетная запись?</span> <button class="btn p-0 c_blue border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#login" aria-controls="login">Войти</button></p>
+        </form>
+    </div>
+
+    <!-- PASS RECOVERY -->
+    <div class="offcanvas offcanvas-start fs-6" tabindex="-1" id="pass-rec" aria-labelledby="pass-recLabel">
+        <div class="offcanvas-header align-items-center justify-content-between shad_box position-relative">
+            <button class="btn p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#login" aria-controls="login">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <h6 class="position-absolute translate-middle start-50 top-50 fw-normal">Вход</h6>
+            <button class="btn p-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                    
+            </button>
+        </div>
+        <form class="offcanvas-body d-flex flex-column justify-content-center pt-4">
+            <h5 class="mb-3 text-center">Восстановление пароля</h5>
+            <input class="form-control mb-4" type="tel" placeholder="Введите Ваш e-mail">
+            <button class="btn btn_1 px-4 mb-5" type="button">Сбросить текущий пароль</button>
+        </form>
+    </div>
 
     <!-- CREATE PROPOSAL -->
     <div class="offcanvas offcanvas-end bg-white" tabindex="-1" id="createProp" aria-labelledby="createPropLabel">
@@ -528,6 +714,53 @@
             <!-- save announcement changes -->
             <div class="px-3">
                 <button class="btn btn_lg btn_1 w-100">Опубликовать</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- ANSWER TO AUTHOR OF TOPIC -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="addAnswer" aria-labelledby="addAnswerLabel">
+        <div class="offcanvas-header py-2 align-items-center justify-content-between shad_box">
+            <button type="button" class="btn" data-bs-dismiss="offcanvas">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <h6 id="addAnswerLabel" class="fw-normal m-0 position-absolute translate-middle top-50 start-50 text-nowrap">Ваш ответ</h6>
+            <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <form class="offcanvas-body justify-content-between pb-4 c_black">
+            <h5 class="mb-4">Как определить лучшего исполнителя</h5>
+            <textarea class="form-control" rows="8" placeholder="Начните вводить текст..." required></textarea>
+            <div class="mt-auto position-sticky bottom-0 pt-3 start-0 end-0 bg-white">
+                <button class="btn btn_1 w-100" type="submit">Добавить ответ</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- ANSWER TO ANSWER ON TOPIC -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="answerToAnswer" aria-labelledby="answerToAnswerLabel">
+        <div class="offcanvas-header py-2 align-items-center justify-content-between shad_box">
+            <button type="button" class="btn" data-bs-dismiss="offcanvas">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <h6 id="answerToAnswerLabel" class="fw-normal m-0 position-absolute translate-middle top-50 start-50 text-nowrap">Ваш ответ</h6>
+            <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <form class="offcanvas-body justify-content-between pb-4 c_black">
+            <h6 href="user.html" class="c_black fw-normal">Ганнибал Л.</h6>
+            <div class="fst-italic mb-4">Определить лучшего исполнителя можно только попробовав его на вкус.</div>
+            <div class="text-end mb-4 pb-2">
+                <!-- если нажать на удалить то отвечаешь автору темы, а не комментатору, вместо имени, цитаты и кнопки показывать заголовок темы -->
+                <button class="btn text-danger" type="button">Удалить цитату</button>
+            </div>
+            <textarea class="form-control" rows="8" placeholder="Начните вводить текст..." required></textarea>
+            <div class="mt-auto position-sticky bottom-0 pt-3 start-0 end-0 bg-white">
+                <button class="btn btn_1 w-100" type="submit">Добавить ответ</button>
             </div>
         </form>
     </div>
