@@ -160,10 +160,10 @@
         </nav>
     </div>
 
-    <!-- SEARCH SETTINGS -->
+    <!-- PRPOSALS SEARCH SETTINGS -->
     <div class="offcanvas offcanvas-end bg-light-gray" tabindex="-1" id="searchSettings" aria-labelledby="searchSettingsLabel">
         <div class="offcanvas-header py-2 justify-content-end">
-            <button type="button" class="btn-close text-reset m-0 me-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             <h6 class="offcanvas-title fw-normal m-0 position-absolute translate-middle top-50 start-50 text-nowrap" id="searchSettingsLabel">Настройки поиска</h6>
         </div>
         <form class="offcanvas-body py-4 position-relative pb-0">
@@ -191,8 +191,8 @@
             <!-- city and metro station -->
             <fieldset class="bg-white br_10 pt-2 px-3 pb-4 mb-3">
 
+                <label class="fs-6 c_gray mb-1">Город или регион</label>
                 <input list="choose_city" class="form-control mb-3" type="text" placeholder="Выбор города" />
-
                 <datalist id="choose_city">
                     <option value="Казань">Казань</option>
                     <option value="2">2</option>
@@ -238,7 +238,7 @@
             <fieldset class="bg-white br_10 pt-2 px-3 pb-4 mb-3">
                 <legend class="mb-3 fs-6 c_gray">Исполнители</legend>
                 <fieldset class="mb-4 form-check">
-                    <input type="checkbox" class="form-check-input" id="member-type-1">
+                    <input type="checkbox" class="form-check-input" id="member-type-1" checked>
                     <label for="member-type-1" class="form-check-label">Частное лицо</label>
                 </fieldset>
                 <fieldset class="mb-4 form-check">
@@ -285,7 +285,7 @@
         <section class="container pe-0 pb-4">
             <h5 class="visually-hidden">Популярные предложения</h5>
             <!-- categories tabs -->
-            <div class="btn_pills d-flex w-100 overflow-x-scroll py-3">
+            <div class="btn_pills d-flex w-100 py-3">
                 <button class="active">Любая категория</button>
                 <button>Инструменты</button>
                 <button>Спецтехника</button>
@@ -401,20 +401,20 @@
         </section>
 
         <!-- FIND ON MAP SECTION -->
-        <section class="find-on-map container px-0 py-4 py-md-5 position-relative">
+        <section class="container px-0 py-4 py-md-5 position-relative">
             <h4 class="mb-3 ps-3 ps-md-0">Найти на карте</h4>
-            <div class="input-group align-items-center shad_box">
-                <button class="btn mobile-search-btn p-0 px-4 rounded-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#searchSettings" aria-controls="searchSettings"></button>
+            <div class="input-group shad_box">
+                <button class="btn h-auto rounded-0 mobile-search-btn p-0 px-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#searchSettings" aria-controls="searchSettings"></button>
                 <input type="text" class="form-control border-0" placeholder="Поиск по предложениям...">
-                <button class="btn btn_1 px-4 rounded-0">
+                <button class="btn bg-accent px-4 py-2 rounded-0" type="button">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M21 21L16.65 16.65" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                        <path d="M20.9999 21L16.6499 16.65" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                        
                 </button>
             </div>
             <!-- proposals radius search -->
-            <div class="d-flex w-100 overflow-x-scroll btn_pills ps-3 py-3 position-absolute zi_20">
+            <div class="d-flex w-100 btn_pills ps-3 py-3 position-absolute zi_20">
                 <button class="active">В радиусе 1 км</button>
                 <button>В радиусе 5 км</button>
                 <button>В радиусе 10 км</button>
@@ -424,7 +424,7 @@
             </div>
             <!-- map -->
             <div class="w-100 position-relative map_lg">
-                <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100&amp;height=100&amp;lang=ru_RU&amp;scroll=false"></script>
+                <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
             </div>
         </section>
 
@@ -687,10 +687,10 @@
                     <!-- drop img -->
                     <div class="img-drop position-relative rounded-3 border align-self-start">
                         <input type="file" class="top-0 start-0 w-100 h-100">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M35 25V31.6667C35 32.5507 34.6488 33.3986 34.0237 34.0237C33.3986 34.6488 32.5507 35 31.6667 35H8.33333C7.44928 35 6.60143 34.6488 5.97631 34.0237C5.35119 33.3986 5 32.5507 5 31.6667V25" stroke="#4DA9FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M11.6663 16.6667L19.9997 25L28.333 16.6667" stroke="#4DA9FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M20 25V5" stroke="#4DA9FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="#4DA9FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 10L12 15L17 10" stroke="#4DA9FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 15V3" stroke="#4DA9FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                 </fieldset>
@@ -803,7 +803,7 @@
                 </div>
                 <!-- map -->
                 <div class="map_lg position-relative">
-                    <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100&amp;height=100&amp;lang=ru_RU&amp;scroll=false"></script>
+                    <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
                     <button class="btn btn_1 position-absolute start-50 bottom-0 translate-middle px-4">OK</button>
                 </div>
             </fieldset>
@@ -841,64 +841,65 @@
                     </div>
                 </fieldset>
                 <!-- parameters -->
-                <div class="fs-5 mb-3">Параметры</div>
-                <fieldset class="mb-5 add-param-block flex-column">
-                    <!-- hidden param group -->
-                    <fieldset class="mb-4">
-                        <fieldset class="mb-3">
-                            <label class="c_black mb-2">Введите название параметра:</label>
-                            <div class="d-flex flex-nowrap align-items-center">
-                                <div class="col-10">
-                                    <input type="text" class="form-control" placeholder="Например, масса">
-                                </div>
-                                <!-- delete param group -->
-                                <button class="p-0 btn flex-shrink-0 ms-4 col-auto">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3 6H5H21" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>                                    
-                        </button>
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <label class="c_black mb-2">Введите значение параметра:</label>
-                            <input type="text" class="form-control" placeholder="Например, 10кг">
-                        </fieldset>
-                    </fieldset>
+                <fieldset class="mb-5 dynamic-fieldset">
+                    <legend class="fs-5 mb-3">Параметры</legend>
 
                     <!-- visible param group -->
-                    <fieldset class="mb-4">
-                        <fieldset class="mb-3">
-                            <label class="c_black mb-2">Введите название параметра:</label>
-                            <div class="d-flex flex-nowrap align-items-center">
-                                <div class="col-10">
-                                    <input type="text" class="form-control" placeholder="Например, масса">
-                                </div>
-                                <!-- delete param group -->
-                                <button class="p-0 btn flex-shrink-0 ms-3 col-auto">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3 6H5H21" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>                                    
-                        </button>
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <label class="c_black mb-2">Введите значение параметра:</label>
+                    <fieldset class="fieldset-clone mb-4">
+                        <div class="c_black mb-2">Название параметра:</div>
+                        <div class="row align-items-center mb-2">
                             <div class="col-10">
-                                <input type="text" class="form-control" placeholder="Например, 10кг">
+                                <input type="text" class="form-control" placeholder="Например, масса">
                             </div>
-                        </fieldset>
+                            <div class="col-2">
+                                <button type="button" class="btn-delete" onclick="this.closest('.fieldset-clone').remove();">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 6H5H21"/>
+                                        <path d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z"/>
+                                    </svg>                                    
+                                </button>
+                            </div>
+                        </div>
+                        <div class="c_black mb-2">Значение параметра:</div>
+                        <div class="row mb-2">
+                            <div class="col-10">
+                                <input type="text" class="form-control" placeholder="Например, 000 кг">
+                            </div>
+                        </div>
                     </fieldset>
 
                     <!-- add param group btn -->
-                    <button type="button" class="btn btn_2 order-last p-0 border-0 add-param-group" onclick="addInput(this)">
-                        <svg class="me-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <button type="button" class="btn-add" onclick="addFieldset(this)">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 5V19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M5 12H19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                         <span>Добавить параметр</span>
                     </button>
+
+                    <!-- hidden param group -->
+                    <fieldset class="fieldset-clone mb-4">
+                        <div class="c_black mb-2">Название параметра:</div>
+                        <div class="row align-items-center mb-2">
+                            <div class="col-10">
+                                <input type="text" class="form-control" placeholder="Например, масса">
+                            </div>
+                            <div class="col-2">
+                                <button type="button" class="btn-delete" onclick="this.closest('.fieldset-clone').remove();">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 6H5H21"/>
+                                        <path d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z"/>
+                                    </svg>                                    
+                                </button>
+                            </div>
+                        </div>
+                        <div class="c_black mb-2">Значение параметра:</div>
+                        <div class="row mb-2">
+                            <div class="col-10">
+                                <input type="text" class="form-control" placeholder="Например, 000 кг">
+                            </div>
+                        </div>
+                    </fieldset>
                 </fieldset>
                 <button class="btn btn_1 w-100">Опубликовать</button>
             </div>
@@ -946,7 +947,7 @@
                 </div>
                 <!-- map -->
                 <div class="map_lg position-relative">
-                    <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100&amp;height=100&amp;lang=ru_RU&amp;scroll=false"></script>
+                    <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
                     <button class="btn btn_1 position-absolute start-50 bottom-0 translate-middle px-4">OK</button>
                 </div>
             </fieldset>

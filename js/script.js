@@ -13,10 +13,10 @@ passBtn.forEach(function(item, i, arr) {
     });
 });
 
-/* create proposal adding new parametres inputs */
-function addInput(elem) {
-    let cloneInput = elem.previousElementSibling.cloneNode(true);
-    elem.before(cloneInput);
+/* adding new fieldset */
+function addFieldset(btn) {
+    let cloneInput = btn.nextElementSibling.cloneNode(true);
+    btn.before(cloneInput);
 }
 
 // account page show unverified email window
