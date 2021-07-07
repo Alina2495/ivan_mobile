@@ -48,3 +48,10 @@ $('.btn_desc').on('click', function() {
     $(this).next(".topic_link").removeClass('d-none');
     $(this).closest(".br_10").children(".topic_desc").removeClass('d-none');
 });
+
+
+/* adding new fieldset */
+function addFieldset(btn) {
+    let cloneInput = btn.nextElementSibling.cloneNode(true);
+    btn.before(cloneInput);
+}

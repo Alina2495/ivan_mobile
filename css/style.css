@@ -947,3 +947,70 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
 }
 /*# sourceMappingURL=style.css.map */
+
+
+/* dynamic fieldset */
+.dynamic-fieldset .fieldset-clone:last-child {display: none;}
+
+.dynamic-fieldset .btn-add {
+  border: 0;
+  padding: 0px;
+  background: none;
+  color: #FF6600;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.dynamic-fieldset .btn-add svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  margin-right: .5em;
+}
+.dynamic-fieldset .btn-add svg path {
+  stroke: #FF6600;
+  stroke-width:2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.dynamic-fieldset .btn-add:hover,
+.dynamic-fieldset .btn-add:focus,
+.dynamic-fieldset .btn-add:active {
+  color: #EB1919;
+  cursor: pointer;
+}
+.dynamic-fieldset .btn-add:hover svg path,
+.dynamic-fieldset .btn-add:focus svg path,
+.dynamic-fieldset .btn-add:active svg path {
+  stroke: #EB1919;
+}
+
+.fieldset-clone .btn-delete {
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  border: none;
+  padding: 0px;
+  background: none;
+  cursor: pointer;
+}
+.fieldset-clone .btn-delete svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+}
+.fieldset-clone .btn-delete svg path {
+  stroke:#3C3939;
+  stroke-width:2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.fieldset-clone .btn-delete:hover svg path,
+.fieldset-clone .btn-delete:focus svg path {
+  stroke:#FF6600;
+}
+.fieldset-clone .btn-delete:active svg path{
+  stroke: #EB1919;
+}
