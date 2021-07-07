@@ -87,7 +87,7 @@
                     </svg>
                     <a href="my_favorites.html">Избранное</a>
                 </li>
-                <!-- если не залогинен то добавлять атрибут для ссылки data-bs-toggle="modal" и href="#limitedFuncModal", который будет направлять на модалку с ограничеены и так для всех пунктов меню -->
+                <!-- если не залогинен то добавлять атрибут для ссылки data-bs-toggle="modal" и href="#limitedFuncModal", который будет направлять на модалку с текстом об ограниченном доступе и так для всех пунктов меню -->
                 <!-- favorites -->
                 <li class="d-flex align-items-start mb-4">
                     <svg class="me-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -282,7 +282,7 @@
             </svg>
             </a>
             <!-- messages -->
-            <a href="messages.html" class="position-relative px-1">
+            <a href="my_messages.html" class="position-relative px-1">
                 <!-- если есть сообщения показать кружок удалить класс d-none -->
                 <div class="rounded-circle bg-accent position-absolute end-0 top-0 ms-1"></div>
                 <svg class="active" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -291,7 +291,7 @@
             </svg>
             </a>
             <!-- account -->
-            <a href="account.html">
+            <a href="my_account.html">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"/>
                 <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"/>
@@ -302,29 +302,27 @@
 
     <!-- MESSAGE SEARCH -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="findMsg" aria-labelledby="findMsgLabel">
-        <div class="offcanvas-header py-2 align-items-center justify-content-end shad_box">
-            <div class="d-flex align-items-center">
-                <!-- back -->
-                <button class="btn p-0 rounded-0 me-2" type="button" data-bs-dismiss="offcanvas">
+        <div class="offcanvas-header py-2 align-items-center shad_box">
+            <!-- back -->
+            <button class="btn p-0 rounded-0 me-2" type="button" data-bs-dismiss="offcanvas">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </button>
-                <form class="shad_box flex-fill br_10 py-1 px-3 d-flex align-items-center justify-content-between">
-                    <svg class="flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <form class="shad_box flex-fill br_10 py-1 px-3 d-flex align-items-center justify-content-between">
+                <svg class="flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M14 14L11.1 11.1" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <input required type="search" name="" id="" class="form-control flex-fill border-0 p-1 ps-2" placeholder="Поиск">
-                    <button class="btn p-0" type="reset">
+                <input required type="search" name="" id="" class="form-control flex-fill border-0 p-1 ps-2" placeholder="Поиск">
+                <button class="btn p-0" type="reset">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18 6L6 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M6 6L18 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
-                </form>
-            </div>
+            </form>
         </div>
         <div class="offcanvas-body pt-0 px-0 pb-4 c_black">
             <!-- empty state -->

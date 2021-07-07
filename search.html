@@ -78,7 +78,7 @@
                     </svg>
                     <a href="my_favorites.html">Избранное</a>
                 </li>
-                <!-- если не залогинен то добавлять атрибут для ссылки data-bs-toggle="modal" и href="#limitedFuncModal", который будет направлять на модалку с ограничеены и так для всех пунктов меню -->
+                <!-- если не залогинен то добавлять атрибут для ссылки data-bs-toggle="modal" и href="#limitedFuncModal", который будет направлять на модалку с текстом об ограниченном доступе и так для всех пунктов меню -->
                 <!-- favorites -->
                 <li class="d-flex align-items-start mb-4">
                     <svg class="me-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -159,13 +159,13 @@
         </nav>
     </div>
 
-    <!-- MOBILE SEARCH SETTINGS -->
-    <div class="offcanvas offcanvas-end border-0 bg-light-gray" tabindex="-1" id="searchSettings" aria-labelledby="searchSettingsLabel">
-        <div class="offcanvas-header z-index-10 py-2 align-items-center justify-content-start bg-white shad_box">
+    <!-- SEARCH SETTINGS -->
+    <div class="offcanvas offcanvas-end bg-light-gray" tabindex="-1" id="searchSettings" aria-labelledby="searchSettingsLabel">
+        <div class="offcanvas-header z-index-10 py-2 align-items-center justify-content-end bg-white shad_box">
             <button type="button" class="btn-close text-reset m-0 me-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            <h6 class="offcanvas-title" id="searchSettingsLabel">Настройки поиска</h6>
+            <h6 class="offcanvas-title fw-normal m-0 position-absolute translate-middle top-50 start-50 text-nowrap" id="searchSettingsLabel">Настройки поиска</h6>
         </div>
-        <form class="offcanvas-body py-4 position-relative pb-5">
+        <form class="offcanvas-body py-4 position-relative pb-0">
             <!-- category -->
             <fieldset class="bg-white br_10 pt-2 px-3 pb-4 mb-3">
                 <legend class="mb-3 fs-6 c_gray">Категория</legend>
@@ -188,6 +188,140 @@
             </fieldset>
             <!-- city and metro station -->
             <fieldset class="bg-white br_10 pt-2 px-3 pb-4 mb-3">
+
+                <!-- custom select single -->
+                <div class="custom-select single mb-3">
+                    <button type="button">Не выбрано</button>
+                    <div class="cs-options search-list">
+                        <input type="search" placeholder="Поиск" class="search-in-list">
+                        <div class="radio search-item">
+                            <input type="radio" name="radio-opt" value="Для влюбленных">
+                            <label>Для влюбленных</label>
+                        </div>
+                        <div class="sublevel">
+                            <div class="radio search-item">
+                                <input type="radio" name="radio-opt" value="Вкусные подарки Любовь">
+                                <label>
+                                    <span class="nesting">-</span>
+                                    <span class="level-mark">2</span>
+                                    Вкусные подарки Любовь
+                                </label>
+                            </div>
+                            <div class="radio search-item">
+                                <input type="radio" name="radio-opt" value="Другое">
+                                <label>
+                                    <span class="nesting">+</span>
+                                    <span class="level-mark">2</span>
+                                    Другое
+                                </label>
+                            </div>
+                            <div class="sublevel">
+                                <div class="radio search-item">
+                                    <input type="radio" name="radio-opt" value="Термостакан “Любовь...">
+                                    <label>
+                                        <span class="nesting">-</span>
+                                        <span class="level-mark">3</span>
+                                        Термостакан “Любовь...
+                                    </label>
+                                </div>
+                                <div class="radio search-item">
+                                    <input type="radio" name="radio-opt" value="Другое 2">
+                                    <label>
+                                        <span class="nesting">-</span>
+                                        <span class="level-mark">3</span>
+                                        Другое 2
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="radio search-item">
+                            <input type="radio" name="radio-opt" value="Подарочные наборы">
+                            <label>Подарочные наборы</label>
+                        </div>
+                        <div class="sublevel">
+                            <div class="radio search-item">
+                                <input type="radio" name="radio-opt" value="Мужские наборы">
+                                <label>
+                                    <span class="nesting">-</span>
+                                    <span class="level-mark">2</span>
+                                    Мужские наборы
+                                </label>
+                            </div>
+                            <div class="radio search-item">
+                                <input type="radio" name="radio-opt" value="Женские наборы">
+                                <label>
+                                    <span class="nesting">-</span>
+                                    <span class="level-mark">2</span>
+                                    Женские наборы
+                                </label>
+                            </div>
+                        </div>
+                        <div class="radio search-item">
+                            <input type="radio" name="radio-opt" value="Товары 18+">
+                            <label>Товары 18+</label>
+                        </div>
+                        <div class="radio search-item">
+                            <input type="radio" name="radio-opt" value="Воздушные шары">
+                            <label>Воздушные шары</label>
+                        </div>
+                        <div class="sublevel">
+                            <div class="radio search-item">
+                                <input type="radio" name="radio-opt" value="Латексные шары">
+                                <label>
+                                    <span class="nesting">-</span>
+                                    <span class="level-mark">2</span>
+                                    Латексные шары
+                                </label>
+                            </div>
+                            <div class="radio search-item">
+                                <input type="radio" name="radio-opt" value="Фольгированные шары">
+                                <label>
+                                    <span class="nesting">-</span>
+                                    <span class="level-mark">2</span>
+                                    Фольгированные шары
+                                </label>
+                            </div>
+                        </div>
+                        <div class="radio search-item">
+                            <input type="radio" name="radio-opt" value="Фотоальбомы">
+                            <label>Фотоальбомы</label>
+                        </div>
+                        <div class="sublevel">
+                            <div class="radio search-item">
+                                <input type="radio" name="radio-opt" value="Детские фотоальбомы и фотокниги">
+                                <label>
+                                    <span class="nesting">-</span>
+                                    <span class="level-mark">2</span>
+                                    Детские фотоальбомы и фотокниги
+                                </label>
+                            </div>
+                            <div class="radio search-item">
+                                <input type="radio" name="radio-opt" value="Свадебные фотоальбомы">
+                                <label>
+                                    <span class="nesting">-</span>
+                                    <span class="level-mark">2</span>
+                                    Свадебные фотоальбомы
+                                </label>
+                            </div>
+                            <div class="radio search-item">
+                                <input type="radio" name="radio-opt" value="Классические фотоальбомы и фотокниги">
+                                <label>
+                                    <span class="nesting">-</span>
+                                    <span class="level-mark">2</span>
+                                    Классические фотоальбомы и фотокниги
+                                </label>
+                            </div>
+                        </div>
+                        <div class="radio search-item">
+                            <input type="radio" name="radio-opt" value="Подарочная косметика">
+                            <label>Подарочная косметика</label>
+                        </div>
+                        <div class="radio search-item">
+                            <input type="radio" name="radio-opt" value="Необычные вкусные подарки">
+                            <label>Необычные вкусные подарки</label>
+                        </div>
+                    </div>
+                </div>
                 <legend class="mb-1 fs-6 c_gray">Город или регион</legend>
                 <fieldset class="mb-3">
 
@@ -225,7 +359,7 @@
                 </fieldset>
             </fieldset>
             <!-- sorting -->
-            <fieldset class="bg-white br_10 pt-2 px-3 pb-4 mb-4">
+            <fieldset class="bg-white br_10 pt-2 px-3 pb-4 mb-2">
                 <legend class="mb-3 fs-6 c_gray">Сортировка</legend>
                 <fieldset class="form-check mb-4">
                     <input name="sorting" id="default" type="radio" class="form-check-input me-3" required checked>
@@ -244,7 +378,7 @@
                     <label for="by-distance">По удалённости</label>
                 </fieldset>
             </fieldset>
-            <div class="position-fixed bottom-0 p-3 start-0 end-0">
+            <div class="position-sticky bottom-0 py-3 start-0 end-0 bg-light-gray">
                 <button class="btn btn_1 w-100" type="submit">Показать 0 предложений</button>
             </div>
         </form>
@@ -520,7 +654,7 @@
             </svg>
             </a>
             <!-- messages -->
-            <a href="messages.html" class="position-relative px-1">
+            <a href="my_messages.html" class="position-relative px-1">
                 <!-- если есть сообщения показать кружок удалить класс d-none -->
                 <div class="rounded-circle bg-accent position-absolute end-0 top-0 ms-1"></div>
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -529,7 +663,7 @@
             </svg>
             </a>
             <!-- account -->
-            <a href="account.html">
+            <a href="my_account.html">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"/>
                 <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"/>

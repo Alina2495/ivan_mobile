@@ -427,6 +427,20 @@ button {
   white-space: nowrap;
 }
 
+.img-upload div input[type=radio] {
+  cursor: pointer;
+  z-index: 1;
+  opacity: 0;
+}
+
+.img-upload .row > div div {
+  overflow: hidden;
+}
+
+.img-upload div input[type=radio]:checked + div {
+  border-color: #FF6600 !important;
+}
+
 .btn {
   font-weight: 500;
   white-space: nowrap;

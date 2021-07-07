@@ -33,10 +33,12 @@
 <body class="position-relative">
 
     <!-- HEADER -->
-    <header class="p-3 d-flex align-items-center">
-        <!-- Mobile Menu Button -->
-        <button class="btn p-0 mobile-menu-btn rounded-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">Меню</button>
-        <h1 class="ms-3 h6 fw-normal m-0">Профиль</h1>
+    <header>
+        <div class="container p-3 d-flex align-items-center">
+            <!-- Mobile Menu Button -->
+            <button class="btn p-0 mobile-menu-btn rounded-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">Меню</button>
+            <h1 class="ms-3 h6 fw-normal m-0">Профиль</h1>
+        </div>
     </header>
 
     <!-- MENU -->
@@ -67,7 +69,7 @@
                     </svg>
                     <a href="my_favorites.html">Избранное</a>
                 </li>
-                <!-- если не залогинен то добавлять атрибут для ссылки data-bs-toggle="modal" и href="#limitedFuncModal", который будет направлять на модалку с ограничеены и так для всех пунктов меню -->
+                <!-- если не залогинен то добавлять атрибут для ссылки data-bs-toggle="modal" и href="#limitedFuncModal", который будет направлять на модалку с текстом об ограниченном доступе и так для всех пунктов меню -->
                 <!-- favorites -->
                 <li class="d-flex align-items-start mb-4">
                     <svg class="me-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -260,7 +262,7 @@
                             <img src="images/img/category.jpeg" alt="#">
                         </div>
                         <div class="card-body d-flex flex-column p-2">
-                            <a class="card-title mb-1 fw_5 c_blue" href="proposal-author.html">Экскаватор-погрузчик с гидромолотом</a>
+                            <a class="card-title mb-1 fw_5 c_blue" href="my_proposal.html">Экскаватор-погрузчик с гидромолотом</a>
                             <div class="mt-auto fw_5">500 руб./за услугу</div>
                         </div>
                     </div>
@@ -272,7 +274,7 @@
                             <img src="images/img/category2.jpeg" alt="#">
                         </div>
                         <div class="card-body d-flex flex-column p-2">
-                            <a class="card-title mb-1 fw_5 c_blue" href="proposal-author.html">Эвакуатор до 5 т</a>
+                            <a class="card-title mb-1 fw_5 c_blue" href="my_proposal.html">Эвакуатор до 5 т</a>
                             <div class="mt-auto fw_5">1500 руб./за услугу</div>
                         </div>
                     </div>
@@ -284,7 +286,7 @@
                             <img src="images/img/category3.jpg" alt="#">
                         </div>
                         <div class="card-body d-flex flex-column p-2">
-                            <a class="card-title mb-1 fw_5 c_blue" href="proposal-author.html">Китайские вилочные погрузчики</a>
+                            <a class="card-title mb-1 fw_5 c_blue" href="my_proposal.html">Китайские вилочные погрузчики</a>
                             <div class="mt-auto fw_5">500 руб./час</div>
                         </div>
                     </div>
@@ -346,7 +348,7 @@
                     <h5 class="fw-normal c_black mb-0 me-1">Мои отзывы</h5>
                     <span class="c_gray">8</span>
                 </div>
-                <a href="reviews-author.html">
+                <a href="my_reviews.html">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9 18L15 12L9 6" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -415,7 +417,7 @@
                     <h5 class="fw-normal c_black mb-0 me-1">Избранное</h5>
                     <span class="c_gray">16</span>
                 </div>
-                <a href="favorites.html">
+                <a href="my_favorites.html">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9 18L15 12L9 6" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -544,7 +546,7 @@
             </svg>
             </a>
             <!-- messages -->
-            <a href="messages.html" class="position-relative px-1">
+            <a href="my_messages.html" class="position-relative px-1">
                 <!-- если есть сообщения показать кружок удалить класс d-none -->
                 <div class="rounded-circle bg-accent position-absolute end-0 top-0 ms-1"></div>
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -553,7 +555,7 @@
             </svg>
             </a>
             <!-- account -->
-            <a href="account.html">
+            <a href="my_account.html">
                 <svg class="active" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"/>
                 <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"/>
