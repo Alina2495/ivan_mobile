@@ -13,33 +13,31 @@ passBtn.forEach(function(item, i, arr) {
     });
 });
 
-
-/* adding new parametres inputs */
+/* create proposal adding new parametres inputs */
 function addInput(elem) {
     let cloneInput = elem.previousElementSibling.cloneNode(true);
     elem.before(cloneInput);
 }
 
-
-// on account page show unverified email window
+// account page show unverified email window
 $(".unverified_trigger").on('click', function() {
     $(".unverified_window").removeClass('d-none');
 });
 
-
-
-function toggleDiv(elem) {
-    // открываем/закрываем окно, добаляя/удаляя активный класс
-    elem.classList.toggle('d-none');
+// открываем/закрываем блок, добаляя/удаляя класс 'd-none'
+function closeDiv(elem) {
+    elem.classList.add('d-none');
 }
-//скрываем опции при клике вне селекта
-let item = document.getElementById('unverified_window');
+
+// account page hide email window
+let item = document.querySelector('.unverified_window');
+let btn = document.querySelector('.unverified_trigger');
 document.addEventListener('click', function(e) {
     const target = e.target;
+    const currentBtn = target == btn || btn.contains(target);
     const currentDiv = target == item || item.contains(target);
-    const div_is_closed = options.classList.contains('d-none');
-    if (!currentDiv && !div_is_closed) {
-        toggleDiv(item);
+    if (!currentDiv && !currentBtn) {
+        closeDiv(item);
     }
 });
 

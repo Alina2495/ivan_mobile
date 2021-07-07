@@ -44,7 +44,7 @@
                         <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M14 14L11.1 11.1" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <input required type="search" name="" id="" class="form-control border-0 w-100 p-1 ps-2" placeholder="Поиск по предложениям...">
+                    <input required type="search" class="form-control border-0 w-100 p-1 ps-2" placeholder="Поиск по предложениям...">
                 </form>
                 <button class="btn mobile-search-btn p-0 rounded-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#searchSettings" aria-controls="searchSettings">Настройки поиска</button>
             </div>
@@ -55,7 +55,7 @@
     <div class="offcanvas offcanvas-start offcanvas-menu" tabindex="-1" id="mobileMenu">
         <div class="offcanvas-header align-items-start border-bottom flex-column">
             <div class="d-flex mb-3">
-                <div class="img_md overflow-hidden me-3 flex-shrink-0">
+                <div class="img_md me-3 flex-shrink-0">
                     <!-- если залогинен, то подставить аватарку, если она загружена -->
                     <img class="w-100 h-100" alt="" src="https://randomuser.me/api/portraits/men/32.jpg">
                 </div>
@@ -162,7 +162,7 @@
 
     <!-- SEARCH SETTINGS -->
     <div class="offcanvas offcanvas-end bg-light-gray" tabindex="-1" id="searchSettings" aria-labelledby="searchSettingsLabel">
-        <div class="offcanvas-header z-index-10 py-2 align-items-center justify-content-end bg-white shad_box">
+        <div class="offcanvas-header py-2 justify-content-end">
             <button type="button" class="btn-close text-reset m-0 me-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             <h6 class="offcanvas-title fw-normal m-0 position-absolute translate-middle top-50 start-50 text-nowrap" id="searchSettingsLabel">Настройки поиска</h6>
         </div>
@@ -187,151 +187,41 @@
                     <label for="materials">Материалы</label>
                 </fieldset>
             </fieldset>
+
             <!-- city and metro station -->
             <fieldset class="bg-white br_10 pt-2 px-3 pb-4 mb-3">
 
-                <!-- custom select single -->
-                <div class="custom-select single mb-3">
+                <input list="choose_city" class="form-control mb-3" type="text" placeholder="Выбор города" />
+
+                <datalist id="choose_city">
+                    <option value="Казань">Казань</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </datalist>
+
+                <div class="fs-6 c_gray mt-3 mb-1">Метро</div>
+                <div class="custom-select multy">
                     <button type="button">Не выбрано</button>
                     <div class="cs-options search-list">
                         <input type="search" placeholder="Поиск" class="search-in-list">
-                        <div class="radio search-item">
-                            <input type="radio" name="radio-opt" value="Для влюбленных">
-                            <label>Для влюбленных</label>
+                        <div class="checkbox search-item">
+                            <input type="checkbox" name="offer-opt" value="Станция метро 1">
+                            <label>Станция метро 1</label>
                         </div>
-                        <div class="sublevel">
-                            <div class="radio search-item">
-                                <input type="radio" name="radio-opt" value="Вкусные подарки Любовь">
-                                <label>
-                                    <span class="nesting">-</span>
-                                    <span class="level-mark">2</span>
-                                    Вкусные подарки Любовь
-                                </label>
-                            </div>
-                            <div class="radio search-item">
-                                <input type="radio" name="radio-opt" value="Другое">
-                                <label>
-                                    <span class="nesting">+</span>
-                                    <span class="level-mark">2</span>
-                                    Другое
-                                </label>
-                            </div>
-                            <div class="sublevel">
-                                <div class="radio search-item">
-                                    <input type="radio" name="radio-opt" value="Термостакан “Любовь...">
-                                    <label>
-                                        <span class="nesting">-</span>
-                                        <span class="level-mark">3</span>
-                                        Термостакан “Любовь...
-                                    </label>
-                                </div>
-                                <div class="radio search-item">
-                                    <input type="radio" name="radio-opt" value="Другое 2">
-                                    <label>
-                                        <span class="nesting">-</span>
-                                        <span class="level-mark">3</span>
-                                        Другое 2
-                                    </label>
-                                </div>
-                            </div>
+                        <div class="checkbox search-item">
+                            <input type="checkbox" name="offer-opt" value="Станция метро 2">
+                            <label>Станция метро 2</label>
                         </div>
-                        <div class="radio search-item">
-                            <input type="radio" name="radio-opt" value="Подарочные наборы">
-                            <label>Подарочные наборы</label>
-                        </div>
-                        <div class="sublevel">
-                            <div class="radio search-item">
-                                <input type="radio" name="radio-opt" value="Мужские наборы">
-                                <label>
-                                    <span class="nesting">-</span>
-                                    <span class="level-mark">2</span>
-                                    Мужские наборы
-                                </label>
-                            </div>
-                            <div class="radio search-item">
-                                <input type="radio" name="radio-opt" value="Женские наборы">
-                                <label>
-                                    <span class="nesting">-</span>
-                                    <span class="level-mark">2</span>
-                                    Женские наборы
-                                </label>
-                            </div>
-                        </div>
-                        <div class="radio search-item">
-                            <input type="radio" name="radio-opt" value="Товары 18+">
-                            <label>Товары 18+</label>
-                        </div>
-                        <div class="radio search-item">
-                            <input type="radio" name="radio-opt" value="Воздушные шары">
-                            <label>Воздушные шары</label>
-                        </div>
-                        <div class="sublevel">
-                            <div class="radio search-item">
-                                <input type="radio" name="radio-opt" value="Латексные шары">
-                                <label>
-                                    <span class="nesting">-</span>
-                                    <span class="level-mark">2</span>
-                                    Латексные шары
-                                </label>
-                            </div>
-                            <div class="radio search-item">
-                                <input type="radio" name="radio-opt" value="Фольгированные шары">
-                                <label>
-                                    <span class="nesting">-</span>
-                                    <span class="level-mark">2</span>
-                                    Фольгированные шары
-                                </label>
-                            </div>
-                        </div>
-                        <div class="radio search-item">
-                            <input type="radio" name="radio-opt" value="Фотоальбомы">
-                            <label>Фотоальбомы</label>
-                        </div>
-                        <div class="sublevel">
-                            <div class="radio search-item">
-                                <input type="radio" name="radio-opt" value="Детские фотоальбомы и фотокниги">
-                                <label>
-                                    <span class="nesting">-</span>
-                                    <span class="level-mark">2</span>
-                                    Детские фотоальбомы и фотокниги
-                                </label>
-                            </div>
-                            <div class="radio search-item">
-                                <input type="radio" name="radio-opt" value="Свадебные фотоальбомы">
-                                <label>
-                                    <span class="nesting">-</span>
-                                    <span class="level-mark">2</span>
-                                    Свадебные фотоальбомы
-                                </label>
-                            </div>
-                            <div class="radio search-item">
-                                <input type="radio" name="radio-opt" value="Классические фотоальбомы и фотокниги">
-                                <label>
-                                    <span class="nesting">-</span>
-                                    <span class="level-mark">2</span>
-                                    Классические фотоальбомы и фотокниги
-                                </label>
-                            </div>
-                        </div>
-                        <div class="radio search-item">
-                            <input type="radio" name="radio-opt" value="Подарочная косметика">
-                            <label>Подарочная косметика</label>
-                        </div>
-                        <div class="radio search-item">
-                            <input type="radio" name="radio-opt" value="Необычные вкусные подарки">
-                            <label>Необычные вкусные подарки</label>
+                        <div class="checkbox search-item">
+                            <input type="checkbox" name="offer-opt" value="Станция метро 3">
+                            <label>Длинное название станции метро 3</label>
                         </div>
                     </div>
                 </div>
-                <legend class="mb-1 fs-6 c_gray">Город или регион</legend>
-                <fieldset class="mb-3">
-
-                </fieldset>
-                <legend class="mb-1 fs-6 c_gray">Метро</legend>
-                <fieldset>
-
-                </fieldset>
             </fieldset>
+
             <!-- price range -->
             <fieldset class="bg-white br_10 pt-2 px-3 pb-4 mb-3">
                 <fieldset class="mb-3">
@@ -343,6 +233,7 @@
                     <input class="form-control py-1" type="number" name="price" id="price-unto">
                 </fieldset>
             </fieldset>
+
             <!-- type -->
             <fieldset class="bg-white br_10 pt-2 px-3 pb-4 mb-3">
                 <legend class="mb-3 fs-6 c_gray">Исполнители</legend>
@@ -359,6 +250,7 @@
                     <label for="member-type-3" class="form-check-label">Компания</label>
                 </fieldset>
             </fieldset>
+
             <!-- sorting -->
             <fieldset class="bg-white br_10 pt-2 px-3 pb-4 mb-2">
                 <legend class="mb-3 fs-6 c_gray">Сортировка</legend>
@@ -379,6 +271,7 @@
                     <label for="by-distance">По удалённости</label>
                 </fieldset>
             </fieldset>
+
             <div class="position-sticky bottom-0 py-3 start-0 end-0 bg-light-gray">
                 <button class="btn btn_1 w-100" type="submit">Показать 0 предложений</button>
             </div>
@@ -390,8 +283,9 @@
 
         <!-- POPULAR PROPOSALS SECTION -->
         <section class="container pe-0 pb-4">
+            <h5 class="visually-hidden">Популярные предложения</h5>
             <!-- categories tabs -->
-            <div class="d-flex w-100 overflow-x-scroll btn_pills py-3">
+            <div class="btn_pills d-flex w-100 overflow-x-scroll py-3">
                 <button class="active">Любая категория</button>
                 <button>Инструменты</button>
                 <button>Спецтехника</button>
@@ -530,7 +424,7 @@
             </div>
             <!-- map -->
             <div class="w-100 position-relative map_lg">
-                <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=false"></script>
+                <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100&amp;height=100&amp;lang=ru_RU&amp;scroll=false"></script>
             </div>
         </section>
 
@@ -617,8 +511,8 @@
 
     <!-- LOGIN -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="login" aria-labelledby="loginLabel">
-        <div class="offcanvas-header align-items-center justify-content-end shad_box">
-            <h6 class="position-absolute translate-middle start-50 top-50 fw-normal m-0">Вход</h6>
+        <div class="offcanvas-header justify-content-end">
+            <h6 class="position-absolute translate-middle start-50 top-50 fw-normal m-0" id="loginLabel">Вход</h6>
             <button class="btn p-0" data-bs-dismiss="offcanvas" aria-label="Close">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 6L6 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -629,7 +523,7 @@
         <form class="offcanvas-body d-flex flex-column justify-content-center pt-4">
             <input class="form-control mb-3" type="email" placeholder="Введите Ваш e-mail">
             <div class="position-relative mb-3">
-                <input type="password" class="form-control" id="create-pass">
+                <input type="password" class="form-control" id="user-pass">
                 <button data-state="invisible" type="button" class="btn p-0 px-3 position-absolute end-0 top-0 h-100 pass_btn"></button>
             </div>
             <div class="form-check mb-4">
@@ -645,15 +539,15 @@
     </div>
 
     <!-- SIGNIN -->
-    <div class="offcanvas offcanvas-start fs-6" tabindex="-1" id="signin" aria-labelledby="signinLabel">
-        <div class="offcanvas-header align-items-center justify-content-between shad_box position-relative">
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="signin" aria-labelledby="signinLabel">
+        <div class="offcanvas-header justify-content-between">
             <button class="btn p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#login" aria-controls="login">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </button>
-            <h6 class="position-absolute translate-middle start-50 top-50 fw-normal">Регистрация</h6>
+            <h6 class="position-absolute translate-middle start-50 top-50 fw-normal" id="signinLabel">Регистрация</h6>
             <button class="btn p-0" data-bs-dismiss="offcanvas" aria-label="Close">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 6L6 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -669,15 +563,15 @@
     </div>
 
     <!-- SIGNIN 2 -->
-    <div class="offcanvas offcanvas-start fs-6" tabindex="-1" id="signin2" aria-labelledby="signin2Label">
-        <div class="offcanvas-header align-items-center justify-content-between shad_box position-relative">
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="signin2" aria-labelledby="signin2Label">
+        <div class="offcanvas-header justify-content-between">
             <button class="btn p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin" aria-controls="signin">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </button>
-            <h6 class="position-absolute translate-middle start-50 top-50 fw-normal">Регистрация</h6>
+            <h6 class="position-absolute translate-middle start-50 top-50 fw-normal" id="signin2Label">Регистрация</h6>
             <button class="btn p-0" data-bs-dismiss="offcanvas" aria-label="Close">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 6L6 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -696,15 +590,15 @@
     </div>
 
     <!-- SIGNIN 3 -->
-    <div class="offcanvas offcanvas-start fs-6" tabindex="-1" id="signin3" aria-labelledby="signin3Label">
-        <div class="offcanvas-header align-items-center justify-content-between shad_box position-relative">
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="signin3" aria-labelledby="signin3Label">
+        <div class="offcanvas-header justify-content-betwee">
             <button class="btn p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#signin2" aria-controls="signin2">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </button>
-            <h6 class="position-absolute translate-middle start-50 top-50 fw-normal">Регистрация</h6>
+            <h6 class="position-absolute translate-middle start-50 top-50 fw-normal" id="signin3Label">Регистрация</h6>
             <button class="btn p-0" data-bs-dismiss="offcanvas" aria-label="Close">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 6L6 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -725,15 +619,15 @@
     </div>
 
     <!-- PASS RECOVERY -->
-    <div class="offcanvas offcanvas-start fs-6" tabindex="-1" id="pass-rec" aria-labelledby="pass-recLabel">
-        <div class="offcanvas-header align-items-center justify-content-between shad_box position-relative">
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="pass-rec" aria-labelledby="pass-recLabel">
+        <div class="offcanvas-header justify-content-between">
             <button class="btn p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#login" aria-controls="login">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19 12H5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M12 19L5 12L12 5" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </button>
-            <h6 class="position-absolute translate-middle start-50 top-50 fw-normal">Вход</h6>
+            <h6 class="position-absolute translate-middle start-50 top-50 fw-normal" id="pass-recLabel">Вход</h6>
             <button class="btn p-0" data-bs-dismiss="offcanvas" aria-label="Close">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 6L6 18" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -749,8 +643,8 @@
     </div>
 
     <!-- CREATE PROPOSAL -->
-    <div class="offcanvas offcanvas-end bg-white" tabindex="-1" id="createProp" aria-labelledby="createPropLabel">
-        <div class="offcanvas-header position-relative z-index-10 py-2 align-items-center justify-content-end bg-white shad_box">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="createProp" aria-labelledby="createPropLabel">
+        <div class="offcanvas-header py-2 justify-content-end">
             <h6 id="createPropLabel" class="fw-normal m-0 position-absolute translate-middle top-50 start-50 text-nowrap">Новое предложение</h6>
             <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
@@ -759,11 +653,14 @@
                 <!-- category -->
                 <fieldset class="mb-3">
                     <label for="proposal-cat" class="fs-5 mb-2">Категория</label>
+
                     <select id="proposal-cat" class="form-select" required>
-                <option value="equipment">Спецтехника</option>
-                <option value="instruments">Инструменты</option>
-                <option value="materials">Материалы</option>
-            </select>
+                        <option value="" selected disabled>Выберите вариант</option>
+                        <option value="equipment">Спецтехника</option>
+                        <option value="instruments">Инструменты</option>
+                        <option value="materials">Материалы</option>
+                    </select>
+
                 </fieldset>
                 <!-- title -->
                 <fieldset class="mb-3">
@@ -778,7 +675,7 @@
                 <!-- photo -->
                 <fieldset class="img-upload d-flex flex-column mb-3 mb-md-4">
                     <div class="d-flex flex-wrap justify-content-between mb-3 mb-md-4">
-                        <label for="" class="fs-5 c_black me-4">Загрузите фотографию:</label>
+                        <label class="fs-5 c_black me-4">Загрузите фотографию:</label>
                         <div class="position-relative c_accent fw_5">
                             <input type="file" class="w-100 h-100" multiple>
                             <svg class="me-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -801,7 +698,7 @@
                 <!-- photo -->
                 <fieldset class="img-upload d-flex flex-column mb-3 mb-md-4">
                     <div class="d-flex flex-wrap justify-content-between mb-3 mb-md-4">
-                        <label for="" class="fs-5 c_black me-4">Загрузите фотографию:</label>
+                        <label class="fs-5 c_black me-4">Загрузите фотографию:</label>
                         <div class="position-relative c_accent fw_5">
                             <input type="file" class="w-100 h-100" multiple>
                             <svg class="me-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -816,7 +713,7 @@
                     <!-- drop img -->
                     <div class="row row-cols-2 g-3 col-11">
                         <div class="position-relative">
-                            <input class="w-100 h-100 position-absolute start-0" type="radio" name="main-img" id="" checked>
+                            <input class="w-100 h-100 position-absolute start-0" type="radio" name="main-img" checked>
                             <div class="border rounded-3 w-100 h-100 position-relative">
                                 <button type="button" class="btn p-0 position-absolute end-0 me-2 mt-2">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -829,7 +726,7 @@
                             </div>
                         </div>
                         <div class="position-relative">
-                            <input class="w-100 h-100 position-absolute start-0" type="radio" name="main-img" id="">
+                            <input class="w-100 h-100 position-absolute start-0" type="radio" name="main-img">
                             <div class="border rounded-3 w-100 h-100 position-relative">
                                 <button type="button" class="btn p-0 position-absolute end-0 me-2 mt-2">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -842,7 +739,7 @@
                             </div>
                         </div>
                         <div class="position-relative">
-                            <input class="w-100 h-100 position-absolute start-0" type="radio" name="main-img" id="">
+                            <input class="w-100 h-100 position-absolute start-0" type="radio" name="main-img">
                             <div class="border rounded-3 w-100 h-100 position-relative">
                                 <button class="btn p-0 position-absolute end-0 me-2 mt-2">
                                     <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -855,7 +752,7 @@
                             </div>
                         </div>
                         <div class="position-relative">
-                            <input class="w-100 h-100 position-absolute start-0" type="radio" name="main-img" id="">
+                            <input class="w-100 h-100 position-absolute start-0" type="radio" name="main-img">
                             <div class="border rounded-3 w-100 h-100 position-relative">
                                 <button class="btn p-0 position-absolute end-0 me-2 mt-2">
                                     <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -868,7 +765,7 @@
                             </div>
                         </div>
                         <div class="position-relative">
-                            <input class="w-100 h-100 position-absolute start-0" type="radio" name="main-img" id="">
+                            <input class="w-100 h-100 position-absolute start-0" type="radio" name="main-img">
                             <div class="border rounded-3 w-100 h-100 position-relative">
                                 <button class="btn p-0 position-absolute end-0 me-2 mt-2">
                                     <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -906,17 +803,17 @@
                 </div>
                 <!-- map -->
                 <div class="map_lg position-relative">
-                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+                    <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100&amp;height=100&amp;lang=ru_RU&amp;scroll=false"></script>
                     <button class="btn btn_1 position-absolute start-50 bottom-0 translate-middle px-4">OK</button>
                 </div>
             </fieldset>
 
             <!-- address -->
             <fieldset class="mb-4 px-3">
-                <label for="proposal-address" class="fs-5 mb-2">Адрес</label>
+                <label for="create-proposal-address" class="fs-5 mb-2">Адрес</label>
                 <!-- search input -->
                 <div class="input-group flex-nowrap position-relative">
-                    <input class="form-control bg-white col-10" type="search" id="proposal-address" placeholder="Улица и номер дома" value="ул. Красноможайская, д. 12" readonly>
+                    <input class="form-control bg-white col-10" type="search" id="create-proposal-address" placeholder="Улица и номер дома" value="ул. Красноможайская, д. 12" readonly>
                     <button class="w-auto btn p-0 me-1 position-absolute end-0 top-50 translate-middle" type="button">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 20H21" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -936,22 +833,23 @@
                         </div>
                         <div class="col-6">
                             <select class="form-select d-inline-block" aria-label="Выбор категории" required>
-                        <option selected>руб./час</option>
-                        <option>за услугу</option>
-                    </select>
+                                <option value="" disabled selected>Выбрать стоимость</option>
+                                <option>руб./час</option>
+                                <option>за услугу</option>
+                            </select>
                         </div>
                     </div>
                 </fieldset>
                 <!-- parameters -->
-                <legend class="fs-5 mb-3">Параметры</legend>
+                <div class="fs-5 mb-3">Параметры</div>
                 <fieldset class="mb-5 add-param-block flex-column">
                     <!-- hidden param group -->
                     <fieldset class="mb-4">
                         <fieldset class="mb-3">
-                            <label for="parameters-name" class="c_black mb-2">Введите название параметра:</label>
+                            <label class="c_black mb-2">Введите название параметра:</label>
                             <div class="d-flex flex-nowrap align-items-center">
                                 <div class="col-10">
-                                    <input id="parameters-name" type="text" class="form-control" placeholder="Например, масса">
+                                    <input type="text" class="form-control" placeholder="Например, масса">
                                 </div>
                                 <!-- delete param group -->
                                 <button class="p-0 btn flex-shrink-0 ms-4 col-auto">
@@ -963,18 +861,18 @@
                             </div>
                         </fieldset>
                         <fieldset>
-                            <label for="parameters-value" class="c_black mb-2">Введите значение параметра:</label>
-                            <input id="parameters-value" type="text" class="form-control" placeholder="Например, 10кг">
+                            <label class="c_black mb-2">Введите значение параметра:</label>
+                            <input type="text" class="form-control" placeholder="Например, 10кг">
                         </fieldset>
                     </fieldset>
 
                     <!-- visible param group -->
                     <fieldset class="mb-4">
                         <fieldset class="mb-3">
-                            <label for="parameters-name" class="c_black mb-2">Введите название параметра:</label>
+                            <label class="c_black mb-2">Введите название параметра:</label>
                             <div class="d-flex flex-nowrap align-items-center">
                                 <div class="col-10">
-                                    <input id="parameters-name" type="text" class="form-control" placeholder="Например, масса">
+                                    <input type="text" class="form-control" placeholder="Например, масса">
                                 </div>
                                 <!-- delete param group -->
                                 <button class="p-0 btn flex-shrink-0 ms-3 col-auto">
@@ -986,9 +884,9 @@
                             </div>
                         </fieldset>
                         <fieldset>
-                            <label for="parameters-value" class="c_black mb-2">Введите значение параметра:</label>
+                            <label class="c_black mb-2">Введите значение параметра:</label>
                             <div class="col-10">
-                                <input id="parameters-value" type="text" class="form-control" placeholder="Например, 10кг">
+                                <input type="text" class="form-control" placeholder="Например, 10кг">
                             </div>
                         </fieldset>
                     </fieldset>
@@ -1009,7 +907,7 @@
 
     <!-- CREATE ANNOUNCEMENT -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="createAnn" aria-labelledby="createAnnLabel">
-        <div class="offcanvas-header z-index-10 py-2 align-items-center justify-content-end shad_box">
+        <div class="offcanvas-header py-2 justify-content-end">
             <h6 id="createAnnLabel" class="fw-normal m-0 position-absolute translate-middle top-50 start-50 text-nowrap">Новое объявление</h6>
             <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
@@ -1018,6 +916,7 @@
                 <!-- announcement category -->
                 <label for="announcement-cat" class="fs-5 mb-2">Категория</label>
                 <select id="announcement-cat" class="form-select mb-3" required>
+                    <option value="" disabled selected>Выбрать категорию объявления</option>
                     <option value="equipment">Спецтехника</option>
                     <option value="instruments">Инструменты</option>
                     <option value="materials">Материалы</option>
@@ -1047,7 +946,7 @@
                 </div>
                 <!-- map -->
                 <div class="map_lg position-relative">
-                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+                    <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100&amp;height=100&amp;lang=ru_RU&amp;scroll=false"></script>
                     <button class="btn btn_1 position-absolute start-50 bottom-0 translate-middle px-4">OK</button>
                 </div>
             </fieldset>
@@ -1056,7 +955,7 @@
                 <label for="proposal-address" class="fs-5 mb-2">Адрес</label>
                 <!-- search input -->
                 <div class="input-group flex-nowrap position-relative">
-                    <input class="form-control bg-white col-10" type="search" id="proposal-address" placeholder="Улица и номер дома" value="ул. Красноможайская, д. 12" readonly>
+                    <input class="form-control bg-white col-10" type="search" id="announcement-address" placeholder="Улица и номер дома" value="ул. Красноможайская, д. 12" readonly>
                     <button class="w-auto btn p-0 me-1 position-absolute end-0 top-50 translate-middle" type="button">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 20H21" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1081,7 +980,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body py-0 fs_14 c_black">
-                    <h5 class="mb-3">Выполните вход</h5>
+                    <h5 class="mb-3" id="limitedFuncModalLabel">Выполните вход</h5>
                     <p>Для выполнения этого действия необходимо авторизироваться.</p>
                 </div>
                 <div class="modal-footer flex-column pt-0 pb-4 border-0">

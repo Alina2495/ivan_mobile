@@ -11,6 +11,7 @@
     <!-- styles -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom-select.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- open graph -->
     <meta name="og:title" content="Исполнители – «Ivan»">
@@ -284,11 +285,11 @@
 
     <!-- ANNOUNCEMENTS SEARCH SETTINGS -->
     <div class="offcanvas offcanvas-end bg-light-gray" tabindex="-1" id="annSearch" aria-labelledby="annSearchLabel">
-        <div class="offcanvas-header py-2 justify-content-end shad_box">
+        <div class="offcanvas-header py-2 justify-content-end">
             <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             <h6 class="offcanvas-title position-absolute translate-middle start-50 top-50 h6 fw-normal m-0" id="annSearchLabel">Настройки поиска</h6>
         </div>
-        <form class="offcanvas-body py-4 position-relative pb-5">
+        <form class="offcanvas-body py-4 position-relative pb-2">
             <!-- category -->
             <fieldset class="bg-white br_10 pt-2 px-3 pb-4 mb-3">
                 <legend class="mb-3 fs-6 c_gray">Категория</legend>
@@ -309,42 +310,37 @@
                     <label for="materials">Материалы</label>
                 </fieldset>
             </fieldset>
+
+
             <!-- city and metro station -->
             <fieldset class="bg-white br_10 pt-2 px-3 pb-4">
                 <legend class="mb-1 fs-6 c_gray">Город или регион</legend>
-                <input class="form-control mb-3" type="text" value="Россия" />
-                <legend class="mb-1 fs-6 c_gray">Метро</legend>
+                <input list="choose_city" class="form-control mb-3" type="text" placeholder="Выбор города" />
 
-                <!-- custom select single -->
-                <div class="div">
-                    <div class="custom-select me-2">
-                        <button type="button"></button>
-                        <div class="cs-options search-list">
-                            <input type="search" placeholder="Поиск" class="search-in-list">
-                            <div class="radio">
-                                <input type="checkbox" name="country" value="ru" checked>
-                                <label>Авиастроительная</label>
-                            </div>
-                            <div class="radio">
-                                <input type="checkbox" name="country" value="uk">
-                                <label>Северный вокзал</label>
-                            </div>
-                            <div class="radio">
-                                <input type="checkbox" name="country" value="fr">
-                                <label>Яшьлек</label>
-                            </div>
-                            <div class="radio">
-                                <input type="checkbox" name="country" value="ru">
-                                <label>Козья слобода</label>
-                            </div>
-                            <div class="radio">
-                                <input type="checkbox" name="country" value="uk">
-                                <label>Площадь Габдуллы Тукая</label>
-                            </div>
-                            <div class="radio">
-                                <input type="checkbox" name="country" value="fr">
-                                <label>Суконная слобода</label>
-                            </div>
+                <datalist id="choose_city">
+                    <option value="Казань">Казань</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </datalist>
+
+                <div class="fs-6 c_gray mt-3 mb-1">Метро</div>
+                <div class="custom-select multy">
+                    <button type="button">Не выбрано</button>
+                    <div class="cs-options search-list">
+                        <input type="search" placeholder="Поиск" class="search-in-list">
+                        <div class="checkbox search-item">
+                            <input type="checkbox" name="offer-opt" value="Станция метро 1">
+                            <label>Станция метро 1</label>
+                        </div>
+                        <div class="checkbox search-item">
+                            <input type="checkbox" name="offer-opt" value="Станция метро 2">
+                            <label>Станция метро 2</label>
+                        </div>
+                        <div class="checkbox search-item">
+                            <input type="checkbox" name="offer-opt" value="Станция метро 3">
+                            <label>Длинное название станции метро 3</label>
                         </div>
                     </div>
                 </div>
@@ -353,7 +349,7 @@
             </fieldset>
         </form>
         <div class="bottom-0 p-3 start-0 end-0">
-            <button class="btn btn_1 w-100" type="submit">Показать 0 предложений</button>
+            <button class="btn btn_1 w-100" type="submit">Показать 0 объявлений</button>
         </div>
     </div>
 

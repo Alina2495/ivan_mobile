@@ -23,19 +23,20 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .custom-select {
     position: relative;
-    width: 100%;
-    border: 1px solid #D2D2D2;
+    font-size: 15px;
+    min-width: 175px;
 }
 
 .custom-select button {
     width: 100%;
-    border-radius: 4px;
-    border: 1px solid var(--lightengray);
+    border-radius: .33em;
+    border: 1px solid #D2D2D2;
     text-align: left;
-    padding: .7em 1.5em .7em 1em;
+    padding: .375rem .75rem;
+    line-height: 1.4em;
     background: url(../images/icons/label_btn.svg) no-repeat;
-    background-position: calc(100% - .5em) 55%;
-    background-size: 1.25em 1.25em;
+    background-position: calc(100% - 1em) 55%;
+    background-size: .8em;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -43,15 +44,21 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .cs-options {
     position: absolute;
-    top: calc(100% - 1px);
+    top: 100%;
     left: 0;
     z-index: 100;
     width: 100%;
     display: none;
-    border: 1px solid var(--lightengray);
-    background-color: var(--coolwhite);
-    max-height: 300px;
+    border: 1px solid #D2D2D2;
+    background-color: #fff;
+    /* border-radius: .33em; */
+    max-height: 470px;
     overflow-y: scroll;
+}
+
+.align-bottom .cs-options {
+    bottom: calc(100% + .2em);
+    top: unset;
 }
 
 .cs-options::-webkit-scrollbar {
@@ -65,48 +72,99 @@ input[type="search"]::-webkit-search-results-decoration {
 
 /* checkbox for select customization */
 
-.cs-options .radio:not(:last-child) {
-    position: relative;
-    border-bottom: 1px solid var(--lightengray);
-}
-
+.cs-options .checkbox,
 .cs-options .radio {
     position: relative;
 }
 
+.cs-options .checkbox:not(:last-child),
+.cs-options .radio:not(:last-child) {
+    border-bottom: 1px solid #D2D2D2;
+}
+
+.cs-options .checkbox label,
 .cs-options .radio label {
     position: relative;
     z-index: 1;
-    padding: .7em 1em;
-    -webkit-transition: .2s;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .5rem 40px .5rem .75rem;
+    color: #000;
     transition: .2s;
     line-height: 1.2em;
-    display: block;
-    width: 100%;
-    background-color: white;
-    border-bottom: 1px solid #D2D2D2;
-    background: white url("../images/icons/label.svg") no-repeat center right;
+    min-height: 40px;
 }
 
-.cs-options .radio input[type="checkbox"] {
+.cs-options .checkbox input[type="checkbox"],
+.cs-options .radio input[type="radio"] {
     position: absolute;
     top: 0;
     right: 0;
-    width: 100%;
-    height: 100%;
     z-index: 2;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
-    -webkit-box-shadow: none;
     box-shadow: none;
     border: none;
+    border-radius: 0px;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    background-image: url(../images/icons/label.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    transition: .2s;
     outline: none;
 }
 
-.cs-options .radio input[type="checkbox"]:checked~label {
+.cs-options .checkbox input[type="checkbox"]:checked,
+.cs-options .radio input[type="radio"]:checked {
+    background-image: url(../images/icons/label_check.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: auto;
+}
+
+.cs-options .checkbox input[type="checkbox"]:checked::after,
+.cs-options .radio input[type="radio"]:checked::after {
+    content: unset;
+}
+
+.cs-options .checkbox input[type="checkbox"]:checked~label,
+.cs-options .radio input[type="radio"]:checked~label {
     background-color: #FF6600;
-    color: white;
-    background: #FF6600 url("../images/icons/label_check.svg") no-repeat center right;
+    color: #fff;
+}
+
+.cs-options .checkbox input[type="checkbox"]:checked~label span.nesting,
+.cs-options .radio input[type="radio"]:checked~label span.level-mark {
+    color: #fff;
+}
+
+
+/************  
+SEARCH / FILTER 
+*************/
+
+input.search-in-list {
+    border: 1.5px solid #FF6600;
+    background-color: #fff;
+    padding: .375rem .75rem;
+    margin-bottom: .13em;
+    width: 100%;
+    outline: none;
+}
+
+.overlap {
+    display: block !important;
+}
+
+.diff {
+    display: none !important;
 }

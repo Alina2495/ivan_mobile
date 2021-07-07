@@ -41,13 +41,6 @@ header {
     top: 0;
 }
 
-header,
-footer,
-.card,
-.btn_pills button {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
 footer {
     bottom: 0;
     svg {
@@ -71,15 +64,19 @@ footer {
     }
 }
 
+header,
+footer,
+.offcanvas-header,
+.card,
+.btn_pills button {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
 main {
     overflow-y: auto;
     overflow-x: hidden;
     flex-grow: 1;
     margin: 56px 0;
-}
-
-.z-index-10 {
-    z-index: 10;
 }
 
 .zi_20 {
@@ -113,8 +110,15 @@ main {
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
+    .img img {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        object-fit: cover;
+    }
 }
 
+// RATING
 .rated {
     display: inline-flex;
     align-items: center;
@@ -122,12 +126,12 @@ main {
     color: #C4C4C4;
     line-height: 1em;
     font-size: 20px;
+    span.checked {
+        color: $yellow;
+    }
 }
 
-span.checked {
-    color: $yellow;
-}
-
+// ADD RATE
 .add_rate {
     input {
         width: 0;
@@ -163,38 +167,9 @@ span.checked {
     }
 }
 
-.btn_pills {
-    button {
-        border-radius: 30px;
-        color: $accent;
-        background-color: $white;
-        padding: 4px 16px;
-        margin-right: 8px;
-        border: none;
-        &.active {
-            background-color: $accent !important;
-            color: $white !important;
-        }
-    }
-}
-
 .auction {
     background: url('../images/img/auction-bg.png') no-repeat center;
     background-size: contain;
-}
-
-.popular-categories {
-    .img {
-        &:hover {
-            filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
-        }
-    }
-    a {
-        &:hover,
-        &:focus {
-            color: $accent;
-        }
-    }
 }
 
 .news-list {
@@ -210,8 +185,7 @@ span.checked {
     width: 24%;
 }
 
-// *** HOME PAGE end *** //
-// *** Utilities *** //
+// HEADINGS
 h1,
 .h1,
 h2,
@@ -228,6 +202,11 @@ h6,
 }
 
 .h6 {
+    font-weight: normal;
+}
+
+h5,
+.h5 {
     font-weight: normal;
 }
 
@@ -298,144 +277,13 @@ a {
     }
 }
 
-// BACKGROUNDS
-.bg {
-    &-accent {
-        background-color: $accent;
-    }
-    &-blue {
-        background-color: $light-blue;
-    }
-    &-gray {
-        background-color: $light-gray;
-    }
-    &-light-gray {
-        background-color: #F2F2F2;
-    }
-}
-
-.shad_box {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-// MESSAGES PAGE
-.dialogue-list {
-    .unread {
-        background-color: rgba($accent, 0.05);
-        box-shadow: none;
-    }
-    &>a {
-        border-bottom: 1px solid #E0E0E0;
-    }
-    .left {
-        max-width: 2.5em;
-        div {
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-    }
-    .txt {
-        max-width: 70%;
-        div {
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-    }
-}
-
-// DIALOGE PAGE
-.dialogue {
-    line-height: 1.25em;
-    &>div {
-        max-width: 95%;
-        white-space: pre-line;
-        &:last-child {
-            margin-bottom: 0 !important;
-        }
-    }
-    .my-msg {
-        align-self: flex-end;
-        background-color: rgba(255, 102, 0, 0.15);
-    }
-}
-
-.txt_inp {
-    &:focus,
-    &:focus-visible {
-        outline: none;
-        border: none;
-    }
-    &:placeholder-shown+button {
-        display: none;
-    }
-}
-
-h5,
-.h5 {
-    font-weight: normal;
-}
-
-// IMAGES
-.img {
-    &_sm {
-        border-radius: 50%;
-        width: 2em;
-        height: 2em;
-    }
-    &_md {
-        border-radius: 50%;
-        width: 2.5em;
-        height: 2.5em;
-    }
-    &_lg {
-        border-radius: 50%;
-        width: 3.8em;
-        height: 3.8em;
-    }
-    &_rec {
-        border-radius: 10px;
-        width: 7.5em;
-        height: 7.5em;
-    }
-    &_rec_1 {
-        border-radius: 10px;
-        width: 100%;
-        height: 45.5vw;
-    }
-}
-
-// BORDER RADIUS
-.br {
-    &_10 {
-        border-radius: 10px;
-    }
-    &_30 {
-        border-radius: 30px;
-    }
-}
-
 button {
     white-space: nowrap;
 }
 
-.img-upload div input[type=radio] {
-    cursor: pointer;
-    z-index: 1;
-    opacity: 0;
-}
-
-.img-upload .row>div div {
-    overflow: hidden;
-}
-
-.img-upload div input[type=radio]:checked+div {
-    border-color: $accent !important;
-}
-
 // BUTTONS
 .btn {
+    white-space: nowrap;
     font-weight: 500;
     white-space: nowrap;
     border-radius: 10px;
@@ -444,10 +292,6 @@ button {
     &:focus {
         outline: 0;
         box-shadow: 0 0 0 0.25rem rgba($accent, 0.25);
-    }
-    &_lg {
-        padding: 11px 32px 11px 32px;
-        line-height: 1em;
     }
     &_1 {
         background-color: $accent;
@@ -516,6 +360,119 @@ button {
         border: none;
         background-color: $transparent;
     }
+    // POPULAR CATEGORIES AND MAP BUTTONS
+    &_pills {
+        button {
+            border-radius: 30px;
+            color: $accent;
+            background-color: $white;
+            padding: 4px 16px;
+            margin-right: 8px;
+            border: none;
+            &.active {
+                background-color: $accent !important;
+                color: $white !important;
+            }
+        }
+    }
+}
+
+// IMAGES
+.img {
+    &_sm {
+        border-radius: 50%;
+        width: 2em;
+        height: 2em;
+    }
+    &_md {
+        border-radius: 50%;
+        width: 2.5em;
+        height: 2.5em;
+        overflow: hidden;
+    }
+    &_lg {
+        border-radius: 50%;
+        width: 3.8em;
+        height: 3.8em;
+    }
+    &_rec {
+        border-radius: 10px;
+        width: 7.5em;
+        height: 7.5em;
+    }
+    &_rec_1 {
+        border-radius: 10px;
+        width: 100%;
+        height: 45.5vw;
+    }
+}
+
+// BORDER RADIUS
+.br {
+    &_10 {
+        border-radius: 10px;
+    }
+    &_30 {
+        border-radius: 30px;
+    }
+}
+
+// BORDERS
+.border {
+    &-bottom {
+        border-bottom-color: #D2D2D2 !important;
+    }
+    &_acc {
+        border: 1px solid $accent;
+    }
+}
+
+// BACKGROUNDS
+.bg {
+    &-accent {
+        background-color: $accent;
+    }
+    &-blue {
+        background-color: $light-blue;
+    }
+    &-gray {
+        background-color: $light-gray;
+    }
+    &-light-gray {
+        background-color: #F2F2F2;
+    }
+}
+
+// SHADOWS
+.shad_box {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type=date] {
+    background-color: $white;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+    background-image: url('../images/icons/calendar.svg');
+    background-position: 94% center;
+    position: relative;
+    &::-webkit-calendar-picker-indicator {
+        opacity: 0;
+    }
+}
+
+// PROPOSAL CREATE
+.img-upload {
+    div input[type=radio] {
+        cursor: pointer;
+        z-index: 1;
+        opacity: 0;
+    }
+    .row>div div {
+        overflow: hidden;
+    }
+    div input[type=radio]:checked+div {
+        border-color: $accent !important;
+    }
 }
 
 .mb {
@@ -557,13 +514,6 @@ img {
     }
 }
 
-.card .img img {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    object-fit: cover;
-}
-
 .img-upload {
     .img-drop {
         border-color: $blue !important;
@@ -572,6 +522,44 @@ img {
     input[type=file] {
         opacity: 0;
         position: absolute;
+    }
+}
+
+// PAGINATION
+.pagination {
+    margin: 0;
+    .page-item {
+        margin-right: 4px;
+        &:last-of-type {
+            margin-right: 0;
+        }
+        .page-link {
+            color: #797979;
+            border-radius: 10px !important;
+            border-color: $transparent;
+            line-height: 20px;
+            &:focus,
+            &:hover {
+                background-color: transparent;
+                box-shadow: 0 0 0 0.25rem rgba($accent, 0.3);
+            }
+        }
+        &.active {
+            .page-link {
+                background-color: $transparent;
+                border-color: $accent;
+                color: $accent;
+            }
+        }
+        &.disabled {
+            .page-link {
+                border-color: $transparent;
+            }
+            svg path {
+                stroke: $gray;
+                opacity: 0.8;
+            }
+        }
     }
 }
 
@@ -587,67 +575,6 @@ img {
     }
     &:read-only {
         background-color: $white;
-    }
-}
-
-.border {
-    &-bottom {
-        border-bottom-color: #D2D2D2 !important;
-    }
-}
-
-.border_acc {
-    border: 1px solid $accent;
-}
-
-input[type=date] {
-    background-color: $white;
-    background-repeat: no-repeat;
-    background-clip: padding-box;
-    background-image: url('../images/icons/calendar.svg');
-    background-position: 94% center;
-    position: relative;
-    &::-webkit-calendar-picker-indicator {
-        opacity: 0;
-    }
-}
-
-// PAGINATION
-.pagination {
-    margin: 0;
-}
-
-.page-item {
-    margin-right: 4px;
-    &:last-of-type {
-        margin-right: 0;
-    }
-    .page-link {
-        color: #797979;
-        border-radius: 10px !important;
-        border-color: $transparent;
-        line-height: 20px;
-        &:focus,
-        &:hover {
-            background-color: transparent;
-            box-shadow: 0 0 0 0.25rem rgba($accent, 0.3);
-        }
-    }
-    &.active {
-        .page-link {
-            background-color: $transparent;
-            border-color: $accent;
-            color: $accent;
-        }
-    }
-    &.disabled {
-        .page-link {
-            border-color: $transparent;
-        }
-        svg path {
-            stroke: $gray;
-            opacity: 0.8;
-        }
     }
 }
 
@@ -701,6 +628,7 @@ input[type=date] {
     background-image: url('../images/icons/search-settings.svg');
 }
 
+// OFFCANVAS
 .offcanvas {
     border: none;
     &-header {
@@ -714,6 +642,9 @@ input[type=date] {
     }
     &-menu {
         max-width: 90%;
+        .offcanvas-header {
+            box-shadow: none;
+        }
         .img_md {
             width: 40px;
             height: 40px;
@@ -764,6 +695,60 @@ input[type=date] {
     background: url('../images/icons/replay.svg') no-repeat left center;
 }
 
+// MESSAGES PAGE
+.dialogue-list {
+    .unread {
+        background-color: rgba($accent, 0.05);
+        box-shadow: none;
+    }
+    &>a {
+        border-bottom: 1px solid #E0E0E0;
+    }
+    .left {
+        max-width: 2.5em;
+        div {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+    .txt {
+        max-width: 70%;
+        div {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+}
+
+// DIALOGUE PAGE
+.dialogue {
+    line-height: 1.25em;
+    &>div {
+        max-width: 95%;
+        white-space: pre-line;
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+    }
+    .my-msg {
+        align-self: flex-end;
+        background-color: rgba(255, 102, 0, 0.15);
+    }
+}
+
+.txt_inp {
+    &:focus,
+    &:focus-visible {
+        outline: none;
+        border: none;
+    }
+    &:placeholder-shown+button {
+        display: none;
+    }
+}
+
 .btn_del span {
     display: inline-block;
     color: $primary;
@@ -782,6 +767,16 @@ input[type=date] {
     }
 }
 
+.overflow-x-scroll {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+// PROPOSAL PAGE SWIPER
 .gallery-top {
     height: 512px;
     .swiper-slide {
@@ -798,19 +793,6 @@ input[type=date] {
     .swiper-pagination {
         bottom: 6px;
     }
-}
-
-.overflow-x-scroll {
-    &::-webkit-scrollbar {
-        display: none;
-    }
-    overflow-x: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.overflow-hidden {
-    overflow: hidden;
 }
 
 // PROPOSAL PAGE TABLE
@@ -843,9 +825,6 @@ input[type=date] {
 
 // MEDIA QUERIES start
 @media screen and (max-width: 767.98px) {
-    .btn_lg {
-        font-size: 16px;
-    }
     .news-list {
         .news-group {
             >* {
@@ -860,8 +839,10 @@ input[type=date] {
 
 @media (max-width: 575.98px) {
     // PAGINATION
-    .page-item {
-        margin-right: 1px;
+    .pagination {
+        .page-item {
+            margin-right: 1px;
+        }
     }
     .gallery-top {
         height: 45.5vw;
