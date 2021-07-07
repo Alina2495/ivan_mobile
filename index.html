@@ -635,16 +635,17 @@
             <h6 id="createPropLabel" class="fw-normal m-0 position-absolute translate-middle top-50 start-50 text-nowrap">Новое предложение</h6>
             <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <form class="offcanvas-body px-0 position-relative pb-4 c_black">
+        <form id="formProposal" class="offcanvas-body px-0 position-relative pb-4 c_black">
             <div class="px-3">
                 <!-- category -->
                 <fieldset class="mb-3">
                     <label for="proposal-cat" class="fs-5 mb-2">Категория</label>
-                    <select id="proposal-cat" class="form-select" required>
-                <option value="equipment">Спецтехника</option>
-                <option value="instruments">Инструменты</option>
-                <option value="materials">Материалы</option>
-            </select>
+                    <select id="proposal-cat" class="form-select" onchange="toggleGroups(this.id, this.value, this.closest('form').id)" required>
+                        <option value="" selected disabled>Выберите вариант</option>
+                        <option value="equipment">Спецтехника</option>
+                        <option value="instruments">Инструменты</option>
+                        <option value="materials">Материалы</option>
+                    </select>
                 </fieldset>
                 <!-- title -->
                 <fieldset class="mb-3">
@@ -652,9 +653,9 @@
                     <input id="proposal-title" type="text" class="form-control" placeholder="Например, экскаватор-погрузчик" required>
                 </fieldset>
                 <!-- VIN только для спецтехники! -->
-                <fieldset class="mb-4">
+                <fieldset class="equipment d-none mb-4">
                     <label for="proposal-vin" class="fs-5 mb-2">VIN-код</label>
-                    <input id="proposal-vin" type="text" class="form-control" placeholder="Например, XTA210990Y2766389" required>
+                    <input id="proposal-vin" type="text" class="form-control" placeholder="Например, XTA210990Y2766389">
                 </fieldset>
                 <!-- photo -->
                 <fieldset class="img-upload d-flex flex-column mb-3 mb-md-4">

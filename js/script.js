@@ -55,3 +55,26 @@ function addFieldset(btn) {
     let cloneInput = btn.nextElementSibling.cloneNode(true);
     btn.before(cloneInput);
 }
+
+/* выбор полей через селект */
+function toggleGroups(selId, val, formId) {
+    let arr_options = Array.from(document.querySelectorAll('#'+selId+' option'));
+    let vals = [];
+    for(var i = 0, j = arr_options.length; i < j; i++) {
+        if (arr_options[i].value != ""){
+            vals.push(arr_options[i].value);
+        }
+    }
+    console.log('vals =' + vals);
+    
+    vals.forEach(function(item, i, arr){
+        let arrFields = Array.from(document.querySelectorAll('#'+formId+' .'+item));
+        arrFields.forEach(function(elem, i, arr) {
+            if(item == val){
+                elem.classList.remove('d-none');
+            } else {
+                elem.classList.add('d-none');
+            }
+        });
+    });
+}
