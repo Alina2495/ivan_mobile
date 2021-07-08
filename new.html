@@ -11,7 +11,8 @@
     <!-- styles -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom-select.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <!-- open graph -->
     <meta name="og:title" content="Новость – «Ivan»">
     <meta property="og:image" content="images/img/logo.svg">
@@ -150,9 +151,9 @@
         </nav>
     </div>
 
-    <main class="container pt-3 pb-4">
+    <main class="pt-3 pb-4">
         <!-- NEW -->
-        <section>
+        <section class="container">
             <h1 class="h5 mb-1">Как определить лучшего исполнителя</h1>
             <span class="c_gray">24.05.2020</span>
             <img class="img_rec_1 br_10 my-2" src="https://randomwordgenerator.com/img/picture-generator/55e6d1464952a914f1dc8460962e33791c3ad6e04e50774977267cdd9f4bc4_640.jpg" alt="#">
@@ -171,7 +172,7 @@
         </section>
 
         <!-- OTHER NEWS SECTION -->
-        <section class="news-list pe-0 pe-md-3 pt-3">
+        <section class="container pe-0 pe-md-3 pt-3">
             <h5 class="mb-3">Это может быть интересно</h5>
             <div class="news-group row row-cols-auto mx-0 flex-nowrap gx-2">
                 <!-- new preview -->
@@ -210,6 +211,9 @@
                     <img class="br_10 w-100 my-2" src="images/img/ecovata.jpg" alt="" loading="lazy">
                     <a href="new.html">Новый раздел на сайте</a>
                 </div>
+            </div>
+            <div class="pe-3 pe-sm-0 mt-3">
+                <a href="news.html" class="btn btn_2 w-100">Все новости</a>
             </div>
         </section>
 
@@ -251,13 +255,305 @@
         </div>
     </footer>
 
+    <!-- CREATE PROPOSAL -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="createProp" aria-labelledby="createPropLabel">
+        <div class="offcanvas-header py-2 justify-content-end">
+            <h6 id="createPropLabel" class="fw-normal m-0 position-absolute translate-middle top-50 start-50 text-nowrap">Новое предложение</h6>
+            <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <form id="formProposal" class="offcanvas-body px-0 position-relative pb-4 c_black">
+            <div class="px-3">
+                <!-- category -->
+                <fieldset class="mb-3">
+                    <label for="proposal-cat" class="fs-5 mb-2">Категория</label>
+                    <select id="proposal-cat" class="form-select" onchange="toggleGroups(this.id, this.value, this.closest('form').id)" required>
+                        <option value="" selected disabled>Выберите вариант</option>
+                        <option value="equipment">Спецтехника</option>
+                        <option value="instruments">Инструменты</option>
+                        <option value="materials">Материалы</option>
+                    </select>
+                </fieldset>
+                <!-- title -->
+                <fieldset class="mb-3">
+                    <label for="proposal-title" class="fs-5 mb-2">Название</label>
+                    <input id="proposal-title" type="text" class="form-control" placeholder="Например, экскаватор-погрузчик" required>
+                </fieldset>
+                <!-- VIN только для спецтехники! -->
+                <fieldset class="equipment d-none mb-4">
+                    <label for="proposal-vin" class="fs-5 mb-2">VIN-код</label>
+                    <input id="proposal-vin" type="text" class="form-control" placeholder="Например, XTA210990Y2766389">
+                </fieldset>
+                <!-- photo -->
+                <fieldset class="img-upload d-flex flex-column mb-3 mb-md-4">
+                    <div class="d-flex flex-wrap justify-content-between mb-3 mb-md-4">
+                        <label for="" class="fs-5 c_black me-4">Загрузите фотографию:</label>
+                        <div class="position-relative c_accent fw_5">
+                            <input type="file" class="w-100 h-100" multiple>
+                            <svg class="me-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 5V19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5 12H19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- drop img -->
+                    <div class="img-drop position-relative rounded-3 border align-self-start">
+                        <input type="file" class="top-0 start-0 w-100 h-100">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M35 25V31.6667C35 32.5507 34.6488 33.3986 34.0237 34.0237C33.3986 34.6488 32.5507 35 31.6667 35H8.33333C7.44928 35 6.60143 34.6488 5.97631 34.0237C5.35119 33.3986 5 32.5507 5 31.6667V25" stroke="#4DA9FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.6663 16.6667L19.9997 25L28.333 16.6667" stroke="#4DA9FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 25V5" stroke="#4DA9FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </fieldset>
+                <!-- photo -->
+                <fieldset class="img-upload d-flex flex-column mb-3 mb-md-4">
+                    <div class="d-flex flex-wrap justify-content-between mb-3 mb-md-4">
+                        <label for="" class="fs-5 c_black me-4">Загрузите фотографию:</label>
+                        <div class="position-relative c_accent fw_5">
+                            <input type="file" class="w-100 h-100" multiple>
+                            <svg class="me-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 5V19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5 12H19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+
+
+                    <!-- photo uploaded -->
+                    <!-- drop img -->
+                    <div class="row row-cols-2 g-3 col-11">
+                        <div class="position-relative">
+                            <input class="w-100 h-100 position-absolute start-0" type="radio" name="main-img" id="" checked>
+                            <div class="border rounded-3 w-100 h-100 position-relative">
+                                <button type="button" class="btn-i btn_del_photo p-0 position-absolute end-0 me-2 mt-2"></button>
+                                <img class="w-100 h-100 rounded-3" src="images/img/mechanism.png" alt="">
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <input class="w-100 h-100 position-absolute start-0" type="radio" name="main-img" id="">
+                            <div class="border rounded-3 w-100 h-100 position-relative">
+                                <button type="button" class="btn-i btn_del_photo p-0 position-absolute end-0 me-2 mt-2"></button>
+                                <img class="w-100 h-100 rounded-3" src="images/img/category3.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <input class="w-100 h-100 position-absolute start-0" type="radio" name="main-img" id="">
+                            <div class="border rounded-3 w-100 h-100 position-relative">
+                                <button type="button" class="btn-i btn_del_photo p-0 position-absolute end-0 me-2 mt-2"></button>
+                                <img class="w-100 h-100" src="images/img/category2.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <input class="w-100 h-100 position-absolute start-0" type="radio" name="main-img" id="">
+                            <div class="border rounded-3 w-100 h-100 position-relative">
+                                <button type="button" class="btn-i btn_del_photo p-0 position-absolute end-0 me-2 mt-2"></button>
+                                <img class="w-100 h-100" src="images/img/category4.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <input class="w-100 h-100 position-absolute start-0" type="radio" name="main-img" id="">
+                            <div class="border rounded-3 w-100 h-100 position-relative">
+                                <button type="button" class="btn-i btn_del_photo p-0 position-absolute end-0 me-2 mt-2"></button>
+                                <img class="w-100 h-100" src="images/img/mechanism.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+                <!-- description -->
+                <fieldset class="mb-4">
+                    <label for="proposal-desc" class="fs-5 mb-2">Описание</label>
+                    <textarea id="proposal-desc" rows="4" class="form-control" placeholder="Начните ввод..."></textarea>
+                </fieldset>
+            </div>
+            <!-- address edit -->
+            <fieldset class="mb-3">
+                <label for="proposal-address" class="ps-3 fs-5 mb-2">Адрес</label>
+                <!-- search input -->
+                <div class="input-group flex-nowrap">
+                    <input class="form-control border_acc border-start-0 rounded-0 col-10" type="search" id="proposal-address" placeholder="Улица и номер дома">
+                    <button class="btn bg-accent py-1 px-4 rounded-0" type="button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21.0001 21L16.6501 16.65" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                </div>
+                <!-- map -->
+                <div class="map_lg position-relative">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+                    <button class="btn btn_1 position-absolute start-50 bottom-0 translate-middle px-4">OK</button>
+                </div>
+            </fieldset>
+            <!-- address -->
+            <fieldset class="mb-4 px-3">
+                <label for="proposal-address" class="fs-5 mb-2">Адрес</label>
+                <!-- search input -->
+                <div class="input-group flex-nowrap position-relative">
+                    <input class="form-control bg-white col-10" type="search" id="proposal-address" placeholder="Улица и номер дома" value="ул. Красноможайская, д. 12" readonly>
+                    <button class="w-auto btn p-0 me-1 position-absolute end-0 top-50 translate-middle" type="button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 20H21" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.5 3.49998C16.8978 3.10216 17.4374 2.87866 18 2.87866C18.2786 2.87866 18.5544 2.93353 18.8118 3.04014C19.0692 3.14674 19.303 3.303 19.5 3.49998C19.697 3.69697 19.8532 3.93082 19.9598 4.18819C20.0665 4.44556 20.1213 4.72141 20.1213 4.99998C20.1213 5.27856 20.0665 5.55441 19.9598 5.81178C19.8532 6.06915 19.697 6.303 19.5 6.49998L7 19L3 20L4 16L16.5 3.49998Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                </div>
+            </fieldset>
+            <div class="px-3">
+                <!-- price -->
+                <fieldset class="mb-4 d-flex flex-wrap align-items-sm-center">
+                    <label class="mb-2 fs-5" for="price">Стоимость:</label>
+                    <div class="row gx-2 gx-md-3">
+                        <div class="col-6">
+                            <input id="price" type="number" class="form-control d-inline-block" value="1500" placeholder="Цена" required>
+                        </div>
+                        <div class="col-6">
+                            <select class="form-select d-inline-block" aria-label="Выбор категории" required>
+                        <option selected>руб./час</option>
+                        <option>за услугу</option>
+                    </select>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- parameters -->
+                <fieldset class="mb-5 dynamic-fieldset">
+                    <legend class="fs-5 mb-3">Параметры</legend>
+
+                    <!-- visible param group -->
+                    <fieldset class="fieldset-clone mb-4">
+                        <div class="c_black mb-2">Название параметра:</div>
+                        <div class="row align-items-center mb-2">
+                            <div class="col-10">
+                                <input type="text" class="form-control" placeholder="Например, масса">
+                            </div>
+                            <div class="col-2">
+                                <button type="button" class="btn-delete" onclick="this.closest('.fieldset-clone').remove();">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 6H5H21"/>
+                                        <path d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z"/>
+                                    </svg>                                    
+                                </button>
+                            </div>
+                        </div>
+                        <div class="c_black mb-2">Значение параметра:</div>
+                        <div class="row mb-2">
+                            <div class="col-10">
+                                <input type="text" class="form-control" placeholder="Например, 000 кг">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- add param group btn -->
+                    <button type="button" class="btn-add" onclick="addFieldset(this)">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 5V19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5 12H19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Добавить параметр</span>
+                    </button>
+
+                    <!-- hidden param group -->
+                    <fieldset class="fieldset-clone mb-4">
+                        <div class="c_black mb-2">Название параметра:</div>
+                        <div class="row align-items-center mb-2">
+                            <div class="col-10">
+                                <input type="text" class="form-control" placeholder="Например, масса">
+                            </div>
+                            <div class="col-2">
+                                <button type="button" class="btn-delete" onclick="this.closest('.fieldset-clone').remove();">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 6H5H21"/>
+                                        <path d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z"/>
+                                    </svg>                                    
+                                </button>
+                            </div>
+                        </div>
+                        <div class="c_black mb-2">Значение параметра:</div>
+                        <div class="row mb-2">
+                            <div class="col-10">
+                                <input type="text" class="form-control" placeholder="Например, 000 кг">
+                            </div>
+                        </div>
+                    </fieldset>
+                </fieldset>
+                <button class="btn btn_1 w-100">Опубликовать</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- CREATE ANNOUNCEMENT -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="createAnn" aria-labelledby="createAnnLabel">
+        <div class="offcanvas-header py-2 justify-content-end">
+            <h6 id="createAnnLabel" class="fw-normal m-0 position-absolute translate-middle top-50 start-50 text-nowrap">Новое объявление</h6>
+            <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <form class="offcanvas-body px-0 pb-4 c_black">
+            <div class="px-3">
+                <!-- announcement category -->
+                <label for="announcement-cat" class="fs-5 mb-2">Категория</label>
+                <select id="announcement-cat" class="form-select mb-3" required>
+                    <option value="" disabled selected>Выбрать категорию объявления</option>
+                    <option value="equipment">Спецтехника</option>
+                    <option value="instruments">Инструменты</option>
+                    <option value="materials">Материалы</option>
+                </select>
+                <!-- announcement title -->
+                <label for="announcement-title" class="fs-5 mb-2">Название</label>
+                <input id="announcement-title" type="text" class="form-control mb-3" placeholder="Например, экскаватор-погрузчик" required>
+                <!-- announcement date -->
+                <label class="fs-5 mb-2" for="date">Дата:</label>
+                <input type="date" id="date" class="form-control mb-3" value="2021-04-16">
+                <!-- announcement description -->
+                <label for="announcement-desc" class="fs-5 mb-2">Описание</label>
+                <textarea id="announcement-desc" rows="5" class="form-control mb-3" placeholder="Начните ввод..."></textarea>
+            </div>
+            <!-- edit announcement address -->
+            <fieldset class="mb-4">
+                <label for="ann-address" class="ps-3 fs-5 mb-2">Адрес</label>
+                <!-- search input -->
+                <div class="input-group flex-nowrap">
+                    <input class="form-control border_acc border-start-0 rounded-0 col-10" type="search" id="ann-address" placeholder="Улица и номер дома">
+                    <button class="btn btn_1 px-4 rounded-0" type="button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21.0001 21L16.6501 16.65" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <!-- map -->
+                <div class="map_lg position-relative">
+                    <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+                    <button class="btn btn_1 position-absolute start-50 bottom-0 translate-middle px-4">OK</button>
+                </div>
+            </fieldset>
+            <!-- announcement address -->
+            <fieldset class="mb-4 px-3">
+                <label for="proposal-address" class="fs-5 mb-2">Адрес</label>
+                <!-- search input -->
+                <div class="input-group flex-nowrap position-relative">
+                    <input class="form-control bg-white col-10" type="search" id="announcement-address" placeholder="Улица и номер дома" value="ул. Красноможайская, д. 12" readonly>
+                    <button class="w-auto btn p-0 me-1 position-absolute end-0 top-50 translate-middle" type="button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 20H21" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16.5 3.49998C16.8978 3.10216 17.4374 2.87866 18 2.87866C18.2786 2.87866 18.5544 2.93353 18.8118 3.04014C19.0692 3.14674 19.303 3.303 19.5 3.49998C19.697 3.69697 19.8532 3.93082 19.9598 4.18819C20.0665 4.44556 20.1213 4.72141 20.1213 4.99998C20.1213 5.27856 20.0665 5.55441 19.9598 5.81178C19.8532 6.06915 19.697 6.303 19.5 6.49998L7 19L3 20L4 16L16.5 3.49998Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </fieldset>
+            <!-- save announcement changes -->
+            <div class="px-3">
+                <button class="btn btn_lg btn_1 w-100">Опубликовать</button>
+            </div>
+        </form>
+    </div>
+
     <!-- scripts -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/my-swiper.js"></script>
-    <script src="js/extra.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/custom-select.min.js"></script>
+    <script src="js/script.min.js"></script>
 
 </body>
 

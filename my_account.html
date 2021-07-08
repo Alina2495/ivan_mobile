@@ -11,7 +11,8 @@
     <!-- styles -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom-select.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <!-- open graph -->
     <meta name="og:title" content="Профиль пользователя – «Ivan»">
     <meta property="og:image" content="images/img/logo.svg">
@@ -434,7 +435,7 @@
                             <img src="images/img/drel.png" alt="Дрель Makita 6413 450 Вт">
                         </div>
                         <div class="card-body p-2">
-                            <a class="card-title c_blue fw_5" href="proposal.html">Дрель Makita 6413 450 Вт</a>
+                            <a class="card-title c_blue fw_5" href="user_proposal.html">Дрель Makita 6413 450 Вт</a>
                             <span class="fs_14 c_gray mb-1">5 км от Вас</span>
                             <span class="c_black fw_5">200 руб./час</span>
                         </div>
@@ -449,7 +450,7 @@
                             <img src="images/img/category2.jpeg" alt="Китайские вилочные погрузчики">
                         </div>
                         <div class="card-body p-2">
-                            <a class="card-title c_blue fw_5" href="proposal.html">Китайские вилочные погрузчики</a>
+                            <a class="card-title c_blue fw_5" href="user_proposal.html">Китайские вилочные погрузчики</a>
                             <span class="fs_14 c_gray mb-1">5 км от Вас</span>
                             <span class="c_black fw_5">200 руб./час</span>
                         </div>
@@ -464,7 +465,7 @@
                             <img src="images/img/ecovata.jpg" alt="Эковата 2 кг">
                         </div>
                         <div class="card-body p-2">
-                            <a class="card-title c_blue fw_5" href="proposal.html">Эковата 2 кг</a>
+                            <a class="card-title c_blue fw_5" href="user_proposal.html">Эковата 2 кг</a>
                             <span class="fs_14 c_gray mb-1">5 км от Вас</span>
                             <span class="c_black fw_5">4000 за услугу</span>
                         </div>
@@ -479,7 +480,7 @@
                             <img src="images/img/drel.png" alt="Дрель Makita 6413 450 Вт">
                         </div>
                         <div class="card-body p-2">
-                            <a class="card-title c_blue fw_5" href="proposal.html">Дрель Makita 6413 450 Вт</a>
+                            <a class="card-title c_blue fw_5" href="user_proposal.html">Дрель Makita 6413 450 Вт</a>
                             <span class="fs_14 c_gray mb-1">5 км от Вас</span>
                             <span class="c_black fw_5">200 руб./час</span>
                         </div>
@@ -494,7 +495,7 @@
                             <img src="images/img/category2.jpeg" alt="Китайские вилочные погрузчики">
                         </div>
                         <div class="card-body p-2">
-                            <a class="card-title c_blue fw_5" href="proposal.html">Китайские вилочные погрузчики</a>
+                            <a class="card-title c_blue fw_5" href="user_proposal.html">Китайские вилочные погрузчики</a>
                             <span class="fs_14 c_gray mb-1">5 км от Вас</span>
                             <span class="c_black fw_5">200 руб./час</span>
                         </div>
@@ -509,7 +510,7 @@
                             <img src="images/img/ecovata.jpg" alt="Эковата 2 кг">
                         </div>
                         <div class="card-body p-2">
-                            <a class="card-title c_blue fw_5" href="proposal.html">Эковата 2 кг</a>
+                            <a class="card-title c_blue fw_5" href="user_proposal.html">Эковата 2 кг</a>
                             <span class="fs_14 c_gray mb-1">5 км от Вас</span>
                             <span class="c_black fw_5">4000 за услугу</span>
                         </div>
@@ -646,21 +647,22 @@
     </div>
 
     <!-- CREATE PROPOSAL -->
-    <div class="offcanvas offcanvas-end bg-white" tabindex="-1" id="createProp" aria-labelledby="createPropLabel">
-        <div class="offcanvas-header position-relative py-2 align-items-center justify-content-end bg-white shad_box">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="createProp" aria-labelledby="createPropLabel">
+        <div class="offcanvas-header py-2 justify-content-end">
             <h6 id="createPropLabel" class="fw-normal m-0 position-absolute translate-middle top-50 start-50 text-nowrap">Новое предложение</h6>
             <button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <form class="offcanvas-body px-0 position-relative pb-4 c_black">
+        <form id="formProposal" class="offcanvas-body px-0 position-relative pb-4 c_black">
             <div class="px-3">
                 <!-- category -->
                 <fieldset class="mb-3">
                     <label for="proposal-cat" class="fs-5 mb-2">Категория</label>
-                    <select id="proposal-cat" class="form-select" required>
-                <option value="equipment">Спецтехника</option>
-                <option value="instruments">Инструменты</option>
-                <option value="materials">Материалы</option>
-            </select>
+                    <select id="proposal-cat" class="form-select" onchange="toggleGroups(this.id, this.value, this.closest('form').id)" required>
+                        <option value="" selected disabled>Выберите вариант</option>
+                        <option value="equipment">Спецтехника</option>
+                        <option value="instruments">Инструменты</option>
+                        <option value="materials">Материалы</option>
+                    </select>
                 </fieldset>
                 <!-- title -->
                 <fieldset class="mb-3">
@@ -668,9 +670,9 @@
                     <input id="proposal-title" type="text" class="form-control" placeholder="Например, экскаватор-погрузчик" required>
                 </fieldset>
                 <!-- VIN только для спецтехники! -->
-                <fieldset class="mb-4">
+                <fieldset class="equipment d-none mb-4">
                     <label for="proposal-vin" class="fs-5 mb-2">VIN-код</label>
-                    <input id="proposal-vin" type="text" class="form-control" placeholder="Например, XTA210990Y2766389" required>
+                    <input id="proposal-vin" type="text" class="form-control" placeholder="Например, XTA210990Y2766389">
                 </fieldset>
                 <!-- photo -->
                 <fieldset class="img-upload d-flex flex-column mb-3 mb-md-4">
@@ -678,24 +680,74 @@
                         <label for="" class="fs-5 c_black me-4">Загрузите фотографию:</label>
                         <div class="position-relative c_accent fw_5">
                             <input type="file" class="w-100 h-100" multiple>
-                            <span class="d-flex align-items-center">
-                        <svg class="me-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 5V19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M5 12H19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <span>Добавить</span>
-                            </span>
+                            <svg class="me-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 5V19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5 12H19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </div>
                     </div>
                     <!-- drop img -->
                     <div class="img-drop position-relative rounded-3 border align-self-start">
                         <input type="file" class="top-0 start-0 w-100 h-100">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M35 25V31.6667C35 32.5507 34.6488 33.3986 34.0237 34.0237C33.3986 34.6488 32.5507 35 31.6667 35H8.33333C7.44928 35 6.60143 34.6488 5.97631 34.0237C5.35119 33.3986 5 32.5507 5 31.6667V25" stroke="#4DA9FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M11.6663 16.6667L19.9997 25L28.333 16.6667" stroke="#4DA9FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M20 25V5" stroke="#4DA9FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                            <path d="M35 25V31.6667C35 32.5507 34.6488 33.3986 34.0237 34.0237C33.3986 34.6488 32.5507 35 31.6667 35H8.33333C7.44928 35 6.60143 34.6488 5.97631 34.0237C5.35119 33.3986 5 32.5507 5 31.6667V25" stroke="#4DA9FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.6663 16.6667L19.9997 25L28.333 16.6667" stroke="#4DA9FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 25V5" stroke="#4DA9FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
+                </fieldset>
+                <!-- photo -->
+                <fieldset class="img-upload d-flex flex-column mb-3 mb-md-4">
+                    <div class="d-flex flex-wrap justify-content-between mb-3 mb-md-4">
+                        <label for="" class="fs-5 c_black me-4">Загрузите фотографию:</label>
+                        <div class="position-relative c_accent fw_5">
+                            <input type="file" class="w-100 h-100" multiple>
+                            <svg class="me-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 5V19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5 12H19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- photo uploaded -->
+                    <!-- drop img -->
+                    <div class="row row-cols-2 g-3 col-11">
+                        <div class="position-relative">
+                            <input class="w-100 h-100 position-absolute start-0" type="radio" name="main-img" id="" checked>
+                            <div class="border rounded-3 w-100 h-100 position-relative">
+                                <button type="button" class="btn-i btn_del_photo p-0 position-absolute end-0 me-2 mt-2"></button>
+                                <img class="w-100 h-100 rounded-3" src="images/img/mechanism.png" alt="">
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <input class="w-100 h-100 position-absolute start-0" type="radio" name="main-img" id="">
+                            <div class="border rounded-3 w-100 h-100 position-relative">
+                                <button type="button" class="btn-i btn_del_photo p-0 position-absolute end-0 me-2 mt-2"></button>
+                                <img class="w-100 h-100 rounded-3" src="images/img/category3.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <input class="w-100 h-100 position-absolute start-0" type="radio" name="main-img" id="">
+                            <div class="border rounded-3 w-100 h-100 position-relative">
+                                <button type="button" class="btn-i btn_del_photo p-0 position-absolute end-0 me-2 mt-2"></button>
+                                <img class="w-100 h-100" src="images/img/category2.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <input class="w-100 h-100 position-absolute start-0" type="radio" name="main-img" id="">
+                            <div class="border rounded-3 w-100 h-100 position-relative">
+                                <button type="button" class="btn-i btn_del_photo p-0 position-absolute end-0 me-2 mt-2"></button>
+                                <img class="w-100 h-100" src="images/img/category4.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <input class="w-100 h-100 position-absolute start-0" type="radio" name="main-img" id="">
+                            <div class="border rounded-3 w-100 h-100 position-relative">
+                                <button type="button" class="btn-i btn_del_photo p-0 position-absolute end-0 me-2 mt-2"></button>
+                                <img class="w-100 h-100" src="images/img/mechanism.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
                 </fieldset>
                 <!-- description -->
                 <fieldset class="mb-4">
@@ -703,14 +755,13 @@
                     <textarea id="proposal-desc" rows="4" class="form-control" placeholder="Начните ввод..."></textarea>
                 </fieldset>
             </div>
-
             <!-- address edit -->
             <fieldset class="mb-3">
                 <label for="proposal-address" class="ps-3 fs-5 mb-2">Адрес</label>
                 <!-- search input -->
                 <div class="input-group flex-nowrap">
                     <input class="form-control border_acc border-start-0 rounded-0 col-10" type="search" id="proposal-address" placeholder="Улица и номер дома">
-                    <button class="btn btn_1 px-4 rounded-0" type="button">
+                    <button class="btn bg-accent py-1 px-4 rounded-0" type="button">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M21.0001 21L16.6501 16.65" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -723,7 +774,6 @@
                     <button class="btn btn_1 position-absolute start-50 bottom-0 translate-middle px-4">OK</button>
                 </div>
             </fieldset>
-
             <!-- address -->
             <fieldset class="mb-4 px-3">
                 <label for="proposal-address" class="fs-5 mb-2">Адрес</label>
@@ -738,7 +788,6 @@
                 </button>
                 </div>
             </fieldset>
-
             <div class="px-3">
                 <!-- price -->
                 <fieldset class="mb-4 d-flex flex-wrap align-items-sm-center">
@@ -756,64 +805,65 @@
                     </div>
                 </fieldset>
                 <!-- parameters -->
-                <legend class="fs-5 mb-3">Параметры</legend>
-                <fieldset class="mb-5 col-lg-10 add-param-block flex-column">
-                    <!-- hidden param group -->
-                    <fieldset class="mb-4">
-                        <fieldset class="mb-3">
-                            <label for="parameters-name" class="c_black mb-2">Введите название параметра:</label>
-                            <div class="d-flex flex-nowrap align-items-center">
-                                <div class="col-10">
-                                    <input id="parameters-name" type="text" class="form-control" placeholder="Например, масса">
-                                </div>
-                                <!-- delete param group -->
-                                <button class="p-0 btn flex-shrink-0 ms-4 col-auto">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3 6H5H21" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>                                    
-                        </button>
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <label for="parameters-value" class="c_black mb-2">Введите значение параметра:</label>
-                            <input id="parameters-value" type="text" class="form-control" placeholder="Например, 10кг">
-                        </fieldset>
-                    </fieldset>
+                <fieldset class="mb-5 dynamic-fieldset">
+                    <legend class="fs-5 mb-3">Параметры</legend>
 
                     <!-- visible param group -->
-                    <fieldset class="mb-4">
-                        <fieldset class="mb-3">
-                            <label for="parameters-name" class="c_black mb-2">Введите название параметра:</label>
-                            <div class="d-flex flex-nowrap align-items-center">
-                                <div class="col-10">
-                                    <input id="parameters-name" type="text" class="form-control" placeholder="Например, масса">
-                                </div>
-                                <!-- delete param group -->
-                                <button class="p-0 btn flex-shrink-0 ms-3 col-auto">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3 6H5H21" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>                                    
-                        </button>
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <label for="parameters-value" class="c_black mb-2">Введите значение параметра:</label>
+                    <fieldset class="fieldset-clone mb-4">
+                        <div class="c_black mb-2">Название параметра:</div>
+                        <div class="row align-items-center mb-2">
                             <div class="col-10">
-                                <input id="parameters-value" type="text" class="form-control" placeholder="Например, 10кг">
+                                <input type="text" class="form-control" placeholder="Например, масса">
                             </div>
-                        </fieldset>
+                            <div class="col-2">
+                                <button type="button" class="btn-delete" onclick="this.closest('.fieldset-clone').remove();">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 6H5H21"/>
+                                        <path d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z"/>
+                                    </svg>                                    
+                                </button>
+                            </div>
+                        </div>
+                        <div class="c_black mb-2">Значение параметра:</div>
+                        <div class="row mb-2">
+                            <div class="col-10">
+                                <input type="text" class="form-control" placeholder="Например, 000 кг">
+                            </div>
+                        </div>
                     </fieldset>
 
                     <!-- add param group btn -->
-                    <button type="button" class="btn btn_2 order-last p-0 border-0 add-param-group" onclick="addInput(this)">
-                        <svg class="me-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <button type="button" class="btn-add" onclick="addFieldset(this)">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 5V19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M5 12H19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                         <span>Добавить параметр</span>
                     </button>
+
+                    <!-- hidden param group -->
+                    <fieldset class="fieldset-clone mb-4">
+                        <div class="c_black mb-2">Название параметра:</div>
+                        <div class="row align-items-center mb-2">
+                            <div class="col-10">
+                                <input type="text" class="form-control" placeholder="Например, масса">
+                            </div>
+                            <div class="col-2">
+                                <button type="button" class="btn-delete" onclick="this.closest('.fieldset-clone').remove();">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 6H5H21"/>
+                                        <path d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z"/>
+                                    </svg>                                    
+                                </button>
+                            </div>
+                        </div>
+                        <div class="c_black mb-2">Значение параметра:</div>
+                        <div class="row mb-2">
+                            <div class="col-10">
+                                <input type="text" class="form-control" placeholder="Например, 000 кг">
+                            </div>
+                        </div>
+                    </fieldset>
                 </fieldset>
                 <button class="btn btn_1 w-100">Опубликовать</button>
             </div>
@@ -831,6 +881,7 @@
                 <!-- announcement category -->
                 <label for="announcement-cat" class="fs-5 mb-2">Категория</label>
                 <select id="announcement-cat" class="form-select mb-3" required>
+                    <option value="" disabled selected>Выбрать категорию объявления</option>
                     <option value="equipment">Спецтехника</option>
                     <option value="instruments">Инструменты</option>
                     <option value="materials">Материалы</option>
@@ -860,7 +911,7 @@
                 </div>
                 <!-- map -->
                 <div class="map_lg position-relative">
-                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+                    <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7cb7e62a63d014db98068fcd38a8b959bb35574d74be36291d89d97f49b8108&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
                     <button class="btn btn_1 position-absolute start-50 bottom-0 translate-middle px-4">OK</button>
                 </div>
             </fieldset>
@@ -869,7 +920,7 @@
                 <label for="proposal-address" class="fs-5 mb-2">Адрес</label>
                 <!-- search input -->
                 <div class="input-group flex-nowrap position-relative">
-                    <input class="form-control bg-white col-10" type="search" id="proposal-address" placeholder="Улица и номер дома" value="ул. Красноможайская, д. 12" readonly>
+                    <input class="form-control bg-white col-10" type="search" id="announcement-address" placeholder="Улица и номер дома" value="ул. Красноможайская, д. 12" readonly>
                     <button class="w-auto btn p-0 me-1 position-absolute end-0 top-50 translate-middle" type="button">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 20H21" stroke="#3C3939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -908,8 +959,8 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/my-swiper.js"></script>
-    <script src="js/extra.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/custom-select.min.js"></script>
+    <script src="js/script.min.js"></script>
 
 </body>
 

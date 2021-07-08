@@ -51,7 +51,6 @@ input[type="search"]::-webkit-search-results-decoration {
     display: none;
     border: 1px solid #D2D2D2;
     background-color: #fff;
-    /* border-radius: .33em; */
     max-height: 470px;
     overflow-y: scroll;
 }

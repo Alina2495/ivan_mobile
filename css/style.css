@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap");
 html {
   overflow-x: hidden;
   min-height: 100vh;
@@ -107,12 +107,6 @@ footer,
 .offcanvas-menu .offcanvas-header {
   -webkit-box-shadow: none;
           box-shadow: none;
-}
-
-.offcanvas-menu .img_md {
-  width: 40px;
-  height: 40px;
-  background-image: url(../images/img/avatar-sm.svg);
 }
 
 .offcanvas-menu svg {
@@ -246,7 +240,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .h6 {
@@ -457,10 +451,16 @@ button {
   background: url("../images/icons/trash.svg") no-repeat left center;
 }
 
+.btn_del_photo {
+  background: url("../images/icons/del_photo.svg") no-repeat center;
+  background-size: contain;
+}
+
 .img_sm {
   border-radius: 50%;
   width: 2em;
   height: 2em;
+  background-image: url(../images/img/no_photo.svg);
 }
 
 .img_md {
@@ -468,12 +468,14 @@ button {
   width: 2.5em;
   height: 2.5em;
   overflow: hidden;
+  background-image: url(../images/img/no_photo.svg);
 }
 
 .img_lg {
   border-radius: 50%;
   width: 3.8em;
   height: 3.8em;
+  background-image: url(../images/img/no_photo.svg);
 }
 
 .img_rec {
