@@ -24,6 +24,28 @@ $(".unverified_trigger").on('click', function() {
     $(".unverified_window").removeClass('d-none');
 });
 
+// account page show user photo settings
+$(".user_photo").on('click', function() {
+    $(".photo_settings").removeClass('d-none');
+});
+
+// account page show user photo settings
+$(".upl_user_ph_btn").on('click', function() {
+    $(".photo_settings").addClass('d-none');
+    $(".upl_user_photo").removeClass('d-none');
+});
+
+// account page show user photo settings
+$(".del_user_ph_btn").on('click', function() {
+    $(".photo_settings").addClass('d-none');
+    $(".del_user_photo").removeClass('d-none');
+});
+
+// account page show user photo settings
+$(".del_user_ph_close").on('click', function() {
+    $(".del_user_photo").addClass('d-none');
+});
+
 // открываем/закрываем блок, добаляя/удаляя класс 'd-none'
 function closeDiv(elem) {
     elem.classList.add('d-none');

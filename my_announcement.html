@@ -34,18 +34,20 @@
 <body>
 
     <!-- HEADER -->
-    <header class="p-3">
-        <!-- Mobile Menu Button -->
-        <button class="btn p-0 mobile-menu-btn rounded-0 me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">Меню</button>
+    <header>
+        <div class="container py-3">
+            <!-- Mobile Menu Button -->
+            <button class="btn p-0 mobile-menu-btn rounded-0 me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">Меню</button>
+        </div>
     </header>
 
     <!-- MENU -->
     <div class="offcanvas offcanvas-start offcanvas-menu" tabindex="-1" id="mobileMenu">
         <div class="offcanvas-header align-items-start border-bottom flex-column">
             <div class="d-flex mb-3">
-                <div class="img_md overflow-hidden me-3 flex-shrink-0">
+                <div class="img_md me-3 flex-shrink-0">
                     <!-- если залогинен, то подставить аватарку, если она загружена -->
-                    <img class="w-100 h-100" alt="" src="https://randomuser.me/api/portraits/men/32.jpg">
+                    <img alt="" src="https://randomuser.me/api/portraits/men/32.jpg">
                 </div>
                 <!-- скрыть если не вошел -->
                 <div class="d-flex flex-column">
@@ -164,7 +166,7 @@
                 <button class="btn btn_del mb-3 w-100 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#delAnn" aria-controls="delAnn"><span>Удалить объявление</span></button>
                 <div>
                     <span>Заказчик:</span>
-                    <span class="ms-3 c_blue fw_5">Геннадий С.</span>
+                    <a href="my_account.html" class="ms-3 c_blue fw_5">Геннадий С.</a>
                 </div>
                 <div class="c_dark-blue my-2">Индивидуальный предприниматель</div>
                 <div class="mb-3">На сайте с марта 2021 года</div>
@@ -178,7 +180,7 @@
                         <span class="checked">&#9733;</span>
                         <span>&#9733;</span>
                     </div>
-                    <a class="c_blue" href="user.html">14 отзывов</a>
+                    <span class="c_blue">14 отзывов</span>
                 </div>
                 <!-- есть рейтинг, но нет отзывов -->
                 <div class="d-flex align-items-baseline c_gray text-nowrap fs_14">
@@ -233,7 +235,7 @@
                         <span class="checked">&#9733;</span>
                         <span>&#9733;</span>
                     </div>
-                    <a class="c_blue" href="user.html">14 отзывов</a>
+                    <span class="c_blue">14 отзывов</span>
                 </div>
                 <!-- есть рейтинг, но нет отзывов -->
                 <div class="d-flex align-items-baseline c_gray text-nowrap fs_14">
@@ -275,7 +277,7 @@
                         <span class="checked">&#9733;</span>
                         <span>&#9733;</span>
                     </div>
-                    <a class="c_blue" href="user.html">14 отзывов</a>
+                    <span class="c_blue">14 отзывов</span>
                 </div>
                 <!-- есть рейтинг, но нет отзывов -->
                 <div class="d-flex align-items-baseline c_gray text-nowrap fs_14">
@@ -462,7 +464,7 @@
                     <span class="checked">&#9733;</span>
                     <span>&#9733;</span>
                 </div>
-                <a class="c_blue" href="user.html">14 отзывов</a>
+                <span class="c_blue">14 отзывов</span>
             </div>
 
             <!-- есть рейтинг, но нет отзывов -->

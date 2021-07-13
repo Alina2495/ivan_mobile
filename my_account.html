@@ -46,9 +46,9 @@
     <div class="offcanvas offcanvas-start offcanvas-menu" tabindex="-1" id="mobileMenu">
         <div class="offcanvas-header align-items-start border-bottom flex-column">
             <div class="d-flex mb-3">
-                <div class="img_md overflow-hidden me-3 flex-shrink-0">
+                <div class="img_md me-3 flex-shrink-0">
                     <!-- если залогинен, то подставить аватарку, если она загружена -->
-                    <img class="w-100 h-100" alt="" src="https://randomuser.me/api/portraits/men/32.jpg">
+                    <img alt="" src="https://randomuser.me/api/portraits/men/32.jpg">
                 </div>
                 <!-- скрыть если не вошел -->
                 <div class="d-flex flex-column">
@@ -155,12 +155,54 @@
 
         <section class="mb-4">
             <div class="d-flex mb-3">
-                <img class="img_lg me-3" src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
+
+                <div class="img_lg me-3 user_photo">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="#">
+                </div>
+
                 <div class="d-flex flex-column align-items-baseline">
                     <h6 class="mb-0">Геннадий С.</h6>
                     <div class="c_dark-blue lh-sm">Индивидуальный предприниматель</div>
                     <span class="fs_12">На сайте с сентября 2020 года</span>
                 </div>
+
+                <!-- photo settings -->
+                <div class="photo_settings zi_20 d-none br_10 shad_box p-3 position-fixed translate-middle start-50 top-50 bg-white c_primary bg">
+                    <button class="btn fw-normal mb-3">Открыть фотографию</button>
+                    <button class="btn fw-normal mb-3 upl_user_ph_btn">Изменить фотографию</button>
+                    <button class="btn fw-normal del_user_ph_btn">Удалить фотографию</button>
+                </div>
+
+                <!-- upload photo -->
+                <div class="del_user_photo zi_20 d-none br_10 shad_box p-3 position-fixed translate-middle start-50 top-50 bg-white c_black bg">
+                    <p>Вы действительно хотите удалить фотографию?</p>
+                    <div class="text-end">
+                        <button class="btn fw-normal me-4 c_gray del_user_ph_close">Нет</button>
+                        <button class="btn fw-normal text-danger del_user_ph_close">Да</button>
+                    </div>
+                </div>
+
+                <!-- delete photo -->
+                <div class="upl_user_photo zi_20 d-none br_10 shad_box p-3 position-fixed translate-middle start-50 top-50 bg-white c_black bg img-upload">
+                    <p>Загрузить с устройства</p>
+                    <!-- drop img -->
+                    <div class="img-drop position-relative rounded-3 border align-self-center p-3 text-center w-50 mx-auto">
+                        <input type="file" class="top-0 start-0 w-100 h-100">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip6)">
+                            <path d="M12.6567 9.36639V11.7481C12.6567 12.0639 12.5313 12.3668 12.3079 12.5901C12.0846 12.8134 11.7817 12.9389 11.4659 12.9389H3.13002C2.81419 12.9389 2.5113 12.8134 2.28797 12.5901C2.06464 12.3668 1.93918 12.0639 1.93918 11.7481V9.36639" stroke="#4DA9FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.3207 6.38928L7.2978 9.36638L10.2749 6.38928" stroke="#4DA9FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.29785 9.36641L7.29785 2.22137" stroke="#4DA9FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip6">
+                            <rect width="14.2901" height="14.2901" fill="white" transform="translate(14.4429 0.43512) rotate(90)"/>
+                            </clipPath>
+                            </defs>
+                         </svg>
+                    </div>
+                </div>
+
             </div>
             <!-- edit profile -->
             <button class="btn btn_2 w-100 mb-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#addMsg" aria-controls="addMsg">Редактировать информацию</button>
@@ -195,12 +237,12 @@
                     </svg>
                     <span class="text-danger">gennadiy_sabirovskiy@yandex.ru</span>
                 <span class="unc-svg position-relative ms-2">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.99967 14.6667C11.6816 14.6667 14.6663 11.6819 14.6663 8.00001C14.6663 4.31811 11.6816 1.33334 7.99967 1.33334C4.31778 1.33334 1.33301 4.31811 1.33301 8.00001C1.33301 11.6819 4.31778 14.6667 7.99967 14.6667Z" stroke="#EB1919" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M8 5.33334V8.00001" stroke="#EB1919" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M8 10.6667H8.00667" stroke="#EB1919" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.99967 14.6667C11.6816 14.6667 14.6663 11.6819 14.6663 8.00001C14.6663 4.31811 11.6816 1.33334 7.99967 1.33334C4.31778 1.33334 1.33301 4.31811 1.33301 8.00001C1.33301 11.6819 4.31778 14.6667 7.99967 14.6667Z" stroke="#EB1919" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 5.33334V8.00001" stroke="#EB1919" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 10.6667H8.00667" stroke="#EB1919" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
                 </span>
 
                 <!-- unconfirmed email tooltip -->
@@ -208,6 +250,9 @@
                     <div class="fs_14">Неподтвержденная<br/> электронная почта</div>
                     <button onclick="closeDiv(this.closest('.unverified_window'))" class="border-0 btn p-0 c_blue text-dashed rounded-0 fs_14 fw-normal" type="button" data-bs-toggle="modal" data-bs-target="#emailVerificationModal">Отправить сообщение на почту</button>
                 </div>
+
+
+
 
             </div>
             <!-- есть рейтинг и отзывы -->
@@ -361,7 +406,9 @@
                 <!-- review 1 -->
                 <div class="py-3 border-bottom">
                     <div class="d-flex">
-                        <img class="img_md me-2" src="images/img/user.jpg" alt="">
+                        <div class="img_md me-2">
+                            <img src="images/img/user.jpg" alt="">
+                        </div>
                         <div>
                             <!-- name -->
                             <a class="c_black" href="user.html">Геннадий Л.</a>
@@ -380,23 +427,7 @@
                     </div>
 
                     <!-- link -->
-                    <a href="#" class="c_blue d-flex align-items-baseline">
-                        <svg class="flex-shrink-0 me-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip1)">
-                            <path d="M14.4152 1.38101C12.8295 -0.351715 10.1439 -0.47093 8.41097 1.11506L0.747415 8.12856L1.38501 8.82524L9.04857 1.81175C9.69986 1.21567 10.5442 0.909059 11.4264 0.947969C13.2514 1.02881 14.6631 2.57117 14.5823 4.39641C14.5432
-                                5.27845 14.163 6.0925 13.5116 6.68857L4.97723 14.499C4.11285 15.2901 2.7661 15.2304 1.9751 14.366C1.18225 13.4997 1.24162 12.1569 2.10811 11.3639L10.2942 3.87227C10.4803 3.70197 10.7211 3.61423 10.9736 3.6255C11.495 3.64858
-                                11.8984 4.08923 11.8753 4.61076C11.8641 4.86279 11.7554 5.09537 11.5693 5.26567L4.2541 11.9603L4.8917 12.657L12.2069 5.96233C12.5791 5.62171 12.7964 5.15656 12.8187 4.65254C12.865 3.60976 12.0584 2.72819 11.0153 2.68198C10.5113
-                                2.65969 10.0288 2.83494 9.65661 3.17556L1.47051 10.6672C0.219086 11.8125 0.133083 13.7521 1.27842 15.0036C2.42199 16.2532 4.36737 16.3373 5.61482 15.1957L14.1492 7.38529C15.8779 5.80323 15.9972 3.10973 14.4152 1.38101Z
-                               " fill="#4CA9FF"/>
-                        </g>
-                        <defs>
-                            <clipPath id="clip1">
-                                 <rect width="16" height="16" fill="white"/>
-                            </clipPath>
-                        </defs>
-                    </svg>
-                        <span>Экскаватор-погрузчик с гидромолотом</span>
-                    </a>
+                    <a href="my_proposal.html" class="link_row c_blue">Экскаватор-погрузчик с гидромолотом</a>
                     <!-- text -->
                     <p class="c_black m-0">Через несколько недель мне позвонила то ли заведующая магазина, то ли директор, поблагодарила за отзыв и сказала, что он был зачитан на собрании</p>
 

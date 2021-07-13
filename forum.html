@@ -46,9 +46,9 @@
     <div class="offcanvas offcanvas-start offcanvas-menu" tabindex="-1" id="mobileMenu">
         <div class="offcanvas-header align-items-start border-bottom flex-column">
             <div class="d-flex mb-3">
-                <div class="img_md overflow-hidden me-3 flex-shrink-0">
+                <div class="img_md me-3 flex-shrink-0">
                     <!-- если залогинен, то подставить аватарку, если она загружена -->
-                    <img class="w-100 h-100" alt="" src="https://randomuser.me/api/portraits/men/32.jpg">
+                    <img alt="" src="https://randomuser.me/api/portraits/men/32.jpg">
                 </div>
                 <!-- скрыть если не вошел -->
                 <div class="d-flex flex-column">
@@ -284,6 +284,33 @@
         </div>
         <form class="offcanvas-body justify-content-between pb-4 c_black">
             <input type="text" class="form-control mb-3" placeholder="Название темы" required>
+
+            <div class="img-upload d-flex flex-column mb-4">
+
+                <div class="d-flex justify-content-between mb-4">
+                    <div class="fs-5">Загрузите фотографию:</div>
+                    <div class="img-upload">
+                        <div class="position-relative">
+                            <input type="file" class="w-100 h-100">
+                            <svg class="me-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 5V19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M5 12H19" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="img-drop position-relative rounded-3 border align-self-start">
+                    <input type="file" class="top-0 start-0 w-100 h-100">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="24" transform="translate(24) rotate(90)" fill="white"/>
+                        <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="#4DA9FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 10L12 15L17 10" stroke="#4DA9FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 15V3" stroke="#4DA9FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+
             <textarea class="form-control" rows="8" placeholder="Начните вводить текст..." required></textarea>
             <div class="mt-auto position-sticky bottom-0 pt-3 start-0 end-0 bg-white">
                 <button class="btn btn_1 w-100" type="submit">Добавить тему</button>
